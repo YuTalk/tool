@@ -22,6 +22,7 @@
 | 苹果 / App Store | `rules/egern/Apple.yaml` | `rules/quantumultx/Apple.list` | 20 | direct |
 | 微软 / Outlook | `rules/egern/Microsoft.yaml` | `rules/quantumultx/Microsoft.list` | 17 | 微软服务 |
 | 香肠派对 | `rules/egern/SausageMan.yaml` | `rules/quantumultx/SausageMan.list` | 16 | direct |
+| AI Part | `rules/egern/AI.yaml` | `rules/quantumultx/AI.list` | 36 | 人工智能 |
 
 China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段是 CDN / 后台 / 接口域名 **137 条**，覆盖微信、QQ、淘宝、京东、拼多多、美团、饿了么、抖音、哔哩哔哩、爱奇艺、优酷、知乎、微博、百度、阿里、12306、银行、运营商、政府、快递……还有红果短剧、豆包、DeepSeek、Kimi、腾讯元宝、即梦 AI、剪映、夸克等热门应用。
 
