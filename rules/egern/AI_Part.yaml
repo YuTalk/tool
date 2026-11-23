@@ -1,6 +1,6 @@
 # AI_Part
 # Muse + GPT + Claude
-# 总共 36 条
+# 总共 45 条
 # 用法：Egern 分流 -> 人工智能
 domain_suffix_set:
   - openai.com
@@ -19,6 +19,9 @@ domain_suffix_set:
   - openaicom.imgix.net
   - openaicomproductionae4b.blob.core.windows.net
   - production-openaicom-storage.azureedge.net
+  - chat.com
+  - crixet.com
+  - ai.com
   - anthropic.com
   - anthropic.team
   - claude.ai
@@ -35,7 +38,13 @@ domain_suffix_set:
   - claudeusercontent.com
   - chatbotclaude.com
   - servd-anthropic-website.b-cdn.net
+  - ant.dev
+  - antspace.dev
+  - clau.de
   - meta.ai
   - muse.ai
   - llama.com
   - ai.meta.com
+  - atmeta.com
+  - metaaiusercontent.com
+  - metaaivm.com
