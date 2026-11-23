@@ -44,7 +44,7 @@
 在代理工具里把这个文件加为规则集 / DNS 转发，策略选国内 / DIRECT：
 
 ```text
-https://raw.githubusercontent.com/YuTalk/tool/main/China.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/China.yaml
 ```
 
 ### 2️⃣ GeoIpCN.mmdb：换 GeoIP 库
@@ -69,7 +69,11 @@ GEOIP CN → DIRECT（倒数第二条）
 ## 🔗 直链（复制即用）
 
 ```text
-https://raw.githubusercontent.com/YuTalk/tool/main/China.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/China.yaml
+```
+
+```text
+https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/China.list
 ```
 
 ```text
