@@ -1,0 +1,26 @@
+#!name=哔哩哔哩去广告
+#!desc=去开屏广告、推荐流广告、搜索热词、直播间购物入口
+#!author=YuTalk
+#!homepage=https://github.com/YuTalk/tool
+# 注意：不要和已有的 fmz200 哔哩哔哩模块同时开，两个都改同一批接口会打架
+# 注意：QX 版暂不支持精简「我的」页多余入口，那个要 Egern 版才有
+
+[rewrite_local]
+^https?://(grpc|app)\.bili(bili\.com|api\.net)/bilibili\.app\.interface\.v1\.Search/DefaultWords$ url 307 http://reject/
+^https?://app\.bili(bili\.com|api\.net)/x/v2/splash/(brand/list|event/list2|list|show)(\?.*)?$ url 307 http://reject/
+^https?://app\.bili(bili\.com|api\.net)/x/v2/feed/index(/story)?(\?.*)?$ url 307 http://reject/
+^https?://api\.vc\.bilibili\.com/search_svr/v\d/Search/recommend_words url 307 http://reject/
+^https?://api\.vc\.bilibili\.com/topic_svr/v1/topic_svr url 307 http://reject/
+^https?://api\.vc\.bilibili\.com/dynamic_svr/v1/dynamic_svr/mix_uplist url 307 http://reject/
+^https?://manga\.bilibili\.com/twirp/comic\.v\d\.Comic/Flash url 307 http://reject/
+^https?://manga\.bilibili\.com/twirp/comic\.v\d\.Comic/ListFlash url 307 http://reject/
+^https?://api\.live\.bilibili\.com/xlive/e-commerce-interface/v1/ecommerce-user/get_shopping_info\? url 307 http://reject/
+
+[filter_local]
+host, api.biliapi.com, reject
+host, app.biliapi.com, reject
+host, api.biliapi.net, reject
+host, app.biliapi.net, reject
+
+[mitm]
+hostname = manga.bilibili.com, api.live.bilibili.com, api.vc.bilibili.com, app.bilibili.com, app.biliapi.net, api.bilibili.com, api.biliapi.net, grpc.biliapi.net, grpc.bilibili.com

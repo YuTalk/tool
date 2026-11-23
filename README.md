@@ -68,7 +68,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 
 | 模块 | 分类 | Egern 版 | QX 版 | 功能 |
 | --- | --- | --- | --- | --- |
-| 📺 哔哩哔哩去广告 | 视频 | [Bilibili-ADBlock.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/%E8%A7%86%E9%A2%91/Bilibili-ADBlock.yaml) | [Bilibili-ADBlock.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/%E8%A7%86%E9%A2%91/Bilibili-ADBlock.snippet) | 去开屏广告、推荐流广告、搜索热词、直播间购物入口，精简「我的」页多余入口（游戏中心、会员购、直播、漫画、课堂、免流量、我的客服、邀好友） |
+| 📺 哔哩哔哩去广告 | [Bilibili-ADBlock.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/Bilibili-ADBlock.yaml) | [Bilibili-ADBlock.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/Bilibili-ADBlock.snippet) | 去开屏广告、推荐流广告、搜索热词、直播间购物入口，精简「我的」页多余入口（游戏中心、会员购、直播、漫画、课堂、免流量、我的客服、邀好友） |
 
 > 注意：
 > - 不要和已有的 fmz200 哔哩哔哩模块同时开，两个都改同一批接口会打架。
