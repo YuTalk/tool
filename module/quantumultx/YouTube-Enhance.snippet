@@ -1,0 +1,19 @@
+# 最后修改：2026-11-24 02:10
+# YouTube Enhance（QX 版）
+# 改编自 Maasea 的 Youtube (Music) Enhance，脚本都由我们自己维护，放在仓库 script/ 文件夹里
+# QX 版不带开关，脚本用默认（屏蔽上传和选段、字幕翻译关）；想改开关用 Egern 版
+# 注意：不要和别的 YouTube 模块同时开（比如 DualSubs），两个都改字幕会打架
+[general]
+name=YouTube Enhance
+description=适用于 YouTube 与 YouTube Music：屏蔽上传、选段按钮（QX 版无开关）
+author=YuTalk
+homepage=https://github.com/YuTalk/tool
+icon=https://raw.githubusercontent.com/YuTalk/tool/main/icon/youtube.png
+
+[script]
+youtube.response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch|log_event|config))(\?(.*))?$,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/YuTalk/tool/main/script/youtube.response.js
+youtube.request.init = type=http-request,pattern=^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&ack.*,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/YuTalk/tool/main/script/youtube.request.js
+youtube.request.log_event = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/log_event,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/YuTalk/tool/main/script/youtube.request.js
+
+[mitm]
+hostname = *.googlevideo.com, youtubei.googleapis.com
