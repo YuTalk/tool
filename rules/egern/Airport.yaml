@@ -1,0 +1,9 @@
+# 机场 / 自建节点
+# 总共 4 条
+# 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
+# 第一段：应用/网站域名
+domain_suffix_set:
+  - yy-179.pages.dev
+  - 521.yutalk000.top
+  - 1212.yutalk000.ccwu.cc
+  - freesocks.org

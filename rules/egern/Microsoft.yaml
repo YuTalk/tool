@@ -1,0 +1,15 @@
+# 微软 / Outlook
+# 总共 10 条
+# 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
+# 第一段：应用/网站域名
+domain_suffix_set:
+  - microsoft.com
+  - live.com
+  - outlook.com
+  - office.com
+  - office365.com
+  - onedrive.com
+  - windows.com
+  - windowsupdate.com
+  - microsoftonline.com
+  - sharepoint.com

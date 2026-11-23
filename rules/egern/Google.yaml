@@ -1,0 +1,19 @@
+# 谷歌 / YouTube
+# 总共 14 条
+# 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
+# 第一段：应用/网站域名
+domain_suffix_set:
+  - google.com
+  - googleapis.com
+  - gstatic.com
+  - gmail.com
+  - googleusercontent.com
+  - youtube.com
+  - youtu.be
+  - googlevideo.com
+  - ytimg.com
+  - ggpht.com
+  - gvt1.com
+  - gvt2.com
+  - 1e100.net
+  - youtube-nocookie.com

@@ -1,0 +1,15 @@
+# 谷歌广告 / 统计
+# 总共 12 条
+# 第一段：应用/网站域名
+host-suffix, doubleclick.net, reject
+host-suffix, googlesyndication.com, reject
+host-suffix, googleadservices.com, reject
+host-suffix, googletagmanager.com, reject
+host-suffix, googletagservices.com, reject
+host-suffix, google-analytics.com, reject
+host-suffix, 2mdn.net, reject
+host-suffix, admob.com, reject
+host-suffix, googleads.com, reject
+host-suffix, ads.google.com, reject
+host-suffix, ads.youtube.com, reject
+host-suffix, app-measurement.com, reject

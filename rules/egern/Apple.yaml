@@ -1,0 +1,17 @@
+# 苹果 / App Store
+# 总共 12 条
+# 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
+# 第一段：应用/网站域名
+domain_suffix_set:
+  - apple.com
+  - icloud.com
+  - mzstatic.com
+  - cdn-apple.com
+  - ks-cdn.com
+  - apple-cloudkit.com
+  - icloud-content.com
+  - aaplimg.com
+  - appstore.com
+  - itunes.com
+  - apple-dns.net
+  - apple.com.cn
