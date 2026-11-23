@@ -1,0 +1,18 @@
+# 最后修改：2026-11-24 02:04
+# 哔哩哔哩 · 纯净（QX 版，精简版）
+# QX 做不了 Egern 版那套脚本（protobuf、我的页精简、底部栏），这里只有去开屏和热词两条
+# 想用完整版（去推荐流广告、视频页广告、我的页精简、底部栏）用 Egern 版
+# 2026-11-24 重做：按 fmz200 的做法，去广告永远开着，不给总开关
+[general]
+name=哔哩哔哩 · 纯净
+description=去开屏、热词（QX 精简版，完整版用 Egern）
+author=YuTalk
+homepage=https://github.com/YuTalk/tool
+icon=https://raw.githubusercontent.com/YuTalk/tool/main/icon/bilibili.png
+
+[rewrite_local]
+^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list url 307 reject
+^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square url 307 reject
+
+[mitm]
+hostname = app.bilibili.com, api.bilibili.com

@@ -13,6 +13,7 @@
 | 项目 | 数量 |
 | --- | --- |
 | 规则集 | 8 个（Egern 和 QX 各一份，内容一致） |
+| 模块 | 1 个（哔哩哔哩 · 纯净，Egern 和 QX 各一份） |
 | 图标 | 39 个（13 套图标库预览图 + 25 个单个应用图标，都是从别人家搬过来的原图） |
 | 域名总数 | 850 条（去重后） |
 | GeoIP 库 | 6,575 条 CIDR，约 132KB，覆盖 357,426,983 个中国 IPv4 地址 |
@@ -21,6 +22,7 @@
 ## 📖 目录
 
 - [📦 文件说明](#-文件说明)
+- [🧩 模块](#-模块)
 - [⚡ 一键添加进软件](#-一键添加进软件)
 - [🚀 怎么用](#-怎么用)
 - [🔄 自动更新](#-自动更新)
@@ -61,9 +63,30 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 
 </details>
 
+### 🧩 模块
+
+同一个模块 Egern 和 QX 各一份，内容一致、格式不同。脚本单独放 `script/` 文件夹，模块自己去拉，不用手动添加。
+
+- 📺 哔哩哔哩 · 纯净 — Egern：[Bilibili-ADBlock.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/Bilibili-ADBlock.yaml)　QX：[Bilibili-ADBlock.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/Bilibili-ADBlock.snippet)
+  - 去开屏、热词、推荐流广告、视频页广告；「我的」页只留蓝色一排；底部栏只留首页、关注、我的；Egern 版 7 个开关（热词、我的页、动态、评论、优化加载、空降助手、日志等级）。去广告没有总开关，永远开着（按 fmz200 的做法，2026-11-24 重做）
+
+### 📜 脚本
+
+脚本都由我们自己维护，放在顶层 `script/` 文件夹里，模块直接引用我们自己的链接，不引用别人家的脚本链接。kokoryh 的脚本原样复制进来（一个字没改），上游更新后手动同步。
+
+- [bilibili.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.js) — 哔哩哔哩 · 纯净模块用的脚本，自己写的，处理开屏、热词、推荐流广告、「我的」页、底部栏、广告接口；开屏、推荐流、广告接口永远拦截，没有开关
+- [bilibili.protobuf.request.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.protobuf.request.js) / [bilibili.protobuf.response.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.protobuf.response.js) — 哔哩哔哩视频页、评论区用的 protobuf 脚本，来自 kokoryh 的 Sparkle，2026-11-24 复制进来（原版，未改）
+- [bilibili.json.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.json.js) / [webpage.bilibili.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/webpage.bilibili.js) — 哔哩哔哩直播和网页用的脚本，来自 kokoryh 的 Sparkle，2026-11-24 复制进来（原版，未改）
+
 ### 🖼️ 图标
 
 图标都放在顶层 `icon/` 文件夹里，都是从别人家搬过来的原图（主要来自 [ddgksf2013/Icon](https://github.com/ddgksf2013/Icon) 和 [Koolson/Qure](https://github.com/Koolson/Qure)）。
+
+**模块正在用的图标：**
+
+| 图标 | 模块 |
+| --- | --- |
+| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/bilibili.png" width="48"> | 哔哩哔哩 · 纯净（Qure 彩色版） |
 
 **13 套图标库（预览图就是原图）：**
 
@@ -131,6 +154,11 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 
 <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-13-semporia.PNG" width="120">
 
+> 注意：
+> - 不要和已有的 fmz200 哔哩哔哩模块同时开，两个都改同一批接口会打架。
+> - QX 版暂不支持精简「我的」页多余入口，那个要 Egern 版才有。
+> - 模块要开 MITM，证书要装好、信任开好，不然不生效。
+
 ### GeoIpCN.mmdb（6,575 条 CIDR，约 132KB）
 
 只含中国 IPv4，共覆盖 **357,426,983 个地址**，约 132KB。
@@ -189,14 +217,16 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 1. **DNS 转发**：设置 → DNS 转发 → 添加规则集，粘贴 China 链接，策略选国内
 2. **分流**：设置 → 分流 → 添加规则集，粘贴对应链接，策略按上面表格选
 3. **GeoIP 库**：设置 → GeoIP 数据库 → 粘贴 GeoIpCN.mmdb 链接
-4. **分流留一条**：`GEOIP CN → DIRECT` 放倒数第二，`默认 → 兜底策略` 放最后
+4. **模块**：工具 → 模块 → + → 粘贴哔哩哔哩 · 纯净的 Egern 版链接
+5. **分流留一条**：`GEOIP CN → DIRECT` 放倒数第二，`默认 → 兜底策略` 放最后
 
 > ⚠️ GEOIP CN 一定放倒数第二，别放第一，不然每个域名都要先解析 IP，费电又变慢。
 
 ### ⚡ Quantumult X
 
 1. 分流里加远程规则，粘贴上面表格里的 QX 版链接，策略按表格选
-2. 分流留一条：`geoip, cn, direct` 放倒数第二，`final` 放最后
+2. 模块：重写 → 引用 → 粘贴哔哩哔哩 · 纯净的 QX 版链接
+3. 分流留一条：`geoip, cn, direct` 放倒数第二，`final` 放最后
 3. QX 不能用自建 .mmdb 库，用它自带的就行
 
 ---

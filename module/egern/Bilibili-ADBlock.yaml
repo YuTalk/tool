@@ -1,0 +1,151 @@
+# 最后修改：2026-11-24 02:04
+# 哔哩哔哩 · 纯净
+# 做法（按 fmz200 的思路）：去广告永远开着，不给总开关；开关只留给热词、我的页、动态、评论、空降这些可选功能
+# 视频页、评论区、热门页、搜索的广告清理用 kokoryh 的 protobuf 脚本（原样，未改）；开屏、推荐流、广告接口用自己写的 bilibili.js（永远拦截）
+# 2026-11-24 重做：删掉了 [去广告]总开关（removeAds），就是这个总开关害得开关关了广告还在；现在广告拦截没有开关，永远开
+# 用法：Egern > 工具 > 模块 > + > 粘贴 raw 链接
+# 注意：不要和别的哔哩哔哩模块同时开（比如 fmz200 的），两个都改同一批接口会打架
+name: 哔哩哔哩 · 纯净
+description: 去开屏、热词、推荐流广告、视频页广告；「我的」页只留蓝色一排；底部栏只留首页、关注、我的
+author: YuTalk
+homepage: https://github.com/YuTalk/tool
+icon: https://raw.githubusercontent.com/YuTalk/tool/main/icon/bilibili.png
+compat_arguments:
+  removeHotWords: true
+  cleanMinePage: true
+  displayUpList: show
+  purifyComment: true
+  optimizeRequest: true
+  sponsorBlock: true
+  logLevel: error
+compat_arguments_schema:
+  removeHotWords:
+    name: '[搜索]去除热词'
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
+  cleanMinePage:
+    name: '[我的]精简多余入口'
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
+  displayUpList:
+    name: '[动态]最常访问（显示/隐藏/自动）'
+    default_value: show
+    options:
+    - show
+    - hide
+    - auto
+  purifyComment:
+    name: '[评论区]过滤置顶评论广告'
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
+  optimizeRequest:
+    name: 优化评论区加载
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
+  sponsorBlock:
+    name: 空降助手
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
+  logLevel:
+    name: 日志等级
+    default_value: error
+    options:
+    - error
+    - warn
+    - info
+    - debug
+    - 'off'
+compat_arguments_desc: '[搜索]去除热词
+
+[我的]精简多余入口
+
+[动态]最常访问（显示/隐藏/自动）
+
+[评论区]过滤置顶评论广告
+
+优化评论区加载
+
+空降助手
+
+日志等级'
+scriptings:
+- http_response:
+    name: bilibili.js
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.js
+    match: ^https:\/\/(app\.bilibili\.com|api\.bilibili\.com|app\.biliapi\.net|api\.biliapi\.net)\/(x\/v2\/(splash|search|feed|account|dm)|x\/resource|vip\/ads|pgc\/activity)
+    body_required: true
+    env:
+      argument: '{"removeHotWords":{{{removeHotWords}}},"cleanMinePage":{{{cleanMinePage}}}}'
+- http_request:
+    name: bilibili.protobuf.request
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.protobuf.request.js
+    timeout: 10
+    match: ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(app\.viewunite\.v1\.View\/View|main\.community\.reply\.v1\.Reply\/MainList)$
+    body_required: true
+    binary_body: true
+    env:
+      _hub_enabled: '{{{optimizeRequest}}}'
+      argument: '{"purifyComment":{{{purifyComment}}},"logLevel":"{{{logLevel}}}"}'
+- http_request:
+    name: bilibili.airborne
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.protobuf.request.js
+    timeout: 10
+    match: ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(community\.service\.dm\.v1\.DM\/DmSegMobile|app\.view(unite)?\.v1\.View\/ViewProgress)$
+    body_required: true
+    binary_body: true
+    env:
+      _hub_enabled: '{{{sponsorBlock}}}'
+      argument: '{"logLevel":"{{{logLevel}}}"}'
+- http_response:
+    name: bilibili.live
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.json.js
+    timeout: 20
+    match: ^https:\/\/api\.live\.bilibili\.com\/xlive\/(app-interface\/v2\/index\/feed|app-room\/v1\/index\/getInfoBy(Room|User))\?
+    body_required: true
+- http_response:
+    name: bilibili.webpage
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/webpage.bilibili.js
+    timeout: 20
+    match: ^https:\/\/www\.bilibili\.com\/blackboard\/era\/[^?]+\.html\?
+    body_required: true
+- http_response:
+    name: bilibili.protobuf.response
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.protobuf.response.js
+    timeout: 20
+    match: ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(app\.(show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(unite)?\.v1\.View\/(View|ViewProgress|RelatesFeed|AIRelateAsync)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$
+    body_required: true
+    binary_body: true
+    env:
+      argument: '{"displayUpList":"{{{displayUpList}}}","purifyComment":{{{purifyComment}}},"sponsorBlock":{{{sponsorBlock}}},"logLevel":"{{{logLevel}}}"}'
+      EGH_DEVICE_TYPE: iPhone
+mitm:
+  hostnames:
+    includes:
+    - app.bilibili.com
+    - api.bilibili.com
+    - app.biliapi.net
+    - api.biliapi.net
+    - grpc.bilibili.com
+    - grpc.biliapi.net
+    - api.live.bilibili.com
+    - www.bilibili.com
+    - line3-h5-mobile-api.biligame.com
+env_schema:
+  EGH_DEVICE_TYPE:
+    name: 设备类型
+    description: 默认 iPhone；iPad / Mac 请按实际设备切换。
+    default_value: iPhone
+    options:
+    - iPhone
+    - iPad
+    - Mac
