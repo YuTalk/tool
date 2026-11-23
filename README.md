@@ -21,6 +21,7 @@
 
 - [📦 文件说明](#-文件说明)
 - [🔗 直链](#-直链)
+- [⚡ 一键添加进软件](#-一键添加进软件)
 - [🚀 怎么用](#-怎么用)
 - [🔄 自动更新](#-自动更新)
 - [❓ 常见问题](#-常见问题)
@@ -105,6 +106,27 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 | 🗺️ GeoIP_CN | 1 | direct | 仅 QX 版 | [打开](https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/GeoIP_CN.list) |
 
 **GeoIP 库**（Egern 换库用，QX 不能用）：[GeoIpCN.mmdb](https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb)
+
+
+## ⚡ 一键添加进软件
+
+点下面表格里的链接，就会直接跳进 Egern / QX，问你要不要添加，点确认就加进去了，不用自己复制链接再粘贴。
+
+| 软件 | Egern | Quantumult X |
+| --- | --- | --- |
+| 🇨🇳 中国常用域名 | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FChina.yaml&policy=DIRECT) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FChina.list%2C%20tag%3DChina%2C%20force-policy%3Ddirect%22%5D%7D) |
+| 🔍 谷歌 / YouTube | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FGoogle.yaml&policy=%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FGoogle.list%2C%20tag%3DGoogle%2C%20force-policy%3D%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%22%5D%7D) |
+| 🚫 谷歌广告 / 统计 | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FGoogleAds.yaml&policy=REJECT) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FGoogleAds.list%2C%20tag%3DGoogleAds%2C%20force-policy%3Dreject%22%5D%7D) |
+| 🍎 苹果 / App Store | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FApple.yaml&policy=DIRECT) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FApple.list%2C%20tag%3DApple%2C%20force-policy%3Ddirect%22%5D%7D) |
+| 🪟 微软 / Outlook | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FMicrosoft.yaml&policy=%E5%BE%AE%E8%BD%AF%E6%9C%8D%E5%8A%A1) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FMicrosoft.list%2C%20tag%3DMicrosoft%2C%20force-policy%3D%E5%BE%AE%E8%BD%AF%E6%9C%8D%E5%8A%A1%22%5D%7D) |
+| 🌭 香肠派对 | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FSausageMan.yaml&policy=DIRECT) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FSausageMan.list%2C%20tag%3DSausageMan%2C%20force-policy%3Ddirect%22%5D%7D) |
+| 🤖 AI_Part | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FAI_Part.yaml&policy=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FAI_Part.list%2C%20tag%3DAI_Part%2C%20force-policy%3D%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%22%5D%7D) |
+| 🗺️ GeoIP_CN | 仅 QX 版 | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FGeoIP_CN.list%2C%20tag%3DGeoIP_CN%2C%20force-policy%3Ddirect%22%5D%7D) |
+
+> 注意：
+> - Egern 的一键添加是加到**分流**里，China 还要再单独加一次 **DNS 转发 → 国内**，那个不能一键加，得在设置里手动加。
+> - 点链接后软件会先弹出来让你确认，策略已经按上面表格填好了，确认就行。
+> - 如果点链接没反应，先确认 Egern / QX 已经装好了。
 
 ---
 
