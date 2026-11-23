@@ -1,7 +1,8 @@
-# 最后修改：2026-11-24 00:58
+# 最后修改：2026-11-24 01:01
 # 哔哩哔哩 · 纯净
 # 做法按经过验证的公开模块：推荐流过滤广告卡片、「我的」页 sections_v2、底部栏 tab 接口、视频页广告用 protobuf 脚本
 # 带开关：在 Egern 模块编辑页里，想关哪个功能就关哪个；去广告的 4 个（开屏、推荐、评论、空降）合成一个总开关
+# 注意：模块里没有不经过开关的拦截，关掉总开关广告就全回来
 # 用法：Egern > 工具 > 模块 > + > 粘贴 raw 链接
 # 注意：不要和别的哔哩哔哩模块同时开（比如 fmz200 的），两个都改同一批接口会打架，开关看起来就像没用
 name: 哔哩哔哩 · 纯净
@@ -47,19 +48,6 @@ compat_arguments_desc: '[去广告]总开关（开屏、推荐、评论、空降
 [我的]精简多余入口
 
 [动态]最常访问（显示/隐藏/自动）'
-rules:
-- domain:
-    match: api.biliapi.com
-    policy: REJECT
-- domain:
-    match: app.biliapi.com
-    policy: REJECT
-- domain:
-    match: api.biliapi.net
-    policy: REJECT
-- domain:
-    match: app.biliapi.net
-    policy: REJECT
 scriptings:
 - http_response:
     name: Bilibili AdBlock

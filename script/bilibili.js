@@ -98,8 +98,8 @@ if (url.indexOf('/x/v2/splash/') !== -1 && removeSplash) {
     walk(obj);
     body = JSON.stringify(obj);
   } catch (e) {}
-} else if (url.indexOf('vip/ads/materials') !== -1 || url.indexOf('resource/top/activity') !== -1 || url.indexOf('pgc/activity/deliver/material/receive') !== -1 || url.indexOf('v2/search/square') !== -1 || url.indexOf('x/v2/dm/ad') !== -1) {
-  // 广告接口：直接返回空，让广告加载不出来
+} else if (removeAds && (url.indexOf('vip/ads/materials') !== -1 || url.indexOf('resource/top/activity') !== -1 || url.indexOf('pgc/activity/deliver/material/receive') !== -1 || url.indexOf('v2/search/square') !== -1 || url.indexOf('x/v2/dm/ad') !== -1)) {
+  // 广告接口：直接返回空，让广告加载不出来；总开关关了就放行
   body = '{"code":-404,"message":"-404","ttl":1,"data":null}';
 }
 $done({body: body});
