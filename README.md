@@ -5,4 +5,4 @@ Egern rules for YuTalk000
 ## 文件说明
 
 - **中国IP库.mmdb**：中国 IPv4 GeoIP 数据库，Egern 用它判断 IP 是不是中国的（GEOIP CN），只含 IPv4。
-- **中国常用域名.yaml**：中国常用域名 684 条，Egern DNS 转发用，国内域名走国内 DNS。
+- **China.yaml**：中国常用域名 684 条，Egern DNS 转发用，国内域名走国内 DNS。
