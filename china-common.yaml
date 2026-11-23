@@ -3,687 +3,687 @@
 # 前面是应用/网站域名，后面是 CDN/后台/接口域名
 # 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
 domain_suffix_set:
-  - baidu.com  # 百度
-  - qq.com  # QQ
-  - weixin.com  # 微信
-  - wechat.com  # 微信
-  - weibo.com  # 微博
-  - weibo.cn  # 微博
-  - taobao.com  # 淘宝
-  - tmall.com  # 天猫
-  - jd.com  # 京东
-  - alipay.com  # 支付宝
-  - alibaba.com  # 阿里巴巴
-  - aliyun.com  # 阿里云
-  - 1688.com  # 1688批发
-  - xianyu.com  # 闲鱼
-  - pinduoduo.com  # 拼多多
-  - meituan.com  # 美团
-  - ele.me  # 饿了么
-  - zhihu.com  # 知乎
-  - bilibili.com  # 哔哩哔哩
-  - youku.com  # 优酷
-  - iqiyi.com  # 爱奇艺
-  - v.qq.com  # 应用
-  - mgtv.com  # 芒果TV
-  - douyin.com  # 抖音
-  - 12306.cn  # 12306火车票
-  - cctv.com  # 央视
-  - cntv.cn  # 应用
-  - sina.com.cn  # 新浪
-  - sina.cn  # 新浪
-  - sohu.com  # 搜狐
-  - ifeng.com  # 凤凰网
-  - 163.com  # 网易
-  - 126.com  # 网易邮箱
-  - yeah.net  # 应用
-  - hao123.com  # hao123导航
-  - amap.com  # 高德地图
-  - gaode.com  # 应用
-  - didi.com  # 滴滴
-  - people.com.cn  # 应用
-  - xinhuanet.com  # 新华网
-  - 10086.cn  # 应用
-  - 10010.com  # 中国联通
-  - 189.cn  # 应用
-  - netease.com  # 网易
-  - music.163.com  # 应用
-  - kugou.com  # 酷狗音乐
-  - qqmusic.qq.com  # 应用
-  - douban.com  # 豆瓣
-  - tianya.cn  # 应用
-  - csdn.net  # CSDN
-  - cnblogs.com  # 博客园
-  - github.com.cn  # GitHub中国
-  - gitee.com  # 应用
-  - oschina.net  # 开源中国
-  - qqmail.com  # QQ邮箱
-  - outlook.cn  # 应用
-  - weather.com.cn  # 中国天气网
-  - cma.cn  # 应用
-  - mi.com  # 小米
-  - xiaomi.com  # 小米
-  - huawei.com  # 华为
-  - honor.com  # 应用
-  - oppo.com  # OPPO
-  - vivo.com  # vivo
-  - oneplus.com  # 一加
-  - lenovo.com  # 应用
-  - mcdonalds.com.cn  # 应用
-  - kfc.com.cn  # 应用
-  - starbucks.com.cn  # 应用
-  - luckincoffee.com  # 应用
-  - heytea.com  # 应用
-  - haidilao.com  # 应用
-  - tencent.com  # 腾讯
-  - weiyun.com  # 微云
-  - alipay.cn  # 应用
-  - feishu.cn  # 应用
-  - wps.cn  # 应用
-  - wps.com  # 应用
-  - kingsoft.com  # 应用
-  - jinshan.com  # 应用
-  - xunlei.com  # 迅雷
-  - thunder.com  # 应用
-  - 2345.com  # 应用
-  - moji.com  # 墨迹天气
-  - qweather.com  # 应用
-  - heweather.com  # 应用
-  - kuaidi100.com  # 快递100
-  - sf-express.com  # 顺丰快递
-  - zto.com  # 应用
-  - yto.net.cn  # 应用
-  - yundaex.com  # 应用
-  - sto.cn  # 应用
-  - ems.com.cn  # 应用
-  - chinapost.com.cn  # 应用
-  - chinaunicom.cn  # 应用
-  - unicom.com  # 应用
-  - telecom.cn  # 应用
-  - chinamobile.com  # 应用
-  - cmcc.com  # 应用
-  - cctv.cn  # 应用
-  - cnr.cn  # 应用
-  - cri.cn  # 应用
-  - china.com  # 应用
-  - chinadaily.com.cn  # 应用
-  - huanqiu.com  # 应用
-  - thepaper.cn  # 应用
-  - guancha.cn  # 应用
-  - jiemian.com  # 应用
-  - baidubce.com  # 应用
-  - meituan.net  # 美团
-  - huochepiao.com  # 应用
-  - didiglobal.com  # 滴滴
-  - wechatpay.com  # 应用
-  - 10086.com  # 应用
-  - 12306.com  # 应用
-  - 126.net  # 应用
-  - 2345.cc  # 应用
-  - 2345.cn  # 应用
-  - acg.tv  # 应用
-  - baidu.com.cn  # 应用
-  - bdurl.net  # 应用
-  - bilibili.co  # 应用
-  - biligame.net  # 应用
-  - cc.163.com  # 应用
-  - china.com.cn  # 应用
-  - didi.cn  # 应用
-  - docs.qq.com  # 应用
-  - dpfile.com  # 应用
-  - enrichgw.10010.com  # 应用
-  - iesdouyin.com  # 应用
-  - map.baidu.com  # 应用
-  - meeting.tencent.com  # 应用
-  - nishub1.10010.com  # 应用
-  - open.e.189.cn  # 应用
-  - sina.com  # 应用
-  - tianya.net  # 应用
-  - tieba.baidu.com  # 应用
-  - tmall.hk  # 应用
-  - waimai.meituan.com  # 应用
-  - weather.com  # 应用
-  - xiaomi.net  # 应用
-  - xiaomicp.com  # 应用
-  - 115.com  # 应用
-  - 127.net  # 应用
-  - 13th.tech  # 应用
-  - 163yun.com  # 应用
-  - 17173.com  # 应用
-  - 178.com  # 应用
-  - 17k.com  # 应用
-  - 21cn.com  # 应用
-  - 360.com  # 应用
-  - 360buy.com  # 应用
-  - 360doc.com  # 应用
-  - 360kuai.com  # 应用
-  - 360safe.com  # 应用
-  - 36kr.com  # 应用
-  - 3dmgame.com  # 应用
-  - 423down.com  # 应用
-  - 4399.com  # 应用
-  - 4399pk.com  # 应用
-  - 5054399.com  # 应用
-  - 51cto.com  # 应用
-  - 51job.com  # 应用
-  - 56.com  # 应用
-  - 58.com  # 应用
-  - 71.am  # 应用
-  - 8686c.com  # 应用
-  - 95516.com  # 应用
-  - abchina.com  # 应用
-  - abercrombie.com  # 应用
-  - acfun.tv  # 应用
-  - air-matters.com  # 应用
-  - air-matters.io  # 应用
-  - aixifan.com  # 应用
-  - algocasts.io  # 应用
-  - aliapp.org  # 应用
-  - alibabachengdun.com  # 应用
-  - alibabausercontent.com  # 应用
-  - aliexpress.com  # 应用
-  - alikunlun.com  # 应用
-  - alipayobjects.com  # 应用
-  - alisoft.com  # 应用
-  - aliyuncs.com  # 应用
-  - aliyundrive.com  # 应用
-  - aliyundrive.net  # 应用
-  - allawnfs.com  # 应用
-  - allawno.com  # 应用
-  - allawntech.com  # 应用
-  - amemv.com  # 应用
-  - appvipshop.com  # 应用
-  - asklink.com  # 应用
-  - auth.wo.cn  # 应用
-  - auth.wosms.cn  # 应用
-  - autonavi.com  # 应用
-  - b23.tv  # 应用
-  - babytree.com  # 应用
-  - baicizhan.com  # 应用
-  - baidubcr.com  # 应用
-  - baidupan.com  # 应用
-  - baidupcs.com  # 应用
-  - baike.com  # 应用
-  - baomitu.com  # 应用
-  - bigfun.cn  # 应用
-  - bigfunapp.cn  # 应用
-  - biligame.com  # 应用
-  - biliintl.co  # 应用
-  - biqudu.com  # 应用
-  - biquge.com  # 应用
-  - bitauto.com  # 应用
-  - bokecc.com  # 应用
-  - bootcss.com  # 应用
-  - bytedance.com  # 应用
-  - bytedance.net  # 应用
-  - bytednsdoc.com  # 应用
-  - bytegoofy.com  # 应用
-  - bytescm.com  # 应用
-  - bytetos.com  # 应用
-  - bytexservice.com  # 应用
-  - c-ctrip.com  # 应用
-  - camera360.com  # 应用
-  - chaipip.com  # 应用
-  - chaoxing.com  # 应用
-  - che168.com  # 应用
-  - chinaplay.store  # 应用
-  - chinaso.com  # 应用
-  - chinaz.com  # 应用
-  - chinaz.net  # 应用
-  - cibntv.net  # 应用
-  - cm.steampowered.com  # 应用
-  - cmbchina.com  # 应用
-  - cmpassport.com  # 应用
-  - cn  # 应用
-  - cn163.net  # 应用
-  - cnki.net  # 应用
-  - cnmstl.net  # 应用
-  - coloros.com  # 应用
-  - config.cmpassport.com  # 应用
-  - coolapk.com  # 应用
-  - coolapkmarket.com  # 应用
-  - csgo.wmsj.cn  # 应用
-  - ctrip.com  # 携程
-  - dangdang.com  # 应用
-  - dfcfw.com  # 应用
-  - dhrest.com  # 应用
-  - dianping.com  # 应用
-  - didialift.com  # 应用
-  - dilidili.wang  # 应用
-  - dingtalk.com  # 应用
-  - dl.steam.clngaa.com  # 应用
-  - dl.steam.ksyna.com  # 应用
-  - dns.alidns.com  # 应用
-  - doh.360.cn  # 应用
-  - doh.pub  # 应用
-  - dota2.wmsj.cn  # 应用
-  - doubanio.com  # 应用
-  - douyu.com  # 应用
-  - douyu.tv  # 应用
-  - douyutv.com  # 应用
-  - duokan.com  # 应用
-  - duowan.com  # 应用
-  - dytt8.net  # 应用
-  - easou.com  # 应用
-  - eastday.com  # 应用
-  - eastmoney.com  # 应用
-  - ecitic.com  # 应用
-  - element-plus.org  # 应用
-  - ewqcxz.com  # 应用
-  - fang.com  # 应用
-  - fantasy.tv  # 应用
-  - feelgood.cn  # 应用
-  - feiliao.com  # 应用
-  - feng.com  # 应用
-  - fir.im  # 应用
-  - foxmail.com  # 应用
-  - frdic.com  # 应用
-  - fresh-ideas.cc  # 应用
-  - ganji.com  # 应用
-  - geetest.com  # 应用
-  - ghpym.com  # 应用
-  - gifshow.com  # 应用
-  - go2map.com  # 应用
-  - godic.net  # 应用
-  - got001.com  # 应用
-  - guazi.com  # 应用
-  - gwdang.com  # 应用
-  - gzlzfm.com  # 应用
-  - haibian.com  # 应用
-  - haosou.com  # 应用
-  - helpshift.com  # 应用
-  - heytap.com  # 应用
-  - heytapcs.com  # 应用
-  - heytapmobi.com  # 应用
-  - hichina.com  # 应用
-  - hihonor.com  # 应用
-  - hitv.com  # 应用
-  - hmrz.wo.cn  # 应用
-  - hollisterco.com  # 应用
-  - hongxiu.com  # 应用
-  - hrtsea.com  # 应用
-  - huajiao.com  # 应用
-  - huaweishop.net  # 应用
-  - hunantv.com  # 应用
-  - huoshan.com  # 应用
-  - huoshanzhibo.com  # 应用
-  - hupu.com  # 应用
-  - huya.com  # 应用
-  - hwccpc.com  # 应用
-  - ibytedapm.com  # 应用
-  - iciba.com  # 应用
-  - id.mail.wo.cn  # 应用
-  - id6.me  # 应用
-  - iflyink.com  # 应用
-  - iflyrec.com  # 应用
-  - iflytek.com  # 应用
-  - igamecj.com  # 应用
-  - im9.com  # 应用
-  - infzm.com  # 应用
-  - ipip.net  # 应用
-  - it168.com  # 应用
-  - ithome.com  # 应用
-  - ixdzs.com  # 应用
-  - ixigua.com  # 应用
-  - jd.hk  # 应用
-  - jdpay.com  # 应用
-  - jianguoyun.com  # 应用
-  - jianshu.com  # 应用
-  - jianshu.io  # 应用
-  - jiasule.com  # 应用
-  - jiathis.com  # 应用
-  - jomodns.com  # 应用
-  - jumei.com  # 应用
-  - kaikeba.com  # 应用
-  - kankan.com  # 应用
-  - kaola.com  # 应用
-  - knewone.com  # 应用
-  - koowo.com  # 应用
-  - koyso.com  # 应用
-  - ksosoft.com  # 应用
-  - kspkg.com  # 应用
-  - ksyun.com  # 应用
-  - ksyungslb.com  # 应用
-  - kuaishou.com  # 快手
-  - landiannews.com  # 应用
-  - lanzou.com  # 应用
-  - lanzoui.com  # 应用
-  - lanzoux.com  # 应用
-  - laomo.me  # 应用
-  - le.com  # 应用
-  - leju.com  # 应用
-  - lemicp.com  # 应用
-  - letitfly.me  # 应用
-  - letv.com  # 应用
-  - letvlive.com  # 应用
-  - letvstore.com  # 应用
-  - livechina.com  # 应用
-  - lizhi.fm  # 应用
-  - lizhi.io  # 应用
-  - lizhifm.com  # 应用
-  - lofter.com  # 应用
-  - log.cmpassport.com  # 应用
-  - log1.cmpassport.com  # 应用
-  - luoo.net  # 应用
-  - lvmama.com  # 应用
-  - lxdns.com  # 应用
-  - maoyan.com  # 应用
-  - mdn.open.wo.cn  # 应用
-  - meilishuo.com  # 应用
-  - meipai.com  # 应用
-  - meitu.com  # 应用
-  - meitudata.com  # 应用
-  - meitustat.com  # 应用
-  - meizu.com  # 应用
-  - miaopai.com  # 应用
-  - miui.com  # 应用
-  - mob.com  # 应用
-  - mobike.com  # 应用
-  - mogu.com  # 应用
-  - mogujie.com  # 应用
-  - moke.com  # 应用
-  - mpyit.com  # 应用
-  - msftconnecttest.com  # 应用
-  - msftncsi.com  # 应用
-  - mubu.com  # 应用
-  - mxhichina.com  # 应用
-  - myapp.com  # 应用
-  - myunlu.com  # 应用
-  - nruan.com  # 应用
-  - nuomi.com  # 应用
-  - onedns.net  # 应用
-  - onlinedown.net  # 应用
-  - oppoer.me  # 应用
-  - oppomobile.com  # 应用
-  - oracle.com  # 应用
-  - ourdvs.com  # 应用
-  - p4pfile.com  # 应用
-  - paipai.com  # 应用
-  - paragon.com  # 应用
-  - pdfwifi.com  # 应用
-  - playstation.com  # 应用
-  - playstation.net  # 应用
-  - playstationnetwork.com  # 应用
-  - polyv.net  # 应用
-  - pplive.com  # 应用
-  - pptv.com  # 应用
-  - qbox.me  # 应用
-  - qdaily.com  # 应用
-  - qdmm.com  # 应用
-  - qhres.com  # 应用
-  - qhupdate.com  # 应用
-  - qianqian.com  # 应用
-  - qidian.com  # 应用
-  - qin.io  # 应用
-  - qiniu.com  # 应用
-  - qiniudn.com  # 应用
-  - qiushibaike.com  # 应用
-  - qiyi.com  # 应用
-  - qqurl.com  # 应用
-  - quanmin.tv  # 应用
-  - qunar.com  # 应用
-  - qunarzz.com  # 应用
-  - qupu123.com  # 应用
-  - qwen.ai  # 应用
-  - qy.net  # 应用
-  - realme.com  # 应用
-  - repaik.com  # 应用
-  - rrys.tv  # 应用
-  - rrys2020.com  # 应用
-  - ruguoapp.com  # 应用
-  - runoob.com  # 应用
-  - sandai.net  # 应用
-  - sankuai.com  # 应用
-  - segmentfault.com  # 应用
-  - shumilou.net  # 应用
-  - simplecd.me  # 应用
-  - sinaapp.cn  # 应用
-  - sinaapp.com  # 应用
-  - smzdm.com  # 应用
-  - snapdrop.net  # 应用
-  - snssdk.com  # 应用
-  - snwx.com  # 应用
-  - so.com  # 应用
-  - sogo.com  # 应用
-  - sogou.com  # 应用
-  - sohu-inc.com  # 应用
-  - sohucs.com  # 应用
-  - sohuno.com  # 应用
-  - sohurdc.com  # 应用
-  - soku.com  # 应用
-  - sony.com  # 应用
-  - sonyentertainmentnetwork.com  # 应用
-  - soso.com  # 应用
-  - sspai.com  # 应用
-  - startssl.com  # 应用
-  - steamchina.com  # 应用
-  - steamcontent.com  # 应用
-  - steampipe.steamcontent.tnkjmec.com  # 应用
-  - steampowered.com.8686c.com  # 应用
-  - steamusercontent.com  # 应用
-  - suning.com  # 应用
-  - synology.com  # 应用
-  - taihe.com  # 应用
-  - teamviewer.com  # 应用
-  - tebex.io  # 应用
-  - tencentmind.com  # 应用
-  - tenpay.com  # 应用
-  - th-sjy.com  # 应用
-  - tianqi.com  # 应用
-  - tianyancha.com  # 应用
-  - tianyaui.com  # 应用
-  - tietuku.com  # 应用
-  - tiexue.net  # 应用
-  - tmiaoo.com  # 应用
-  - toutiao.com  # 应用
-  - toutiao13.com  # 应用
-  - toutiaohao.com  # 应用
-  - toutiaohao.net  # 应用
-  - toutiaopage.com  # 应用
-  - trip.com  # 应用
-  - ttmeiju.com  # 应用
-  - tudou.com  # 应用
-  - tuniu.com  # 应用
-  - ucweb.com  # 应用
-  - udache.com  # 应用
-  - unrealengine.com  # 应用
-  - upaiyun.com  # 应用
-  - upyun.com  # 应用
-  - uxengine.net  # 应用
-  - v-56.com  # 应用
-  - vip.com  # 应用
-  - vmall.com  # 应用
-  - vmallres.com  # 应用
-  - wandoujia.com  # 应用
-  - weico.cc  # 应用
-  - weidian.com  # 应用
-  - weiphone.com  # 应用
-  - weiphone.net  # 应用
-  - wmsjsteam.com  # 应用
-  - womai.com  # 应用
-  - wukong.com  # 应用
-  - xdrig.com  # 应用
-  - xiachufang.com  # 应用
-  - xiami.com  # 应用
-  - xiami.net  # 应用
-  - xiaohongshu.com  # 应用
-  - xiaojukeji.com  # 应用
-  - xiaoka.tv  # 应用
-  - ximalaya.com  # 应用
-  - xip.io  # 应用
-  - xitek.com  # 应用
-  - xiumi.us  # 应用
-  - xn--55qx5d  # 应用
-  - xn--fiqs8s  # 应用
-  - xn--io0a7i  # 应用
-  - xslb.net  # 应用
-  - xueqiu.com  # 应用
-  - xz.pphimalayanrt.com  # 应用
-  - yach.me  # 应用
-  - yangkeduo.com  # 应用
-  - ye.dun.163yun.com  # 应用
-  - yeepay.com  # 应用
-  - yhd.com  # 应用
-  - yinxiang.com  # 应用
-  - yinyuetai.com  # 应用
-  - yixia.com  # 应用
-  - youdao.com  # 应用
-  - ys168.com  # 应用
-  - yuewen.com  # 应用
-  - yy.com  # 应用
-  - yyets.com  # 应用
-  - zealer.com  # 应用
-  - zhangzishi.cc  # 应用
-  - zhanqi.tv  # 应用
-  - zhaopin.com  # 应用
-  - zhenguanyu.biz  # 应用
-  - zhenguanyu.com  # 应用
-  - zhipin.com  # 应用
-  - zhongsou.com  # 应用
-  - zhuihd.com  # 应用
-  - zimuzu.io  # 应用
-  - zimuzu.tv  # 应用
-  - zjbyte.com  # 应用
-  - zmz001.com  # 应用
-  - zmz002.com  # 应用
-  - zmz003.com  # 应用
-  - zmz004.com  # 应用
-  - zmz2019.com  # 应用
-  - zmzfile.com  # 应用
-  - alicdn.com  # 阿里CDN
-  - qlogo.cn  # QQ头像
-  - tencentcloud.com  # CDN/后台
-  - 360buyimg.com  # CDN/后台
-  - alicloudccp.com  # CDN/后台
-  - aliimg.com  # CDN/后台
-  - aliyuncdn.com  # CDN/后台
-  - baidustatic.com  # CDN/后台
-  - bcebos.com  # CDN/后台
-  - biliapi.com  # CDN/后台
-  - biliapi.net  # CDN/后台
-  - bilivideo.com  # CDN/后台
-  - byted-static.com  # CDN/后台
-  - bytedns.net  # CDN/后台
-  - byteimg.com  # CDN/后台
-  - cloud.tencent.com  # CDN/后台
-  - douyincdn.com  # CDN/后台
-  - douyinpic.com  # CDN/后台
-  - douyinstatic.com  # CDN/后台
-  - douyinvod.com  # CDN/后台
-  - elemecdn.com  # CDN/后台
-  - gtimg.com  # CDN/后台
-  - hao123img.com  # CDN/后台
-  - hc-cdn.com  # CDN/后台
-  - hdslb.com  # CDN/后台
-  - hicloud.com  # CDN/后台
-  - idqqimg.com  # CDN/后台
-  - mi-img.com  # CDN/后台
-  - mmstat.com  # CDN/后台
-  - pstatp.com  # CDN/后台
-  - sinaimg.cn  # CDN/后台
-  - smtcdns.com  # CDN/后台
-  - smtcdns.net  # CDN/后台
-  - tbcdn.cn  # CDN/后台
-  - toutiaocdn.com  # CDN/后台
-  - weibocdn.cn  # CDN/后台
-  - zhimg.com  # CDN/后台
-  - 00cdn.com  # CDN/后台
-  - 51jobcdn.com  # CDN/后台
-  - 71edge.com  # CDN/后台
-  - 88cdn.com  # CDN/后台
-  - acgvideo.com  # CDN/后台
-  - alibabacloud.com  # CDN/后台
-  - appsimg.com  # CDN/后台
-  - babytreeimg.com  # CDN/后台
-  - bdimg.com  # CDN/后台
-  - bdstatic.com  # CDN/后台
-  - bdxiguaimg.com  # CDN/后台
-  - bdxiguastatic.com  # CDN/后台
-  - bilivideo.cn  # CDN/后台
-  - bosszhipin.com  # CDN/后台
-  - bytefcdnrd.com  # CDN/后台
-  - cctvpic.com  # CDN/后台
-  - cdnmama.com  # CDN/后台
-  - chinacache.net  # CDN/后台
-  - chuimg.com  # CDN/后台
-  - clouddn.com  # CDN/后台
-  - cloudxns.net  # CDN/后台
-  - dbankcdn.com  # CDN/后台
-  - douyucdn.cn  # CDN/后台
-  - douyuscdn.com  # CDN/后台
-  - dxycdn.com  # CDN/后台
-  - edgesrv.com  # CDN/后台
-  - epicgames.com  # CDN/后台
-  - epicgames.dev  # CDN/后台
-  - fengkongcloud.com  # CDN/后台
-  - ganjistatic1.com  # CDN/后台
-  - geilicdn.com  # CDN/后台
-  - heytapdownload.com  # CDN/后台
-  - heytapimage.com  # CDN/后台
-  - huaweicloud.com  # CDN/后台
-  - huxiucdn.com  # CDN/后台
-  - ifengimg.com  # CDN/后台
-  - images-amazon.com  # CDN/后台
-  - img4399.com  # CDN/后台
-  - iqiyipic.com  # CDN/后台
-  - jcloudcs.com  # CDN/后台
-  - jdcloud.com  # CDN/后台
-  - jianshuapi.com  # CDN/后台
-  - jmstatic.com  # CDN/后台
-  - kanimg.com  # CDN/后台
-  - lancdns.com  # CDN/后台
-  - lecloud.com  # CDN/后台
-  - letvcloud.com  # CDN/后台
-  - letvimg.com  # CDN/后台
-  - migucloud.com  # CDN/后台
-  - miguvideo.com  # CDN/后台
-  - mogucdn.com  # CDN/后台
-  - msstatic.com  # CDN/后台
-  - myqcloud.com  # CDN/后台
-  - opencloud.wostore.cn  # CDN/后台
-  - p2cdn.com  # CDN/后台
-  - ppsimg.com  # CDN/后台
-  - qcloud.com  # CDN/后台
-  - qcloudcdn.com  # CDN/后台
-  - qhimg.com  # CDN/后台
-  - qhstatic.com  # CDN/后台
-  - qihucdn.com  # CDN/后台
-  - qiniucdn.com  # CDN/后台
-  - qiyipic.com  # CDN/后台
-  - sinaimg.com  # CDN/后台
-  - sogoucdn.com  # CDN/后台
-  - soufunimg.com  # CDN/后台
-  - st.dl.bscstorage.net  # CDN/后台
-  - st.dl.eccdnx.com  # CDN/后台
-  - st.dl.pinyuncloud.com  # CDN/后台
-  - staticfile.org  # CDN/后台
-  - steamstatic.com.8686c.com  # CDN/后台
-  - taobaocdn.com  # CDN/后台
-  - tbcache.com  # CDN/后台
-  - tbcdn.com  # CDN/后台
-  - tencent-cloud.net  # CDN/后台
-  - thundercdn.com  # CDN/后台
-  - tianqistatic.com  # CDN/后台
-  - toutiaoapi.com  # CDN/后台
-  - toutiaocdn.net  # CDN/后台
-  - toutiaocloud.com  # CDN/后台
-  - toutiaoimg.com  # CDN/后台
-  - tuniucdn.com  # CDN/后台
-  - umengcloud.com  # CDN/后台
-  - videocc.net  # CDN/后台
-  - vipstatic.com  # CDN/后台
-  - weibocdn.com  # CDN/后台
-  - wscdns.com  # CDN/后台
-  - xhscdn.com  # CDN/后台
-  - xmcdn.com  # CDN/后台
-  - ydstatic.com  # CDN/后台
-  - yihaodianimg.com  # CDN/后台
-  - ykimg.com  # CDN/后台
-  - yunjiasu-cdn.net  # CDN/后台
-  - yximgs.com  # CDN/后台
-  - yystatic.com  # CDN/后台
-  - zijieapi.com  # CDN/后台
-  - zijieimg.com  # CDN/后台
-  - zjcdn.com  # CDN/后台
-  - zmzapi.com  # CDN/后台
-  - zmzapi.net  # CDN/后台
+  - baidu.com
+  - qq.com
+  - weixin.com
+  - wechat.com
+  - weibo.com
+  - weibo.cn
+  - taobao.com
+  - tmall.com
+  - jd.com
+  - alipay.com
+  - alibaba.com
+  - aliyun.com
+  - 1688.com
+  - xianyu.com
+  - pinduoduo.com
+  - meituan.com
+  - ele.me
+  - zhihu.com
+  - bilibili.com
+  - youku.com
+  - iqiyi.com
+  - v.qq.com
+  - mgtv.com
+  - douyin.com
+  - 12306.cn
+  - cctv.com
+  - cntv.cn
+  - sina.com.cn
+  - sina.cn
+  - sohu.com
+  - ifeng.com
+  - 163.com
+  - 126.com
+  - yeah.net
+  - hao123.com
+  - amap.com
+  - gaode.com
+  - didi.com
+  - people.com.cn
+  - xinhuanet.com
+  - 10086.cn
+  - 10010.com
+  - 189.cn
+  - netease.com
+  - music.163.com
+  - kugou.com
+  - qqmusic.qq.com
+  - douban.com
+  - tianya.cn
+  - csdn.net
+  - cnblogs.com
+  - github.com.cn
+  - gitee.com
+  - oschina.net
+  - qqmail.com
+  - outlook.cn
+  - weather.com.cn
+  - cma.cn
+  - mi.com
+  - xiaomi.com
+  - huawei.com
+  - honor.com
+  - oppo.com
+  - vivo.com
+  - oneplus.com
+  - lenovo.com
+  - mcdonalds.com.cn
+  - kfc.com.cn
+  - starbucks.com.cn
+  - luckincoffee.com
+  - heytea.com
+  - haidilao.com
+  - tencent.com
+  - weiyun.com
+  - alipay.cn
+  - feishu.cn
+  - wps.cn
+  - wps.com
+  - kingsoft.com
+  - jinshan.com
+  - xunlei.com
+  - thunder.com
+  - 2345.com
+  - moji.com
+  - qweather.com
+  - heweather.com
+  - kuaidi100.com
+  - sf-express.com
+  - zto.com
+  - yto.net.cn
+  - yundaex.com
+  - sto.cn
+  - ems.com.cn
+  - chinapost.com.cn
+  - chinaunicom.cn
+  - unicom.com
+  - telecom.cn
+  - chinamobile.com
+  - cmcc.com
+  - cctv.cn
+  - cnr.cn
+  - cri.cn
+  - china.com
+  - chinadaily.com.cn
+  - huanqiu.com
+  - thepaper.cn
+  - guancha.cn
+  - jiemian.com
+  - baidubce.com
+  - meituan.net
+  - huochepiao.com
+  - didiglobal.com
+  - wechatpay.com
+  - 10086.com
+  - 12306.com
+  - 126.net
+  - 2345.cc
+  - 2345.cn
+  - acg.tv
+  - baidu.com.cn
+  - bdurl.net
+  - bilibili.co
+  - biligame.net
+  - cc.163.com
+  - china.com.cn
+  - didi.cn
+  - docs.qq.com
+  - dpfile.com
+  - enrichgw.10010.com
+  - iesdouyin.com
+  - map.baidu.com
+  - meeting.tencent.com
+  - nishub1.10010.com
+  - open.e.189.cn
+  - sina.com
+  - tianya.net
+  - tieba.baidu.com
+  - tmall.hk
+  - waimai.meituan.com
+  - weather.com
+  - xiaomi.net
+  - xiaomicp.com
+  - 115.com
+  - 127.net
+  - 13th.tech
+  - 163yun.com
+  - 17173.com
+  - 178.com
+  - 17k.com
+  - 21cn.com
+  - 360.com
+  - 360buy.com
+  - 360doc.com
+  - 360kuai.com
+  - 360safe.com
+  - 36kr.com
+  - 3dmgame.com
+  - 423down.com
+  - 4399.com
+  - 4399pk.com
+  - 5054399.com
+  - 51cto.com
+  - 51job.com
+  - 56.com
+  - 58.com
+  - 71.am
+  - 8686c.com
+  - 95516.com
+  - abchina.com
+  - abercrombie.com
+  - acfun.tv
+  - air-matters.com
+  - air-matters.io
+  - aixifan.com
+  - algocasts.io
+  - aliapp.org
+  - alibabachengdun.com
+  - alibabausercontent.com
+  - aliexpress.com
+  - alikunlun.com
+  - alipayobjects.com
+  - alisoft.com
+  - aliyuncs.com
+  - aliyundrive.com
+  - aliyundrive.net
+  - allawnfs.com
+  - allawno.com
+  - allawntech.com
+  - amemv.com
+  - appvipshop.com
+  - asklink.com
+  - auth.wo.cn
+  - auth.wosms.cn
+  - autonavi.com
+  - b23.tv
+  - babytree.com
+  - baicizhan.com
+  - baidubcr.com
+  - baidupan.com
+  - baidupcs.com
+  - baike.com
+  - baomitu.com
+  - bigfun.cn
+  - bigfunapp.cn
+  - biligame.com
+  - biliintl.co
+  - biqudu.com
+  - biquge.com
+  - bitauto.com
+  - bokecc.com
+  - bootcss.com
+  - bytedance.com
+  - bytedance.net
+  - bytednsdoc.com
+  - bytegoofy.com
+  - bytescm.com
+  - bytetos.com
+  - bytexservice.com
+  - c-ctrip.com
+  - camera360.com
+  - chaipip.com
+  - chaoxing.com
+  - che168.com
+  - chinaplay.store
+  - chinaso.com
+  - chinaz.com
+  - chinaz.net
+  - cibntv.net
+  - cm.steampowered.com
+  - cmbchina.com
+  - cmpassport.com
+  - cn
+  - cn163.net
+  - cnki.net
+  - cnmstl.net
+  - coloros.com
+  - config.cmpassport.com
+  - coolapk.com
+  - coolapkmarket.com
+  - csgo.wmsj.cn
+  - ctrip.com
+  - dangdang.com
+  - dfcfw.com
+  - dhrest.com
+  - dianping.com
+  - didialift.com
+  - dilidili.wang
+  - dingtalk.com
+  - dl.steam.clngaa.com
+  - dl.steam.ksyna.com
+  - dns.alidns.com
+  - doh.360.cn
+  - doh.pub
+  - dota2.wmsj.cn
+  - doubanio.com
+  - douyu.com
+  - douyu.tv
+  - douyutv.com
+  - duokan.com
+  - duowan.com
+  - dytt8.net
+  - easou.com
+  - eastday.com
+  - eastmoney.com
+  - ecitic.com
+  - element-plus.org
+  - ewqcxz.com
+  - fang.com
+  - fantasy.tv
+  - feelgood.cn
+  - feiliao.com
+  - feng.com
+  - fir.im
+  - foxmail.com
+  - frdic.com
+  - fresh-ideas.cc
+  - ganji.com
+  - geetest.com
+  - ghpym.com
+  - gifshow.com
+  - go2map.com
+  - godic.net
+  - got001.com
+  - guazi.com
+  - gwdang.com
+  - gzlzfm.com
+  - haibian.com
+  - haosou.com
+  - helpshift.com
+  - heytap.com
+  - heytapcs.com
+  - heytapmobi.com
+  - hichina.com
+  - hihonor.com
+  - hitv.com
+  - hmrz.wo.cn
+  - hollisterco.com
+  - hongxiu.com
+  - hrtsea.com
+  - huajiao.com
+  - huaweishop.net
+  - hunantv.com
+  - huoshan.com
+  - huoshanzhibo.com
+  - hupu.com
+  - huya.com
+  - hwccpc.com
+  - ibytedapm.com
+  - iciba.com
+  - id.mail.wo.cn
+  - id6.me
+  - iflyink.com
+  - iflyrec.com
+  - iflytek.com
+  - igamecj.com
+  - im9.com
+  - infzm.com
+  - ipip.net
+  - it168.com
+  - ithome.com
+  - ixdzs.com
+  - ixigua.com
+  - jd.hk
+  - jdpay.com
+  - jianguoyun.com
+  - jianshu.com
+  - jianshu.io
+  - jiasule.com
+  - jiathis.com
+  - jomodns.com
+  - jumei.com
+  - kaikeba.com
+  - kankan.com
+  - kaola.com
+  - knewone.com
+  - koowo.com
+  - koyso.com
+  - ksosoft.com
+  - kspkg.com
+  - ksyun.com
+  - ksyungslb.com
+  - kuaishou.com
+  - landiannews.com
+  - lanzou.com
+  - lanzoui.com
+  - lanzoux.com
+  - laomo.me
+  - le.com
+  - leju.com
+  - lemicp.com
+  - letitfly.me
+  - letv.com
+  - letvlive.com
+  - letvstore.com
+  - livechina.com
+  - lizhi.fm
+  - lizhi.io
+  - lizhifm.com
+  - lofter.com
+  - log.cmpassport.com
+  - log1.cmpassport.com
+  - luoo.net
+  - lvmama.com
+  - lxdns.com
+  - maoyan.com
+  - mdn.open.wo.cn
+  - meilishuo.com
+  - meipai.com
+  - meitu.com
+  - meitudata.com
+  - meitustat.com
+  - meizu.com
+  - miaopai.com
+  - miui.com
+  - mob.com
+  - mobike.com
+  - mogu.com
+  - mogujie.com
+  - moke.com
+  - mpyit.com
+  - msftconnecttest.com
+  - msftncsi.com
+  - mubu.com
+  - mxhichina.com
+  - myapp.com
+  - myunlu.com
+  - nruan.com
+  - nuomi.com
+  - onedns.net
+  - onlinedown.net
+  - oppoer.me
+  - oppomobile.com
+  - oracle.com
+  - ourdvs.com
+  - p4pfile.com
+  - paipai.com
+  - paragon.com
+  - pdfwifi.com
+  - playstation.com
+  - playstation.net
+  - playstationnetwork.com
+  - polyv.net
+  - pplive.com
+  - pptv.com
+  - qbox.me
+  - qdaily.com
+  - qdmm.com
+  - qhres.com
+  - qhupdate.com
+  - qianqian.com
+  - qidian.com
+  - qin.io
+  - qiniu.com
+  - qiniudn.com
+  - qiushibaike.com
+  - qiyi.com
+  - qqurl.com
+  - quanmin.tv
+  - qunar.com
+  - qunarzz.com
+  - qupu123.com
+  - qwen.ai
+  - qy.net
+  - realme.com
+  - repaik.com
+  - rrys.tv
+  - rrys2020.com
+  - ruguoapp.com
+  - runoob.com
+  - sandai.net
+  - sankuai.com
+  - segmentfault.com
+  - shumilou.net
+  - simplecd.me
+  - sinaapp.cn
+  - sinaapp.com
+  - smzdm.com
+  - snapdrop.net
+  - snssdk.com
+  - snwx.com
+  - so.com
+  - sogo.com
+  - sogou.com
+  - sohu-inc.com
+  - sohucs.com
+  - sohuno.com
+  - sohurdc.com
+  - soku.com
+  - sony.com
+  - sonyentertainmentnetwork.com
+  - soso.com
+  - sspai.com
+  - startssl.com
+  - steamchina.com
+  - steamcontent.com
+  - steampipe.steamcontent.tnkjmec.com
+  - steampowered.com.8686c.com
+  - steamusercontent.com
+  - suning.com
+  - synology.com
+  - taihe.com
+  - teamviewer.com
+  - tebex.io
+  - tencentmind.com
+  - tenpay.com
+  - th-sjy.com
+  - tianqi.com
+  - tianyancha.com
+  - tianyaui.com
+  - tietuku.com
+  - tiexue.net
+  - tmiaoo.com
+  - toutiao.com
+  - toutiao13.com
+  - toutiaohao.com
+  - toutiaohao.net
+  - toutiaopage.com
+  - trip.com
+  - ttmeiju.com
+  - tudou.com
+  - tuniu.com
+  - ucweb.com
+  - udache.com
+  - unrealengine.com
+  - upaiyun.com
+  - upyun.com
+  - uxengine.net
+  - v-56.com
+  - vip.com
+  - vmall.com
+  - vmallres.com
+  - wandoujia.com
+  - weico.cc
+  - weidian.com
+  - weiphone.com
+  - weiphone.net
+  - wmsjsteam.com
+  - womai.com
+  - wukong.com
+  - xdrig.com
+  - xiachufang.com
+  - xiami.com
+  - xiami.net
+  - xiaohongshu.com
+  - xiaojukeji.com
+  - xiaoka.tv
+  - ximalaya.com
+  - xip.io
+  - xitek.com
+  - xiumi.us
+  - xn--55qx5d
+  - xn--fiqs8s
+  - xn--io0a7i
+  - xslb.net
+  - xueqiu.com
+  - xz.pphimalayanrt.com
+  - yach.me
+  - yangkeduo.com
+  - ye.dun.163yun.com
+  - yeepay.com
+  - yhd.com
+  - yinxiang.com
+  - yinyuetai.com
+  - yixia.com
+  - youdao.com
+  - ys168.com
+  - yuewen.com
+  - yy.com
+  - yyets.com
+  - zealer.com
+  - zhangzishi.cc
+  - zhanqi.tv
+  - zhaopin.com
+  - zhenguanyu.biz
+  - zhenguanyu.com
+  - zhipin.com
+  - zhongsou.com
+  - zhuihd.com
+  - zimuzu.io
+  - zimuzu.tv
+  - zjbyte.com
+  - zmz001.com
+  - zmz002.com
+  - zmz003.com
+  - zmz004.com
+  - zmz2019.com
+  - zmzfile.com
+  - alicdn.com
+  - qlogo.cn
+  - tencentcloud.com
+  - 360buyimg.com
+  - alicloudccp.com
+  - aliimg.com
+  - aliyuncdn.com
+  - baidustatic.com
+  - bcebos.com
+  - biliapi.com
+  - biliapi.net
+  - bilivideo.com
+  - byted-static.com
+  - bytedns.net
+  - byteimg.com
+  - cloud.tencent.com
+  - douyincdn.com
+  - douyinpic.com
+  - douyinstatic.com
+  - douyinvod.com
+  - elemecdn.com
+  - gtimg.com
+  - hao123img.com
+  - hc-cdn.com
+  - hdslb.com
+  - hicloud.com
+  - idqqimg.com
+  - mi-img.com
+  - mmstat.com
+  - pstatp.com
+  - sinaimg.cn
+  - smtcdns.com
+  - smtcdns.net
+  - tbcdn.cn
+  - toutiaocdn.com
+  - weibocdn.cn
+  - zhimg.com
+  - 00cdn.com
+  - 51jobcdn.com
+  - 71edge.com
+  - 88cdn.com
+  - acgvideo.com
+  - alibabacloud.com
+  - appsimg.com
+  - babytreeimg.com
+  - bdimg.com
+  - bdstatic.com
+  - bdxiguaimg.com
+  - bdxiguastatic.com
+  - bilivideo.cn
+  - bosszhipin.com
+  - bytefcdnrd.com
+  - cctvpic.com
+  - cdnmama.com
+  - chinacache.net
+  - chuimg.com
+  - clouddn.com
+  - cloudxns.net
+  - dbankcdn.com
+  - douyucdn.cn
+  - douyuscdn.com
+  - dxycdn.com
+  - edgesrv.com
+  - epicgames.com
+  - epicgames.dev
+  - fengkongcloud.com
+  - ganjistatic1.com
+  - geilicdn.com
+  - heytapdownload.com
+  - heytapimage.com
+  - huaweicloud.com
+  - huxiucdn.com
+  - ifengimg.com
+  - images-amazon.com
+  - img4399.com
+  - iqiyipic.com
+  - jcloudcs.com
+  - jdcloud.com
+  - jianshuapi.com
+  - jmstatic.com
+  - kanimg.com
+  - lancdns.com
+  - lecloud.com
+  - letvcloud.com
+  - letvimg.com
+  - migucloud.com
+  - miguvideo.com
+  - mogucdn.com
+  - msstatic.com
+  - myqcloud.com
+  - opencloud.wostore.cn
+  - p2cdn.com
+  - ppsimg.com
+  - qcloud.com
+  - qcloudcdn.com
+  - qhimg.com
+  - qhstatic.com
+  - qihucdn.com
+  - qiniucdn.com
+  - qiyipic.com
+  - sinaimg.com
+  - sogoucdn.com
+  - soufunimg.com
+  - st.dl.bscstorage.net
+  - st.dl.eccdnx.com
+  - st.dl.pinyuncloud.com
+  - staticfile.org
+  - steamstatic.com.8686c.com
+  - taobaocdn.com
+  - tbcache.com
+  - tbcdn.com
+  - tencent-cloud.net
+  - thundercdn.com
+  - tianqistatic.com
+  - toutiaoapi.com
+  - toutiaocdn.net
+  - toutiaocloud.com
+  - toutiaoimg.com
+  - tuniucdn.com
+  - umengcloud.com
+  - videocc.net
+  - vipstatic.com
+  - weibocdn.com
+  - wscdns.com
+  - xhscdn.com
+  - xmcdn.com
+  - ydstatic.com
+  - yihaodianimg.com
+  - ykimg.com
+  - yunjiasu-cdn.net
+  - yximgs.com
+  - yystatic.com
+  - zijieapi.com
+  - zijieimg.com
+  - zjcdn.com
+  - zmzapi.com
+  - zmzapi.net
