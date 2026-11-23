@@ -4,7 +4,7 @@
 
 > 中国常用域名与中国 IPv4 地址库，让国内流量走国内、走直连，更快、更省电。
 
-![更新](https://img.shields.io/badge/自动更新-每%203%20小时-blue?style=flat-square)
+![更新](https://img.shields.io/badge/自动更新-每%204%20小时-blue?style=flat-square)
 ![IPv4](https://img.shields.io/badge/GeoIP-IPv4-orange?style=flat-square)
 ![License](https://img.shields.io/badge/开源-MIT-lightgrey?style=flat-square)
 
@@ -12,18 +12,20 @@
 
 ## 📦 文件说明
 
-| 文件 | 内容 | 大小 | 用途 |
-| --- | --- | --- | --- |
-| **China.yaml** | 中国常用域名 **690 条** | 约 11 KB | DNS 分流 / 规则集，国内域名走国内 DNS |
-| **GeoIpCN.mmdb** | 中国 IPv4 地址库 **6,575 条 CIDR** | 约 132 KB | GEOIP CN 判断，国内 IP 走直连 |
+### 🌐 规则集（Egern 和 QX 各一份，内容一致）
 
-### 🌐 China.yaml（690 条）
+| 规则 | Egern 版 | QX 版 | 条数 | QX 策略 |
+| --- | --- | --- | --- | --- |
+| 中国常用域名 | `rules/egern/China.yaml` | `rules/quantumultx/China.list` | 690 | direct |
+| 谷歌 / YouTube | `rules/egern/Google.yaml` | `rules/quantumultx/Google.list` | 24 | 谷歌服务 |
+| 谷歌广告 / 统计 | `rules/egern/GoogleAds.yaml` | `rules/quantumultx/GoogleAds.list` | 20 | reject |
+| 苹果 / App Store | `rules/egern/Apple.yaml` | `rules/quantumultx/Apple.list` | 20 | direct |
+| 微软 / Outlook | `rules/egern/Microsoft.yaml` | `rules/quantumultx/Microsoft.list` | 17 | 微软服务 |
+| 香肠派对 | `rules/egern/SausageMan.yaml` | `rules/quantumultx/SausageMan.list` | 16 | direct |
 
-分两段，第一段是应用 / 网站域名 **553 条**，第二段是 CDN / 后台 / 接口域名 **137 条**。
+China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段是 CDN / 后台 / 接口域名 **137 条**，覆盖微信、QQ、淘宝、京东、拼多多、美团、饿了么、抖音、哔哩哔哩、爱奇艺、优酷、知乎、微博、百度、阿里、12306、银行、运营商、政府、快递……还有红果短剧、豆包、DeepSeek、Kimi、腾讯元宝、即梦 AI、剪映、夸克等热门应用。
 
-覆盖：微信、QQ、淘宝、京东、拼多多、美团、饿了么、抖音、哔哩哔哩、爱奇艺、优酷、知乎、微博、百度、阿里、12306、银行、运营商、政府、快递……还有红果短剧、豆包、DeepSeek、Kimi、腾讯元宝、即梦 AI、剪映、夸克等热门应用。
-
-### 🗺️ GeoIpCN.mmdb（6,575 条 CIDR）
+### 🗺️ GeoIpCN.mmdb（6,575 条 CIDR，约 132KB）
 
 只含中国 IPv4，共覆盖 **357,426,983 个地址**，约 132KB。
 
@@ -49,6 +51,12 @@
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/China.yaml
 ```
 
+QX 用这个：
+
+```text
+https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/China.list
+```
+
 ### 2️⃣ GeoIpCN.mmdb：换 GeoIP 库
 
 在支持自定义 GeoIP 库的代理工具里，把 GeoIP 数据库换成这个链接：
@@ -70,13 +78,59 @@ GEOIP CN → DIRECT（倒数第二条）
 
 ## 🔗 直链（复制即用）
 
+Egern 版：
+
 ```text
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/China.yaml
 ```
 
 ```text
+https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/Google.yaml
+```
+
+```text
+https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/GoogleAds.yaml
+```
+
+```text
+https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/Apple.yaml
+```
+
+```text
+https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/Microsoft.yaml
+```
+
+```text
+https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/SausageMan.yaml
+```
+
+QX 版：
+
+```text
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/China.list
 ```
+
+```text
+https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/Google.list
+```
+
+```text
+https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/GoogleAds.list
+```
+
+```text
+https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/Apple.list
+```
+
+```text
+https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/Microsoft.list
+```
+
+```text
+https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/SausageMan.list
+```
+
+GeoIP 库：
 
 ```text
 https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
@@ -88,10 +142,9 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 
 | 任务 | 频率 |
 | --- | --- |
-| China.yaml（域名） | 每 3 小时检查，失效的删、新的热门应用先问再加 |
-| GeoIpCN.mmdb（IP 库） | 每 3 小时多来源重建，有变化才更新 |
+| 仓库检查（全部规则 + GeoIP 库 + README） | 每 4 小时，凌晨 0:00、4:00、8:00…… |
 
-文件名和链接固定不变，只更新内容。
+文件名和链接固定不变，只更新内容。新增域名要经过主人同意才加，失效的直接删。
 
 ---
 
