@@ -47,7 +47,7 @@
 ```
 设置 > DNS > DNS 转发 > +
 类型：proxy_rule_set
-匹配：https://raw.githubusercontent.com/YuTalk000/egern/main/China.yaml
+匹配：https://raw.githubusercontent.com/YuTalk/egern/main/China.yaml
 策略：国内
 ```
 
@@ -57,7 +57,7 @@
 
 ```
 设置 > 分流 > GeoIP 数据库
-链接：https://raw.githubusercontent.com/YuTalk000/egern/main/GeoIpCN.mmdb
+链接：https://raw.githubusercontent.com/YuTalk/egern/main/GeoIpCN.mmdb
 ```
 
 ### 3️⃣ 分流里留一条 GEOIP CN → DIRECT
@@ -74,11 +74,11 @@ GEOIP CN → DIRECT（倒数第二条）
 ## 🔗 直链（复制即用）
 
 ```text
-https://raw.githubusercontent.com/YuTalk000/egern/main/China.yaml
+https://raw.githubusercontent.com/YuTalk/egern/main/China.yaml
 ```
 
 ```text
-https://raw.githubusercontent.com/YuTalk000/egern/main/GeoIpCN.mmdb
+https://raw.githubusercontent.com/YuTalk/egern/main/GeoIpCN.mmdb
 ```
 
 ---
