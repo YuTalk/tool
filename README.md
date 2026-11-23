@@ -13,7 +13,8 @@
 | 项目 | 数量 |
 | --- | --- |
 | 规则集 | 8 个（Egern 和 QX 各一份，内容一致） |
-| 模块 | 2 个（哔哩哔哩去广告、Spotify 会员，Egern 和 QX 各一份） |
+| 模块 | 2 个（哔哩哔哩 · 纯净、Spotify 会员，Egern 和 QX 各一份） |
+| 图标 | 2 个（自己画的：哔哩哔哩、Spotify） |
 | 域名总数 | 850 条（去重后） |
 | GeoIP 库 | 6,575 条 CIDR，约 132KB，覆盖 357,426,983 个中国 IPv4 地址 |
 | 自动检查 | 每 4 小时，凌晨 0:00、4:00、8:00…… |
@@ -77,11 +78,34 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 | --- | --- |
 | [bilibili.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.js) | 哔哩哔哩 · 纯净模块用的脚本，处理开屏、热词、「我的」页、底部栏、广告接口，按模块里的开关决定开不开 |
 
-### 🖼️ 模块图标
+### 🖼️ 图标
 
-| 图标 | 用途 |
-| --- | --- |
-| [bilibili-icon.png](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/bilibili-icon.png) | 哔哩哔哩 · 纯净模块的图标（自己画的粉色方块 + bilibili 字样） |
+图标都放在顶层 `icon/` 文件夹里。
+
+**自己的图标（自己画的）：**
+
+| 图标 | 给谁用 | 说明 |
+| --- | --- | --- |
+| [bilibili-icon.png](https://raw.githubusercontent.com/YuTalk/tool/main/icon/bilibili-icon.png) | 哔哩哔哩 · 纯净 | 粉色方块 + 白色 bilibili 字样 |
+| [spotify-icon.png](https://raw.githubusercontent.com/YuTalk/tool/main/icon/spotify-icon.png) | Spotify 会员 | 绿色圆 + 白色三道弧线 |
+
+**别人家的图标库（来自 [ddgksf2013/Icon](https://github.com/ddgksf2013/Icon)，点链接一键加进 QX 的图标库）：**
+
+| 图标库 | 风格 | 一键添加 |
+| --- | --- | --- |
+| Qure 图标库（黑白） | 黑白简约 | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fgithub.com%2FKoolson%2FQure%2Fraw%2Fmaster%2FOther%2FQureLight-All.json%22%0A%5D) |
+| Qure 图标库（彩色 1） | 彩色 | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fgithub.com%2FKoolson%2FQure%2Fraw%2Fmaster%2FOther%2FQureColor-All.json%22%0A%5D) |
+| Qure 图标库（彩色 2） | 彩色 | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FKoolson%2FQure%2Fmaster%2FOther%2FQureColor.json%22%0A%5D) |
+| Qure 图标（mini） | 迷你 | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FKoolson%2FQure%2Fmaster%2FOther%2FQuremini.json%22%0A%5D) |
+| Orz-3 图标库（mini style） | 迷你风 | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fgithub.com%2FOrz-3%2Fmini%2Fraw%2Fmaster%2Fmini.json%22%0A%5D) |
+| Orz-3 图标库（big style） | 大图标风 | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FOrz-3%2Fmini%2Fmaster%2FColor%2B.json%22%0A%5D) |
+| Orz-3 图标库（mini color） | 迷你彩色 | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FOrz-3%2Fmini%2Fmaster%2FminiColor.json%22%0A%5D) |
+| 泡泡图标 | 可爱泡泡风 | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2Ftugepaopao%2FImage-Storage%2Fmaster%2Fother%2FCute.json%22%0A%5D) |
+| PokemonGo | 宝可梦 | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2Fshoujiqiyuan%2FPokemonGOforQuanX%2Fmaster%2FPokemonGo.json%22%0A%5D) |
+| 小猫咪 | 猫咪风 | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FYuanxsxs%2FQtumultX%2Fmaster%2FIcon%2FCatcat.json%22%0A%5D) |
+| 姿势图标 1 | 姿势风 | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fgithub.com%2FLovedGM%2FQuantumult-X-TuBiao%2Fraw%2Fmain%2Fzishi.json%22%0A%5D) |
+| 姿势图标 2 | 姿势风（彩色） | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FLovedGM%2FQuantumult-X-TuBiao%2Fmain%2Fzishi-cs.json%22%0A%5D) |
+| Semporia | 手绘风 | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FSemporia%2FHand-Painted-icon%2Fmaster%2FSemporia.json%22%0A%5D) |
 
 > 注意：
 > - 不要和已有的 fmz200 哔哩哔哩模块同时开，两个都改同一批接口会打架。

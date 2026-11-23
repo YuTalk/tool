@@ -8,7 +8,7 @@ name: 哔哩哔哩 · 纯净
 description: 一个干净的哔哩哔哩：去开屏、热词，「我的」页只留你想留的
 author: YuTalk
 homepage: https://github.com/YuTalk/tool
-icon: https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/bilibili-icon.png
+icon: https://raw.githubusercontent.com/YuTalk/tool/main/icon/bilibili-icon.png
 compat_arguments:
   removeSplash: true
   removeHotWords: true
