@@ -1,4 +1,4 @@
-# 最后修改：2026-11-24 00:50
+# 最后修改：2026-11-24 00:58
 # 哔哩哔哩 · 纯净
 # 做法按经过验证的公开模块：推荐流过滤广告卡片、「我的」页 sections_v2、底部栏 tab 接口、视频页广告用 protobuf 脚本
 # 带开关：在 Egern 模块编辑页里，想关哪个功能就关哪个；去广告的 4 个（开屏、推荐、评论、空降）合成一个总开关
@@ -34,7 +34,7 @@ compat_arguments_schema:
     - 'true'
     - 'false'
   displayUpList:
-    name: '[动态]最常访问的显示方式'
+    name: '[动态]最常访问（显示/隐藏/自动）'
     default_value: show
     options:
     - show
@@ -46,7 +46,7 @@ compat_arguments_desc: '[去广告]总开关（开屏、推荐、评论、空降
 
 [我的]精简多余入口
 
-[动态]最常访问的显示方式'
+[动态]最常访问（显示/隐藏/自动）'
 rules:
 - domain:
     match: api.biliapi.com
