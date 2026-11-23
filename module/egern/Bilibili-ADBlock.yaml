@@ -1,4 +1,4 @@
-# 最后修改：2026-11-23 23:59
+# 最后修改：2026-11-24 00:07
 # 哔哩哔哩 · 纯净
 # 做法按经过验证的公开模块：推荐流过滤广告卡片、「我的」页 sections_v2、底部栏 tab 接口、视频页广告用 protobuf 脚本
 # 带开关：在 Egern 模块编辑页里，想关哪个功能就关哪个，默认全开
@@ -94,5 +94,4 @@ mitm:
     - app.bilibili.com
     - api.bilibili.com
     - app.biliapi.net
-    - grpc.bilibili.com
     - grpc.biliapi.net
