@@ -13,6 +13,7 @@
 | 项目 | 数量 |
 | --- | --- |
 | 规则集 | 8 个（Egern 和 QX 各一份，内容一致） |
+| 模块 | 1 个（哔哩哔哩去广告，Egern 和 QX 各一份） |
 | 域名总数 | 850 条（去重后） |
 | GeoIP 库 | 6,575 条 CIDR，约 132KB，覆盖 357,426,983 个中国 IPv4 地址 |
 | 自动检查 | 每 4 小时，凌晨 0:00、4:00、8:00…… |
@@ -20,6 +21,7 @@
 ## 📖 目录
 
 - [📦 文件说明](#-文件说明)
+- [🧩 模块](#-模块)
 - [⚡ 一键添加进软件](#-一键添加进软件)
 - [🚀 怎么用](#-怎么用)
 - [🔄 自动更新](#-自动更新)
@@ -59,6 +61,19 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 - Muse / Meta AI：meta.ai、muse.ai、llama.com 等，7 条
 
 </details>
+
+### 🧩 模块
+
+按应用分类放，同一个模块 Egern 和 QX 各一份，内容一致、格式不同。
+
+| 模块 | 分类 | Egern 版 | QX 版 | 功能 |
+| --- | --- | --- | --- | --- |
+| 📺 哔哩哔哩去广告 | 视频 | [Bilibili-ADBlock.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/%E8%A7%86%E9%A2%91/Bilibili-ADBlock.yaml) | [Bilibili-ADBlock.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/%E8%A7%86%E9%A2%91/Bilibili-ADBlock.snippet) | 去开屏广告、推荐流广告、搜索热词、直播间购物入口，精简「我的」页多余入口（游戏中心、会员购、直播、漫画、课堂、免流量、我的客服、邀好友） |
+
+> 注意：
+> - 不要和已有的 fmz200 哔哩哔哩模块同时开，两个都改同一批接口会打架。
+> - QX 版暂不支持精简「我的」页多余入口，那个要 Egern 版才有。
+> - 模块要开 MITM，证书要装好、信任开好，不然不生效。
 
 ### 🗺️ GeoIpCN.mmdb（6,575 条 CIDR，约 132KB）
 
@@ -118,14 +133,16 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 1. **DNS 转发**：设置 → DNS 转发 → 添加规则集，粘贴 China 链接，策略选国内
 2. **分流**：设置 → 分流 → 添加规则集，粘贴对应链接，策略按上面表格选
 3. **GeoIP 库**：设置 → GeoIP 数据库 → 粘贴 GeoIpCN.mmdb 链接
-4. **分流留一条**：`GEOIP CN → DIRECT` 放倒数第二，`默认 → 兜底策略` 放最后
+4. **模块**：工具 → 模块 → + → 粘贴哔哩哔哩去广告的 Egern 版链接
+5. **分流留一条**：`GEOIP CN → DIRECT` 放倒数第二，`默认 → 兜底策略` 放最后
 
 > ⚠️ GEOIP CN 一定放倒数第二，别放第一，不然每个域名都要先解析 IP，费电又变慢。
 
 ### ⚡ Quantumult X
 
 1. 分流里加远程规则，粘贴上面表格里的 QX 版链接，策略按表格选
-2. 分流留一条：`geoip, cn, direct` 放倒数第二，`final` 放最后
+2. 模块：重写 → 引用 → 粘贴哔哩哔哩去广告的 QX 版链接
+3. 分流留一条：`geoip, cn, direct` 放倒数第二，`final` 放最后
 3. QX 不能用自建 .mmdb 库，用它自带的就行
 
 ---
