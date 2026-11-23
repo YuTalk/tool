@@ -1,0 +1,7 @@
+# 中国 GeoIP 补充集 - 补 GEOIP 库认不到的 IP
+# 主要是微信 mmtls / 短链接用的 198.18.x.x 特殊段
+# 用法：Egern 分流里加一条 IP-CIDR 规则集 -> DIRECT，放在 GEOIP CN 前面
+# 来源：2026-11-23 实测 minorshort.weixin.qq.com / extshort.weixin.qq.com / wx.qlogo.cn
+ip_cidr_set:
+  - 198.18.82.0/24
+  - 198.18.0.0/15
