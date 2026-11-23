@@ -1,5 +1,5 @@
 # 中国常用域名 - 经常用到的
-# 总共 681 条
+# 总共 690 条
 # 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
 domain_suffix_set:
 # 第一段：应用/网站域名
@@ -547,6 +547,15 @@ domain_suffix_set:
   - zmz004.com
   - zmz2019.com
   - zmzfile.com
+  - hongguoduanju.com
+  - doubao.com
+  - deepseek.com
+  - kimi.com
+  - moonshot.cn
+  - yuanbao.tencent.com
+  - jimeng.jianying.com
+  - jianying.com
+  - quark.cn
 # 第二段：CDN/后台/接口域名
   - alicdn.com
   - qlogo.cn
