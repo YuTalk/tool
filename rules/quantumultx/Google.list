@@ -1,5 +1,5 @@
 # 谷歌 / YouTube
-# 总共 24 条
+# 总共 31 条
 host-suffix, google.com, 谷歌服务
 host-suffix, googleapis.com, 谷歌服务
 host-suffix, gstatic.com, 谷歌服务
@@ -24,3 +24,10 @@ host-suffix, google.com.hk, 谷歌服务
 host-suffix, google.co.jp, 谷歌服务
 host-suffix, google.co.uk, 谷歌服务
 host-suffix, google.de, 谷歌服务
+host-suffix, gemini.google.com, 谷歌服务
+host-suffix, translate.google.com, 谷歌服务
+host-suffix, scholar.google.com, 谷歌服务
+host-suffix, news.google.com, 谷歌服务
+host-suffix, photos.google.com, 谷歌服务
+host-suffix, calendar.google.com, 谷歌服务
+host-suffix, meet.google.com, 谷歌服务

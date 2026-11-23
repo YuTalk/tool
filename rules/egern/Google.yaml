@@ -1,6 +1,6 @@
 # 谷歌 / YouTube
-# 总共 24 条
-# 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
+# 总共 31 条
+# 用法：Egern 分流 -> 谷歌服务
 domain_suffix_set:
   - google.com
   - googleapis.com
@@ -26,3 +26,10 @@ domain_suffix_set:
   - google.co.jp
   - google.co.uk
   - google.de
+  - gemini.google.com
+  - translate.google.com
+  - scholar.google.com
+  - news.google.com
+  - photos.google.com
+  - calendar.google.com
+  - meet.google.com

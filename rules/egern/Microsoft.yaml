@@ -1,6 +1,6 @@
 # 微软 / Outlook
-# 总共 17 条
-# 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
+# 总共 21 条
+# 用法：Egern 分流 -> 微软服务
 domain_suffix_set:
   - microsoft.com
   - live.com
@@ -19,3 +19,7 @@ domain_suffix_set:
   - bing.com
   - windows.net
   - azure.com
+  - outlook.live.com
+  - account.microsoft.com
+  - support.microsoft.com
+  - learn.microsoft.com

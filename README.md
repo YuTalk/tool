@@ -17,10 +17,10 @@
 | 规则 | Egern 版 | QX 版 | 条数 | QX 策略 |
 | --- | --- | --- | --- | --- |
 | 中国常用域名 | `rules/egern/China.yaml` | `rules/quantumultx/China.list` | 690 | direct |
-| 谷歌 / YouTube | `rules/egern/Google.yaml` | `rules/quantumultx/Google.list` | 24 | 谷歌服务 |
+| 谷歌 / YouTube | `rules/egern/Google.yaml` | `rules/quantumultx/Google.list` | 31 | 谷歌服务 |
 | 谷歌广告 / 统计 | `rules/egern/GoogleAds.yaml` | `rules/quantumultx/GoogleAds.list` | 24 | reject |
-| 苹果 / App Store | `rules/egern/Apple.yaml` | `rules/quantumultx/Apple.list` | 20 | direct |
-| 微软 / Outlook | `rules/egern/Microsoft.yaml` | `rules/quantumultx/Microsoft.list` | 17 | 微软服务 |
+| 苹果 / App Store | `rules/egern/Apple.yaml` | `rules/quantumultx/Apple.list` | 23 | direct |
+| 微软 / Outlook | `rules/egern/Microsoft.yaml` | `rules/quantumultx/Microsoft.list` | 21 | 微软服务 |
 | 香肠派对 | `rules/egern/SausageMan.yaml` | `rules/quantumultx/SausageMan.list` | 16 | direct |
 | AI_Part | `rules/egern/AI_Part.yaml` | `rules/quantumultx/AI_Part.list` | 45 | 人工智能 |
 | GeoIP_CN | `rules/egern/GeoIP_CN.yaml` | `rules/quantumultx/GeoIP_CN.list` | 1 | direct |

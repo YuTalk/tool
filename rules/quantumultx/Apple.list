@@ -1,5 +1,5 @@
 # 苹果 / App Store
-# 总共 20 条
+# 总共 23 条
 host-suffix, apple.com, direct
 host-suffix, icloud.com, direct
 host-suffix, mzstatic.com, direct
@@ -20,3 +20,6 @@ host-suffix, icloud.com.cn, direct
 host-suffix, apple.co, direct
 host-suffix, apps.apple.com, direct
 host-suffix, support.apple.com, direct
+host-suffix, developer.apple.com, direct
+host-suffix, music.apple.com, direct
+host-suffix, tv.apple.com, direct

@@ -1,6 +1,6 @@
 # 苹果 / App Store
-# 总共 20 条
-# 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
+# 总共 23 条
+# 用法：Egern 分流 -> direct
 domain_suffix_set:
   - apple.com
   - icloud.com
@@ -22,3 +22,6 @@ domain_suffix_set:
   - apple.co
   - apps.apple.com
   - support.apple.com
+  - developer.apple.com
+  - music.apple.com
+  - tv.apple.com
