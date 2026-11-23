@@ -1,5 +1,5 @@
 # 中国常用域名 - 经常用到的
-# 总共 684 条
+# 总共 681 条
 # 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
 domain_suffix_set:
 # 第一段：应用/网站域名
@@ -51,10 +51,8 @@ domain_suffix_set:
   - kugou.com
   - qqmusic.qq.com
   - douban.com
-  - tianya.cn
   - csdn.net
   - cnblogs.com
-  - github.com.cn
   - gitee.com
   - oschina.net
   - qqmail.com
@@ -126,7 +124,6 @@ domain_suffix_set:
   - bdurl.net
   - bilibili.co
   - biligame.net
-  - cc.163.com
   - china.com.cn
   - didi.cn
   - docs.qq.com
