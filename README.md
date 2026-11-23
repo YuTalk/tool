@@ -13,7 +13,7 @@
 | 项目 | 数量 |
 | --- | --- |
 | 规则集 | 8 个（Egern 和 QX 各一份，内容一致） |
-| 模块 | 2 个（哔哩哔哩 · 纯净、Spotify 会员，Egern 和 QX 各一份） |
+| 模块 | 3 个（哔哩哔哩 · 纯净、Spotify 会员、YouTube Enhance，Egern 和 QX 各一份） |
 | 图标 | 38 个（13 套图标库预览图 + 25 个单个应用图标，都是从别人家搬过来的原图） |
 | 域名总数 | 850 条（去重后） |
 | GeoIP 库 | 6,575 条 CIDR，约 132KB，覆盖 357,426,983 个中国 IPv4 地址 |
@@ -70,7 +70,9 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 - 📺 哔哩哔哩 · 纯净 — Egern：[Bilibili-ADBlock.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/Bilibili-ADBlock.yaml)　QX：[Bilibili-ADBlock.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/Bilibili-ADBlock.snippet)
   - 去开屏、热词、推荐流广告、视频页广告；「我的」页只留蓝色一排；底部栏只留首页、关注、我的；Egern 版 4 个开关（[去广告]总开关管开屏、推荐、评论、空降；另有热词、我的页、动态）
 - 🎵 Spotify 会员 — Egern：[Spotify-Premium.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/Spotify-Premium.yaml)　QX：[Spotify-Premium.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/Spotify-Premium.snippet)
-  - 去广告、解锁会员标识（QX 版只能去广告）
+  - 会员配置、首页与播放页去广告，歌词补全和双语翻译；Egern 版 3 个开关（歌词补全、歌词翻译、翻译目标语言）
+- ▶️ YouTube Enhance — Egern：[YouTube-Enhance.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/YouTube-Enhance.yaml)　QX：[YouTube-Enhance.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/YouTube-Enhance.snippet)
+  - 屏蔽上传、选段、Shorts 按钮，字幕翻译；Egern 版 5 个开关（上传、选段、Shorts、翻译语言、调试）
 
 ### 📜 脚本
 
@@ -86,6 +88,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 | --- | --- |
 | <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/bilibili.png" width="48"> | 哔哩哔哩 · 纯净（Qure 彩色版） |
 | <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/spotify.png" width="48"> | Spotify 会员（Qure 彩色版） |
+| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/youtube.png" width="48"> | YouTube Enhance（Qure 彩色版） |
 
 **13 套图标库（预览图就是原图）：**
 

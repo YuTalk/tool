@@ -1,24 +1,34 @@
 #!name=Spotify 会员
-#!desc=去广告
+#!desc=会员配置、首页与播放页去广告，歌词补全和双语翻译
 #!author=YuTalk
 #!homepage=https://github.com/YuTalk/tool
-# 最后修改：2026-11-23 23:56
+# 最后修改：2026-11-24 00:57
+# 改编自 Reukix 的 Spotify 模块：https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/Script/Spotify.sgmodule
 # 注意：不要和别的 Spotify 模块同时开，两个都改同一批接口会打架
-# 注意：QX 版只能去广告，解锁会员标识要 Egern 版才有
+# 注意：QX 版不带开关，歌词默认开、翻译默认中文；想改开关用 Egern 版
 
 [rewrite_local]
 # 广告接口，直接拒绝
-^https?://spclient\.wg\.spotify\.com/ads/v1/.* url 307 http://reject/
-^https?://spclient\.wg\.spotify\.com/ad-logic/.* url 307 http://reject/
-^https?://gew-spclient\.spotify\.com/ad-logic/.* url 307 http://reject/
-^https?://adeventtracker\.spotify\.com/.* url 307 http://reject/
-# 音频广告，直接拒绝
-^https?://spclient\.wg\.spotify\.com/audio-ads/.* url 307 http://reject/
+^https?://(spclient\.wg|.*-spclient)\.spotify\.com(:443)?/pendragon.* url 307 http://reject/
+^https?://.*-spclient\.spotify\.com(:443)?/pam-view-service/.* url 307 http://reject/
+^https?://.*37i9dQZF1EYkqdzj48dyYq.* url 307 http://reject/
+# 广告接收接口，直接拒绝
+^https?://(.*-spclient\.spotify\.com(:443)?|spclient\.wg\.spotify\.com)/gabo-receiver-service.* url 307 http://reject/
+# 首页去广告
+^https?://(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?/casita/v1/home/default/?(?:\?[^#]*)?$ url script-response-body https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-home.js?v=0e4692c6dc47
+# 搜索去广告
+^https?://(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)/browsita/v./browse url script-response-body https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-search.js?v=511d67b05081
+# 歌词补全与翻译
+^https?://(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?/scrollsita/v[0-9]+/scroll/spotify:[^?#]+(?:\?[^#]*)?$ url script-response-body https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-lyrics.js?v=caf13ded9c7b
+^https?://(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?/color-lyrics/v2/track/[A-Za-z0-9]{22}(?:/image/[^/?#]+)?/?(?:\?[^#]*)?$ url script-response-body https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-lyrics.js?v=caf13ded9c7b
+^https?://(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?/(?:extended-metadata/v0/extended-metadata|metadata/4/track/[a-fA-F0-9]{32})(?:\?[^#]*)?$ url script-response-body https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-lyrics.js?v=caf13ded9c7b
+^https?://(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?/connect-state/v1/devices/[^/?#]+/?(?:\?[^#]*)?$ url script-response-body https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-lyrics.js?v=caf13ded9c7b
+# 会员配置
+^https?://(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?/(?:bootstrap/v1/bootstrap|user-customization-service/v1/customize|nebula/v1/configuration/attributes|remote-config-resolver/v3/configuration)/?(?:\?[^#]*)?$ url script-response-body https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-proto.js?v=0321ac8dbef4
 
 [filter_local]
 # 广告统计域名，直接拒绝
-host, adeventtracker.spotify.com, reject
-host, analytics.spotify.com, reject
+host, aet.spotify.com, reject
 
 [mitm]
-hostname = api.spotify.com, spclient.wg.spotify.com, gew-spclient.spotify.com, dealer.spotify.com, ap.spotify.com
+hostname = *.spotify.com

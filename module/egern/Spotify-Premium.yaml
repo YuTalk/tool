@@ -1,53 +1,137 @@
-# 最后修改：2026-11-23 23:59
+# 最后修改：2026-11-24 00:57
 # Spotify 会员
-# 原理：Spotify App 启动时会问 api.spotify.com/v1/me「我是不是会员」
-# 返回里 product 是 free 还是 premium，App 就按这个显示
-# 把它改成 premium，App 就会按会员显示；广告走 spclient 的 ads 接口，直接拦掉
+# 改编自 Reukix 的 Spotify 模块：https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/Script/Spotify.sgmodule
+# 做法：会员配置走 protobuf 脚本（bootstrap/config），首页和搜索走 JSON 脚本去广告，歌词走歌词脚本补全和翻译
+# 带开关：在 Egern 模块编辑页里，歌词补全、歌词翻译、翻译目标语言都能改，默认全开、翻译默认中文
 # 用法：Egern > 工具 > 模块 > + > 粘贴 raw 链接
 # 注意：不要和别的 Spotify 模块同时开，两个都改同一批接口会打架
+# 注意：QUIC 拦截不用写，Egern 主配置已经开了 block_quic
 name: Spotify 会员
-description: 去广告、解锁会员标识
+description: 会员配置、首页与播放页去广告，歌词补全和双语翻译
 author: YuTalk
 homepage: https://github.com/YuTalk/tool
 icon: https://raw.githubusercontent.com/YuTalk/tool/main/icon/spotify.png
-url_rewrites:
-# 广告接口，直接拒绝
-- match: ^https?:\/\/spclient\.wg\.spotify\.com\/ads\/v1\/.*
-  location: http://reject/
-  status_code: 307
-- match: ^https?:\/\/spclient\.wg\.spotify\.com\/ad-logic\/.*
-  location: http://reject/
-  status_code: 307
-- match: ^https?:\/\/gew-spclient\.spotify\.com\/ad-logic\/.*
-  location: http://reject/
-  status_code: 307
-- match: ^https?:\/\/adeventtracker\.spotify\.com\/.*
-  location: http://reject/
-  status_code: 307
-body_rewrites:
-# 问「我是不是会员」时，回答 premium
-- response_jq:
-    match: ^https:\/\/api\.spotify\.com\/v1\/me(\?.*)?$
-    filter: .product = "premium"
-map_locals:
-# 音频广告，返回空
-- match: ^https?:\/\/spclient\.wg\.spotify\.com\/audio-ads\/.*
-  headers:
-    application/json: ''
-  body: '{}'
+compat_arguments:
+  Lyrics: true
+  Translate: true
+  TargetLanguage: zh-CN
+compat_arguments_schema:
+  Lyrics:
+    name: '[歌词]启用歌词补全'
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
+  Translate:
+    name: '[歌词]启用歌词翻译'
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
+  TargetLanguage:
+    name: '[歌词]翻译目标语言'
+    default_value: zh-CN
+    options:
+    - zh-CN
+    - zh-TW
+    - en
+    - ja
+    - ko
+    - es
+    - fr
+compat_arguments_desc: '[歌词]启用歌词补全
+
+[歌词]启用歌词翻译
+
+[歌词]翻译目标语言（默认 zh-CN）'
 rules:
 # 广告统计域名，直接拒绝
 - domain:
-    match: adeventtracker.spotify.com
+    match: aet.spotify.com
     policy: REJECT
-- domain:
-    match: analytics.spotify.com
-    policy: REJECT
+header_rewrites:
+# 配置接口去掉 if-none-match，让服务器每次都返回完整配置，protobuf 脚本才能改
+- delete:
+    type: request
+    match: ^https?:\/\/(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?\/(?:user-customization-service\/v1\/customize|nebula\/v1\/configuration\/attributes|remote-config-resolver\/v3\/configuration)\/?(?:\?[^#]*)?$
+    name: if-none-match
+url_rewrites:
+# 广告接口，直接拒绝
+- match: ^https?:\/\/(spclient\.wg|.*-spclient)\.spotify\.com(:443)?\/pendragon.*
+  location: http://reject/
+  status_code: 307
+- match: ^https?:\/\/.*-spclient\.spotify\.com(:443)?\/pam-view-service\/.*
+  location: http://reject/
+  status_code: 307
+- match: ^https?:\/\/.*37i9dQZF1EYkqdzj48dyYq.*
+  location: http://reject/
+  status_code: 307
+map_locals:
+# 广告接收接口，返回空
+- match: ^https?:\/\/(.*-spclient\.spotify\.com(:443)?|spclient\.wg\.spotify\.com)\/gabo-receiver-service.*
+  headers:
+    Cache-Control: no-cache
+  body: ''
+scriptings:
+- http_response:
+    name: spotify-home
+    script_url: https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-home.js?v=0e4692c6dc47
+    timeout: 5
+    match: ^https?:\/\/(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?\/casita\/v1\/home\/default\/?(?:\?[^#]*)?$
+    body_required: true
+    binary_body: true
+- http_response:
+    name: spotify-search
+    script_url: https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-search.js?v=511d67b05081
+    timeout: 5
+    match: ^https?:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/browsita\/v.\/browse
+    body_required: true
+    binary_body: true
+- http_response:
+    name: spotify-scroll
+    script_url: https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-lyrics.js?v=caf13ded9c7b
+    timeout: 8
+    match: ^https?:\/\/(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?\/scrollsita\/v[0-9]+\/scroll\/spotify:[^?#]+(?:\?[^#]*)?$
+    body_required: true
+    binary_body: true
+    env:
+      argument: 'Lyrics={{{Lyrics}}}&Translate={{{Translate}}}&TargetLanguage={{{TargetLanguage}}}'
+- http_response:
+    name: spotify-lyrics
+    script_url: https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-lyrics.js?v=caf13ded9c7b
+    timeout: 20
+    match: ^https?:\/\/(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?\/color-lyrics\/v2\/track\/[A-Za-z0-9]{22}(?:\/image\/[^/?#]+)?\/?(?:\?[^#]*)?$
+    body_required: true
+    binary_body: true
+    env:
+      argument: 'Lyrics={{{Lyrics}}}&Translate={{{Translate}}}&TargetLanguage={{{TargetLanguage}}}'
+- http_response:
+    name: spotify-lyrics-metadata
+    script_url: https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-lyrics.js?v=caf13ded9c7b
+    timeout: 5
+    match: ^https?:\/\/(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?\/(?:extended-metadata\/v0\/extended-metadata|metadata\/4\/track\/[a-fA-F0-9]{32})(?:\?[^#]*)?$
+    body_required: true
+    binary_body: true
+    env:
+      argument: 'Lyrics={{{Lyrics}}}&Translate={{{Translate}}}&TargetLanguage={{{TargetLanguage}}}'
+- http_response:
+    name: spotify-lyrics-playback
+    script_url: https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-lyrics.js?v=caf13ded9c7b
+    timeout: 5
+    match: ^https?:\/\/(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?\/connect-state\/v1\/devices\/[^/?#]+\/?(?:\?[^#]*)?$
+    body_required: true
+    binary_body: true
+    env:
+      argument: 'Lyrics={{{Lyrics}}}&Translate={{{Translate}}}&TargetLanguage={{{TargetLanguage}}}'
+- http_response:
+    name: spotify-proto
+    script_url: https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-proto.js?v=0321ac8dbef4
+    timeout: 5
+    match: ^https?:\/\/(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?\/(?:bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize|nebula\/v1\/configuration\/attributes|remote-config-resolver\/v3\/configuration)\/?(?:\?[^#]*)?$
+    body_required: true
+    binary_body: true
 mitm:
   hostnames:
     includes:
-    - api.spotify.com
-    - spclient.wg.spotify.com
-    - gew-spclient.spotify.com
-    - dealer.spotify.com
-    - ap.spotify.com
+    # *.spotify.com 盖住所有 spclient 主机（相当于原模块的 *spclient.spotify.com）
+    - '*.spotify.com'
