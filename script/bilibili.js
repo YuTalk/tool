@@ -7,9 +7,9 @@ try { arg = JSON.parse($argument || '{}'); } catch (e) {}
 const removeAds = arg.removeAds !== false && arg.removeAds !== 'false';
 const removeHotWords = arg.removeHotWords !== false && arg.removeHotWords !== 'false';
 const cleanMinePage = arg.cleanMinePage !== false && arg.cleanMinePage !== 'false';
-// 兼容旧版参数：以前的 removeSplash / removeFeedAds 还在就按它们来
-const removeSplash = (arg.removeSplash !== undefined) ? (arg.removeSplash !== false && arg.removeSplash !== 'false') : removeAds;
-const removeFeedAds = (arg.removeFeedAds !== undefined) ? (arg.removeFeedAds !== false && arg.removeFeedAds !== 'false') : removeAds;
+// 开屏和推荐流直接跟总开关走，不再认旧版的 removeSplash / removeFeedAds（那两个旧参数已不用，留着会被绕过总开关）
+const removeSplash = removeAds;
+const removeFeedAds = removeAds;
 const url = $request.url;
 let body = $response.body;
 // 多余入口的关键词：名字里包含就删（「会员购订单」「我的直播」「看视频免流量」这种变体也能删掉）
