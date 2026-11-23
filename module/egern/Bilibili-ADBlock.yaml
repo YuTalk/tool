@@ -1,6 +1,6 @@
-# 最后修改：2026-11-23 23:49
-# 哔哩哔哩 · 纯净，自己写的模块，不引用别人的模块
-# 做法按经过验证的公开模块重写：推荐流过滤广告卡片、「我的」页 sections_v2、底部栏 tab 接口
+# 最后修改：2026-11-23 23:56
+# 哔哩哔哩 · 纯净
+# 做法按经过验证的公开模块：推荐流过滤广告卡片、「我的」页 sections_v2、底部栏 tab 接口、视频页广告用 protobuf 脚本
 # 带开关：在 Egern 模块编辑页里，想关哪个功能就关哪个，默认全开
 # 用法：Egern > 工具 > 模块 > + > 粘贴 raw 链接
 # 注意：不要和别的哔哩哔哩模块同时开
@@ -68,6 +68,26 @@ scriptings:
     body_required: true
     env:
       argument: '{"removeSplash":{{{removeSplash}}},"removeHotWords":{{{removeHotWords}}},"cleanMinePage":{{{cleanMinePage}}},"removeFeedAds":{{{removeFeedAds}}}}'
+- http_request:
+    name: bilibili.protobuf.request
+    script_url: https://egern.pages.dev/scripts/kokoryh/Sparkle/dist/bilibili.protobuf.request.js
+    timeout: 10
+    match: ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(app\.viewunite\.v1\.View\/View|main\.community\.reply\.v1\.Reply\/MainList)$
+    body_required: true
+    binary_body: true
+    env:
+      _hub_enabled: 'true'
+      argument: '{"purifyComment":true,"logLevel":"error"}'
+- http_response:
+    name: bilibili.protobuf.response
+    script_url: https://egern.pages.dev/scripts/kokoryh/Sparkle/dist/bilibili.protobuf.response.js
+    timeout: 20
+    match: ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(app\.(show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(unite)?\.v1\.View\/(View|ViewProgress|RelatesFeed|AIRelateAsync)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$
+    body_required: true
+    binary_body: true
+    env:
+      argument: '{"displayUpList":"show","purifyComment":true,"sponsorBlock":false,"logLevel":"error"}'
+      EGH_DEVICE_TYPE: iPhone
 mitm:
   hostnames:
     includes:

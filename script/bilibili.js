@@ -1,6 +1,6 @@
-// 哔哩哔哩去广告脚本（自己写，不引用别人的脚本）
+// 哔哩哔哩去广告脚本
 // 做法跟经过验证的公开模块一样：推荐流是过滤掉广告卡片（不是把接口拦掉，拦掉首页就加载失败）
-// 「我的」页按 sections_v2 处理，底部栏按 tab 接口处理
+// 「我的」页按 sections_v2 处理，底部栏按 tab 接口处理；视频页的关联广告由模块里引用的 protobuf 脚本处理
 // 开关从模块参数来，默认全开；关掉哪个，哪个就不生效
 let arg = {};
 try { arg = JSON.parse($argument || '{}'); } catch (e) {}
@@ -84,13 +84,13 @@ if (url.indexOf('/x/v2/splash/') !== -1 && removeSplash) {
     body = JSON.stringify(obj);
   } catch (e) {}
 } else if ((url.indexOf('patch/tab') !== -1 || url.indexOf('show/tab/v2') !== -1) && cleanMinePage) {
-  // 底部栏：把会员购那一项删掉，其他原样保留
+  // 底部栏：只留首页、关注、我的，上传按钮（+）和会员购都不要
   try {
     const obj = JSON.parse(body);
     if (obj.data && Array.isArray(obj.data.bottom)) {
       obj.data.bottom = obj.data.bottom.filter(function (it) {
         const t = (typeof it.name === 'string') ? it.name : ((typeof it.title === 'string') ? it.title : '');
-        return t.indexOf('会员购') === -1;
+        return t.indexOf('首页') !== -1 || t.indexOf('关注') !== -1 || t.indexOf('动态') !== -1 || t.indexOf('我的') !== -1;
       });
     }
     walk(obj);

@@ -1,5 +1,5 @@
-# 最后修改：2026-11-23 23:46
-# Spotify 会员 · 自己写的模块，不引用别人的模块
+# 最后修改：2026-11-23 23:56
+# Spotify 会员
 # 原理：Spotify App 启动时会问 api.spotify.com/v1/me「我是不是会员」
 # 返回里 product 是 free 还是 premium，App 就按这个显示
 # 把它改成 premium，App 就会按会员显示；广告走 spclient 的 ads 接口，直接拦掉
