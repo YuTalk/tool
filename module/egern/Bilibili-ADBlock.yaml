@@ -1,4 +1,4 @@
-# 最后修改：2026-11-24 01:01
+# 最后修改：2026-11-24 01:05
 # 哔哩哔哩 · 纯净
 # 做法按经过验证的公开模块：推荐流过滤广告卡片、「我的」页 sections_v2、底部栏 tab 接口、视频页广告用 protobuf 脚本
 # 带开关：在 Egern 模块编辑页里，想关哪个功能就关哪个；去广告的 4 个（开屏、推荐、评论、空降）合成一个总开关
@@ -66,7 +66,7 @@ scriptings:
     binary_body: true
     env:
       _hub_enabled: 'true'
-      argument: '{"purifyComment":true,"logLevel":"error"}'
+      argument: '{"purifyComment":{{{removeAds}}},"logLevel":"error"}'
 - http_response:
     name: bilibili.protobuf.response
     script_url: https://egern.pages.dev/scripts/kokoryh/Sparkle/dist/bilibili.protobuf.response.js
