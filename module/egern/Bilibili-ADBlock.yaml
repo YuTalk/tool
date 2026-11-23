@@ -1,11 +1,11 @@
-# 最后修改：2026-11-24 00:07
+# 最后修改：2026-11-24 00:44
 # 哔哩哔哩 · 纯净
 # 做法按经过验证的公开模块：推荐流过滤广告卡片、「我的」页 sections_v2、底部栏 tab 接口、视频页广告用 protobuf 脚本
-# 带开关：在 Egern 模块编辑页里，想关哪个功能就关哪个，默认全开
+# 带开关：在 Egern 模块编辑页里，想关哪个功能就关哪个，默认全开（空降助手默认关）
 # 用法：Egern > 工具 > 模块 > + > 粘贴 raw 链接
-# 注意：不要和别的哔哩哔哩模块同时开
+# 注意：不要和别的哔哩哔哩模块同时开（比如 fmz200 的），两个都改同一批接口会打架，开关看起来就像没用
 name: 哔哩哔哩 · 纯净
-description: 一个干净的哔哩哔哩：去开屏、热词、推荐流广告，「我的」页只留你想留的
+description: 一个干净的哔哩哔哩：去开屏、热词、推荐流广告，净化评论区，「我的」页只留你想留的
 author: YuTalk
 homepage: https://github.com/YuTalk/tool
 icon: https://raw.githubusercontent.com/YuTalk/tool/main/icon/bilibili.png
@@ -14,6 +14,9 @@ compat_arguments:
   removeHotWords: true
   cleanMinePage: true
   removeFeedAds: true
+  purifyComment: true
+  sponsorBlock: false
+  displayUpList: show
 compat_arguments_schema:
   removeSplash:
     name: '[开屏]去除广告'
@@ -39,13 +42,38 @@ compat_arguments_schema:
     options:
     - 'true'
     - 'false'
+  purifyComment:
+    name: '[评论区]过滤置顶评论广告'
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
+  sponsorBlock:
+    name: '[视频]空降助手（跳过恰饭片段）'
+    default_value: 'false'
+    options:
+    - 'true'
+    - 'false'
+  displayUpList:
+    name: '[动态]最常访问的显示方式'
+    default_value: show
+    options:
+    - show
+    - hide
+    - auto
 compat_arguments_desc: '[开屏]去除广告
 
 [搜索]去除热词
 
 [我的]精简多余入口
 
-[推荐]去除广告卡片'
+[推荐]去除广告卡片
+
+[评论区]过滤置顶评论广告
+
+[视频]空降助手（跳过恰饭片段）
+
+[动态]最常访问的显示方式'
 rules:
 - domain:
     match: api.biliapi.com
@@ -86,7 +114,7 @@ scriptings:
     body_required: true
     binary_body: true
     env:
-      argument: '{"displayUpList":"show","purifyComment":true,"sponsorBlock":false,"logLevel":"error"}'
+      argument: '{"displayUpList":"{{{displayUpList}}}","purifyComment":{{{purifyComment}}},"sponsorBlock":{{{sponsorBlock}}},"logLevel":"error"}'
       EGH_DEVICE_TYPE: iPhone
 mitm:
   hostnames:
@@ -94,4 +122,5 @@ mitm:
     - app.bilibili.com
     - api.bilibili.com
     - app.biliapi.net
+    - grpc.bilibili.com
     - grpc.biliapi.net

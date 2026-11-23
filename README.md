@@ -68,7 +68,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 同一个模块 Egern 和 QX 各一份，内容一致、格式不同。脚本单独放 `script/` 文件夹，模块自己去拉，不用手动添加。
 
 - 📺 哔哩哔哩 · 纯净 — Egern：[Bilibili-ADBlock.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/Bilibili-ADBlock.yaml)　QX：[Bilibili-ADBlock.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/Bilibili-ADBlock.snippet)
-  - 去开屏、热词、推荐流广告、视频页广告；「我的」页只留蓝色一排；底部栏只留首页、关注、我的；Egern 版 4 个开关
+  - 去开屏、热词、推荐流广告、视频页广告；「我的」页只留蓝色一排；底部栏只留首页、关注、我的；Egern 版 7 个开关（多了评论区净化、空降助手、动态最常访问）
 - 🎵 Spotify 会员 — Egern：[Spotify-Premium.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/Spotify-Premium.yaml)　QX：[Spotify-Premium.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/Spotify-Premium.snippet)
   - 去广告、解锁会员标识（QX 版只能去广告）
 
