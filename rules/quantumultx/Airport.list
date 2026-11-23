@@ -1,7 +1,0 @@
-# 机场 / 自建节点
-# 总共 4 条
-# 第一段：应用/网站域名
-host-suffix, yy-179.pages.dev, direct
-host-suffix, 521.yutalk000.top, direct
-host-suffix, 1212.yutalk000.ccwu.cc, direct
-host-suffix, freesocks.org, direct
