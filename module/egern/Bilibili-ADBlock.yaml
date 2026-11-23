@@ -1,11 +1,11 @@
-# 最后修改：2026-11-23 23:43
+# 最后修改：2026-11-23 23:49
 # 哔哩哔哩 · 纯净，自己写的模块，不引用别人的模块
+# 做法按经过验证的公开模块重写：推荐流过滤广告卡片、「我的」页 sections_v2、底部栏 tab 接口
 # 带开关：在 Egern 模块编辑页里，想关哪个功能就关哪个，默认全开
-# 「我的」页只留上面那排蓝色的，下面整组删掉；底部栏去掉会员购；视频页广告也拦
 # 用法：Egern > 工具 > 模块 > + > 粘贴 raw 链接
 # 注意：不要和别的哔哩哔哩模块同时开
 name: 哔哩哔哩 · 纯净
-description: 一个干净的哔哩哔哩：去开屏、热词，「我的」页只留你想留的
+description: 一个干净的哔哩哔哩：去开屏、热词、推荐流广告，「我的」页只留你想留的
 author: YuTalk
 homepage: https://github.com/YuTalk/tool
 icon: https://raw.githubusercontent.com/YuTalk/tool/main/icon/bilibili-icon.png
@@ -13,6 +13,7 @@ compat_arguments:
   removeSplash: true
   removeHotWords: true
   cleanMinePage: true
+  removeFeedAds: true
 compat_arguments_schema:
   removeSplash:
     name: '[开屏]去除广告'
@@ -32,20 +33,41 @@ compat_arguments_schema:
     options:
     - 'true'
     - 'false'
+  removeFeedAds:
+    name: '[推荐]去除广告卡片'
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
 compat_arguments_desc: '[开屏]去除广告
 
 [搜索]去除热词
 
-[我的]精简多余入口'
+[我的]精简多余入口
+
+[推荐]去除广告卡片'
+rules:
+- domain:
+    match: api.biliapi.com
+    policy: REJECT
+- domain:
+    match: app.biliapi.com
+    policy: REJECT
+- domain:
+    match: api.biliapi.net
+    policy: REJECT
+- domain:
+    match: app.biliapi.net
+    policy: REJECT
 scriptings:
 - http_response:
     name: Bilibili AdBlock
     script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.js
     timeout: 10
-    match: ^https?://(app|api|grpc)\.bili(bili\.com|api\.net)/(bilibili\.app\.interface\.v1\.Search/DefaultWords|x/v2/(splash/|account/mine|dm/ad|search/square)|x/resource/(top/activity|patch/tab)|x/vip/ads/materials|pgc/activity/deliver/material/receive)
+    match: ^https?://(app|api|grpc)\.bili(bili\.com|api\.net)/(bilibili\.app\.interface\.v1\.Search/DefaultWords|x/v2/(splash/|account/mine|dm/ad|search/square|feed/index(/story)?)|x/resource/(top/activity|patch/tab|show/tab/v2)|x/vip/ads/materials|pgc/activity/deliver/material/receive)
     body_required: true
     env:
-      argument: '{"removeSplash":{{{removeSplash}}},"removeHotWords":{{{removeHotWords}}},"cleanMinePage":{{{cleanMinePage}}}}'
+      argument: '{"removeSplash":{{{removeSplash}}},"removeHotWords":{{{removeHotWords}}},"cleanMinePage":{{{cleanMinePage}}},"removeFeedAds":{{{removeFeedAds}}}}'
 mitm:
   hostnames:
     includes:
