@@ -1,22 +1,50 @@
-# 最后修改：2026-11-23 23:26
-# 哔哩哔哩去广告 · 精简版（自己写的模块，不引用别人的模块）
-# 之前完整版把 B站的接口拦错了导致首页加载失败，先只留最稳的两条
-# 等首页正常了，再一条一条加回去
+# 最后修改：2026-11-23 23:31
+# 哔哩哔哩去广告 · 自己写的模块，不引用别人的模块
+# 带开关：在 Egern 模块编辑页里，想关哪个功能就关哪个，默认全开
+# 只处理开屏、搜索热词、「我的」页这三个接口，不碰推荐流，首页不会坏
 # 用法：Egern > 工具 > 模块 > + > 粘贴 raw 链接
 # 注意：不要和别的哔哩哔哩模块同时开
 name: 哔哩哔哩去广告
-description: 去开屏广告、搜索热词
+description: 去开屏广告、搜索热词，精简「我的」页多余入口，带开关
 author: YuTalk
 homepage: https://github.com/YuTalk/tool
-url_rewrites:
-# 开屏广告，直接拒绝
-- match: ^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/splash\/(brand\/list|event\/list2|list|show)(\?.*)?$
-  location: http://reject/
-  status_code: 307
-# 搜索框下面的热词推荐，直接拒绝
-- match: ^https?:\/\/(grpc|app)\.bili(bili\.com|api\.net)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$
-  location: http://reject/
-  status_code: 307
+compat_arguments:
+  removeSplash: true
+  removeHotWords: true
+  cleanMinePage: true
+compat_arguments_schema:
+  removeSplash:
+    name: '[开屏]去除广告'
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
+  removeHotWords:
+    name: '[搜索]去除热词'
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
+  cleanMinePage:
+    name: '[我的]精简多余入口'
+    default_value: 'true'
+    options:
+    - 'true'
+    - 'false'
+compat_arguments_desc: '[开屏]去除广告
+
+[搜索]去除热词
+
+[我的]精简多余入口'
+scriptings:
+- http_response:
+    name: Bilibili AdBlock
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/bilibili.js
+    timeout: 10
+    match: ^https?://((grpc|app)\.bili(bili\.com|api\.net)/bilibili\.app\.interface\.v1\.Search/DefaultWords|app\.bili(bili\.com|api\.net)/x/v2/(splash/|account/mine))
+    body_required: true
+    env:
+      argument: '{"removeSplash":{{{removeSplash}}},"removeHotWords":{{{removeHotWords}}},"cleanMinePage":{{{cleanMinePage}}}}'
 mitm:
   hostnames:
     includes:
