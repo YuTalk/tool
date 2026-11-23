@@ -16,14 +16,26 @@ if (url.indexOf('/x/v2/splash/') !== -1 && removeSplash) {
   body = '{}';
 } else if (url.indexOf('/x/v2/account/mine') !== -1 && cleanMinePage) {
   // 「我的」页：把多余的入口删掉
+  // 用包含匹配（不是全名相等），这样「会员购订单」「我的直播」「看视频免流量」这种变体也能去掉
+  // 递归走一遍整个返回数据，不管入口藏在哪一层都能找到
+  const drop = ['游戏中心', '会员购', '直播', '漫画', '课堂', '课程', '免流量', '我的客服', '邀好友'];
   try {
     const obj = JSON.parse(body);
-    const drop = ['游戏中心', '会员购', '直播', '漫画', '课堂', '免流量', '我的客服', '邀好友'];
-    if (obj.data && obj.data.sections) {
-      obj.data.sections.forEach(function (s) {
-        if (s.items) s.items = s.items.filter(function (i) { return drop.indexOf(i.title) === -1; });
-      });
-    }
+    const walk = function (o) {
+      if (Array.isArray(o)) {
+        for (let i = o.length - 1; i >= 0; i--) {
+          const it = o[i];
+          if (it && typeof it.title === 'string' && drop.some(function (k) { return it.title.indexOf(k) !== -1; })) {
+            o.splice(i, 1);
+          } else {
+            walk(it);
+          }
+        }
+      } else if (o && typeof o === 'object') {
+        for (const k in o) walk(o[k]);
+      }
+    };
+    walk(obj);
     body = JSON.stringify(obj);
   } catch (e) {}
 }
