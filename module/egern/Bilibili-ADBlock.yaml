@@ -1,4 +1,4 @@
-# 最后修改：2026-11-23 23:56
+# 最后修改：2026-11-23 23:59
 # 哔哩哔哩 · 纯净
 # 做法按经过验证的公开模块：推荐流过滤广告卡片、「我的」页 sections_v2、底部栏 tab 接口、视频页广告用 protobuf 脚本
 # 带开关：在 Egern 模块编辑页里，想关哪个功能就关哪个，默认全开
@@ -8,7 +8,7 @@ name: 哔哩哔哩 · 纯净
 description: 一个干净的哔哩哔哩：去开屏、热词、推荐流广告，「我的」页只留你想留的
 author: YuTalk
 homepage: https://github.com/YuTalk/tool
-icon: https://raw.githubusercontent.com/YuTalk/tool/main/icon/bilibili-icon.png
+icon: https://raw.githubusercontent.com/YuTalk/tool/main/icon/bilibili.png
 compat_arguments:
   removeSplash: true
   removeHotWords: true

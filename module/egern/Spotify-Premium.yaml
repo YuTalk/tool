@@ -1,4 +1,4 @@
-# 最后修改：2026-11-23 23:56
+# 最后修改：2026-11-23 23:59
 # Spotify 会员
 # 原理：Spotify App 启动时会问 api.spotify.com/v1/me「我是不是会员」
 # 返回里 product 是 free 还是 premium，App 就按这个显示
@@ -9,7 +9,7 @@ name: Spotify 会员
 description: 去广告、解锁会员标识
 author: YuTalk
 homepage: https://github.com/YuTalk/tool
-icon: https://raw.githubusercontent.com/YuTalk/tool/main/icon/spotify-icon.png
+icon: https://raw.githubusercontent.com/YuTalk/tool/main/icon/spotify.png
 url_rewrites:
 # 广告接口，直接拒绝
 - match: ^https?:\/\/spclient\.wg\.spotify\.com\/ads\/v1\/.*
