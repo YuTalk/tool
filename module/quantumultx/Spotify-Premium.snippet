@@ -1,0 +1,25 @@
+#!name=Spotify 会员
+#!desc=去广告
+#!author=YuTalk
+#!homepage=https://github.com/YuTalk/tool
+# 最后修改：2026-11-23 23:20
+# 自己写的模块，不引用别人的模块
+# 注意：不要和别的 Spotify 模块同时开，两个都改同一批接口会打架
+# 注意：QX 版只能去广告，解锁会员标识要 Egern 版才有
+
+[rewrite_local]
+# 广告接口，直接拒绝
+^https?://spclient\.wg\.spotify\.com/ads/v1/.* url 307 http://reject/
+^https?://spclient\.wg\.spotify\.com/ad-logic/.* url 307 http://reject/
+^https?://gew-spclient\.spotify\.com/ad-logic/.* url 307 http://reject/
+^https?://adeventtracker\.spotify\.com/.* url 307 http://reject/
+# 音频广告，直接拒绝
+^https?://spclient\.wg\.spotify\.com/audio-ads/.* url 307 http://reject/
+
+[filter_local]
+# 广告统计域名，直接拒绝
+host, adeventtracker.spotify.com, reject
+host, analytics.spotify.com, reject
+
+[mitm]
+hostname = api.spotify.com, spclient.wg.spotify.com, gew-spclient.spotify.com, dealer.spotify.com, ap.spotify.com

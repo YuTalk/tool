@@ -1,0 +1,52 @@
+# 最后修改：2026-11-23 23:20
+# Spotify 会员 · 自己写的模块，不引用别人的模块
+# 原理：Spotify App 启动时会问 api.spotify.com/v1/me「我是不是会员」
+# 返回里 product 是 free 还是 premium，App 就按这个显示
+# 把它改成 premium，App 就会按会员显示；广告走 spclient 的 ads 接口，直接拦掉
+# 用法：Egern > 工具 > 模块 > + > 粘贴 raw 链接
+# 注意：不要和别的 Spotify 模块同时开，两个都改同一批接口会打架
+name: Spotify 会员
+description: 去广告、解锁会员标识
+author: YuTalk
+homepage: https://github.com/YuTalk/tool
+url_rewrites:
+# 广告接口，直接拒绝
+- match: ^https?:\/\/spclient\.wg\.spotify\.com\/ads\/v1\/.*
+  location: http://reject/
+  status_code: 307
+- match: ^https?:\/\/spclient\.wg\.spotify\.com\/ad-logic\/.*
+  location: http://reject/
+  status_code: 307
+- match: ^https?:\/\/gew-spclient\.spotify\.com\/ad-logic\/.*
+  location: http://reject/
+  status_code: 307
+- match: ^https?:\/\/adeventtracker\.spotify\.com\/.*
+  location: http://reject/
+  status_code: 307
+body_rewrites:
+# 问「我是不是会员」时，回答 premium
+- response_jq:
+    match: ^https:\/\/api\.spotify\.com\/v1\/me(\?.*)?$
+    filter: .product = "premium"
+map_locals:
+# 音频广告，返回空
+- match: ^https?:\/\/spclient\.wg\.spotify\.com\/audio-ads\/.*
+  headers:
+    application/json: ''
+  body: '{}'
+rules:
+# 广告统计域名，直接拒绝
+- domain:
+    match: adeventtracker.spotify.com
+    policy: REJECT
+- domain:
+    match: analytics.spotify.com
+    policy: REJECT
+mitm:
+  hostnames:
+    includes:
+    - api.spotify.com
+    - spclient.wg.spotify.com
+    - gew-spclient.spotify.com
+    - dealer.spotify.com
+    - ap.spotify.com
