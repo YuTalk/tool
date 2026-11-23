@@ -80,74 +80,105 @@ GEOIP CN → DIRECT（倒数第二条）
 
 ## 🔗 直链（复制即用）
 
-Egern 版：
+每个链接上面都写了是哪个软件、多少条、怎么用，复制对应的那条就行。
+
+### Egern 版
+
+**中国常用域名**（690 条，DNS 转发 → 国内 / 分流 → DIRECT）：
 
 ```text
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/China.yaml
 ```
 
+**谷歌 / YouTube**（31 条，分流 → 谷歌服务）：
+
 ```text
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/Google.yaml
 ```
+
+**谷歌广告 / 统计**（24 条，分流 → reject）：
 
 ```text
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/GoogleAds.yaml
 ```
 
+**苹果 / App Store**（23 条，分流 → direct）：
+
 ```text
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/Apple.yaml
 ```
+
+**微软 / Outlook**（21 条，分流 → 微软服务）：
 
 ```text
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/Microsoft.yaml
 ```
 
+**香肠派对**（16 条，分流 → direct）：
+
 ```text
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/SausageMan.yaml
 ```
 
-```
+**AI_Part**（45 条，Muse / GPT / Claude，分流 → 人工智能）：
+
+```text
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/AI_Part.yaml
 ```
 
-```
-```
+### Quantumult X 版
 
-QX 版：
+**中国常用域名**（690 条，分流 → direct）：
 
 ```text
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/China.list
 ```
 
+**谷歌 / YouTube**（31 条，分流 → 谷歌服务）：
+
 ```text
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/Google.list
 ```
+
+**谷歌广告 / 统计**（24 条，分流 → reject）：
 
 ```text
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/GoogleAds.list
 ```
 
+**苹果 / App Store**（23 条，分流 → direct）：
+
 ```text
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/Apple.list
 ```
+
+**微软 / Outlook**（21 条，分流 → 微软服务）：
 
 ```text
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/Microsoft.list
 ```
 
+**香肠派对**（16 条，分流 → direct）：
+
 ```text
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/SausageMan.list
 ```
 
-```
+**AI_Part**（45 条，Muse / GPT / Claude，分流 → 人工智能）：
+
+```text
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/AI_Part.list
 ```
 
-```
+**GeoIP_CN**（1 条，QX 专用，分流 → direct；Egern 版已删除）：
+
+```text
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/GeoIP_CN.list
 ```
 
-GeoIP 库：
+### GeoIP 库
+
+**中国 IPv4 地址库 GeoIpCN.mmdb**（6,575 条 CIDR，约 132KB，Egern 换库用，QX 不能用）：
 
 ```text
 https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
