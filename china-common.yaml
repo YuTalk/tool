@@ -1,7 +1,6 @@
 # 中国常用域名 - 经常用到的
-# 总共 1600 条
+# 总共 1594 条
 # 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
-# 来源：中国常用 415 + ChinaDomain.list + geolocation-cn
 domain_suffix_set:
   - baidu.com
   - qq.com
@@ -522,7 +521,6 @@ domain_suffix_set:
   - douyinstatic.com
   - douyinvod.com
   - feelgood.cn
-  - feiliao.com
   - gifshow.com
   - huoshanzhibo.com
   - ibytedapm.com
@@ -606,7 +604,6 @@ domain_suffix_set:
   - qiyi.com
   - qiyipic.com
   - qy.net
-  - 360buy.com
   - 360buyimg.com
   - jcloudcs.com
   - jd.hk
@@ -623,9 +620,7 @@ domain_suffix_set:
   - le.com
   - lecloud.com
   - letvcloud.com
-  - letvimg.com
   - letvlive.com
-  - letvstore.com
   - hitv.com
   - duokan.com
   - mi-img.com
@@ -738,7 +733,6 @@ domain_suffix_set:
   - acfun.tv
   - air-matters.com
   - air-matters.io
-  - aixifan.com
   - algocasts.io
   - asklink.com
   - babytree.com
@@ -1594,7 +1588,6 @@ domain_suffix_set:
   - 998tool.com
   - 999d.com
   - 99danji.com
-  - 9ht.com
   - 9xu.com
   - a9vg.com
   - acetaffy.club
