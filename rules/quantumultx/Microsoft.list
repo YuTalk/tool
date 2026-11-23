@@ -1,6 +1,5 @@
 # 微软 / Outlook
-# 总共 10 条
-# 第一段：应用/网站域名
+# 总共 17 条
 host-suffix, microsoft.com, 微软服务
 host-suffix, live.com, 微软服务
 host-suffix, outlook.com, 微软服务
@@ -11,3 +10,10 @@ host-suffix, windows.com, 微软服务
 host-suffix, windowsupdate.com, 微软服务
 host-suffix, microsoftonline.com, 微软服务
 host-suffix, sharepoint.com, 微软服务
+host-suffix, microsoft365.com, 微软服务
+host-suffix, hotmail.com, 微软服务
+host-suffix, live.net, 微软服务
+host-suffix, msn.com, 微软服务
+host-suffix, bing.com, 微软服务
+host-suffix, windows.net, 微软服务
+host-suffix, azure.com, 微软服务

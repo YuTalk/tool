@@ -1,7 +1,6 @@
 # 谷歌广告 / 统计
-# 总共 12 条
+# 总共 20 条
 # 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
-# 第一段：应用/网站域名
 domain_suffix_set:
   - doubleclick.net
   - googlesyndication.com
@@ -15,3 +14,11 @@ domain_suffix_set:
   - ads.google.com
   - ads.youtube.com
   - app-measurement.com
+  - ad.doubleclick.net
+  - googleads.g.doubleclick.net
+  - pubads.g.doubleclick.net
+  - securepubads.g.doubleclick.net
+  - stats.g.doubleclick.net
+  - adservice.google.com
+  - adsense.google.com
+  - analytics.google.com

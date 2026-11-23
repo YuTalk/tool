@@ -1,6 +1,5 @@
 # 谷歌 / YouTube
-# 总共 14 条
-# 第一段：应用/网站域名
+# 总共 24 条
 host-suffix, google.com, 谷歌服务
 host-suffix, googleapis.com, 谷歌服务
 host-suffix, gstatic.com, 谷歌服务
@@ -15,3 +14,13 @@ host-suffix, gvt1.com, 谷歌服务
 host-suffix, gvt2.com, 谷歌服务
 host-suffix, 1e100.net, 谷歌服务
 host-suffix, youtube-nocookie.com, 谷歌服务
+host-suffix, accounts.google.com, 谷歌服务
+host-suffix, drive.google.com, 谷歌服务
+host-suffix, docs.google.com, 谷歌服务
+host-suffix, maps.google.com, 谷歌服务
+host-suffix, play.google.com, 谷歌服务
+host-suffix, music.youtube.com, 谷歌服务
+host-suffix, google.com.hk, 谷歌服务
+host-suffix, google.co.jp, 谷歌服务
+host-suffix, google.co.uk, 谷歌服务
+host-suffix, google.de, 谷歌服务
