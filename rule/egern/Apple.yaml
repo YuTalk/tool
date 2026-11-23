@@ -1,0 +1,28 @@
+# 最后修改：2026-11-23 23:18
+# 苹果 / App Store
+# 总共 23 条
+# 用法：Egern 分流 -> direct
+domain_suffix_set:
+  - apple.com
+  - icloud.com
+  - mzstatic.com
+  - cdn-apple.com
+  - ks-cdn.com
+  - apple-cloudkit.com
+  - icloud-content.com
+  - aaplimg.com
+  - appstore.com
+  - itunes.com
+  - apple-dns.net
+  - apple.com.cn
+  - apple.com.hk
+  - apple.com.tw
+  - apple.com.sg
+  - apple.com.au
+  - icloud.com.cn
+  - apple.co
+  - apps.apple.com
+  - support.apple.com
+  - developer.apple.com
+  - music.apple.com
+  - tv.apple.com

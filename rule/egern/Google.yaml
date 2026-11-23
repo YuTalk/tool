@@ -1,0 +1,36 @@
+# 最后修改：2026-11-23 23:18
+# 谷歌 / YouTube
+# 总共 31 条
+# 用法：Egern 分流 -> 谷歌服务
+domain_suffix_set:
+  - google.com
+  - googleapis.com
+  - gstatic.com
+  - gmail.com
+  - googleusercontent.com
+  - youtube.com
+  - youtu.be
+  - googlevideo.com
+  - ytimg.com
+  - ggpht.com
+  - gvt1.com
+  - gvt2.com
+  - 1e100.net
+  - youtube-nocookie.com
+  - accounts.google.com
+  - drive.google.com
+  - docs.google.com
+  - maps.google.com
+  - play.google.com
+  - music.youtube.com
+  - google.com.hk
+  - google.co.jp
+  - google.co.uk
+  - google.de
+  - gemini.google.com
+  - translate.google.com
+  - scholar.google.com
+  - news.google.com
+  - photos.google.com
+  - calendar.google.com
+  - meet.google.com
