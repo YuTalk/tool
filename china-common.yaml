@@ -1,4 +1,5 @@
 # 中国常用域名 - 经常用到的
+# 总共 1600 条
 # 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
 # 来源：中国常用 415 + ChinaDomain.list + geolocation-cn
 domain_suffix_set:
