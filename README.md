@@ -125,15 +125,15 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 | <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/zhihu.png" width="48"> | zhihu.png | 知乎 |
 | <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/Netease_Music_Unlock.png" width="48"> | Netease_Music_Unlock.png | 网易云音乐解锁 |
 | <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/cmcc.png" width="48"> | cmcc.png | 中国移动 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/debao.png" width="48"> | debao.png | 原仓库零散图标，看图认 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/gt.png" width="48"> | gt.png | 原仓库零散图标，看图认 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/liwo.png" width="48"> | liwo.png | 原仓库零散图标，看图认 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/mmjz.png" width="48"> | mmjz.png | 原仓库零散图标，看图认 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/olympic.jpeg" width="48"> | olympic.jpeg | 原仓库零散图标，看图认 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/share.jpg" width="48"> | share.jpg | 原仓库零散图标，看图认 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/sxmd.png" width="48"> | sxmd.png | 原仓库零散图标，看图认 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/tq.png" width="48"> | tq.png | 原仓库零散图标，看图认 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/yu.png" width="48"> | yu.png | 原仓库零散图标，看图认 |
+| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/debao.png" width="48"> | debao.png | 得宝 Tempo 纸巾 |
+| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/gt.png" width="48"> | gt.png | 绿底白狗头（京东 Joy 狗造型） |
+| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/liwo.png" width="48"> | liwo.png | 青色底卡通大眼表情 |
+| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/mmjz.png" width="48"> | mmjz.png | 粉底橘色卡通猫抱着手机 |
+| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/olympic.jpeg" width="48"> | olympic.jpeg | 2022 北京冬奥会会徽（不是应用图标） |
+| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/share.jpg" width="48"> | share.jpg | 分享邀请二维码图（不是图标） |
+| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/sxmd.png" width="48"> | sxmd.png | 绿色藤蔓花纹装饰图（不是应用图标） |
+| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/tq.png" width="48"> | tq.png | 红底白鲸鱼 + 金色钱币 |
+| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/yu.png" width="48"> | yu.png | 黑底粉色「鱼」字艺术字 |
 
 > 注意：
 > - 不要和已有的 fmz200 哔哩哔哩模块同时开，两个都改同一批接口会打架。
