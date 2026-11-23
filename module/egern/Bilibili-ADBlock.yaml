@@ -1,4 +1,4 @@
-# 最后修改：2026-11-23 23:31
+# 最后修改：2026-11-23 23:33
 # 哔哩哔哩去广告 · 自己写的模块，不引用别人的模块
 # 带开关：在 Egern 模块编辑页里，想关哪个功能就关哪个，默认全开
 # 只处理开屏、搜索热词、「我的」页这三个接口，不碰推荐流，首页不会坏
@@ -39,7 +39,7 @@ compat_arguments_desc: '[开屏]去除广告
 scriptings:
 - http_response:
     name: Bilibili AdBlock
-    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/bilibili.js
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.js
     timeout: 10
     match: ^https?://((grpc|app)\.bili(bili\.com|api\.net)/bilibili\.app\.interface\.v1\.Search/DefaultWords|app\.bili(bili\.com|api\.net)/x/v2/(splash/|account/mine))
     body_required: true
