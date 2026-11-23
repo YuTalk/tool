@@ -66,8 +66,8 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 
 按应用分类放，同一个模块 Egern 和 QX 各一份，内容一致、格式不同。
 
-| 模块 | 分类 | Egern 版 | QX 版 | 功能 |
-| --- | --- | --- | --- | --- |
+| 模块 | Egern 版 | QX 版 | 功能 |
+| --- | --- | --- | --- |
 | 📺 哔哩哔哩去广告 | [Bilibili-ADBlock.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/Bilibili-ADBlock.yaml) | [Bilibili-ADBlock.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/Bilibili-ADBlock.snippet) | 去开屏广告、推荐流广告、搜索热词、直播间购物入口，精简「我的」页多余入口（游戏中心、会员购、直播、漫画、课堂、免流量、我的客服、邀好友） |
 
 > 注意：
