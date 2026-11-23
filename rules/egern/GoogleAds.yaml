@@ -1,6 +1,6 @@
 # 谷歌广告 / 统计
-# 总共 20 条
-# 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
+# 总共 24 条
+# 用法：Egern 分流 -> REJECT
 domain_suffix_set:
   - doubleclick.net
   - googlesyndication.com
@@ -22,3 +22,7 @@ domain_suffix_set:
   - adservice.google.com
   - adsense.google.com
   - analytics.google.com
+  - adsense.com
+  - doubleclick.com
+  - crashlytics.com
+  - firebase.com

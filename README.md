@@ -18,7 +18,7 @@
 | --- | --- | --- | --- | --- |
 | 中国常用域名 | `rules/egern/China.yaml` | `rules/quantumultx/China.list` | 690 | direct |
 | 谷歌 / YouTube | `rules/egern/Google.yaml` | `rules/quantumultx/Google.list` | 24 | 谷歌服务 |
-| 谷歌广告 / 统计 | `rules/egern/GoogleAds.yaml` | `rules/quantumultx/GoogleAds.list` | 20 | reject |
+| 谷歌广告 / 统计 | `rules/egern/GoogleAds.yaml` | `rules/quantumultx/GoogleAds.list` | 24 | reject |
 | 苹果 / App Store | `rules/egern/Apple.yaml` | `rules/quantumultx/Apple.list` | 20 | direct |
 | 微软 / Outlook | `rules/egern/Microsoft.yaml` | `rules/quantumultx/Microsoft.list` | 17 | 微软服务 |
 | 香肠派对 | `rules/egern/SausageMan.yaml` | `rules/quantumultx/SausageMan.list` | 16 | direct |

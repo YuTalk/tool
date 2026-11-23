@@ -1,5 +1,5 @@
 # 谷歌广告 / 统计
-# 总共 20 条
+# 总共 24 条
 host-suffix, doubleclick.net, reject
 host-suffix, googlesyndication.com, reject
 host-suffix, googleadservices.com, reject
@@ -20,3 +20,7 @@ host-suffix, stats.g.doubleclick.net, reject
 host-suffix, adservice.google.com, reject
 host-suffix, adsense.google.com, reject
 host-suffix, analytics.google.com, reject
+host-suffix, adsense.com, reject
+host-suffix, doubleclick.com, reject
+host-suffix, crashlytics.com, reject
+host-suffix, firebase.com, reject
