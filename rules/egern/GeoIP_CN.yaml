@@ -1,6 +1,0 @@
-# GeoIP_CN
-# 来源：https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/GeoIP_CN.list
-# 总共 1 条
-# 用法：Egern 分流 -> DIRECT
-geoip_set:
-  - CN
