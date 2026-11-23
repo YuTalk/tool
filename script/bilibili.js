@@ -1,13 +1,15 @@
 // 哔哩哔哩去广告脚本
 // 做法跟经过验证的公开模块一样：推荐流是过滤掉广告卡片（不是把接口拦掉，拦掉首页就加载失败）
 // 「我的」页按 sections_v2 处理，底部栏按 tab 接口处理；视频页的关联广告由模块里引用的 protobuf 脚本处理
-// 开关从模块参数来，默认全开；关掉哪个，哪个就不生效
+// 开关从模块参数来：去广告总开关管开屏和推荐流，默认开；关掉哪个，哪个就不生效
 let arg = {};
 try { arg = JSON.parse($argument || '{}'); } catch (e) {}
-const removeSplash = arg.removeSplash !== false && arg.removeSplash !== 'false';
+const removeAds = arg.removeAds !== false && arg.removeAds !== 'false';
 const removeHotWords = arg.removeHotWords !== false && arg.removeHotWords !== 'false';
 const cleanMinePage = arg.cleanMinePage !== false && arg.cleanMinePage !== 'false';
-const removeFeedAds = arg.removeFeedAds !== false && arg.removeFeedAds !== 'false';
+// 兼容旧版参数：以前的 removeSplash / removeFeedAds 还在就按它们来
+const removeSplash = (arg.removeSplash !== undefined) ? (arg.removeSplash !== false && arg.removeSplash !== 'false') : removeAds;
+const removeFeedAds = (arg.removeFeedAds !== undefined) ? (arg.removeFeedAds !== false && arg.removeFeedAds !== 'false') : removeAds;
 const url = $request.url;
 let body = $response.body;
 // 多余入口的关键词：名字里包含就删（「会员购订单」「我的直播」「看视频免流量」这种变体也能删掉）
