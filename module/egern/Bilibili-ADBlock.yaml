@@ -1,13 +1,14 @@
-# 最后修改：2026-11-23 23:35
-# 哔哩哔哩去广告 · 自己写的模块，不引用别人的模块
+# 最后修改：2026-11-23 23:43
+# 哔哩哔哩 · 纯净，自己写的模块，不引用别人的模块
 # 带开关：在 Egern 模块编辑页里，想关哪个功能就关哪个，默认全开
-# 只处理开屏、搜索热词、「我的」页这三个接口，不碰推荐流，首页不会坏
+# 「我的」页只留上面那排蓝色的，下面整组删掉；底部栏去掉会员购；视频页广告也拦
 # 用法：Egern > 工具 > 模块 > + > 粘贴 raw 链接
 # 注意：不要和别的哔哩哔哩模块同时开
-name: 哔哩哔哩去广告
-description: 去开屏广告、搜索热词，精简「我的」页多余入口，带开关
+name: 哔哩哔哩 · 纯净
+description: 一个干净的哔哩哔哩：去开屏、热词，「我的」页只留你想留的
 author: YuTalk
 homepage: https://github.com/YuTalk/tool
+icon: https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/bilibili-icon.png
 compat_arguments:
   removeSplash: true
   removeHotWords: true
@@ -41,7 +42,7 @@ scriptings:
     name: Bilibili AdBlock
     script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.js
     timeout: 10
-    match: ^https?://((grpc|app)\.bili(bili\.com|api\.net)/bilibili\.app\.interface\.v1\.Search/DefaultWords|(app|api)\.bili(bili\.com|api\.net)/x/v2/(splash/|account/mine))
+    match: ^https?://(app|api|grpc)\.bili(bili\.com|api\.net)/(bilibili\.app\.interface\.v1\.Search/DefaultWords|x/v2/(splash/|account/mine|dm/ad|search/square)|x/resource/(top/activity|patch/tab)|x/vip/ads/materials|pgc/activity/deliver/material/receive)
     body_required: true
     env:
       argument: '{"removeSplash":{{{removeSplash}}},"removeHotWords":{{{removeHotWords}}},"cleanMinePage":{{{cleanMinePage}}}}'
