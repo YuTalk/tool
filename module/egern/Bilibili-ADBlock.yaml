@@ -1,42 +1,52 @@
-# 哔哩哔哩去广告 · 自用模块
-# 来源：按公开的哔哩哔哩去广告写法整理，不依赖第三方中转服务
-# 用法：Egern > 工具 > 模块 > + > 粘贴下面的 raw 链接
-# 注意：不要和已有的 fmz200 哔哩哔哩模块同时开，两个都改同一批接口会打架
+# 哔哩哔哩去广告 · 自己写的模块，不引用别人的模块
+# 原理：B站 App 的广告都走固定的几个接口
+# 开屏广告走 x/v2/splash，推荐流广告走 x/v2/feed，搜索热词走 DefaultWords
+# 「我的」页的多余入口是 x/v2/account/mine 返回的数据，里面把不要的删掉就行
+# 用法：Egern > 工具 > 模块 > + > 粘贴 raw 链接
+# 注意：不要和别的哔哩哔哩模块同时开，两个都改同一批接口会打架
 name: 哔哩哔哩去广告
 description: 去开屏广告、推荐流广告、搜索热词、直播间购物入口，并精简「我的」页多余入口
 author: YuTalk
 homepage: https://github.com/YuTalk/tool
-icon: https://egern.pages.dev/assets/icons/fmz200/wool_scripts/Loon/plugin/split/partB/bilibili.webp
 url_rewrites:
+# 搜索框下面的热词推荐，直接拒绝
 - match: ^https?:\/\/(grpc|app)\.bili(bili\.com|api\.net)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$
   location: http://reject/
   status_code: 307
+# 开屏广告，直接拒绝
 - match: ^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/splash\/(brand\/list|event\/list2|list|show)(\?.*)?$
   location: http://reject/
   status_code: 307
+# 推荐流里的广告，直接拒绝
 - match: ^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/feed\/index(\/story)?(\?.*)?$
   location: http://reject/
   status_code: 307
 body_rewrites:
+# 「我的」页返回的数据里，把多余的入口删掉：游戏中心、会员购、直播、漫画、课堂、免流量、我的客服、邀好友
 - response_jq:
     match: ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\?
     filter: del(.data.sections[]?.items[]? | select((.title // "") | test("游戏中心|会员购|直播|漫画|课堂|免流量|我的客服|邀好友")))
+# 番剧页的付费提示去掉
 - response_jq:
     match: ^https:\/\/api\.bilibili\.com\/pgc\/view\/v2\/app\/season\?
     filter: del(.data.payment)
 map_locals:
+# 搜索推荐词，返回空
 - match: ^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words
   headers:
     application/json: ''
   body: '{}'
+# 动态页的热门话题，返回空
 - match: ^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr
   headers:
     application/json: ''
   body: '{}'
+# 动态页的最常访问，返回空
 - match: ^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist
   headers:
     application/json: ''
   body: '{}'
+# 漫画的闪屏，返回空
 - match: ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash
   headers:
     application/json: ''
@@ -45,15 +55,18 @@ map_locals:
   headers:
     application/json: ''
   body: '{}'
+# 直播间的购物入口，返回空
 - match: ^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\?
   headers:
     application/json: ''
   body: '{}'
+# 番剧的活动弹窗，返回已关闭
 - match: ^https:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive\?
   headers:
     content-type: ' application/json'
   body: '{"code":0,"data":{"closeType":"close_win","container":[],"showTime":""},"message":"success"}'
 rules:
+# B站的广告统计域名，直接拒绝
 - domain:
     match: api.biliapi.com
     policy: REJECT
