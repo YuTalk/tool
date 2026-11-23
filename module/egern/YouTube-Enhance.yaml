@@ -1,6 +1,7 @@
-# 最后修改：2026-11-24 00:57
+# 最后修改：2026-11-24 01:07
 # YouTube Enhance
-# 改编自 Maasea 的 Youtube (Music) Enhance：https://github.com/Maasea/sgmodule/raw/master/YouTube.Enhance.sgmodule
+# 改编自 Maasea 的 Youtube (Music) Enhance，脚本都由我们自己维护，放在仓库 script/ 文件夹里，不直接引用别人家的链接
+# 原模块：https://github.com/Maasea/sgmodule/raw/master/YouTube.Enhance.sgmodule
 # 做法：拦截 youtubei 接口改界面（屏蔽上传、选段、Shorts 按钮）和字幕翻译，拦截 googlevideo 请求处理字幕
 # 带开关：在 Egern 模块编辑页里，屏蔽哪个按钮、字幕翻译成哪种语言都能改
 # 用法：Egern > 工具 > 模块 > + > 粘贴 raw 链接
@@ -64,7 +65,7 @@ compat_arguments_desc: '[界面]屏蔽上传按钮
 scriptings:
 - http_response:
     name: youtube.response
-    script_url: https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/youtube.response.js
     match: ^https?:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch|log_event|config))(\?(.*))?$
     body_required: true
     binary_body: true
@@ -72,7 +73,7 @@ scriptings:
       argument: '{"captionLang":"{{{captionLang}}}","blockUpload":{{{blockUpload}}},"blockImmersive":{{{blockImmersive}}},"blockShorts":{{{blockShorts}}},"debug":{{{debug}}}}'
 - http_request:
     name: youtube.request.init
-    script_url: https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/youtube.request.js
     match: ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&ack.*
     body_required: true
     binary_body: true
@@ -80,7 +81,7 @@ scriptings:
       argument: '{"captionLang":"{{{captionLang}}}"}'
 - http_request:
     name: youtube.request.log_event
-    script_url: https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/youtube.request.js
     match: ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/log_event
     body_required: true
     binary_body: true

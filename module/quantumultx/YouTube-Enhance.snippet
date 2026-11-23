@@ -2,15 +2,16 @@
 #!desc=适用于 YouTube 与 YouTube Music：屏蔽上传、选段、Shorts 按钮，字幕翻译
 #!author=YuTalk
 #!homepage=https://github.com/YuTalk/tool
-# 最后修改：2026-11-24 00:57
-# 改编自 Maasea 的 Youtube (Music) Enhance：https://github.com/Maasea/sgmodule/raw/master/YouTube.Enhance.sgmodule
+# 最后修改：2026-11-24 01:07
+# 改编自 Maasea 的 Youtube (Music) Enhance，脚本都由我们自己维护，放在仓库 script/ 文件夹里，不直接引用别人家的链接
+# 原模块：https://github.com/Maasea/sgmodule/raw/master/YouTube.Enhance.sgmodule
 # 注意：不要和别的 YouTube 模块同时开（比如 DualSubs），两个都改字幕会打架
 # 注意：QX 版不带开关，默认屏蔽上传和选段按钮、字幕翻译关；想改开关用 Egern 版
 
 [rewrite_local]
-^https://youtubei\.googleapis\.com/(youtubei/v1/(browse|next|player|search|reel/reel_watch_sequence|guide|account/get_setting|get_watch|log_event|config))(\?(.*))?$ url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js
-^https?://[\w-]+\.googlevideo\.com/initplayback.+&ack.* url script-request-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js
-^https://youtubei\.googleapis\.com/youtubei/v1/log_event url script-request-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js
+^https://youtubei\.googleapis\.com/(youtubei/v1/(browse|next|player|search|reel/reel_watch_sequence|guide|account/get_setting|get_watch|log_event|config))(\?(.*))?$ url script-response-body https://raw.githubusercontent.com/YuTalk/tool/main/script/youtube.response.js
+^https?://[\w-]+\.googlevideo\.com/initplayback.+&ack.* url script-request-body https://raw.githubusercontent.com/YuTalk/tool/main/script/youtube.request.js
+^https://youtubei\.googleapis\.com/youtubei/v1/log_event url script-request-body https://raw.githubusercontent.com/YuTalk/tool/main/script/youtube.request.js
 
 [mitm]
 hostname = *.googlevideo.com, youtubei.googleapis.com

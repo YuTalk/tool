@@ -1,6 +1,7 @@
-# 最后修改：2026-11-24 01:05
+# 最后修改：2026-11-24 01:07
 # 哔哩哔哩 · 纯净
 # 做法按经过验证的公开模块：推荐流过滤广告卡片、「我的」页 sections_v2、底部栏 tab 接口、视频页广告用 protobuf 脚本
+# 脚本都由我们自己维护，放在仓库 script/ 文件夹里，不直接引用别人家的链接（protobuf 脚本是 kokoryh 的，2026-11-24 复制进来）
 # 带开关：在 Egern 模块编辑页里，想关哪个功能就关哪个；去广告的 4 个（开屏、推荐、评论、空降）合成一个总开关
 # 注意：模块里没有不经过开关的拦截，关掉总开关广告就全回来
 # 用法：Egern > 工具 > 模块 > + > 粘贴 raw 链接
@@ -59,7 +60,7 @@ scriptings:
       argument: '{"removeAds":{{{removeAds}}},"removeHotWords":{{{removeHotWords}}},"cleanMinePage":{{{cleanMinePage}}}}'
 - http_request:
     name: bilibili.protobuf.request
-    script_url: https://egern.pages.dev/scripts/kokoryh/Sparkle/dist/bilibili.protobuf.request.js
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.protobuf.request.js
     timeout: 10
     match: ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(app\.viewunite\.v1\.View\/View|main\.community\.reply\.v1\.Reply\/MainList)$
     body_required: true
@@ -69,7 +70,7 @@ scriptings:
       argument: '{"purifyComment":{{{removeAds}}},"logLevel":"error"}'
 - http_response:
     name: bilibili.protobuf.response
-    script_url: https://egern.pages.dev/scripts/kokoryh/Sparkle/dist/bilibili.protobuf.response.js
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.protobuf.response.js
     timeout: 20
     match: ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(app\.(show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(unite)?\.v1\.View\/(View|ViewProgress|RelatesFeed|AIRelateAsync)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$
     body_required: true

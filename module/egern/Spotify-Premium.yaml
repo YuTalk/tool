@@ -1,6 +1,7 @@
-# 最后修改：2026-11-24 00:57
+# 最后修改：2026-11-24 01:07
 # Spotify 会员
-# 改编自 Reukix 的 Spotify 模块：https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/Script/Spotify.sgmodule
+# 改编自 Reukix 的 Spotify 模块，脚本都由我们自己维护，放在仓库 script/ 文件夹里，不直接引用别人家的链接
+# 原模块：https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/Script/Spotify.sgmodule
 # 做法：会员配置走 protobuf 脚本（bootstrap/config），首页和搜索走 JSON 脚本去广告，歌词走歌词脚本补全和翻译
 # 带开关：在 Egern 模块编辑页里，歌词补全、歌词翻译、翻译目标语言都能改，默认全开、翻译默认中文
 # 用法：Egern > 工具 > 模块 > + > 粘贴 raw 链接
@@ -75,21 +76,21 @@ map_locals:
 scriptings:
 - http_response:
     name: spotify-home
-    script_url: https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-home.js?v=0e4692c6dc47
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/spotify-home.js
     timeout: 5
     match: ^https?:\/\/(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?\/casita\/v1\/home\/default\/?(?:\?[^#]*)?$
     body_required: true
     binary_body: true
 - http_response:
     name: spotify-search
-    script_url: https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-search.js?v=511d67b05081
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/spotify-search.js
     timeout: 5
     match: ^https?:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/browsita\/v.\/browse
     body_required: true
     binary_body: true
 - http_response:
     name: spotify-scroll
-    script_url: https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-lyrics.js?v=caf13ded9c7b
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/spotify-lyrics.js
     timeout: 8
     match: ^https?:\/\/(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?\/scrollsita\/v[0-9]+\/scroll\/spotify:[^?#]+(?:\?[^#]*)?$
     body_required: true
@@ -98,7 +99,7 @@ scriptings:
       argument: 'Lyrics={{{Lyrics}}}&Translate={{{Translate}}}&TargetLanguage={{{TargetLanguage}}}'
 - http_response:
     name: spotify-lyrics
-    script_url: https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-lyrics.js?v=caf13ded9c7b
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/spotify-lyrics.js
     timeout: 20
     match: ^https?:\/\/(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?\/color-lyrics\/v2\/track\/[A-Za-z0-9]{22}(?:\/image\/[^/?#]+)?\/?(?:\?[^#]*)?$
     body_required: true
@@ -107,7 +108,7 @@ scriptings:
       argument: 'Lyrics={{{Lyrics}}}&Translate={{{Translate}}}&TargetLanguage={{{TargetLanguage}}}'
 - http_response:
     name: spotify-lyrics-metadata
-    script_url: https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-lyrics.js?v=caf13ded9c7b
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/spotify-lyrics.js
     timeout: 5
     match: ^https?:\/\/(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?\/(?:extended-metadata\/v0\/extended-metadata|metadata\/4\/track\/[a-fA-F0-9]{32})(?:\?[^#]*)?$
     body_required: true
@@ -116,7 +117,7 @@ scriptings:
       argument: 'Lyrics={{{Lyrics}}}&Translate={{{Translate}}}&TargetLanguage={{{TargetLanguage}}}'
 - http_response:
     name: spotify-lyrics-playback
-    script_url: https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-lyrics.js?v=caf13ded9c7b
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/spotify-lyrics.js
     timeout: 5
     match: ^https?:\/\/(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?\/connect-state\/v1\/devices\/[^/?#]+\/?(?:\?[^#]*)?$
     body_required: true
@@ -125,7 +126,7 @@ scriptings:
       argument: 'Lyrics={{{Lyrics}}}&Translate={{{Translate}}}&TargetLanguage={{{TargetLanguage}}}'
 - http_response:
     name: spotify-proto
-    script_url: https://raw.githubusercontent.com/Reukix/ukix/refs/heads/main/js/Spotify-proto.js?v=0321ac8dbef4
+    script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/spotify-proto.js
     timeout: 5
     match: ^https?:\/\/(?:[A-Za-z0-9-]+-)?spclient(?:\.wg)?\.spotify\.com(?::443)?\/(?:bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize|nebula\/v1\/configuration\/attributes|remote-config-resolver\/v3\/configuration)\/?(?:\?[^#]*)?$
     body_required: true
