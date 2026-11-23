@@ -1,5 +1,5 @@
 # 中国常用域名 - 经常用到的
-# 总共 116 条
+# 总共 179 条
 # 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
 domain_suffix_set:
   - baidu.com
@@ -118,3 +118,66 @@ domain_suffix_set:
   - huochepiao.com
   - didiglobal.com
   - wechatpay.com
+  - 10086.com
+  - 12306.com
+  - 126.net
+  - 2345.cc
+  - 2345.cn
+  - 360buyimg.com
+  - acg.tv
+  - alicloudccp.com
+  - aliimg.com
+  - aliyuncdn.com
+  - baidu.com.cn
+  - baidustatic.com
+  - bcebos.com
+  - bdurl.net
+  - biliapi.com
+  - biliapi.net
+  - bilibili.co
+  - biligame.net
+  - bilivideo.com
+  - byted-static.com
+  - bytedns.net
+  - byteimg.com
+  - cc.163.com
+  - china.com.cn
+  - cloud.tencent.com
+  - didi.cn
+  - docs.qq.com
+  - douyincdn.com
+  - douyinpic.com
+  - douyinstatic.com
+  - douyinvod.com
+  - dpfile.com
+  - elemecdn.com
+  - enrichgw.10010.com
+  - gtimg.com
+  - hao123img.com
+  - hc-cdn.com
+  - hdslb.com
+  - hicloud.com
+  - idqqimg.com
+  - iesdouyin.com
+  - map.baidu.com
+  - meeting.tencent.com
+  - mi-img.com
+  - mmstat.com
+  - nishub1.10010.com
+  - open.e.189.cn
+  - pstatp.com
+  - sina.com
+  - sinaimg.cn
+  - smtcdns.com
+  - smtcdns.net
+  - tbcdn.cn
+  - tianya.net
+  - tieba.baidu.com
+  - tmall.hk
+  - toutiaocdn.com
+  - waimai.meituan.com
+  - weather.com
+  - weibocdn.cn
+  - xiaomi.net
+  - xiaomicp.com
+  - zhimg.com
