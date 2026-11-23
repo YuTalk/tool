@@ -79,7 +79,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 脚本都由我们自己维护，放在顶层 `script/` 文件夹里，模块直接引用我们自己的链接，不引用别人家的脚本链接。借鉴来的脚本原样复制进来（一个字没改），上游更新后手动同步。
 
 - [bilibili.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.js) — 哔哩哔哩 · 纯净模块用的脚本，自己写的，处理开屏、热词、推荐流广告、「我的」页、底部栏、广告接口，按模块里的开关决定开不开
-- [bilibili.protobuf.request.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.protobuf.request.js) / [bilibili.protobuf.response.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.protobuf.response.js) — 哔哩哔哩视频页、评论区用的 protobuf 脚本，来自 kokoryh 的 Sparkle，2026-11-24 复制进来
+- [bilibili.protobuf.request.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.protobuf.request.js) / [bilibili.protobuf.response.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.protobuf.response.js) — 哔哩哔哩视频页、评论区用的 protobuf 脚本，来自 kokoryh 的 Sparkle，2026-11-24 复制进来；2026-11-24 01:26 改过（合并了我和 ChatGPT 的修复）：加了 removeAds 总开关，关总开关时视频页、评论区、热门页、搜索的广告净化全部停，动态显示开关不受影响；上游更新后同步时要把这个改动重新加上
 - [spotify-home.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/spotify-home.js) / [spotify-search.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/spotify-search.js) / [spotify-lyrics.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/spotify-lyrics.js) / [spotify-proto.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/spotify-proto.js) — Spotify 模块用的脚本，来自 Reukix 的 ukix，2026-11-24 复制进来
 - [youtube.response.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/youtube.response.js) / [youtube.request.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/youtube.request.js) — YouTube Enhance 模块用的脚本，来自 Maasea 的 sgmodule，2026-11-24 复制进来
 
