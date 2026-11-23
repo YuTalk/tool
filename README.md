@@ -69,14 +69,14 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 
 | 模块 | Egern 版 | QX 版 | 功能 |
 | --- | --- | --- | --- |
-| 📺 哔哩哔哩 · 纯净 | [Bilibili-ADBlock.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/Bilibili-ADBlock.yaml) | [Bilibili-ADBlock.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/Bilibili-ADBlock.snippet) | 去开屏广告、搜索热词、视频页广告；「我的」页只留上面那排蓝色的（离线缓存、历史记录、我的收藏、稍后再看），下面整组删掉；底部栏去掉会员购；Egern 版带开关（开屏 / 热词 / 我的页各一个） |
+| 📺 哔哩哔哩 · 纯净 | [Bilibili-ADBlock.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/Bilibili-ADBlock.yaml) | [Bilibili-ADBlock.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/Bilibili-ADBlock.snippet) | 去开屏广告、搜索热词、推荐流广告卡片、视频页广告；「我的」页只留上面那排蓝色的（离线缓存、历史记录、我的收藏、稍后再看），下面整组删掉；底部栏去掉会员购；Egern 版带 4 个开关（开屏 / 热词 / 我的页 / 推荐各一个） |
 | 🎵 Spotify 会员 | [Spotify-Premium.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/Spotify-Premium.yaml) | [Spotify-Premium.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/Spotify-Premium.snippet) | 去广告、解锁会员标识（QX 版只能去广告） |
 
 ### 📜 脚本
 
 | 脚本 | 用途 |
 | --- | --- |
-| [bilibili.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.js) | 哔哩哔哩 · 纯净模块用的脚本，处理开屏、热词、「我的」页、底部栏、广告接口，按模块里的开关决定开不开 |
+| [bilibili.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.js) | 哔哩哔哩 · 纯净模块用的脚本，处理开屏、热词、推荐流广告、「我的」页、底部栏、广告接口，按模块里的开关决定开不开 |
 
 ### 🖼️ 图标
 
