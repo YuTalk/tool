@@ -2,7 +2,6 @@
 #!desc=去开屏广告、推荐流广告、搜索热词、直播间购物入口
 #!author=YuTalk
 #!homepage=https://github.com/YuTalk/tool
-# 最后修改：2026-11-23 23:18
 # 自己写的模块，不引用别人的模块
 # 注意：不要和别的哔哩哔哩模块同时开，两个都改同一批接口会打架
 # 注意：QX 版暂不支持精简「我的」页多余入口，那个要 Egern 版才有
@@ -12,8 +11,6 @@
 ^https?://(grpc|app)\.bili(bili\.com|api\.net)/bilibili\.app\.interface\.v1\.Search/DefaultWords$ url 307 http://reject/
 # 开屏广告，直接拒绝
 ^https?://app\.bili(bili\.com|api\.net)/x/v2/splash/(brand/list|event/list2|list|show)(\?.*)?$ url 307 http://reject/
-# 推荐流里的广告，直接拒绝
-^https?://app\.bili(bili\.com|api\.net)/x/v2/feed/index(/story)?(\?.*)?$ url 307 http://reject/
 # 搜索推荐词，返回空
 ^https?://api\.vc\.bilibili\.com/search_svr/v\d/Search/recommend_words url 307 http://reject/
 # 动态页的热门话题，返回空

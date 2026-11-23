@@ -1,4 +1,3 @@
-# 最后修改：2026-11-23 23:18
 # 哔哩哔哩去广告 · 自己写的模块，不引用别人的模块
 # 原理：B站 App 的广告都走固定的几个接口
 # 开屏广告走 x/v2/splash，推荐流广告走 x/v2/feed，搜索热词走 DefaultWords
@@ -16,10 +15,6 @@ url_rewrites:
   status_code: 307
 # 开屏广告，直接拒绝
 - match: ^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/splash\/(brand\/list|event\/list2|list|show)(\?.*)?$
-  location: http://reject/
-  status_code: 307
-# 推荐流里的广告，直接拒绝
-- match: ^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/feed\/index(\/story)?(\?.*)?$
   location: http://reject/
   status_code: 307
 body_rewrites:
