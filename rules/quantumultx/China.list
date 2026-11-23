@@ -1,3 +1,7 @@
+# 中国常用域名 - 经常用到的
+# 总共 690 条
+# 用法：QX 分流 -> direct
+# 第一段：应用/网站域名
 host-suffix, baidu.com, direct
 host-suffix, qq.com, direct
 host-suffix, weixin.com, direct
@@ -551,6 +555,7 @@ host-suffix, yuanbao.tencent.com, direct
 host-suffix, jimeng.jianying.com, direct
 host-suffix, jianying.com, direct
 host-suffix, quark.cn, direct
+# 第二段：CDN/后台/接口域名
 host-suffix, alicdn.com, direct
 host-suffix, qlogo.cn, direct
 host-suffix, tencentcloud.com, direct
