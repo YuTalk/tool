@@ -295,6 +295,7 @@ export default async function(ctx) {
     "[Argument]", e.argument), t());
   var Pt = Ot({
     displayUpList: "show",
+    removeAds: !0,
     purifyComment: !0,
     sponsorBlock: !0
   });
@@ -3778,6 +3779,7 @@ export default async function(ctx) {
     return !0;
   }
   var on = (s, e) => {
+    if (s.argument.removeAds === false || s.argument.removeAds === "false") return e();
     let t = Xe.fromBinary(s.response.bodyBytes);
     return sloppySet(t, "cm", void 0), t.reqUser && (sloppySet(t.reqUser, "elecPlusBtn",
       void 0)), t.tab?.tabModule.forEach(n => {
@@ -3812,10 +3814,11 @@ export default async function(ctx) {
       cid: l
     } = r;
     let o = wt(i);
-    (await Promise.all([fe(s, 1), dn(s, o, l)]));
+    (await Promise.all([fe(s, 1), (s.argument.sponsorBlock === false || s.argument.sponsorBlock === "false") ? Promise.resolve() : dn(s, o, l)]));
     return e();
   };
   var an = (s, e) => {
+    if (s.argument.sponsorBlock === false || s.argument.sponsorBlock === "false") return e();
     let {
       sponsorBlock: t
     } = s.argument, n = Ye.fromBinary(s.response.bodyBytes);
@@ -3830,6 +3833,7 @@ export default async function(ctx) {
           "pointPermanent", !0))), sloppySet(s.response, "bodyBytes", Ye.toBinary(n)), e();
   };
   var ln = (s, e) => {
+    if (s.argument.sponsorBlock === false || s.argument.sponsorBlock === "false") return e();
     let {
       sponsorBlock: t
     } = s.argument, n = nt.fromBinary(s.response.bodyBytes);
@@ -3840,6 +3844,7 @@ export default async function(ctx) {
       "bodyBytes", nt.toBinary(n)), e();
   };
   var fn = async (s, e) => {
+    if (s.argument.sponsorBlock === false || s.argument.sponsorBlock === "false") j();
     s.state.isDanmakuAirborneEffective || j();
     let t = s.request.bodyBytes;
     let n = t[0] ? (await F(t.subarray(5))) : t.subarray(5);
@@ -3850,7 +3855,7 @@ export default async function(ctx) {
       oid: l
     } = r;
     let o = wt(i);
-    (await Promise.all([fe(s, 1), dn(s, o, l)]));
+    (await Promise.all([fe(s, 1), (s.argument.sponsorBlock === false || s.argument.sponsorBlock === "false") ? Promise.resolve() : dn(s, o, l)]));
     if (s.state.segments) {
       return e();
     }
@@ -3892,7 +3897,9 @@ export default async function(ctx) {
   var cn = (s, e) => {
     let {
       purifyComment: t
-    } = s.argument, n = gt.fromBinary(s.response.bodyBytes);
+    } = s.argument;
+    if (t === false || t === "false") return e();
+    let n = gt.fromBinary(s.response.bodyBytes);
     sloppySet(n, "cm", void 0), sloppySet(n.mixedCards, "length", 0);
     let r = [3, 5];
     if (sloppySet(n, "subjectTopCards", n.subjectTopCards.filter(i => !r.includes(i.type))),

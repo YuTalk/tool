@@ -250,10 +250,12 @@ export default async function(ctx) {
   };
   var Vn = a => (e, t) => (e.setupArgument(a), P.setLevel(String(e.argument.logLevel)), P.debug(
     "[Argument]", e.argument), t());
+  const isAdsEnabled = value => value !== false && value !== "false";
   var L = Vn({
     displayUpList: "show",
     purifyComment: !0,
-    sponsorBlock: !0
+    sponsorBlock: !0,
+    removeAds: !0
   });
   var we = (a, e) => {
     sloppySet(a.state, "biliVariant", "universal"), sloppySet(a.state, "biliVersion", 0),
@@ -5004,7 +5006,7 @@ export default async function(ctx) {
         message: ""
       })), sloppySet(a.response, "bodyBytes", Ge.toBinary(t)), e();
   };
-  var si = (a, e) => {
+  var si = (a, e) => {if(!isAdsEnabled(a.argument?.removeAds))return e();
     let t = Nt.fromBinary(a.response.bodyBytes);
     return sloppySet(t, "cm", void 0), t.reqUser && (sloppySet(t.reqUser, "elecPlusBtn",
       void 0)), t.tab?.tabModule.forEach(n => {
@@ -5012,12 +5014,12 @@ export default async function(ctx) {
         .tab.introduction.modules)));
     }), sloppySet(a.response, "bodyBytes", Nt.toBinary(t)), e();
   };
-  var li = (a, e) => {
+  var li = (a, e) => {if(!isAdsEnabled(a.argument?.removeAds))return e();
     let t = Pt.fromBinary(a.response.bodyBytes);
     return sloppySet(t, "cm", void 0), t.module && (sloppySet(t.module, "modules", pi(t.module
       .modules))), sloppySet(a.response, "bodyBytes", Pt.toBinary(t)), e();
   };
-  var fi = (a, e) => {
+  var fi = (a, e) => {if(!isAdsEnabled(a.argument?.removeAds))return e();
     let t = xt.fromBinary(a.response.bodyBytes);
     return sloppySet(t, "relates", di(t.relates)), sloppySet(a.response, "bodyBytes", xt
       .toBinary(t)), e();
@@ -5036,7 +5038,7 @@ export default async function(ctx) {
     return a.filter(t => !e.includes(t.relateCardType) && !t.cmStock.length && !t.basicInfo
       ?.uniqueId);
   }
-  var ui = (a, e) => {
+  var ui = (a, e) => {if(!isAdsEnabled(a.argument?.removeAds))return e();
     let {
       sponsorBlock: t
     } = a.argument, n = Ot.fromBinary(a.response.bodyBytes);
@@ -5050,7 +5052,7 @@ export default async function(ctx) {
           .state.segments, a.state.videoDuration)), sloppySet(n.videoGuide.videoPoint,
           "pointPermanent", !0))), sloppySet(a.response, "bodyBytes", Ot.toBinary(n)), e();
   };
-  var ci = (a, e) => {
+  var ci = (a, e) => {if(!isAdsEnabled(a.argument?.removeAds))return e();
     let t = Mt.fromBinary(a.response.bodyBytes);
     return sloppySet(t, "label", void 0), sloppySet(t, "cmIpad", void 0), sloppySet(t,
         "cmConfig", void 0), t.reqUser && (sloppySet(t.reqUser, "elecPlusBtn", void 0)),
@@ -5058,12 +5060,12 @@ export default async function(ctx) {
         "relates", t.relates.filter(n => !n.cm.length)), sloppySet(a.response, "bodyBytes", Mt
         .toBinary(t)), e();
   };
-  var yi = (a, e) => {
+  var yi = (a, e) => {if(!isAdsEnabled(a.argument?.removeAds))return e();
     let t = vt.fromBinary(a.response.bodyBytes);
     return sloppySet(t, "list", t.list.filter(n => !n.cm.length)), sloppySet(a.response,
       "bodyBytes", vt.toBinary(t)), e();
   };
-  var mi = (a, e) => {
+  var mi = (a, e) => {if(!isAdsEnabled(a.argument?.removeAds))return e();
     let {
       sponsorBlock: t
     } = a.argument, n = $t.fromBinary(a.response.bodyBytes);
@@ -5073,13 +5075,13 @@ export default async function(ctx) {
         .videoDuration)), sloppySet(n, "pointPermanent", !0))), sloppySet(a.response,
       "bodyBytes", $t.toBinary(n)), e();
   };
-  var hi = (a, e) => {
+  var hi = (a, e) => {if(!isAdsEnabled(a.argument?.removeAds))return e();
     let t = fn.fromBinary(a.response.bodyBytes);
     return sloppySet(t, "qoe", void 0), sloppySet(t.activityMeta, "length", 0), t.command
       ?.commandDms.length && (sloppySet(t.command.commandDms, "length", 0)), sloppySet(a
         .response, "bodyBytes", fn.toBinary(t)), e();
   };
-  var bi = (a, e) => {
+  var bi = (a, e) => {if(!isAdsEnabled(a.argument?.removeAds))return e();
     let {
       purifyComment: t
     } = a.argument, n = wn.fromBinary(a.response.bodyBytes);
@@ -5101,9 +5103,11 @@ export default async function(ctx) {
     let {
       displayUpList: t
     } = a.argument, n = Zt.fromBinary(a.response.bodyBytes);
-    if (sloppySet(n, "topicList", void 0), n.dynamicList) {
-      let r = [15, 18];
-      sloppySet(n.dynamicList, "list", n.dynamicList.list.filter(i => !r.includes(i.cardType)));
+    if (isAdsEnabled(a.argument.removeAds)) {
+      if (sloppySet(n, "topicList", void 0), n.dynamicList) {
+        let r = [15, 18];
+        sloppySet(n.dynamicList, "list", n.dynamicList.list.filter(i => !r.includes(i.cardType)));
+      }
     }
     return Si(n, t), sloppySet(a.response, "bodyBytes", Zt.toBinary(n)), e();
   };
@@ -5121,7 +5125,7 @@ export default async function(ctx) {
     r && (sloppySet(r, "separator", !0), sloppySet(a.upList, "list", [...n, ...t]), sloppySet(n,
       "length", 0));
   }
-  var wi = (a, e) => {
+  var wi = (a, e) => {if(!isAdsEnabled(a.argument?.removeAds))return e();
     let t = an.fromBinary(a.response.bodyBytes),
       n = ["rcmdOneItem", "smallCoverV5Ad", "topicList"];
     return sloppySet(t, "items", t.items.filter(r => {
@@ -5132,7 +5136,7 @@ export default async function(ctx) {
       return !n.includes(r.item.oneofKind);
     })), sloppySet(a.response, "bodyBytes", an.toBinary(t)), e();
   };
-  var ki = (a, e) => {
+  var ki = (a, e) => {if(!isAdsEnabled(a.argument?.removeAds))return e();
     let t = In.fromBinary(a.response.bodyBytes),
       n = /_ad_?/;
     return sloppySet(t, "item", t.item.filter(r => !n.test(r.linktype))), sloppySet(a.response,
@@ -5168,18 +5172,18 @@ export default async function(ctx) {
   R.post("playerunite.v1.Player/PlayViewUnite", ri);
   R.post("playurl.v1.PlayURL/PlayView", ai);
   R.post("player.v2.PlayURL/PlayView", oi);
-  R.post("viewunite.v1.View/View", si);
-  R.post("viewunite.v1.View/AIRelateAsync", li);
-  R.post("viewunite.v1.View/RelatesFeed", fi);
+  R.post("viewunite.v1.View/View", L, si);
+  R.post("viewunite.v1.View/AIRelateAsync", L, li);
+  R.post("viewunite.v1.View/RelatesFeed", L, fi);
   R.post("viewunite.v1.View/ViewProgress", L, we, ui);
-  R.post("view.v1.View/View", ci);
-  R.post("view.v1.View/RelatesFeed", yi);
+  R.post("view.v1.View/View", L, ci);
+  R.post("view.v1.View/RelatesFeed", L, yi);
   R.post("view.v1.View/ViewProgress", L, we, mi);
-  R.post("v1.DM/DmView", hi);
+  R.post("v1.DM/DmView", L, hi);
   R.post("v1.Reply/MainList", L, bi);
   R.post("v2.Dynamic/DynAll", L, gi);
-  R.post("v1.Popular/Index", wi);
-  R.post("v1.Search/SearchAll", ki);
+  R.post("v1.Popular/Index", L, wi);
+  R.post("v1.Search/SearchAll", L, ki);
   var Nn = new H;
   Nn.use(Un).use(En).use(Wn).use(R.routes()).use(R.notFound());
   return await Nn.run();

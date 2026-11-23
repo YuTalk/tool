@@ -1,7 +1,7 @@
-# 最后修改：2026-11-24 01:07
+# 最后修改：2026-11-24 01:26
 # 哔哩哔哩 · 纯净
 # 做法按经过验证的公开模块：推荐流过滤广告卡片、「我的」页 sections_v2、底部栏 tab 接口、视频页广告用 protobuf 脚本
-# 脚本都由我们自己维护，放在仓库 script/ 文件夹里，不直接引用别人家的链接（protobuf 脚本是 kokoryh 的，2026-11-24 复制进来）
+# 脚本都由我们自己维护，放在仓库 script/ 文件夹里，不直接引用别人家的链接（protobuf 脚本是 kokoryh 的，2026-11-24 复制进来；2026-11-24 01:26 合并了我和 ChatGPT 的修复：响应脚本和请求脚本的去广告都跟 [去广告]总开关走，关总开关时视频页、评论区、热门页、搜索的广告净化全部停，动态显示开关不受影响）
 # 带开关：在 Egern 模块编辑页里，想关哪个功能就关哪个；去广告的 4 个（开屏、推荐、评论、空降）合成一个总开关
 # 注意：模块里没有不经过开关的拦截，关掉总开关广告就全回来
 # 用法：Egern > 工具 > 模块 > + > 粘贴 raw 链接
@@ -67,7 +67,7 @@ scriptings:
     binary_body: true
     env:
       _hub_enabled: 'true'
-      argument: '{"purifyComment":{{{removeAds}}},"logLevel":"error"}'
+      argument: '{"removeAds":{{{removeAds}}},"sponsorBlock":{{{removeAds}}},"purifyComment":{{{removeAds}}},"logLevel":"error"}'
 - http_response:
     name: bilibili.protobuf.response
     script_url: https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.protobuf.response.js
@@ -76,7 +76,7 @@ scriptings:
     body_required: true
     binary_body: true
     env:
-      argument: '{"displayUpList":"{{{displayUpList}}}","purifyComment":{{{removeAds}}},"sponsorBlock":{{{removeAds}}},"logLevel":"error"}'
+      argument: '{"displayUpList":"{{{displayUpList}}}","purifyComment":{{{removeAds}}},"sponsorBlock":{{{removeAds}}},"removeAds":{{{removeAds}}},"logLevel":"error"}'
       EGH_DEVICE_TYPE: iPhone
 mitm:
   hostnames:
