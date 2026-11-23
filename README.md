@@ -105,6 +105,10 @@ https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/Microsoft.yaml
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/SausageMan.yaml
 ```
 
+```
+https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/AI%20Part.yaml
+```
+
 QX 版：
 
 ```text
@@ -129,6 +133,10 @@ https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/Microsoft.l
 
 ```text
 https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/SausageMan.list
+```
+
+```
+https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/AI%20Part.list
 ```
 
 GeoIP 库：
