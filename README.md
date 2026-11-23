@@ -13,7 +13,7 @@
 | 项目 | 数量 |
 | --- | --- |
 | 规则集 | 8 个（Egern 和 QX 各一份，内容一致） |
-| 模块 | 1 个（哔哩哔哩 · 纯净，Egern 和 QX 各一份） |
+| 模块 | 2 个（哔哩哔哩 · 纯净、Spotify 会员，Egern 和 QX 各一份） |
 | 图标 | 39 个（13 套图标库预览图 + 25 个单个应用图标，都是从别人家搬过来的原图） |
 | 域名总数 | 850 条（去重后） |
 | GeoIP 库 | 6,575 条 CIDR，约 132KB，覆盖 357,426,983 个中国 IPv4 地址 |
@@ -69,6 +69,8 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 
 - 📺 哔哩哔哩 · 纯净 — Egern：[Bilibili-ADBlock.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/Bilibili-ADBlock.yaml)　QX：[Bilibili-ADBlock.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/Bilibili-ADBlock.snippet)
   - 去开屏、热词、推荐流广告、视频页广告；「我的」页只留蓝色一排；底部栏只留首页、关注、我的；Egern 版 7 个开关（热词、我的页、动态、评论、优化加载、空降助手、日志等级）。去广告没有总开关，永远开着（按 fmz200 的做法，2026-11-24 重做）
+- 🎵 Spotify 会员 — Egern：[Spotify-Premium.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/Spotify-Premium.yaml)　QX：[Spotify-Premium.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/Spotify-Premium.snippet)
+  - 会员配置、首页与播放页去广告，歌词补全和双语翻译；Egern 版 3 个开关（歌词补全、歌词翻译、翻译目标语言）。会员和去广告没有总开关，永远开着
 
 ### 📜 脚本
 
@@ -77,6 +79,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 - [bilibili.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.js) — 哔哩哔哩 · 纯净模块用的脚本，自己写的，处理开屏、热词、推荐流广告、「我的」页、底部栏、广告接口；开屏、推荐流、广告接口永远拦截，没有开关
 - [bilibili.protobuf.request.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.protobuf.request.js) / [bilibili.protobuf.response.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.protobuf.response.js) — 哔哩哔哩视频页、评论区用的 protobuf 脚本，来自 kokoryh 的 Sparkle，2026-11-24 复制进来（原版，未改）
 - [bilibili.json.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.json.js) / [webpage.bilibili.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/webpage.bilibili.js) — 哔哩哔哩直播和网页用的脚本，来自 kokoryh 的 Sparkle，2026-11-24 复制进来（原版，未改）
+- [spotify-home.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/spotify-home.js) / [spotify-search.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/spotify-search.js) / [spotify-lyrics.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/spotify-lyrics.js) / [spotify-proto.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/spotify-proto.js) — Spotify 模块用的脚本，来自 Reukix 的 ukix，2026-11-24 复制进来（原版，未改）
 
 ### 🖼️ 图标
 
@@ -87,6 +90,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 | 图标 | 模块 |
 | --- | --- |
 | <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/bilibili.png" width="48"> | 哔哩哔哩 · 纯净（Qure 彩色版） |
+| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/spotify.png" width="48"> | Spotify 会员（Qure 彩色版） |
 
 **13 套图标库（预览图就是原图）：**
 
