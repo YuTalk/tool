@@ -1,8 +1,7 @@
-# 🐿️ Egern 规则库
+# 🧰 Tool
 
-> 为 Egern（小松鼠）打造的中国域名与中国 IP 规则库，让国内流量走国内、走直连，更快、更省电。
+> 中国常用域名与中国 IPv4 地址库，让国内流量走国内、走直连，更快、更省电。
 
-![Egern](https://img.shields.io/badge/工具-Egern-4CAF50?style=flat-square)
 ![更新](https://img.shields.io/badge/自动更新-每%203%20小时-blue?style=flat-square)
 ![IPv4](https://img.shields.io/badge/GeoIP-IPv4-orange?style=flat-square)
 ![License](https://img.shields.io/badge/开源-MIT-lightgrey?style=flat-square)
@@ -13,8 +12,8 @@
 
 | 文件 | 内容 | 大小 | 用途 |
 | --- | --- | --- | --- |
-| **China.yaml** | 中国常用域名 **690 条** | 约 11 KB | Egern DNS 转发 → 国内 |
-| **GeoIpCN.mmdb** | 中国 IPv4 地址库 **6,575 条 CIDR** | 约 132 KB | Egern GEOIP CN 判断，国内 IP → DIRECT |
+| **China.yaml** | 中国常用域名 **690 条** | 约 11 KB | DNS 分流 / 规则集，国内域名走国内 DNS |
+| **GeoIpCN.mmdb** | 中国 IPv4 地址库 **6,575 条 CIDR** | 约 132 KB | GEOIP CN 判断，国内 IP 走直连 |
 
 ### 🌐 China.yaml（690 条）
 
@@ -40,31 +39,27 @@
 
 ## 🚀 怎么用
 
-### 1️⃣ China.yaml：DNS 转发 → 国内
+### 1️⃣ China.yaml：国内域名走国内 DNS
 
-在 Egern 里：
+在代理工具里把这个文件加为规则集 / DNS 转发，策略选国内 / DIRECT：
 
-```
-设置 > DNS > DNS 转发 > +
-类型：proxy_rule_set
-匹配：https://raw.githubusercontent.com/YuTalk/egern/main/China.yaml
-策略：国内
+```text
+https://raw.githubusercontent.com/YuTalk/tool/main/China.yaml
 ```
 
 ### 2️⃣ GeoIpCN.mmdb：换 GeoIP 库
 
-在 Egern 里：
+在支持自定义 GeoIP 库的代理工具里，把 GeoIP 数据库换成这个链接：
 
-```
-设置 > 分流 > GeoIP 数据库
-链接：https://raw.githubusercontent.com/YuTalk/egern/main/GeoIpCN.mmdb
+```text
+https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 ```
 
 ### 3️⃣ 分流里留一条 GEOIP CN → DIRECT
 
 ```
 GEOIP CN → DIRECT（倒数第二条）
-默认 → 兜底后备策略（最后一条）
+默认 → 兜底策略（最后一条）
 ```
 
 > ⚠️ GEOIP CN 一定放倒数第二，别放第一，不然每个域名都要先解析 IP，费电又变慢。
@@ -74,11 +69,11 @@ GEOIP CN → DIRECT（倒数第二条）
 ## 🔗 直链（复制即用）
 
 ```text
-https://raw.githubusercontent.com/YuTalk/egern/main/China.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/China.yaml
 ```
 
 ```text
-https://raw.githubusercontent.com/YuTalk/egern/main/GeoIpCN.mmdb
+https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 ```
 
 ---
@@ -97,7 +92,7 @@ https://raw.githubusercontent.com/YuTalk/egern/main/GeoIpCN.mmdb
 ## ❓ 常见问题
 
 **Q：外国网站会不会被误判成中国？**
-A：不会。库里只装了中国段，外国 IP 返回空，走兜底代理。
+A：不会。库里只装了中国段，外国 IP 返回空，走代理。
 
 **Q：为什么只有 IPv4？**
 A：IPv6 关着，用纯 IPv4 更小更快。以后开 IPv6 再换回带 IPv6 的库。
