@@ -1,8 +1,8 @@
 # 中国常用域名 - 经常用到的
 # 总共 684 条
-# 前面是应用/网站域名，后面是 CDN/后台/接口域名
 # 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
 domain_suffix_set:
+# 第一段：应用/网站域名
   - baidu.com
   - qq.com
   - weixin.com
@@ -550,6 +550,7 @@ domain_suffix_set:
   - zmz004.com
   - zmz2019.com
   - zmzfile.com
+# 第二段：CDN/后台/接口域名
   - alicdn.com
   - qlogo.cn
   - tencentcloud.com
