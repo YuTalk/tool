@@ -76,6 +76,19 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 
 ---
 
+## 📱 一键跳转到软件
+
+点一下就跳到 App Store，没装就下载，装了就点「打开」：
+
+| 软件 | 跳转 |
+| --- | --- |
+| 🐿️ Egern（小松鼠，免费 + 内购） | [👉 点我打开 Egern](https://apps.apple.com/us/app/egern/id1616105820) |
+| ⚡ Quantumult X（$9.99） | [👉 点我打开 Quantumult X](https://apps.apple.com/us/app/quantumult-x/id1443988620) |
+
+> Egern 和 QX 国区 App Store 搜不到，要用美区 / 港区 Apple ID 才能下载。
+
+---
+
 ## 🔗 直链
 
 点下面表格里的链接就打开规则文件，长按可以复制链接。
