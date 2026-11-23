@@ -1,7 +1,7 @@
 # 中国常用域名 - 经常用到的
 # 总共 684 条
+# 前面是应用/网站域名，后面是 CDN/后台/接口域名
 # 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
-# 来源：你留的 116 + CDN 63 + ChinaDomain.list 609，去重合并
 domain_suffix_set:
   - baidu.com
   - qq.com
@@ -15,7 +15,6 @@ domain_suffix_set:
   - alipay.com
   - alibaba.com
   - aliyun.com
-  - alicdn.com
   - 1688.com
   - xianyu.com
   - pinduoduo.com
@@ -58,7 +57,6 @@ domain_suffix_set:
   - github.com.cn
   - gitee.com
   - oschina.net
-  - qlogo.cn
   - qqmail.com
   - outlook.cn
   - weather.com.cn
@@ -78,7 +76,6 @@ domain_suffix_set:
   - heytea.com
   - haidilao.com
   - tencent.com
-  - tencentcloud.com
   - weiyun.com
   - alipay.cn
   - feishu.cn
@@ -124,65 +121,30 @@ domain_suffix_set:
   - 126.net
   - 2345.cc
   - 2345.cn
-  - 360buyimg.com
   - acg.tv
-  - alicloudccp.com
-  - aliimg.com
-  - aliyuncdn.com
   - baidu.com.cn
-  - baidustatic.com
-  - bcebos.com
   - bdurl.net
-  - biliapi.com
-  - biliapi.net
   - bilibili.co
   - biligame.net
-  - bilivideo.com
-  - byted-static.com
-  - bytedns.net
-  - byteimg.com
   - cc.163.com
   - china.com.cn
-  - cloud.tencent.com
   - didi.cn
   - docs.qq.com
-  - douyincdn.com
-  - douyinpic.com
-  - douyinstatic.com
-  - douyinvod.com
   - dpfile.com
-  - elemecdn.com
   - enrichgw.10010.com
-  - gtimg.com
-  - hao123img.com
-  - hc-cdn.com
-  - hdslb.com
-  - hicloud.com
-  - idqqimg.com
   - iesdouyin.com
   - map.baidu.com
   - meeting.tencent.com
-  - mi-img.com
-  - mmstat.com
   - nishub1.10010.com
   - open.e.189.cn
-  - pstatp.com
   - sina.com
-  - sinaimg.cn
-  - smtcdns.com
-  - smtcdns.net
-  - tbcdn.cn
   - tianya.net
   - tieba.baidu.com
   - tmall.hk
-  - toutiaocdn.com
   - waimai.meituan.com
   - weather.com
-  - weibocdn.cn
   - xiaomi.net
   - xiaomicp.com
-  - zhimg.com
-  - 00cdn.com
   - 115.com
   - 127.net
   - 13th.tech
@@ -204,25 +166,20 @@ domain_suffix_set:
   - 5054399.com
   - 51cto.com
   - 51job.com
-  - 51jobcdn.com
   - 56.com
   - 58.com
   - 71.am
-  - 71edge.com
   - 8686c.com
-  - 88cdn.com
   - 95516.com
   - abchina.com
   - abercrombie.com
   - acfun.tv
-  - acgvideo.com
   - air-matters.com
   - air-matters.io
   - aixifan.com
   - algocasts.io
   - aliapp.org
   - alibabachengdun.com
-  - alibabacloud.com
   - alibabausercontent.com
   - aliexpress.com
   - alikunlun.com
@@ -235,7 +192,6 @@ domain_suffix_set:
   - allawno.com
   - allawntech.com
   - amemv.com
-  - appsimg.com
   - appvipshop.com
   - asklink.com
   - auth.wo.cn
@@ -243,52 +199,38 @@ domain_suffix_set:
   - autonavi.com
   - b23.tv
   - babytree.com
-  - babytreeimg.com
   - baicizhan.com
   - baidubcr.com
   - baidupan.com
   - baidupcs.com
   - baike.com
   - baomitu.com
-  - bdimg.com
-  - bdstatic.com
-  - bdxiguaimg.com
-  - bdxiguastatic.com
   - bigfun.cn
   - bigfunapp.cn
   - biligame.com
   - biliintl.co
-  - bilivideo.cn
   - biqudu.com
   - biquge.com
   - bitauto.com
   - bokecc.com
   - bootcss.com
-  - bosszhipin.com
   - bytedance.com
   - bytedance.net
   - bytednsdoc.com
-  - bytefcdnrd.com
   - bytegoofy.com
   - bytescm.com
   - bytetos.com
   - bytexservice.com
   - c-ctrip.com
   - camera360.com
-  - cctvpic.com
-  - cdnmama.com
   - chaipip.com
   - chaoxing.com
   - che168.com
-  - chinacache.net
   - chinaplay.store
   - chinaso.com
   - chinaz.com
   - chinaz.net
-  - chuimg.com
   - cibntv.net
-  - clouddn.com
-  - cloudxns.net
   - cm.steampowered.com
   - cmbchina.com
   - cmpassport.com
@@ -303,7 +245,6 @@ domain_suffix_set:
   - csgo.wmsj.cn
   - ctrip.com
   - dangdang.com
-  - dbankcdn.com
   - dfcfw.com
   - dhrest.com
   - dianping.com
@@ -319,36 +260,27 @@ domain_suffix_set:
   - doubanio.com
   - douyu.com
   - douyu.tv
-  - douyucdn.cn
-  - douyuscdn.com
   - douyutv.com
   - duokan.com
   - duowan.com
-  - dxycdn.com
   - dytt8.net
   - easou.com
   - eastday.com
   - eastmoney.com
   - ecitic.com
-  - edgesrv.com
   - element-plus.org
-  - epicgames.com
-  - epicgames.dev
   - ewqcxz.com
   - fang.com
   - fantasy.tv
   - feelgood.cn
   - feiliao.com
   - feng.com
-  - fengkongcloud.com
   - fir.im
   - foxmail.com
   - frdic.com
   - fresh-ideas.cc
   - ganji.com
-  - ganjistatic1.com
   - geetest.com
-  - geilicdn.com
   - ghpym.com
   - gifshow.com
   - go2map.com
@@ -362,8 +294,6 @@ domain_suffix_set:
   - helpshift.com
   - heytap.com
   - heytapcs.com
-  - heytapdownload.com
-  - heytapimage.com
   - heytapmobi.com
   - hichina.com
   - hihonor.com
@@ -373,49 +303,38 @@ domain_suffix_set:
   - hongxiu.com
   - hrtsea.com
   - huajiao.com
-  - huaweicloud.com
   - huaweishop.net
   - hunantv.com
   - huoshan.com
   - huoshanzhibo.com
   - hupu.com
-  - huxiucdn.com
   - huya.com
   - hwccpc.com
   - ibytedapm.com
   - iciba.com
   - id.mail.wo.cn
   - id6.me
-  - ifengimg.com
   - iflyink.com
   - iflyrec.com
   - iflytek.com
   - igamecj.com
   - im9.com
-  - images-amazon.com
-  - img4399.com
   - infzm.com
   - ipip.net
-  - iqiyipic.com
   - it168.com
   - ithome.com
   - ixdzs.com
   - ixigua.com
-  - jcloudcs.com
   - jd.hk
-  - jdcloud.com
   - jdpay.com
   - jianguoyun.com
   - jianshu.com
   - jianshu.io
-  - jianshuapi.com
   - jiasule.com
   - jiathis.com
-  - jmstatic.com
   - jomodns.com
   - jumei.com
   - kaikeba.com
-  - kanimg.com
   - kankan.com
   - kaola.com
   - knewone.com
@@ -426,20 +345,16 @@ domain_suffix_set:
   - ksyun.com
   - ksyungslb.com
   - kuaishou.com
-  - lancdns.com
   - landiannews.com
   - lanzou.com
   - lanzoui.com
   - lanzoux.com
   - laomo.me
   - le.com
-  - lecloud.com
   - leju.com
   - lemicp.com
   - letitfly.me
   - letv.com
-  - letvcloud.com
-  - letvimg.com
   - letvlive.com
   - letvstore.com
   - livechina.com
@@ -461,34 +376,27 @@ domain_suffix_set:
   - meitustat.com
   - meizu.com
   - miaopai.com
-  - migucloud.com
-  - miguvideo.com
   - miui.com
   - mob.com
   - mobike.com
   - mogu.com
-  - mogucdn.com
   - mogujie.com
   - moke.com
   - mpyit.com
   - msftconnecttest.com
   - msftncsi.com
-  - msstatic.com
   - mubu.com
   - mxhichina.com
   - myapp.com
-  - myqcloud.com
   - myunlu.com
   - nruan.com
   - nuomi.com
   - onedns.net
   - onlinedown.net
-  - opencloud.wostore.cn
   - oppoer.me
   - oppomobile.com
   - oracle.com
   - ourdvs.com
-  - p2cdn.com
   - p4pfile.com
   - paipai.com
   - paragon.com
@@ -498,27 +406,19 @@ domain_suffix_set:
   - playstationnetwork.com
   - polyv.net
   - pplive.com
-  - ppsimg.com
   - pptv.com
   - qbox.me
-  - qcloud.com
-  - qcloudcdn.com
   - qdaily.com
   - qdmm.com
-  - qhimg.com
   - qhres.com
-  - qhstatic.com
   - qhupdate.com
   - qianqian.com
   - qidian.com
-  - qihucdn.com
   - qin.io
   - qiniu.com
-  - qiniucdn.com
   - qiniudn.com
   - qiushibaike.com
   - qiyi.com
-  - qiyipic.com
   - qqurl.com
   - quanmin.tv
   - qunar.com
@@ -539,7 +439,6 @@ domain_suffix_set:
   - simplecd.me
   - sinaapp.cn
   - sinaapp.com
-  - sinaimg.com
   - smzdm.com
   - snapdrop.net
   - snssdk.com
@@ -547,7 +446,6 @@ domain_suffix_set:
   - so.com
   - sogo.com
   - sogou.com
-  - sogoucdn.com
   - sohu-inc.com
   - sohucs.com
   - sohuno.com
@@ -556,34 +454,22 @@ domain_suffix_set:
   - sony.com
   - sonyentertainmentnetwork.com
   - soso.com
-  - soufunimg.com
   - sspai.com
-  - st.dl.bscstorage.net
-  - st.dl.eccdnx.com
-  - st.dl.pinyuncloud.com
   - startssl.com
-  - staticfile.org
   - steamchina.com
   - steamcontent.com
   - steampipe.steamcontent.tnkjmec.com
   - steampowered.com.8686c.com
-  - steamstatic.com.8686c.com
   - steamusercontent.com
   - suning.com
   - synology.com
   - taihe.com
-  - taobaocdn.com
-  - tbcache.com
-  - tbcdn.com
   - teamviewer.com
   - tebex.io
-  - tencent-cloud.net
   - tencentmind.com
   - tenpay.com
   - th-sjy.com
-  - thundercdn.com
   - tianqi.com
-  - tianqistatic.com
   - tianyancha.com
   - tianyaui.com
   - tietuku.com
@@ -591,43 +477,32 @@ domain_suffix_set:
   - tmiaoo.com
   - toutiao.com
   - toutiao13.com
-  - toutiaoapi.com
-  - toutiaocdn.net
-  - toutiaocloud.com
   - toutiaohao.com
   - toutiaohao.net
-  - toutiaoimg.com
   - toutiaopage.com
   - trip.com
   - ttmeiju.com
   - tudou.com
   - tuniu.com
-  - tuniucdn.com
   - ucweb.com
   - udache.com
-  - umengcloud.com
   - unrealengine.com
   - upaiyun.com
   - upyun.com
   - uxengine.net
   - v-56.com
-  - videocc.net
   - vip.com
-  - vipstatic.com
   - vmall.com
   - vmallres.com
   - wandoujia.com
-  - weibocdn.com
   - weico.cc
   - weidian.com
   - weiphone.com
   - weiphone.net
   - wmsjsteam.com
   - womai.com
-  - wscdns.com
   - wukong.com
   - xdrig.com
-  - xhscdn.com
   - xiachufang.com
   - xiami.com
   - xiami.net
@@ -638,7 +513,6 @@ domain_suffix_set:
   - xip.io
   - xitek.com
   - xiumi.us
-  - xmcdn.com
   - xn--55qx5d
   - xn--fiqs8s
   - xn--io0a7i
@@ -647,23 +521,17 @@ domain_suffix_set:
   - xz.pphimalayanrt.com
   - yach.me
   - yangkeduo.com
-  - ydstatic.com
   - ye.dun.163yun.com
   - yeepay.com
   - yhd.com
-  - yihaodianimg.com
   - yinxiang.com
   - yinyuetai.com
   - yixia.com
-  - ykimg.com
   - youdao.com
   - ys168.com
   - yuewen.com
-  - yunjiasu-cdn.net
-  - yximgs.com
   - yy.com
   - yyets.com
-  - yystatic.com
   - zealer.com
   - zhangzishi.cc
   - zhanqi.tv
@@ -673,17 +541,149 @@ domain_suffix_set:
   - zhipin.com
   - zhongsou.com
   - zhuihd.com
-  - zijieapi.com
-  - zijieimg.com
   - zimuzu.io
   - zimuzu.tv
   - zjbyte.com
-  - zjcdn.com
   - zmz001.com
   - zmz002.com
   - zmz003.com
   - zmz004.com
   - zmz2019.com
+  - zmzfile.com
+  - alicdn.com
+  - qlogo.cn
+  - tencentcloud.com
+  - 360buyimg.com
+  - alicloudccp.com
+  - aliimg.com
+  - aliyuncdn.com
+  - baidustatic.com
+  - bcebos.com
+  - biliapi.com
+  - biliapi.net
+  - bilivideo.com
+  - byted-static.com
+  - bytedns.net
+  - byteimg.com
+  - cloud.tencent.com
+  - douyincdn.com
+  - douyinpic.com
+  - douyinstatic.com
+  - douyinvod.com
+  - elemecdn.com
+  - gtimg.com
+  - hao123img.com
+  - hc-cdn.com
+  - hdslb.com
+  - hicloud.com
+  - idqqimg.com
+  - mi-img.com
+  - mmstat.com
+  - pstatp.com
+  - sinaimg.cn
+  - smtcdns.com
+  - smtcdns.net
+  - tbcdn.cn
+  - toutiaocdn.com
+  - weibocdn.cn
+  - zhimg.com
+  - 00cdn.com
+  - 51jobcdn.com
+  - 71edge.com
+  - 88cdn.com
+  - acgvideo.com
+  - alibabacloud.com
+  - appsimg.com
+  - babytreeimg.com
+  - bdimg.com
+  - bdstatic.com
+  - bdxiguaimg.com
+  - bdxiguastatic.com
+  - bilivideo.cn
+  - bosszhipin.com
+  - bytefcdnrd.com
+  - cctvpic.com
+  - cdnmama.com
+  - chinacache.net
+  - chuimg.com
+  - clouddn.com
+  - cloudxns.net
+  - dbankcdn.com
+  - douyucdn.cn
+  - douyuscdn.com
+  - dxycdn.com
+  - edgesrv.com
+  - epicgames.com
+  - epicgames.dev
+  - fengkongcloud.com
+  - ganjistatic1.com
+  - geilicdn.com
+  - heytapdownload.com
+  - heytapimage.com
+  - huaweicloud.com
+  - huxiucdn.com
+  - ifengimg.com
+  - images-amazon.com
+  - img4399.com
+  - iqiyipic.com
+  - jcloudcs.com
+  - jdcloud.com
+  - jianshuapi.com
+  - jmstatic.com
+  - kanimg.com
+  - lancdns.com
+  - lecloud.com
+  - letvcloud.com
+  - letvimg.com
+  - migucloud.com
+  - miguvideo.com
+  - mogucdn.com
+  - msstatic.com
+  - myqcloud.com
+  - opencloud.wostore.cn
+  - p2cdn.com
+  - ppsimg.com
+  - qcloud.com
+  - qcloudcdn.com
+  - qhimg.com
+  - qhstatic.com
+  - qihucdn.com
+  - qiniucdn.com
+  - qiyipic.com
+  - sinaimg.com
+  - sogoucdn.com
+  - soufunimg.com
+  - st.dl.bscstorage.net
+  - st.dl.eccdnx.com
+  - st.dl.pinyuncloud.com
+  - staticfile.org
+  - steamstatic.com.8686c.com
+  - taobaocdn.com
+  - tbcache.com
+  - tbcdn.com
+  - tencent-cloud.net
+  - thundercdn.com
+  - tianqistatic.com
+  - toutiaoapi.com
+  - toutiaocdn.net
+  - toutiaocloud.com
+  - toutiaoimg.com
+  - tuniucdn.com
+  - umengcloud.com
+  - videocc.net
+  - vipstatic.com
+  - weibocdn.com
+  - wscdns.com
+  - xhscdn.com
+  - xmcdn.com
+  - ydstatic.com
+  - yihaodianimg.com
+  - ykimg.com
+  - yunjiasu-cdn.net
+  - yximgs.com
+  - yystatic.com
+  - zijieapi.com
+  - zijieimg.com
+  - zjcdn.com
   - zmzapi.com
   - zmzapi.net
-  - zmzfile.com
