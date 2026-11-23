@@ -34,28 +34,26 @@
 
 ### 🌐 规则集
 
-| 规则 | 条数 | 用途 | Egern 策略 | QX 策略 |
-| --- | --- | --- | --- | --- |
-| 🇨🇳 中国常用域名 | 690 | 国内应用 / 网站 + CDN / 后台 | DNS 转发 → 国内 / 分流 → DIRECT | direct |
-| 🔍 谷歌 / YouTube | 31 | 谷歌搜索、Gmail、YouTube 等 | 谷歌服务 | 谷歌服务 |
-| 🚫 谷歌广告 / 统计 | 24 | 谷歌广告、统计、分析 | reject | reject |
-| 🍎 苹果 / App Store | 23 | 苹果系统、商店、iCloud | direct | direct |
-| 🪟 微软 / Outlook | 21 | Outlook、微软账号 | 微软服务 | 微软服务 |
-| 🌭 香肠派对 | 16 | 香肠派对及 TapTap 相关 | direct | direct |
-| 🤖 AI_Part | 45 | Muse、GPT、Claude | 人工智能 | 人工智能 |
-| 🗺️ GeoIP_CN | 1 | 中国 IP 段（仅 QX 版） | — | direct |
+- 中国常用域名（690 条）：国内应用 / 网站 + CDN / 后台；Egern：DNS 转发 → 国内 / 分流 → DIRECT；QX：direct
+- 谷歌 / YouTube（31 条）：谷歌搜索、Gmail、YouTube 等；Egern / QX：谷歌服务
+- 谷歌广告 / 统计（24 条）：谷歌广告、统计、分析；Egern / QX：reject
+- 苹果 / App Store（23 条）：苹果系统、商店、iCloud；Egern / QX：direct
+- 微软 / Outlook（21 条）：Outlook、微软账号；Egern / QX：微软服务
+- 香肠派对（16 条）：香肠派对及 TapTap 相关；Egern / QX：direct
+- AI_Part（45 条）：Muse、GPT、Claude；Egern / QX：人工智能
+- GeoIP_CN（1 条）：中国 IP 段（仅 QX 版）；QX：direct
 
 China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段是 CDN / 后台 / 接口域名 **137 条**，覆盖微信、QQ、淘宝、京东、拼多多、美团、饿了么、抖音、哔哩哔哩、爱奇艺、优酷、知乎、微博、百度、阿里、12306、银行、运营商、政府、快递……还有红果短剧、豆包、DeepSeek、Kimi、腾讯元宝、即梦 AI、剪映、夸克等热门应用。
 
 <details>
-<summary>🇨🇳 中国常用域名都包括谁？点开看</summary>
+<summary>中国常用域名都包括谁？点开看</summary>
 
 微信、QQ、淘宝、天猫、京东、拼多多、美团、饿了么、抖音、快手、哔哩哔哩、爱奇艺、优酷、腾讯视频、芒果 TV、知乎、微博、百度、阿里云、12306、携程、滴滴、高德地图、银行、运营商、政府网站、快递，等等。
 
 </details>
 
 <details>
-<summary>🤖 AI_Part 都包括谁？点开看</summary>
+<summary>AI_Part 都包括谁？点开看</summary>
 
 - GPT / OpenAI：ChatGPT、Sora 等，19 条
 - Claude / Anthropic：Claude 官网、App 等，19 条
@@ -67,16 +65,14 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 
 同一个模块 Egern 和 QX 各一份，内容一致、格式不同。脚本单独放 `script/` 文件夹，模块自己去拉，不用手动添加。
 
-| 模块 | Egern 版 | QX 版 | 功能 |
-| --- | --- | --- | --- |
-| 📺 哔哩哔哩 · 纯净 | [Bilibili-ADBlock.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/Bilibili-ADBlock.yaml) | [Bilibili-ADBlock.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/Bilibili-ADBlock.snippet) | 去开屏广告、搜索热词、推荐流广告卡片、视频页广告；「我的」页只留上面那排蓝色的（离线缓存、历史记录、我的收藏、稍后再看），下面整组删掉；底部栏去掉会员购；Egern 版带 4 个开关（开屏 / 热词 / 我的页 / 推荐各一个） |
-| 🎵 Spotify 会员 | [Spotify-Premium.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/Spotify-Premium.yaml) | [Spotify-Premium.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/Spotify-Premium.snippet) | 去广告、解锁会员标识（QX 版只能去广告） |
+- 📺 哔哩哔哩 · 纯净 — Egern：[Bilibili-ADBlock.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/Bilibili-ADBlock.yaml)　QX：[Bilibili-ADBlock.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/Bilibili-ADBlock.snippet)
+  - 去开屏、热词、推荐流广告、视频页广告；「我的」页只留蓝色一排；底部栏只留首页、关注、我的；Egern 版 4 个开关
+- 🎵 Spotify 会员 — Egern：[Spotify-Premium.yaml](https://raw.githubusercontent.com/YuTalk/tool/main/module/egern/Spotify-Premium.yaml)　QX：[Spotify-Premium.snippet](https://raw.githubusercontent.com/YuTalk/tool/main/module/quantumultx/Spotify-Premium.snippet)
+  - 去广告、解锁会员标识（QX 版只能去广告）
 
 ### 📜 脚本
 
-| 脚本 | 用途 |
-| --- | --- |
-| [bilibili.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.js) | 哔哩哔哩 · 纯净模块用的脚本，处理开屏、热词、推荐流广告、「我的」页、底部栏、广告接口，按模块里的开关决定开不开 |
+- [bilibili.js](https://raw.githubusercontent.com/YuTalk/tool/main/script/bilibili.js) — 哔哩哔哩 · 纯净模块用的脚本，处理开屏、热词、推荐流广告、「我的」页、底部栏、广告接口，按模块里的开关决定开不开
 
 ### 🖼️ 图标
 
@@ -84,63 +80,91 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 
 **模块正在用的图标：**
 
-| 图标 | 给谁用 | 说明 |
-| --- | --- | --- |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/bilibili.png" width="48"> | 哔哩哔哩 · 纯净 | Qure 彩色版哔哩哔哩图标 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/spotify.png" width="48"> | Spotify 会员 | Qure 彩色版 Spotify 图标 |
+| 图标 | 模块 |
+| --- | --- |
+| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/bilibili.png" width="48"> | 哔哩哔哩 · 纯净（Qure 彩色版） |
+| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/spotify.png" width="48"> | Spotify 会员（Qure 彩色版） |
 
 **13 套图标库（预览图就是原图，点链接一键加进 QX）：**
 
-| 预览 | 图标库 | 一键添加 |
-| --- | --- | --- |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-01-qure-light.PNG" width="160"> | Qure 图标库（黑白） | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fgithub.com%2FKoolson%2FQure%2Fraw%2Fmaster%2FOther%2FQureLight-All.json%22%0A%5D) |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-02-qure-color-all.PNG" width="160"> | Qure 图标库（彩色 1） | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fgithub.com%2FKoolson%2FQure%2Fraw%2Fmaster%2FOther%2FQureColor-All.json%22%0A%5D) |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-03-qure-color.PNG" width="160"> | Qure 图标库（彩色 2） | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FKoolson%2FQure%2Fmaster%2FOther%2FQureColor.json%22%0A%5D) |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-04-qure-mini.PNG" width="160"> | Qure 图标（mini） | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FKoolson%2FQure%2Fmaster%2FOther%2FQuremini.json%22%0A%5D) |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-05-orz3-mini.PNG" width="160"> | Orz-3 图标库（mini style） | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fgithub.com%2FOrz-3%2Fmini%2Fraw%2Fmaster%2Fmini.json%22%0A%5D) |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-06-orz3-big.PNG" width="160"> | Orz-3 图标库（big style） | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FOrz-3%2Fmini%2Fmaster%2FColor%2B.json%22%0A%5D) |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-07-orz3-mini-color.PNG" width="160"> | Orz-3 图标库（mini color） | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FOrz-3%2Fmini%2Fmaster%2FminiColor.json%22%0A%5D) |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-08-cute.PNG" width="160"> | 泡泡图标 | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2Ftugepaopao%2FImage-Storage%2Fmaster%2Fother%2FCute.json%22%0A%5D) |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-09-pokemongo.PNG" width="160"> | PokemonGo | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2Fshoujiqiyuan%2FPokemonGOforQuanX%2Fmaster%2FPokemonGo.json%22%0A%5D) |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-10-catcat.PNG" width="160"> | 小猫咪 | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FYuanxsxs%2FQtumultX%2Fmaster%2FIcon%2FCatcat.json%22%0A%5D) |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-11-zishi.PNG" width="160"> | 姿势图标 1 | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fgithub.com%2FLovedGM%2FQuantumult-X-TuBiao%2Fraw%2Fmain%2Fzishi.json%22%0A%5D) |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-12-zishi-cs.PNG" width="160"> | 姿势图标 2 | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FLovedGM%2FQuantumult-X-TuBiao%2Fmain%2Fzishi-cs.json%22%0A%5D) |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-13-semporia.PNG" width="160"> | Semporia | [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FSemporia%2FHand-Painted-icon%2Fmaster%2FSemporia.json%22%0A%5D) |
+#### Qure 系列
+
+- **Qure 图标库（黑白）** [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fgithub.com%2FKoolson%2FQure%2Fraw%2Fmaster%2FOther%2FQureLight-All.json%22%0A%5D)
+  <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-01-qure-light.PNG" width="120">
+- **Qure 图标库（彩色 1）** [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fgithub.com%2FKoolson%2FQure%2Fraw%2Fmaster%2FOther%2FQureColor-All.json%22%0A%5D)
+  <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-02-qure-color-all.PNG" width="120">
+- **Qure 图标库（彩色 2）** [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FKoolson%2FQure%2Fmaster%2FOther%2FQureColor.json%22%0A%5D)
+  <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-03-qure-color.PNG" width="120">
+- **Qure 图标（mini）** [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FKoolson%2FQure%2Fmaster%2FOther%2FQuremini.json%22%0A%5D)
+  <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-04-qure-mini.PNG" width="120">
+
+#### Orz-3 系列
+
+- **Orz-3 图标库（mini style）** [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fgithub.com%2FOrz-3%2Fmini%2Fraw%2Fmaster%2Fmini.json%22%0A%5D)
+  <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-05-orz3-mini.PNG" width="120">
+- **Orz-3 图标库（big style）** [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FOrz-3%2Fmini%2Fmaster%2FColor%2B.json%22%0A%5D)
+  <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-06-orz3-big.PNG" width="120">
+- **Orz-3 图标库（mini color）** [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FOrz-3%2Fmini%2Fmaster%2FminiColor.json%22%0A%5D)
+  <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-07-orz3-mini-color.PNG" width="120">
+
+#### 卡通可爱
+
+- **泡泡图标** [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2Ftugepaopao%2FImage-Storage%2Fmaster%2Fother%2FCute.json%22%0A%5D)
+  <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-08-cute.PNG" width="120">
+- **PokemonGo** [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2Fshoujiqiyuan%2FPokemonGOforQuanX%2Fmaster%2FPokemonGo.json%22%0A%5D)
+  <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-09-pokemongo.PNG" width="120">
+- **小猫咪** [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FYuanxsxs%2FQtumultX%2Fmaster%2FIcon%2FCatcat.json%22%0A%5D)
+  <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-10-catcat.PNG" width="120">
+
+#### 姿势
+
+- **姿势图标 1** [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fgithub.com%2FLovedGM%2FQuantumult-X-TuBiao%2Fraw%2Fmain%2Fzishi.json%22%0A%5D)
+  <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-11-zishi.PNG" width="120">
+- **姿势图标 2** [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FLovedGM%2FQuantumult-X-TuBiao%2Fmain%2Fzishi-cs.json%22%0A%5D)
+  <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-12-zishi-cs.PNG" width="120">
+
+#### 手绘
+
+- **Semporia** [👉 加进 QX](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FSemporia%2FHand-Painted-icon%2Fmaster%2FSemporia.json%22%0A%5D)
+  <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-13-semporia.PNG" width="120">
 
 **单个应用图标（都在 `icon/` 文件夹里，直接看图认）：**
 
-| 图标 | 文件 | 是什么 |
-| --- | --- | --- |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/ai.png" width="48"> | ai.png | AI 应用 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/baiduwangpan.png" width="48"> | baiduwangpan.png | 百度网盘 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/box.png" width="48"> | box.png | Box |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/caiyuntianqi.png" width="48"> | caiyuntianqi.png | 彩云天气 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/douban.png" width="48"> | douban.png | 豆瓣 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/gaode.png" width="48"> | gaode.png | 高德地图 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/googlevoice.png" width="48"> | googlevoice.png | Google Voice |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/search.png" width="48"> | search.png | 搜索 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/xianyu.png" width="48"> | xianyu.png | 闲鱼 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/xiaohongshu.png" width="48"> | xiaohongshu.png | 小红书 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/ximalaya.png" width="48"> | ximalaya.png | 喜马拉雅 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/zhihu.png" width="48"> | zhihu.png | 知乎 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/Netease_Music_Unlock.png" width="48"> | Netease_Music_Unlock.png | 网易云音乐解锁 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/cmcc.png" width="48"> | cmcc.png | 中国移动 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/debao.png" width="48"> | debao.png | 得宝 Tempo 纸巾 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/gt.png" width="48"> | gt.png | 绿底白狗头（京东 Joy 狗造型） |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/liwo.png" width="48"> | liwo.png | 青色底卡通大眼表情 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/mmjz.png" width="48"> | mmjz.png | 粉底橘色卡通猫抱着手机 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/olympic.jpeg" width="48"> | olympic.jpeg | 2022 北京冬奥会会徽（不是应用图标） |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/share.jpg" width="48"> | share.jpg | 分享邀请二维码图（不是图标） |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/sxmd.png" width="48"> | sxmd.png | 绿色藤蔓花纹装饰图（不是应用图标） |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/tq.png" width="48"> | tq.png | 红底白鲸鱼 + 金色钱币 |
-| <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/yu.png" width="48"> | yu.png | 黑底粉色「鱼」字艺术字 |
+#### qx/ 单个图标
+
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/ai.png" width="48"> ai.png — AI 应用
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/baiduwangpan.png" width="48"> baiduwangpan.png — 百度网盘
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/box.png" width="48"> box.png — Box
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/caiyuntianqi.png" width="48"> caiyuntianqi.png — 彩云天气
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/douban.png" width="48"> douban.png — 豆瓣
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/gaode.png" width="48"> gaode.png — 高德地图
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/googlevoice.png" width="48"> googlevoice.png — Google Voice
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/search.png" width="48"> search.png — 搜索
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/xianyu.png" width="48"> xianyu.png — 闲鱼
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/xiaohongshu.png" width="48"> xiaohongshu.png — 小红书
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/ximalaya.png" width="48"> ximalaya.png — 喜马拉雅
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/zhihu.png" width="48"> zhihu.png — 知乎
+
+#### 零散图标
+
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/Netease_Music_Unlock.png" width="48"> Netease_Music_Unlock.png — 网易云音乐解锁
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/cmcc.png" width="48"> cmcc.png — 中国移动
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/debao.png" width="48"> debao.png — 得宝 Tempo 纸巾
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/gt.png" width="48"> gt.png — 绿底白狗头（京东 Joy 狗造型）
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/liwo.png" width="48"> liwo.png — 青色底卡通大眼表情
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/mmjz.png" width="48"> mmjz.png — 粉底橘色卡通猫抱着手机
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/olympic.jpeg" width="48"> olympic.jpeg — 2022 北京冬奥会会徽（不是应用图标）
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/share.jpg" width="48"> share.jpg — 分享邀请二维码图（不是图标）
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/sxmd.png" width="48"> sxmd.png — 绿色藤蔓花纹装饰图（不是应用图标）
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/tq.png" width="48"> tq.png — 红底白鲸鱼 + 金色钱币
+- <img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/yu.png" width="48"> yu.png — 黑底粉色「鱼」字艺术字
 
 > 注意：
 > - 不要和已有的 fmz200 哔哩哔哩模块同时开，两个都改同一批接口会打架。
 > - QX 版暂不支持精简「我的」页多余入口，那个要 Egern 版才有。
 > - 模块要开 MITM，证书要装好、信任开好，不然不生效。
 
-### 🗺️ GeoIpCN.mmdb（6,575 条 CIDR，约 132KB）
+### GeoIpCN.mmdb（6,575 条 CIDR，约 132KB）
 
 只含中国 IPv4，共覆盖 **357,426,983 个地址**，约 132KB。
 
@@ -175,14 +199,14 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 
 | 软件 | Egern | Quantumult X |
 | --- | --- | --- |
-| 🇨🇳 中国常用域名 | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FChina.yaml&policy=DIRECT) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FChina.list%2C%20tag%3DChina%2C%20force-policy%3Ddirect%22%5D%7D) |
-| 🔍 谷歌 / YouTube | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FGoogle.yaml&policy=%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FGoogle.list%2C%20tag%3DGoogle%2C%20force-policy%3D%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%22%5D%7D) |
-| 🚫 谷歌广告 / 统计 | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FGoogleAds.yaml&policy=REJECT) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FGoogleAds.list%2C%20tag%3DGoogleAds%2C%20force-policy%3Dreject%22%5D%7D) |
-| 🍎 苹果 / App Store | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FApple.yaml&policy=DIRECT) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FApple.list%2C%20tag%3DApple%2C%20force-policy%3Ddirect%22%5D%7D) |
-| 🪟 微软 / Outlook | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FMicrosoft.yaml&policy=%E5%BE%AE%E8%BD%AF%E6%9C%8D%E5%8A%A1) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FMicrosoft.list%2C%20tag%3DMicrosoft%2C%20force-policy%3D%E5%BE%AE%E8%BD%AF%E6%9C%8D%E5%8A%A1%22%5D%7D) |
-| 🌭 香肠派对 | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FSausageMan.yaml&policy=DIRECT) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FSausageMan.list%2C%20tag%3DSausageMan%2C%20force-policy%3Ddirect%22%5D%7D) |
-| 🤖 AI_Part | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FAI_Part.yaml&policy=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FAI_Part.list%2C%20tag%3DAI_Part%2C%20force-policy%3D%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%22%5D%7D) |
-| 🗺️ GeoIP_CN | 仅 QX 版 | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FGeoIP_CN.list%2C%20tag%3DGeoIP_CN%2C%20force-policy%3Ddirect%22%5D%7D) |
+| 中国常用域名 | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FChina.yaml&policy=DIRECT) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FChina.list%2C%20tag%3DChina%2C%20force-policy%3Ddirect%22%5D%7D) |
+| 谷歌 / YouTube | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FGoogle.yaml&policy=%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FGoogle.list%2C%20tag%3DGoogle%2C%20force-policy%3D%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%22%5D%7D) |
+| 谷歌广告 / 统计 | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FGoogleAds.yaml&policy=REJECT) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FGoogleAds.list%2C%20tag%3DGoogleAds%2C%20force-policy%3Dreject%22%5D%7D) |
+| 苹果 / App Store | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FApple.yaml&policy=DIRECT) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FApple.list%2C%20tag%3DApple%2C%20force-policy%3Ddirect%22%5D%7D) |
+| 微软 / Outlook | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FMicrosoft.yaml&policy=%E5%BE%AE%E8%BD%AF%E6%9C%8D%E5%8A%A1) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FMicrosoft.list%2C%20tag%3DMicrosoft%2C%20force-policy%3D%E5%BE%AE%E8%BD%AF%E6%9C%8D%E5%8A%A1%22%5D%7D) |
+| 香肠派对 | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FSausageMan.yaml&policy=DIRECT) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FSausageMan.list%2C%20tag%3DSausageMan%2C%20force-policy%3Ddirect%22%5D%7D) |
+| AI_Part | [👉 加进 Egern](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fegern%2FAI_Part.yaml&policy=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD) | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FAI_Part.list%2C%20tag%3DAI_Part%2C%20force-policy%3D%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%22%5D%7D) |
+| GeoIP_CN | 仅 QX 版 | [👉 加进 QX](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frules%2Fquantumultx%2FGeoIP_CN.list%2C%20tag%3DGeoIP_CN%2C%20force-policy%3Ddirect%22%5D%7D) |
 
 > 注意：
 > - Egern 的一键添加是加到**分流**里，China 还要再单独加一次 **DNS 转发 → 国内**，那个不能一键加，得在设置里手动加。
