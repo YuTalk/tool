@@ -20,7 +20,6 @@
 ## 📖 目录
 
 - [📦 文件说明](#-文件说明)
-- [🔗 直链](#-直链)
 - [⚡ 一键添加进软件](#-一键添加进软件)
 - [🚀 怎么用](#-怎么用)
 - [🔄 自动更新](#-自动更新)
@@ -89,24 +88,6 @@ China.yaml 分两段，第一段是应用 / 网站域名 **553 条**，第二段
 > Egern 和 QX 国区 App Store 搜不到，要用美区 / 港区 Apple ID 才能下载。
 
 ---
-
-## 🔗 直链
-
-点下面表格里的链接就打开规则文件，长按可以复制链接。
-
-| 软件 | 条数 | 策略 | Egern 版 | QX 版 |
-| --- | --- | --- | --- | --- |
-| 🇨🇳 中国常用域名 | 690 | 国内 / DIRECT | [打开](https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/China.yaml) | [打开](https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/China.list) |
-| 🔍 谷歌 / YouTube | 31 | 谷歌服务 | [打开](https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/Google.yaml) | [打开](https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/Google.list) |
-| 🚫 谷歌广告 / 统计 | 24 | reject | [打开](https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/GoogleAds.yaml) | [打开](https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/GoogleAds.list) |
-| 🍎 苹果 / App Store | 23 | direct | [打开](https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/Apple.yaml) | [打开](https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/Apple.list) |
-| 🪟 微软 / Outlook | 21 | 微软服务 | [打开](https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/Microsoft.yaml) | [打开](https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/Microsoft.list) |
-| 🌭 香肠派对 | 16 | direct | [打开](https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/SausageMan.yaml) | [打开](https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/SausageMan.list) |
-| 🤖 AI_Part | 45 | 人工智能 | [打开](https://raw.githubusercontent.com/YuTalk/tool/main/rules/egern/AI_Part.yaml) | [打开](https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/AI_Part.list) |
-| 🗺️ GeoIP_CN | 1 | direct | 仅 QX 版 | [打开](https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/GeoIP_CN.list) |
-
-**GeoIP 库**（Egern 换库用，QX 不能用）：[GeoIpCN.mmdb](https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb)
-
 
 ## ⚡ 一键添加进软件
 
