@@ -29,11 +29,21 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 | GeoIP 库 | 6,575 条 CIDR，约 132KB，覆盖 357,427,495 个中国 IPv4 地址 |
 | 自动检查 | 每 6 小时，0:00、6:00、12:00、18:00 |
 
+## ✅ 快速上手（第一次用）
+
+1. **先换 GeoIP 库**：Egern → 设置 → GeoIP 数据库 → 粘贴最上面那个 `GeoIpCN.mmdb` 链接，把默认的库换成这个自建库。
+2. **加 DNS 转发**：设置 → DNS 转发 → 添加 China，策略选国内。只加 China 这一套就够了，其他规则不用加 DNS 转发。
+3. **加分流**：设置 → 分流 → 把 13 套规则按下面「文件说明」表格里的策略加进去，也可以直接点「一键添加进软件」表格里的绿色按钮，不用自己复制链接。
+4. **分流最后留两条**：`GEOIP CN → DIRECT` 放倒数第二，`默认 → 兜底策略` 放最后。别把 GEOIP CN 放第一，不然每个域名都要先解析 IP，费电又变慢。
+5. **去广告**：GoogleAds 规则（reject）已经在拦广告平台了；再加哔哩哔哩、Spotify、YouTube Enhance 三个模块，App 里的广告也少了。
+6. **换图标**：往下翻到「图标」那节，点预览图放大看，喜欢的点蓝色按钮加进 QX、绿色按钮加进 Egern。
+
 ## 📖 目录
 
 - [📦 文件说明](#-文件说明)
 - [🧩 模块](#-模块)
 - [⚡ 一键添加进软件](#-一键添加进软件)
+- [✅ 快速上手](#-快速上手-第一次用)
 - [🚀 怎么用](#-怎么用)
 - [🔄 自动更新](#-自动更新)
 - [❓ 常见问题](#-常见问题)
@@ -273,6 +283,13 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 3. QX 不能用自建 .mmdb 库，用它自带的就行。QX 也没有 DNS 转发功能，DNS 就靠分流本身，国内域名走直连、国外走代理，效果是一样的。
 4. 注意：QX 每条规则后面必须带策略，没有策略会报 Invalid Line，这个仓库的 QX 版每条都带了策略，直接用就行。
 
+### 🟢 Loon
+
+1. 分流里加远程规则，粘贴 `rule/loon/` 文件夹里对应那套的 `.list` 链接，每条规则自带策略，不用自己选：China、Apple、SausageMan、GeoIP_CN 是 DIRECT，Google、Microsoft、AI_Part、Spotify、TikTok、GitHub、Speedtest、Telegram 是 PROXY，GoogleAds 是 REJECT。
+2. 分流留一条：`GEOIP,CN,DIRECT` 放倒数第二，`FINAL,兜底后备策略` 放最后。Loon 没有自建 .mmdb 库，靠 GeoIP_CN.list 这条远程规则判断中国 IP。
+3. Loon 的 DoH 流量模式选 Rule，就相当于 Egern 的 DNS 转发，国内域名走国内 DNS，国外走国外 DNS。
+4. 哔哩哔哩模块 Loon 不能直接用仓库里那个 Egern 版（`.yaml`），要用作者的 Loon 版插件（`.lpx`），链接在上面「模块」那节的说明里。
+
 ---
 
 ## 🔄 自动更新
@@ -319,6 +336,12 @@ A：先看链接对不对，再点规则集手动刷新一次。Egern 是按内�
 **Q：怎么知道规则有没有生效？**
 A：打开 Egern 的连接记录，看域名的连接走的是哪条策略。比如打开微信，看 weixin.qq.com 是不是走 DIRECT；打开 YouTube，看 youtube.com 是不是走代理。
 
+**Q：图标预览图怎么放大看？**
+A：点图片就能打开原图，再捏合放大。图标那节的 13 张预览图都是原图，点开看得更清楚。
+
+**Q：Egern 消息储存是什么？**
+A：平时用 Egern 攒下来的笔记（比如域名匹配的 5 种写法），存在 Muse 的「Egern 消息储存」空间里，也同步了一份在仓库最下面「Egern 消息储存」那节，点链接就能看。
+
 ---
 
 ## 📄 开源协议
@@ -339,4 +362,12 @@ MIT License —— 随便用，改了也行。
 | [ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master) | blackmatrix7 的 iOS 规则库，本仓库 5 套规则的上游 |
 | [wool_scripts](https://github.com/fmz200/wool_scripts) | fmz200 的规则与模块库，本仓库哔哩哔哩模块的上游 |
 | [墨魚手記](https://ddgksf2013.top) | 个人资源索引：影视、动漫、下载、工具、QX 脚本 |
+
+---
+
+## 📝 Egern 消息储存
+
+平时用 Egern 攒下来的笔记和提醒（比如域名匹配的 5 种写法），存在这里，也同步在 Muse 的「Egern 消息储存」空间里，两边是一份内容。
+
+[Egern 消息储存](https://github.com/YuTalk/tool/blob/main/Egern-消息储存.md)
 
