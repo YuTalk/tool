@@ -1,6 +1,6 @@
-# 最后修改：2026-11-23 23:18
+# 最后修改：2026-11-24 06:13
 # 苹果 / App Store
-# 总共 23 条
+# 总共 22 条
 # 用法：Egern 分流 -> direct
 domain_suffix_set:
   - apple.com
@@ -15,7 +15,6 @@ domain_suffix_set:
   - itunes.com
   - apple-dns.net
   - apple.com.cn
-  - apple.com.hk
   - apple.com.tw
   - apple.com.sg
   - apple.com.au

@@ -1,6 +1,6 @@
-# 最后修改：2026-11-23 23:18
+# 最后修改：2026-11-24 09:09
 # 中国常用域名 - 经常用到的
-# 总共 690 条
+# 总共 664 条
 # 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
 domain_suffix_set:
 # 第一段：应用/网站域名
@@ -192,19 +192,15 @@ domain_suffix_set:
   - amemv.com
   - appvipshop.com
   - asklink.com
-  - auth.wo.cn
   - auth.wosms.cn
   - autonavi.com
   - b23.tv
   - babytree.com
   - baicizhan.com
-  - baidubcr.com
   - baidupan.com
   - baidupcs.com
   - baike.com
   - baomitu.com
-  - bigfun.cn
-  - bigfunapp.cn
   - biligame.com
   - biliintl.co
   - biqudu.com
@@ -229,7 +225,6 @@ domain_suffix_set:
   - chinaz.com
   - chinaz.net
   - cibntv.net
-  - cm.steampowered.com
   - cmbchina.com
   - cmpassport.com
   - cn
@@ -240,7 +235,6 @@ domain_suffix_set:
   - config.cmpassport.com
   - coolapk.com
   - coolapkmarket.com
-  - csgo.wmsj.cn
   - ctrip.com
   - dangdang.com
   - dfcfw.com
@@ -250,11 +244,9 @@ domain_suffix_set:
   - dilidili.wang
   - dingtalk.com
   - dl.steam.clngaa.com
-  - dl.steam.ksyna.com
   - dns.alidns.com
   - doh.360.cn
   - doh.pub
-  - dota2.wmsj.cn
   - doubanio.com
   - douyu.com
   - douyu.tv
@@ -267,7 +259,6 @@ domain_suffix_set:
   - eastmoney.com
   - ecitic.com
   - element-plus.org
-  - ewqcxz.com
   - fang.com
   - fantasy.tv
   - feelgood.cn
@@ -283,7 +274,6 @@ domain_suffix_set:
   - gifshow.com
   - go2map.com
   - godic.net
-  - got001.com
   - guazi.com
   - gwdang.com
   - gzlzfm.com
@@ -355,7 +345,6 @@ domain_suffix_set:
   - letv.com
   - letvlive.com
   - letvstore.com
-  - livechina.com
   - lizhi.fm
   - lizhi.io
   - lizhifm.com
@@ -363,10 +352,8 @@ domain_suffix_set:
   - log.cmpassport.com
   - log1.cmpassport.com
   - luoo.net
-  - lvmama.com
   - lxdns.com
   - maoyan.com
-  - mdn.open.wo.cn
   - meilishuo.com
   - meipai.com
   - meitu.com
@@ -386,7 +373,6 @@ domain_suffix_set:
   - mubu.com
   - mxhichina.com
   - myapp.com
-  - myunlu.com
   - nruan.com
   - nuomi.com
   - onedns.net
@@ -395,7 +381,6 @@ domain_suffix_set:
   - oppomobile.com
   - oracle.com
   - ourdvs.com
-  - p4pfile.com
   - paipai.com
   - paragon.com
   - pdfwifi.com
@@ -421,7 +406,6 @@ domain_suffix_set:
   - quanmin.tv
   - qunar.com
   - qunarzz.com
-  - qupu123.com
   - qwen.ai
   - qy.net
   - realme.com
@@ -456,8 +440,6 @@ domain_suffix_set:
   - startssl.com
   - steamchina.com
   - steamcontent.com
-  - steampipe.steamcontent.tnkjmec.com
-  - steampowered.com.8686c.com
   - steamusercontent.com
   - suning.com
   - synology.com
@@ -506,7 +488,6 @@ domain_suffix_set:
   - xiami.net
   - xiaohongshu.com
   - xiaojukeji.com
-  - xiaoka.tv
   - ximalaya.com
   - xip.io
   - xitek.com
@@ -543,11 +524,7 @@ domain_suffix_set:
   - zimuzu.tv
   - zjbyte.com
   - zmz001.com
-  - zmz002.com
-  - zmz003.com
-  - zmz004.com
   - zmz2019.com
-  - zmzfile.com
   - hongguoduanju.com
   - doubao.com
   - deepseek.com
@@ -593,7 +570,6 @@ domain_suffix_set:
   - smtcdns.net
   - tbcdn.cn
   - toutiaocdn.com
-  - weibocdn.cn
   - zhimg.com
   - 00cdn.com
   - 51jobcdn.com
@@ -639,7 +615,6 @@ domain_suffix_set:
   - jianshuapi.com
   - jmstatic.com
   - kanimg.com
-  - lancdns.com
   - lecloud.com
   - letvcloud.com
   - letvimg.com
@@ -665,7 +640,6 @@ domain_suffix_set:
   - st.dl.eccdnx.com
   - st.dl.pinyuncloud.com
   - staticfile.org
-  - steamstatic.com.8686c.com
   - taobaocdn.com
   - tbcache.com
   - tbcdn.com

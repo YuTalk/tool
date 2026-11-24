@@ -1,6 +1,6 @@
-# 最后修改：2026-11-23 23:18
+# 最后修改：2026-11-24 06:13
 # 香肠派对
-# 总共 16 条
+# 总共 15 条
 # 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
 domain_suffix_set:
   - xd.com
@@ -10,7 +10,6 @@ domain_suffix_set:
   - tlivesdk.com
   - my-imcloud.com
   - imcloud.com
-  - sausageman.cc
   - tencent-cloud.com
   - taptapdada.com
   - tapimg.com
