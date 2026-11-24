@@ -1,4 +1,4 @@
-# 🐿️ Egern 规则
+# <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/42/12/5d/42125db1-6a4f-de58-cf03-72bf8e2e4354/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" width="32" height="32" alt="Egern"> Egern 规则
 
 ## 前言
 
@@ -12,25 +12,25 @@ Egern 用的规则，13 套，和 Quantumult X、Loon 那两份内容一致，�
 
 ## 规则统计
 
-最后更新时间：2026-11-24 16:24:25
+最后更新时间：2026-11-24 16:31:43
 
 各规则集统计：
 
 | 规则集 | 数量(条) |
 | ---- | ---- |
 | China | 664 |
-| Google | 31 |
-| GoogleAds | 24 |
-| Apple | 22 |
-| Microsoft | 21 |
+| <img src="https://cdn.simpleicons.org/google/4285F4" width="20" height="20" alt="Google"> Google | 31 |
+| <img src="https://cdn.simpleicons.org/googleads/4285F4" width="20" height="20" alt="GoogleAds"> GoogleAds | 24 |
+| <img src="https://cdn.simpleicons.org/apple" width="20" height="20" alt="Apple"> Apple | 22 |
+| <img src="https://www.microsoft.com/favicon.ico" width="20" height="20" alt="Microsoft"> Microsoft | 21 |
 | SausageMan | 15 |
 | AI_Part | 45 |
 | GeoIP_CN | 1 |
-| Spotify | 30 |
-| TikTok | 37 |
-| GitHub | 31 |
-| Speedtest | 9 |
-| Telegram | 35 |
+| <img src="https://cdn.simpleicons.org/spotify/1DB954" width="20" height="20" alt="Spotify"> Spotify | 30 |
+| <img src="https://cdn.simpleicons.org/tiktok/FE2C55" width="20" height="20" alt="TikTok"> TikTok | 37 |
+| <img src="https://cdn.simpleicons.org/github" width="20" height="20" alt="GitHub"> GitHub | 31 |
+| <img src="https://cdn.simpleicons.org/speedtest/141526" width="20" height="20" alt="Speedtest"> Speedtest | 9 |
+| <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="20" height="20" alt="Telegram"> Telegram | 35 |
 | TOTAL | 965 |
 
 其中域名 964 条，GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
