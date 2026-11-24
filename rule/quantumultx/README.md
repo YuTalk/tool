@@ -12,13 +12,13 @@ Quantumult X 用的规则，13 套，每套一个文件夹（点进文件夹能�
 
 ## 规则统计
 
-最后更新时间：2026-11-24 18:08:00
+最后更新时间：2026-11-25 01:53:20
 
 各规则集统计：
 
 | 规则集 | 数量(条) |
 | ---- | ---- |
-| China | 663 |
+| China | 553 |
 | <img src="https://cdn.simpleicons.org/google/4285F4" width="20" height="20" alt="Google"> Google | 31 |
 | <img src="https://cdn.simpleicons.org/googleads/4285F4" width="20" height="20" alt="GoogleAds"> GoogleAds | 24 |
 | <img src="https://cdn.simpleicons.org/apple" width="20" height="20" alt="Apple"> Apple | 22 |
@@ -31,9 +31,9 @@ Quantumult X 用的规则，13 套，每套一个文件夹（点进文件夹能�
 | <img src="https://cdn.simpleicons.org/github" width="20" height="20" alt="GitHub"> GitHub | 31 |
 | <img src="https://cdn.simpleicons.org/speedtest/141526" width="20" height="20" alt="Speedtest"> Speedtest | 9 |
 | <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="20" height="20" alt="Telegram"> Telegram | 34 |
-| TOTAL | 961 |
+| TOTAL | 851 |
 
-其中域名 964 条，GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
+其中域名 850 条，GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
 
 ## Quantumult X
 
@@ -47,7 +47,7 @@ Quantumult X 用的规则，13 套，每套一个文件夹（点进文件夹能�
 - QX 没有 DNS 转发，DNS 用 doh-server 直连，逐域名用 server=/*.example.com/ 这种形式。
 
 #### 规则链接
-**China.list（663 条）**
+**China.list（553 条）**
 
 原始链接：
 

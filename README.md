@@ -25,7 +25,7 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 | 规则集 | 13 个（Egern、QX、Loon 各一份，内容一致） |
 | 模块 | 3 个（Spotify、YouTube Enhance、哔哩哔哩，都是从别人家搬过来的原版，没改过） |
 | 图标 | 13 个（13 套图标库的预览图，都是从别人家搬过来的原图） |
-| 域名总数 | 960 条（去重后） |
+| 域名总数 | 850 条（去重后） |
 | GeoIP 库 | 6,574 条 CIDR，约 132KB，覆盖 357,426,983 个中国 IPv4 地址 |
 | 自动检查 | 每 6 小时，0:00、6:00、12:00、18:00 |
 
@@ -38,7 +38,7 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 
 | 规则 | 条数 | 说明 | 策略 |
 | --- | --- | --- | --- |
-| China | 663 | 国内应用 / 网站 + CDN / 后台，Egern DNS 转发 → 国内 | DIRECT |
+| China | 553 | 国内应用 / 网站 + CDN / 后台，Egern DNS 转发 → 国内 | DIRECT |
 | Google | 31 | 谷歌搜索、Gmail、YouTube 等 | 谷歌服务 |
 | GoogleAds | 24 | 谷歌广告、统计、分析 | reject |
 | Apple | 22 | 苹果系统、商店、iCloud | direct |
@@ -56,14 +56,14 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 
 另外还有一份 Loon 版，在 `rule/loon/` 文件夹里，13 套内容和上面一模一样，只是格式换成 Loon 的 `DOMAIN-SUFFIX,域名,策略`，策略只有三种：DIRECT（China、Apple、SausageMan、GeoIP_CN）、PROXY（Google、Microsoft、AI_Part、Spotify、TikTok、GitHub、Speedtest、Telegram）、REJECT（GoogleAds）。
 
-China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段是 CDN / 后台 / 接口域名 **133 条**，覆盖微信、QQ、淘宝、京东、拼多多、美团、饿了么、抖音、哔哩哔哩、爱奇艺、优酷、知乎、微博、百度、阿里、12306、银行、运营商、政府、快递……还有红果短剧、豆包、DeepSeek、Kimi、腾讯元宝、即梦 AI、剪映、夸克等热门应用。
+China.yaml 分两段，第一段是应用 / 网站域名 **443 条**，第二段是 CDN / 后台 / 接口域名 **110 条**，覆盖微信、QQ、淘宝、京东、拼多多、美团、饿了么、抖音、哔哩哔哩、爱奇艺、优酷、知乎、微博、百度、阿里、12306、银行、运营商、政府、快递……还有红果短剧、豆包、DeepSeek、Kimi、腾讯元宝、即梦 AI、剪映、夸克等热门应用。
 
 为什么分两段？第一段是你平时打开的 App 和网站本身，第二段是这些 App 背后用的图片、视频、接口服务器。只加第一段的话，App 能打开，但里面的图片视频可能还是走外国 IP，又慢又卡；两段一起加才完整。
 
 <details>
 <summary>China 都包括谁？点开看</summary>
 
-微信、QQ、淘宝、天猫、京东、拼多多、美团、饿了么、抖音、快手、哔哩哔哩、爱奇艺、优酷、腾讯视频、芒果 TV、知乎、微博、百度、阿里云、12306、携程、滴滴、高德地图、银行、运营商、政府网站、快递，等等。
+微信、QQ、淘宝、天猫、京东、拼多多、美团、饿了么、抖音、快手、哔哩哔哩、爱奇艺、优酷、腾讯视频、芒果 TV、知乎、微博、百度、阿里云、12306、滴滴、高德地图、银行、运营商、政府网站、快递，等等。
 
 </details>
 
@@ -81,7 +81,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 <details>
 <summary>每条规则是干什么的？点开看</summary>
 
-- **China（663 条）**：国内常用的应用和网站域名，加上它们的 CDN、后台、接口域名。分两段：第一段是应用和网站本身（530 条），第二段是这些应用背后的 CDN、图片、视频、接口域名（133 条），两段要一起用才完整。Egern 里要加两处：DNS 转发 → 国内，查域名时问国内 DNS，拿到国内 IP；分流 → DIRECT，流量直接走，不绕代理。这样国内 App 打开快、不卡，视频图片也快。
+- **China（553 条）**：国内常用的应用和网站域名，加上它们的 CDN、后台、接口域名。分两段：第一段是应用和网站本身（443 条），第二段是这些应用背后的 CDN、图片、视频、接口域名（110 条），两段要一起用才完整。Egern 里要加两处：DNS 转发 → 国内，查域名时问国内 DNS，拿到国内 IP；分流 → DIRECT，流量直接走，不绕代理。这样国内 App 打开快、不卡，视频图片也快。
 - **Google（31 条）**：谷歌全家桶，谷歌搜索、Gmail、YouTube、Google Drive、Google 地图、Google Play、谷歌账号登录等。谷歌在国内打不开，必须走代理，策略选谷歌服务（也就是你的代理节点组）。
 - **GoogleAds（24 条）**：谷歌的广告、统计、分析和崩溃上报域名，比如 doubleclick、adsense、firebase、crashlytics。走 reject 直接拦截，不让它们上报和弹广告，App 打开更快，也少耗流量。
 - **Apple（22 条）**：苹果系统服务，App Store、iCloud、Apple ID、系统更新、推送通知、Siri、Apple Music 等。苹果的服务器在国内有节点，走直连最快最稳，分流 → DIRECT，DNS 也走国内。
