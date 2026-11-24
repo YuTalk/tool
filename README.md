@@ -12,7 +12,7 @@
 
 | 项目 | 数量 |
 | --- | --- |
-| 规则集 | 8 个（Egern 和 QX 各一份，内容一致） |
+| 规则集 | 8 个（Egern、QX、Loon 各一份，内容一致） |
 | 模块 | 3 个（Spotify、YouTube Enhance、哔哩哔哩，都是从别人家搬过来的原版，没改过） |
 | 图标 | 13 个（13 套图标库的预览图，都是从别人家搬过来的原图） |
 | 域名总数 | 822 条（去重后） |
@@ -43,7 +43,9 @@
 | Microsoft | 21 | Outlook、微软账号 | 微软服务 |
 | SausageMan | 15 | 香肠派对及 TapTap 相关 | direct |
 | AI_Part | 45 | Muse、GPT、Claude | 人工智能 |
-| GeoIP_CN | 1 | 中国 IP 段（仅 QX 版） | direct |
+| GeoIP_CN | 1 | 中国 IP 段（QX、Loon 版，没有 Egern 版） | direct |
+
+另外还有一份 Loon 版，在 `rule/loon/` 文件夹里，8 套内容和上面一模一样，只是格式换成 Loon 的 `DOMAIN-SUFFIX,域名,策略`，策略只有三种：DIRECT（China、Apple、SausageMan、GeoIP_CN）、PROXY（Google、Microsoft、AI_Part）、REJECT（GoogleAds）。
 
 China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段是 CDN / 后台 / 接口域名 **134 条**，覆盖微信、QQ、淘宝、京东、拼多多、美团、饿了么、抖音、哔哩哔哩、爱奇艺、优酷、知乎、微博、百度、阿里、12306、银行、运营商、政府、快递……还有红果短剧、豆包、DeepSeek、Kimi、腾讯元宝、即梦 AI、剪映、夸克等热门应用。
 
@@ -77,7 +79,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 - **Microsoft（21 条）**：微软服务，Outlook 邮箱、微软账号登录、OneDrive、Office 等。微软的服务器在国外，走直连慢甚至打不开，要走代理，策略选微软服务。
 - **SausageMan（15 条）**：香肠派对（吃鸡手游）加 TapTap 相关域名，游戏服务器、TapTap 下载、TapTap 账号、游戏内嵌网页等。游戏服务器在国内，走直连延迟最低，分流 → DIRECT，DNS 转发 → 国内。
 - **AI_Part（45 条）**：只包括你常用的三个 AI，Muse（Meta AI，7 条）、GPT / ChatGPT（OpenAI，19 条）、Claude（Anthropic，19 条）。三个 AI 都在国外，必须走代理，策略选人工智能。注意：meta.com 没加进去，因为它太宽，会把 Facebook、Instagram、WhatsApp 也拉进 AI 组。
-- **GeoIP_CN（1 条）**：中国 IP 段列表，只有 1 条规则，内容就是 geoip, cn, direct，只有 QX 版，没有 Egern 版。QX 没有自建 .mmdb 库，靠这条远程规则判断中国 IP。放在分流倒数第二，外国 IP 走默认代理。
+- **GeoIP_CN（1 条）**：中国 IP 段列表，只有 1 条规则，内容就是 geoip, cn, direct，有 QX 版和 Loon 版，没有 Egern 版。QX 没有自建 .mmdb 库，靠这条远程规则判断中国 IP。放在分流倒数第二，外国 IP 走默认代理。
 
 </details>
 
