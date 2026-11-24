@@ -1,6 +1,6 @@
-# 最后修改：2026-11-23 23:18
+# 最后修改：2026-11-24 09:09
 # 中国常用域名 - 经常用到的
-# 总共 690 条
+# 总共 664 条
 # 用法：QX 分流 -> direct
 # 第一段：应用/网站域名
 host-suffix, baidu.com, direct
@@ -191,19 +191,15 @@ host-suffix, allawntech.com, direct
 host-suffix, amemv.com, direct
 host-suffix, appvipshop.com, direct
 host-suffix, asklink.com, direct
-host-suffix, auth.wo.cn, direct
 host-suffix, auth.wosms.cn, direct
 host-suffix, autonavi.com, direct
 host-suffix, b23.tv, direct
 host-suffix, babytree.com, direct
 host-suffix, baicizhan.com, direct
-host-suffix, baidubcr.com, direct
 host-suffix, baidupan.com, direct
 host-suffix, baidupcs.com, direct
 host-suffix, baike.com, direct
 host-suffix, baomitu.com, direct
-host-suffix, bigfun.cn, direct
-host-suffix, bigfunapp.cn, direct
 host-suffix, biligame.com, direct
 host-suffix, biliintl.co, direct
 host-suffix, biqudu.com, direct
@@ -228,7 +224,6 @@ host-suffix, chinaso.com, direct
 host-suffix, chinaz.com, direct
 host-suffix, chinaz.net, direct
 host-suffix, cibntv.net, direct
-host-suffix, cm.steampowered.com, direct
 host-suffix, cmbchina.com, direct
 host-suffix, cmpassport.com, direct
 host-suffix, cn, direct
@@ -239,7 +234,6 @@ host-suffix, coloros.com, direct
 host-suffix, config.cmpassport.com, direct
 host-suffix, coolapk.com, direct
 host-suffix, coolapkmarket.com, direct
-host-suffix, csgo.wmsj.cn, direct
 host-suffix, ctrip.com, direct
 host-suffix, dangdang.com, direct
 host-suffix, dfcfw.com, direct
@@ -249,11 +243,9 @@ host-suffix, didialift.com, direct
 host-suffix, dilidili.wang, direct
 host-suffix, dingtalk.com, direct
 host-suffix, dl.steam.clngaa.com, direct
-host-suffix, dl.steam.ksyna.com, direct
 host-suffix, dns.alidns.com, direct
 host-suffix, doh.360.cn, direct
 host-suffix, doh.pub, direct
-host-suffix, dota2.wmsj.cn, direct
 host-suffix, doubanio.com, direct
 host-suffix, douyu.com, direct
 host-suffix, douyu.tv, direct
@@ -266,7 +258,6 @@ host-suffix, eastday.com, direct
 host-suffix, eastmoney.com, direct
 host-suffix, ecitic.com, direct
 host-suffix, element-plus.org, direct
-host-suffix, ewqcxz.com, direct
 host-suffix, fang.com, direct
 host-suffix, fantasy.tv, direct
 host-suffix, feelgood.cn, direct
@@ -282,7 +273,6 @@ host-suffix, ghpym.com, direct
 host-suffix, gifshow.com, direct
 host-suffix, go2map.com, direct
 host-suffix, godic.net, direct
-host-suffix, got001.com, direct
 host-suffix, guazi.com, direct
 host-suffix, gwdang.com, direct
 host-suffix, gzlzfm.com, direct
@@ -354,7 +344,6 @@ host-suffix, letitfly.me, direct
 host-suffix, letv.com, direct
 host-suffix, letvlive.com, direct
 host-suffix, letvstore.com, direct
-host-suffix, livechina.com, direct
 host-suffix, lizhi.fm, direct
 host-suffix, lizhi.io, direct
 host-suffix, lizhifm.com, direct
@@ -362,10 +351,8 @@ host-suffix, lofter.com, direct
 host-suffix, log.cmpassport.com, direct
 host-suffix, log1.cmpassport.com, direct
 host-suffix, luoo.net, direct
-host-suffix, lvmama.com, direct
 host-suffix, lxdns.com, direct
 host-suffix, maoyan.com, direct
-host-suffix, mdn.open.wo.cn, direct
 host-suffix, meilishuo.com, direct
 host-suffix, meipai.com, direct
 host-suffix, meitu.com, direct
@@ -385,7 +372,6 @@ host-suffix, msftncsi.com, direct
 host-suffix, mubu.com, direct
 host-suffix, mxhichina.com, direct
 host-suffix, myapp.com, direct
-host-suffix, myunlu.com, direct
 host-suffix, nruan.com, direct
 host-suffix, nuomi.com, direct
 host-suffix, onedns.net, direct
@@ -394,7 +380,6 @@ host-suffix, oppoer.me, direct
 host-suffix, oppomobile.com, direct
 host-suffix, oracle.com, direct
 host-suffix, ourdvs.com, direct
-host-suffix, p4pfile.com, direct
 host-suffix, paipai.com, direct
 host-suffix, paragon.com, direct
 host-suffix, pdfwifi.com, direct
@@ -420,7 +405,6 @@ host-suffix, qqurl.com, direct
 host-suffix, quanmin.tv, direct
 host-suffix, qunar.com, direct
 host-suffix, qunarzz.com, direct
-host-suffix, qupu123.com, direct
 host-suffix, qwen.ai, direct
 host-suffix, qy.net, direct
 host-suffix, realme.com, direct
@@ -455,8 +439,6 @@ host-suffix, sspai.com, direct
 host-suffix, startssl.com, direct
 host-suffix, steamchina.com, direct
 host-suffix, steamcontent.com, direct
-host-suffix, steampipe.steamcontent.tnkjmec.com, direct
-host-suffix, steampowered.com.8686c.com, direct
 host-suffix, steamusercontent.com, direct
 host-suffix, suning.com, direct
 host-suffix, synology.com, direct
@@ -505,7 +487,6 @@ host-suffix, xiami.com, direct
 host-suffix, xiami.net, direct
 host-suffix, xiaohongshu.com, direct
 host-suffix, xiaojukeji.com, direct
-host-suffix, xiaoka.tv, direct
 host-suffix, ximalaya.com, direct
 host-suffix, xip.io, direct
 host-suffix, xitek.com, direct
@@ -542,11 +523,7 @@ host-suffix, zimuzu.io, direct
 host-suffix, zimuzu.tv, direct
 host-suffix, zjbyte.com, direct
 host-suffix, zmz001.com, direct
-host-suffix, zmz002.com, direct
-host-suffix, zmz003.com, direct
-host-suffix, zmz004.com, direct
 host-suffix, zmz2019.com, direct
-host-suffix, zmzfile.com, direct
 host-suffix, hongguoduanju.com, direct
 host-suffix, doubao.com, direct
 host-suffix, deepseek.com, direct
@@ -592,7 +569,6 @@ host-suffix, smtcdns.com, direct
 host-suffix, smtcdns.net, direct
 host-suffix, tbcdn.cn, direct
 host-suffix, toutiaocdn.com, direct
-host-suffix, weibocdn.cn, direct
 host-suffix, zhimg.com, direct
 host-suffix, 00cdn.com, direct
 host-suffix, 51jobcdn.com, direct
@@ -638,7 +614,6 @@ host-suffix, jdcloud.com, direct
 host-suffix, jianshuapi.com, direct
 host-suffix, jmstatic.com, direct
 host-suffix, kanimg.com, direct
-host-suffix, lancdns.com, direct
 host-suffix, lecloud.com, direct
 host-suffix, letvcloud.com, direct
 host-suffix, letvimg.com, direct
@@ -664,7 +639,6 @@ host-suffix, st.dl.bscstorage.net, direct
 host-suffix, st.dl.eccdnx.com, direct
 host-suffix, st.dl.pinyuncloud.com, direct
 host-suffix, staticfile.org, direct
-host-suffix, steamstatic.com.8686c.com, direct
 host-suffix, taobaocdn.com, direct
 host-suffix, tbcache.com, direct
 host-suffix, tbcdn.com, direct
