@@ -12,7 +12,7 @@ Telegram 规则（Telegram）由本仓库每 6 小时自动检查更新。
 
 ## 规则统计
 
-最后更新时间：2026-11-24 16:44:57
+最后更新时间：2026-11-24 18:08:00
 
 各类型规则统计：
 
@@ -20,12 +20,12 @@ Telegram 规则（Telegram）由本仓库每 6 小时自动检查更新。
 | ---- | ---- |
 | DOMAIN | 2 |
 | DOMAIN-KEYWORD | 1 |
-| DOMAIN-SUFFIX | 22 |
+| DOMAIN-SUFFIX | 21 |
 | IP-ASN | 5 |
 | IP-CIDR | 6 |
 | IP-CIDR6 | 4 |
 | PROCESS-NAME | 5 |
-| TOTAL | 45 |
+| TOTAL | 44 |
 
 ## Loon
 

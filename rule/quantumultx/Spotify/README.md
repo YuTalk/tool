@@ -12,18 +12,18 @@ Spotify 规则（Spotify）由本仓库每 6 小时自动检查更新。
 
 ## 规则统计
 
-最后更新时间：2026-11-24 16:44:57
+最后更新时间：2026-11-24 18:08:00
 
 各类型规则统计：
 
 | 类型 | 数量(条) |
 | ---- | ---- |
-| DOMAIN-SUFFIX | 20 |
+| DOMAIN-SUFFIX | 19 |
 | host | 6 |
 | host-keyword | 1 |
 | ip-cidr | 2 |
 | user-agent | 1 |
-| TOTAL | 30 |
+| TOTAL | 28 |
 
 ## Quantumult X
 

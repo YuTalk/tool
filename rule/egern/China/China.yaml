@@ -1,6 +1,6 @@
-# 最后修改：2026-11-24 09:09
+# 最后修改：2026-11-24 18:08
 # 中国常用域名 - 经常用到的
-# 总共 664 条
+# 总共 663 条
 # 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
 domain_suffix_set:
 # 第一段：应用/网站域名
@@ -557,7 +557,6 @@ domain_suffix_set:
   - douyinvod.com
   - elemecdn.com
   - gtimg.com
-  - hao123img.com
   - hc-cdn.com
   - hdslb.com
   - hicloud.com

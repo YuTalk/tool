@@ -12,7 +12,7 @@ Spotify 规则（Spotify）由本仓库每 6 小时自动检查更新。
 
 ## 规则统计
 
-最后更新时间：2026-11-24 16:44:57
+最后更新时间：2026-11-24 18:08:00
 
 各类型规则统计：
 
@@ -20,11 +20,11 @@ Spotify 规则（Spotify）由本仓库每 6 小时自动检查更新。
 | ---- | ---- |
 | DOMAIN | 6 |
 | DOMAIN-KEYWORD | 1 |
-| DOMAIN-SUFFIX | 20 |
+| DOMAIN-SUFFIX | 19 |
 | IP-CIDR | 2 |
 | PROCESS-NAME | 1 |
 | USER-AGENT | 1 |
-| TOTAL | 31 |
+| TOTAL | 29 |
 
 ## Loon
 

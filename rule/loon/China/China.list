@@ -1,6 +1,6 @@
-# 最后修改：2026-11-24 14:40
+# 最后修改：2026-11-24 18:08
 # 中国常用域名 - 经常用到的
-# 总共 664 条
+# 总共 663 条
 # 用法：Loon 分流 -> DIRECT
 # 第一段：应用/网站域名
 DOMAIN-SUFFIX,baidu.com,DIRECT
@@ -556,7 +556,6 @@ DOMAIN-SUFFIX,douyinstatic.com,DIRECT
 DOMAIN-SUFFIX,douyinvod.com,DIRECT
 DOMAIN-SUFFIX,elemecdn.com,DIRECT
 DOMAIN-SUFFIX,gtimg.com,DIRECT
-DOMAIN-SUFFIX,hao123img.com,DIRECT
 DOMAIN-SUFFIX,hc-cdn.com,DIRECT
 DOMAIN-SUFFIX,hdslb.com,DIRECT
 DOMAIN-SUFFIX,hicloud.com,DIRECT

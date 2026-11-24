@@ -12,13 +12,13 @@ Egern 用的规则，13 套，每套一个文件夹（点进文件夹能看到�
 
 ## 规则统计
 
-最后更新时间：2026-11-24 16:45:33
+最后更新时间：2026-11-24 18:08:00
 
 各规则集统计：
 
 | 规则集 | 数量(条) |
 | ---- | ---- |
-| China | 664 |
+| China | 663 |
 | <img src="https://cdn.simpleicons.org/google/4285F4" width="20" height="20" alt="Google"> Google | 31 |
 | <img src="https://cdn.simpleicons.org/googleads/4285F4" width="20" height="20" alt="GoogleAds"> GoogleAds | 24 |
 | <img src="https://cdn.simpleicons.org/apple" width="20" height="20" alt="Apple"> Apple | 22 |
@@ -26,12 +26,12 @@ Egern 用的规则，13 套，每套一个文件夹（点进文件夹能看到�
 | SausageMan | 15 |
 | AI_Part | 45 |
 | GeoIP_CN | 1 |
-| <img src="https://cdn.simpleicons.org/spotify/1DB954" width="20" height="20" alt="Spotify"> Spotify | 30 |
+| <img src="https://cdn.simpleicons.org/spotify/1DB954" width="20" height="20" alt="Spotify"> Spotify | 28 |
 | <img src="https://cdn.simpleicons.org/tiktok/FE2C55" width="20" height="20" alt="TikTok"> TikTok | 37 |
 | <img src="https://cdn.simpleicons.org/github" width="20" height="20" alt="GitHub"> GitHub | 31 |
 | <img src="https://cdn.simpleicons.org/speedtest/141526" width="20" height="20" alt="Speedtest"> Speedtest | 9 |
-| <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="20" height="20" alt="Telegram"> Telegram | 35 |
-| TOTAL | 965 |
+| <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="20" height="20" alt="Telegram"> Telegram | 34 |
+| TOTAL | 961 |
 
 其中域名 964 条，GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
 
@@ -47,7 +47,7 @@ Egern 用的规则，13 套，每套一个文件夹（点进文件夹能看到�
 - DNS 转发里 China.yaml 配国内 DNS（223.5.5.5、119.29.29.29），没配 DNS 转发的域名会走国外 DNS。
 
 #### 规则链接
-**China.yaml（664 条）**
+**China.yaml（663 条）**
 
 原始链接：
 
@@ -127,7 +127,7 @@ CDN 链接：
 
 https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/GeoIP_CN/GeoIP_CN.yaml
 
-**Spotify.yaml（30 条）**
+**Spotify.yaml（28 条）**
 
 原始链接：
 
@@ -167,7 +167,7 @@ CDN 链接：
 
 https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/Speedtest/Speedtest.yaml
 
-**Telegram.yaml（35 条）**
+**Telegram.yaml（34 条）**
 
 原始链接：
 

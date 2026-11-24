@@ -1,6 +1,6 @@
-# 最后修改：2026-11-24 14:48
+# 最后修改：2026-11-24 18:08
 # Telegram
-# 总共 35 条
+# 总共 34 条
 # 来源：blackmatrix7/ios_rule_script rule/Surge/Telegram/Telegram.list
 # 用法：Egern 分流 -> Telegram
 domain_suffix_set:
@@ -16,7 +16,6 @@ domain_suffix_set:
   - tdesktop.com
   - telega.one
   - telegra.ph
-  - telegram-cdn.org
   - telegram.dog
   - telegram.me
   - telegram.org

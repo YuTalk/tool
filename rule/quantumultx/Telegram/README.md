@@ -12,18 +12,18 @@ Telegram 规则（Telegram）由本仓库每 6 小时自动检查更新。
 
 ## 规则统计
 
-最后更新时间：2026-11-24 16:44:57
+最后更新时间：2026-11-24 18:08:00
 
 各类型规则统计：
 
 | 类型 | 数量(条) |
 | ---- | ---- |
-| DOMAIN-SUFFIX | 22 |
+| DOMAIN-SUFFIX | 21 |
 | host | 2 |
 | host-keyword | 1 |
 | ip-cidr | 6 |
 | ip6-cidr | 4 |
-| TOTAL | 35 |
+| TOTAL | 34 |
 
 ## Quantumult X
 

@@ -1,6 +1,6 @@
-# 最后修改：2026-11-24 14:48
+# 最后修改：2026-11-24 18:08
 # Telegram
-# 总共 45 条
+# 总共 44 条
 # 来源：blackmatrix7/ios_rule_script rule/Surge/Telegram/Telegram.list
 # 用法：Loon 分流 -> PROXY
 DOMAIN-SUFFIX,cdn-telegram.org,PROXY
@@ -15,7 +15,6 @@ DOMAIN-SUFFIX,t.me,PROXY
 DOMAIN-SUFFIX,tdesktop.com,PROXY
 DOMAIN-SUFFIX,telega.one,PROXY
 DOMAIN-SUFFIX,telegra.ph,PROXY
-DOMAIN-SUFFIX,telegram-cdn.org,PROXY
 DOMAIN-SUFFIX,telegram.dog,PROXY
 DOMAIN-SUFFIX,telegram.me,PROXY
 DOMAIN-SUFFIX,telegram.org,PROXY
