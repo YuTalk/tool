@@ -221,15 +221,15 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 | 文件 | 对应哪个模块 | 内容 |
 | --- | --- | --- |
-| Spotify.snippet | Spotify | 7 条脚本重写 + 3 条拦截 + MITM + 1 条分流 |
-| YouTube.Enhance.snippet | YouTube Enhance | 3 条脚本重写 + MITM |
-| bilibili.snippet | 哔哩哔哩 | 2 条空 JSON 返回 + 3 条整段替换响应 + 12 条 jq 改响应 + 5 条脚本重写 + MITM + 6 条分流 |
+| Spotify.conf | Spotify | 7 条脚本重写 + 3 条拦截 + MITM + 1 条分流 |
+| YouTube.Enhance.conf | YouTube Enhance | 3 条脚本重写 + MITM |
+| bilibili.conf | 哔哩哔哩 | 2 条空 JSON 返回 + 3 条整段替换响应 + 12 条 jq 改响应 + 5 条脚本重写 + MITM + 6 条分流 |
 
 怎么用：QX 里添加远程重写，粘贴下面对应文件的链接。
 
-- Spotify：`https://raw.githubusercontent.com/YuTalk/tool/main/rewrite/Spotify.snippet`
-- YouTube Enhance：`https://raw.githubusercontent.com/YuTalk/tool/main/rewrite/YouTube.Enhance.snippet`
-- 哔哩哔哩：`https://raw.githubusercontent.com/YuTalk/tool/main/rewrite/bilibili.snippet`
+- Spotify：`https://raw.githubusercontent.com/YuTalk/tool/main/rewrite/Spotify.conf`
+- YouTube Enhance：`https://raw.githubusercontent.com/YuTalk/tool/main/rewrite/YouTube.Enhance.conf`
+- 哔哩哔哩：`https://raw.githubusercontent.com/YuTalk/tool/main/rewrite/bilibili.conf`
 
 要注意的 3 点：
 
