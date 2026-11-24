@@ -29,20 +29,6 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 | GeoIP 库 | 6,575 条 CIDR，约 132KB，覆盖 357,427,495 个中国 IPv4 地址 |
 | 自动检查 | 每 6 小时，0:00、6:00、12:00、18:00 |
 
-## 📖 目录
-
-- [📦 文件说明](#-文件说明)
-- [🧩 模块](#-模块)
-- [⚡ 一键添加进软件](#-一键添加进软件)
-- [🚀 怎么用](#-怎么用)
-- [🔄 自动更新](#-自动更新)
-- [❓ 常见问题](#-常见问题)
-- [🔗 相关网站](#-相关网站)
-
----
-
-<a id="-文件说明"></a>
-
 <details>
 <summary><b>📦 文件说明</b></summary>
 
@@ -207,7 +193,6 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 </details>
 
-<a id="-模块"></a>
 
 <details>
 <summary><b>🧩 模块</b></summary>
@@ -231,7 +216,6 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 </details>
 
-<a id="-一键添加进软件"></a>
 
 <details>
 <summary><b>⚡ 一键添加进软件</b></summary>
@@ -264,7 +248,6 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 </details>
 
-<a id="-怎么用"></a>
 
 <details>
 <summary><b>🚀 怎么用</b></summary>
@@ -312,7 +295,6 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 </details>
 
-<a id="-自动更新"></a>
 
 <details>
 <summary><b>🔄 自动更新</b></summary>
@@ -336,7 +318,6 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 </details>
 
-<a id="-常见问题"></a>
 
 <details>
 <summary><b>❓ 常见问题</b></summary>
