@@ -1,0 +1,27 @@
+# 最后修改：2026-11-23 23:18
+# 谷歌广告 / 统计
+# 总共 24 条
+host-suffix, doubleclick.net, reject
+host-suffix, googlesyndication.com, reject
+host-suffix, googleadservices.com, reject
+host-suffix, googletagmanager.com, reject
+host-suffix, googletagservices.com, reject
+host-suffix, google-analytics.com, reject
+host-suffix, 2mdn.net, reject
+host-suffix, admob.com, reject
+host-suffix, googleads.com, reject
+host-suffix, ads.google.com, reject
+host-suffix, ads.youtube.com, reject
+host-suffix, app-measurement.com, reject
+host-suffix, ad.doubleclick.net, reject
+host-suffix, googleads.g.doubleclick.net, reject
+host-suffix, pubads.g.doubleclick.net, reject
+host-suffix, securepubads.g.doubleclick.net, reject
+host-suffix, stats.g.doubleclick.net, reject
+host-suffix, adservice.google.com, reject
+host-suffix, adsense.google.com, reject
+host-suffix, analytics.google.com, reject
+host-suffix, adsense.com, reject
+host-suffix, doubleclick.com, reject
+host-suffix, crashlytics.com, reject
+host-suffix, firebase.com, reject

@@ -4,7 +4,7 @@
 
 ![](https://shields.io/badge/-移除重复规则-ff69b4) ![](https://shields.io/badge/-三格式同步-green) ![](https://shields.io/badge/-每6小时自动更新-blue) ![](https://shields.io/badge/-仅自用-critical)
 
-Egern 用的规则，13 套，和 Quantumult X、Loon 那两份内容一致，只是格式不同，由本仓库每 6 小时自动检查更新。
+Egern 用的规则，13 套，每套一个文件夹（点进文件夹能看到这套规则的说明页），和 Quantumult X、Loon 那两份内容一致，只是格式不同，由本仓库每 6 小时自动检查更新。
 
 分流规则是互联网公共服务的域名和 IP 地址汇总，所有数据均收集自互联网公开信息，不代表我们支持或使用这些服务。
 
@@ -12,7 +12,7 @@ Egern 用的规则，13 套，和 Quantumult X、Loon 那两份内容一致，�
 
 ## 规则统计
 
-最后更新时间：2026-11-24 16:31:43
+最后更新时间：2026-11-24 16:45:33
 
 各规则集统计：
 
@@ -51,131 +51,131 @@ Egern 用的规则，13 套，和 Quantumult X、Loon 那两份内容一致，�
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/China.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/China/China.yaml
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/China.yaml
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/China/China.yaml
 
 **Google.yaml（31 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Google.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Google/Google.yaml
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/Google.yaml
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/Google/Google.yaml
 
 **GoogleAds.yaml（24 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/GoogleAds.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/GoogleAds/GoogleAds.yaml
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/GoogleAds.yaml
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/GoogleAds/GoogleAds.yaml
 
 **Apple.yaml（22 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Apple.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Apple/Apple.yaml
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/Apple.yaml
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/Apple/Apple.yaml
 
 **Microsoft.yaml（21 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Microsoft.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Microsoft/Microsoft.yaml
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/Microsoft.yaml
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/Microsoft/Microsoft.yaml
 
 **SausageMan.yaml（15 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/SausageMan.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/SausageMan/SausageMan.yaml
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/SausageMan.yaml
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/SausageMan/SausageMan.yaml
 
 **AI_Part.yaml（45 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/AI_Part.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/AI_Part/AI_Part.yaml
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/AI_Part.yaml
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/AI_Part/AI_Part.yaml
 
 **GeoIP_CN.yaml（1 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/GeoIP_CN.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/GeoIP_CN/GeoIP_CN.yaml
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/GeoIP_CN.yaml
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/GeoIP_CN/GeoIP_CN.yaml
 
 **Spotify.yaml（30 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Spotify.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Spotify/Spotify.yaml
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/Spotify.yaml
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/Spotify/Spotify.yaml
 
 **TikTok.yaml（37 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/TikTok.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/TikTok/TikTok.yaml
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/TikTok.yaml
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/TikTok/TikTok.yaml
 
 **GitHub.yaml（31 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/GitHub.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/GitHub/GitHub.yaml
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/GitHub.yaml
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/GitHub/GitHub.yaml
 
 **Speedtest.yaml（9 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Speedtest.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Speedtest/Speedtest.yaml
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/Speedtest.yaml
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/Speedtest/Speedtest.yaml
 
 **Telegram.yaml（35 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Telegram.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Telegram/Telegram.yaml
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/Telegram.yaml
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/Telegram/Telegram.yaml
 
 
 ## 数据来源

@@ -4,7 +4,7 @@
 
 ![](https://shields.io/badge/-移除重复规则-ff69b4) ![](https://shields.io/badge/-三格式同步-green) ![](https://shields.io/badge/-每6小时自动更新-blue) ![](https://shields.io/badge/-仅自用-critical)
 
-Quantumult X 用的规则，13 套，和 Egern、Loon 那两份内容一致，只是格式不同（每条后面都带策略），由本仓库每 6 小时自动检查更新。
+Quantumult X 用的规则，13 套，每套一个文件夹（点进文件夹能看到这套规则的说明页），和 Egern、Loon 那两份内容一致，只是格式不同（每条后面都带策略），由本仓库每 6 小时自动检查更新。
 
 分流规则是互联网公共服务的域名和 IP 地址汇总，所有数据均收集自互联网公开信息，不代表我们支持或使用这些服务。
 
@@ -12,7 +12,7 @@ Quantumult X 用的规则，13 套，和 Egern、Loon 那两份内容一致，�
 
 ## 规则统计
 
-最后更新时间：2026-11-24 16:31:43
+最后更新时间：2026-11-24 16:45:33
 
 各规则集统计：
 
@@ -51,131 +51,131 @@ Quantumult X 用的规则，13 套，和 Egern、Loon 那两份内容一致，�
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/China.list
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/China/China.list
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/China.list
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/China/China.list
 
 **Google.list（31 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/Google.list
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/Google/Google.list
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/Google.list
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/Google/Google.list
 
 **GoogleAds.list（24 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/GoogleAds.list
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/GoogleAds/GoogleAds.list
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/GoogleAds.list
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/GoogleAds/GoogleAds.list
 
 **Apple.list（22 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/Apple.list
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/Apple/Apple.list
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/Apple.list
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/Apple/Apple.list
 
 **Microsoft.list（21 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/Microsoft.list
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/Microsoft/Microsoft.list
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/Microsoft.list
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/Microsoft/Microsoft.list
 
 **SausageMan.list（15 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/SausageMan.list
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/SausageMan/SausageMan.list
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/SausageMan.list
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/SausageMan/SausageMan.list
 
 **AI_Part.list（45 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/AI_Part.list
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/AI_Part/AI_Part.list
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/AI_Part.list
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/AI_Part/AI_Part.list
 
 **GeoIP_CN.list（1 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/GeoIP_CN.list
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/GeoIP_CN/GeoIP_CN.list
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/GeoIP_CN.list
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/GeoIP_CN/GeoIP_CN.list
 
 **Spotify.list（30 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/Spotify.list
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/Spotify/Spotify.list
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/Spotify.list
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/Spotify/Spotify.list
 
 **TikTok.list（37 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/TikTok.list
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/TikTok/TikTok.list
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/TikTok.list
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/TikTok/TikTok.list
 
 **GitHub.list（31 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/GitHub.list
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/GitHub/GitHub.list
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/GitHub.list
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/GitHub/GitHub.list
 
 **Speedtest.list（9 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/Speedtest.list
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/Speedtest/Speedtest.list
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/Speedtest.list
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/Speedtest/Speedtest.list
 
 **Telegram.list（35 条）**
 
 原始链接：
 
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/Telegram.list
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/quantumultx/Telegram/Telegram.list
 
 CDN 链接：
 
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/Telegram.list
+https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/Telegram/Telegram.list
 
 
 ## 数据来源
