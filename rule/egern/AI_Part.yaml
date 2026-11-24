@@ -1,7 +1,7 @@
-# 最后修改：2026-11-23 23:18
+# 最后修改：2026-11-24 12:13
 # AI_Part
-# Muse + GPT + Claude
-# 总共 45 条
+# Muse + GPT + Claude + WorkBuddy + Shine
+# 总共 47 条
 # 用法：Egern 分流 -> 人工智能
 domain_suffix_set:
   - openai.com
@@ -49,3 +49,5 @@ domain_suffix_set:
   - atmeta.com
   - metaaiusercontent.com
   - metaaivm.com
+  - workbuddy.cn
+  - shineapp.cn
