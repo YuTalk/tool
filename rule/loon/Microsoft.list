@@ -1,0 +1,25 @@
+# 最后修改：2026-11-24 14:40
+# 微软 / Outlook
+# 总共 21 条
+# 用法：Loon 分流 -> PROXY
+DOMAIN-SUFFIX,microsoft.com,PROXY
+DOMAIN-SUFFIX,live.com,PROXY
+DOMAIN-SUFFIX,outlook.com,PROXY
+DOMAIN-SUFFIX,office.com,PROXY
+DOMAIN-SUFFIX,office365.com,PROXY
+DOMAIN-SUFFIX,onedrive.com,PROXY
+DOMAIN-SUFFIX,windows.com,PROXY
+DOMAIN-SUFFIX,windowsupdate.com,PROXY
+DOMAIN-SUFFIX,microsoftonline.com,PROXY
+DOMAIN-SUFFIX,sharepoint.com,PROXY
+DOMAIN-SUFFIX,microsoft365.com,PROXY
+DOMAIN-SUFFIX,hotmail.com,PROXY
+DOMAIN-SUFFIX,live.net,PROXY
+DOMAIN-SUFFIX,msn.com,PROXY
+DOMAIN-SUFFIX,bing.com,PROXY
+DOMAIN-SUFFIX,windows.net,PROXY
+DOMAIN-SUFFIX,azure.com,PROXY
+DOMAIN-SUFFIX,outlook.live.com,PROXY
+DOMAIN-SUFFIX,account.microsoft.com,PROXY
+DOMAIN-SUFFIX,support.microsoft.com,PROXY
+DOMAIN-SUFFIX,learn.microsoft.com,PROXY
