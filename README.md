@@ -41,9 +41,13 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 
 ---
 
-## 📦 文件说明
+<details>
+<summary><h2>📦 文件说明</h2></summary>
 
-### 🌐 规则集
+
+<details>
+<summary><h3>🌐 规则集</h3></summary>
+
 
 | 规则 | 条数 | 说明 | 策略 |
 | --- | --- | --- | --- |
@@ -106,7 +110,11 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 </details>
 
-### 🖼️ 图标
+</details>
+
+<details>
+<summary><h3>🖼️ 图标</h3></summary>
+
 
 图标都放在顶层 `icon/` 文件夹里，都是从别人家搬过来的原图（主要来自 [ddgksf2013/Icon](https://github.com/ddgksf2013/Icon) 和 [Koolson/Qure](https://github.com/Koolson/Qure)）。文件夹里现在只有 13 张预览图（preview-01 到 preview-13），单个应用图标已经删了，只留预览图给你看效果。
 
@@ -178,7 +186,11 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 <a href="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-13-semporia.PNG"><img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-13-semporia.PNG" width="180"></a>
 
-### GeoIpCN.mmdb（6,575 条 CIDR，约 132KB）
+</details>
+
+<details>
+<summary><h3>GeoIpCN.mmdb（6,575 条 CIDR，约 132KB）</h3></summary>
+
 
 只含中国 IPv4，共覆盖 **357,427,495 个地址**，约 132KB，纯 IPv4，不含 IPv6。
 
@@ -198,7 +210,13 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 ---
 
-## 🧩 模块
+</details>
+
+</details>
+
+<details>
+<summary><h2>🧩 模块</h2></summary>
+
 
 3 个模块，都是从别人家直接搬过来的原版文件，内容一个字都没改过。上游更新了，这里每 6 小时自动同步一次。
 
@@ -216,7 +234,11 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 ---
 
-## ⚡ 一键添加进软件
+</details>
+
+<details>
+<summary><h2>⚡ 一键添加进软件</h2></summary>
+
 
 点下面表格里的链接，就会直接跳进 Egern / QX，问你要不要添加，点确认就加进去了，不用自己复制链接再粘贴。
 
@@ -243,9 +265,15 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 ---
 
-## 🚀 怎么用
+</details>
 
-### <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/42/12/5d/42125db1-6a4f-de58-cf03-72bf8e2e4354/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" width="32" height="32" alt="Egern"> Egern
+<details>
+<summary><h2>🚀 怎么用</h2></summary>
+
+
+<details>
+<summary><h3><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/42/12/5d/42125db1-6a4f-de58-cf03-72bf8e2e4354/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" width="32" height="32" alt="Egern"> Egern</h3></summary>
+
 
 1. **DNS 转发**：设置 → DNS 转发 → 添加规则集，粘贴 China 的链接，策略选国内。
 
@@ -266,14 +294,22 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 > ⚠️ GEOIP CN 一定放倒数第二，别放第一，不然每个域名都要先解析 IP，费电又变慢。域名规则不用查 IP，直接按域名匹配，又快又省电，只有没匹配上的流量才需要查 IP。
 
-### <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/84/ae/50/84ae5055-dc8c-2f6e-cea6-8b543f72ae98/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg" width="32" height="32" alt="Quantumult X"> Quantumult X
+</details>
+
+<details>
+<summary><h3><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/84/ae/50/84ae5055-dc8c-2f6e-cea6-8b543f72ae98/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg" width="32" height="32" alt="Quantumult X"> Quantumult X</h3></summary>
+
 
 1. 分流里加远程规则，粘贴上面表格里的 QX 版链接，策略按表格选。也可以直接点表格里的蓝色按钮，会跳进 QX 问你要不要添加。
 2. 分流留一条：`geoip, cn, direct` 放倒数第二，`final` 放最后。QX 没有自建 .mmdb 库，靠 GeoIP_CN.list 这条远程规则判断中国 IP。
 3. QX 不能用自建 .mmdb 库，用它自带的就行。QX 也没有 DNS 转发功能，DNS 就靠分流本身，国内域名走直连、国外走代理，效果是一样的。
 4. 注意：QX 每条规则后面必须带策略，没有策略会报 Invalid Line，这个仓库的 QX 版每条都带了策略，直接用就行。
 
-### <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/92/4e/35/924e359d-e682-7b80-372b-920fdb8c6d6c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg" width="32" height="32" alt="Loon"> Loon
+</details>
+
+<details>
+<summary><h3><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/92/4e/35/924e359d-e682-7b80-372b-920fdb8c6d6c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg" width="32" height="32" alt="Loon"> Loon</h3></summary>
+
 
 1. 分流里加远程规则，粘贴 `rule/loon/` 文件夹里对应那套的 `.list` 链接，每条规则自带策略，不用自己选：China、Apple、SausageMan、GeoIP_CN 是 DIRECT，Google、Microsoft、AI_Part、Spotify、TikTok、GitHub、Speedtest、Telegram 是 PROXY，GoogleAds 是 REJECT。
 2. 分流留一条：`GEOIP,CN,DIRECT` 放倒数第二，`FINAL,兜底后备策略` 放最后。Loon 没有自建 .mmdb 库，靠 GeoIP_CN.list 这条远程规则判断中国 IP。
@@ -282,7 +318,13 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 ---
 
-## 🔄 自动更新
+</details>
+
+</details>
+
+<details>
+<summary><h2>🔄 自动更新</h2></summary>
+
 
 | 任务 | 频率 |
 | --- | --- |
@@ -300,7 +342,11 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 ---
 
-## ❓ 常见问题
+</details>
+
+<details>
+<summary><h2>❓ 常见问题</h2></summary>
+
 
 **Q：外国网站会不会被误判成中国？**
 A：不会。库里只装了中国段，外国 IP 查不到，返回空，就走代理。只有中国 IP 才会走直连。
@@ -333,6 +379,8 @@ A：点图片就能打开原图，再捏合放大。图标那节的 13 张预览
 A：平时用 Egern 攒下来的笔记（比如域名匹配的 5 种写法），存在一个单独的网页上，仓库最下面「Egern 消息储存」那节有链接，点链接就能看。网页上能新增、改、删、置顶、收藏，还能自己加分类；默认只能看，站长用口令解锁后才能改。
 
 ---
+
+</details>
 
 ## 📄 开源协议
 
