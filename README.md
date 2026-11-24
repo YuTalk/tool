@@ -312,3 +312,13 @@ A：打开 Egern 的连接记录，看域名的连接走的是哪条策略。比
 ## 📄 开源协议
 
 MIT License —— 随便用，改了也行。
+
+---
+
+## 📋 GeoIP 库直链
+
+点代码框右上角的复制按钮，粘贴到 Egern 的 GeoIP 数据库设置里：
+
+```
+https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
+```
