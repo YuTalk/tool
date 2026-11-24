@@ -15,7 +15,7 @@
 | 规则集 | 8 个（Egern 和 QX 各一份，内容一致） |
 | 模块 | 3 个（Spotify、YouTube Enhance、哔哩哔哩，都是从别人家搬过来的原版，没改过） |
 | 图标 | 13 个（13 套图标库的预览图，都是从别人家搬过来的原图） |
-| 域名总数 | 824 条（去重后） |
+| 域名总数 | 822 条（去重后） |
 | GeoIP 库 | 6,575 条 CIDR，约 132KB，覆盖 357,427,495 个中国 IPv4 地址 |
 | 自动检查 | 每 6 小时，0:00、6:00、12:00、18:00 |
 
@@ -42,7 +42,7 @@
 | Apple | 22 | 苹果系统、商店、iCloud | direct |
 | Microsoft | 21 | Outlook、微软账号 | 微软服务 |
 | SausageMan | 15 | 香肠派对及 TapTap 相关 | direct |
-| AI_Part | 47 | Muse、GPT、Claude、WorkBuddy、Shine | 人工智能 |
+| AI_Part | 45 | Muse、GPT、Claude | 人工智能 |
 | GeoIP_CN | 1 | 中国 IP 段（仅 QX 版） | direct |
 
 China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段是 CDN / 后台 / 接口域名 **134 条**，覆盖微信、QQ、淘宝、京东、拼多多、美团、饿了么、抖音、哔哩哔哩、爱奇艺、优酷、知乎、微博、百度、阿里、12306、银行、运营商、政府、快递……还有红果短剧、豆包、DeepSeek、Kimi、腾讯元宝、即梦 AI、剪映、夸克等热门应用。
@@ -62,10 +62,8 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 - GPT / OpenAI（19 条）：ChatGPT 聊天、Sora 视频、OpenAI 官网、API 接口等
 - Claude / Anthropic（19 条）：Claude 聊天、Claude 官网、App 等
 - Muse / Meta AI（7 条）：meta.ai、muse.ai、llama.com 等，Meta 的 AI 聊天
-- WorkBuddy（1 条）：腾讯的 AI 办公智能体，workbuddy.cn
-- Shine 拾光（1 条）：AI 虚拟角色聊天，shineapp.cn
 
-五个 AI 都在国外，都要走代理。meta.com 故意没加，因为它会把 Facebook、Instagram、WhatsApp 也拉进来。
+三个 AI 都在国外，都要走代理。meta.com 故意没加，因为它会把 Facebook、Instagram、WhatsApp 也拉进来。
 
 </details>
 
@@ -78,7 +76,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 - **Apple（22 条）**：苹果系统服务，App Store、iCloud、Apple ID、系统更新、推送通知、Siri、Apple Music 等。苹果的服务器在国内有节点，走直连最快最稳，分流 → DIRECT，DNS 也走国内。
 - **Microsoft（21 条）**：微软服务，Outlook 邮箱、微软账号登录、OneDrive、Office 等。微软的服务器在国外，走直连慢甚至打不开，要走代理，策略选微软服务。
 - **SausageMan（15 条）**：香肠派对（吃鸡手游）加 TapTap 相关域名，游戏服务器、TapTap 下载、TapTap 账号、游戏内嵌网页等。游戏服务器在国内，走直连延迟最低，分流 → DIRECT，DNS 转发 → 国内。
-- **AI_Part（47 条）**：你常用的 AI 服务，Muse（Meta AI，7 条）、GPT / ChatGPT（OpenAI，19 条）、Claude（Anthropic，19 条），加上 WorkBuddy（腾讯 AI 办公智能体，1 条）和 Shine 拾光（AI 虚拟角色聊天，1 条）。这些 AI 都在国外，必须走代理，策略选人工智能。注意：meta.com 没加进去，因为它太宽，会把 Facebook、Instagram、WhatsApp 也拉进 AI 组。
+- **AI_Part（45 条）**：只包括你常用的三个 AI，Muse（Meta AI，7 条）、GPT / ChatGPT（OpenAI，19 条）、Claude（Anthropic，19 条）。三个 AI 都在国外，必须走代理，策略选人工智能。注意：meta.com 没加进去，因为它太宽，会把 Facebook、Instagram、WhatsApp 也拉进 AI 组。
 - **GeoIP_CN（1 条）**：中国 IP 段列表，只有 1 条规则，内容就是 geoip, cn, direct，只有 QX 版，没有 Egern 版。QX 没有自建 .mmdb 库，靠这条远程规则判断中国 IP。放在分流倒数第二，外国 IP 走默认代理。
 
 </details>

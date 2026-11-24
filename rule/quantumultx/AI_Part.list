@@ -1,7 +1,7 @@
-# 最后修改：2026-11-24 12:13
+# 最后修改：2026-11-24 12:15
 # AI_Part
-# Muse + GPT + Claude + WorkBuddy + Shine
-# 总共 47 条
+# Muse + GPT + Claude
+# 总共 45 条
 host-suffix, openai.com, 人工智能
 host-suffix, openai.org, 人工智能
 host-suffix, chatgpt.com, 人工智能
@@ -47,5 +47,3 @@ host-suffix, ai.meta.com, 人工智能
 host-suffix, atmeta.com, 人工智能
 host-suffix, metaaiusercontent.com, 人工智能
 host-suffix, metaaivm.com, 人工智能
-host-suffix, workbuddy.cn, 人工智能
-host-suffix, shineapp.cn, 人工智能
