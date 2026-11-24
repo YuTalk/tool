@@ -223,7 +223,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 | --- | --- | --- |
 | Spotify.snippet | Spotify | 7 条脚本重写 + 3 条拦截 + MITM + 1 条分流 |
 | YouTube.Enhance.snippet | YouTube Enhance | 3 条脚本重写 + MITM |
-| bilibili.snippet | 哔哩哔哩 | 5 条固定返回 + 12 条 jq 改响应 + 5 条脚本重写 + MITM + 6 条分流 |
+| bilibili.snippet | 哔哩哔哩 | 2 条空 JSON 返回 + 3 条整段替换响应 + 12 条 jq 改响应 + 5 条脚本重写 + MITM + 6 条分流 |
 
 怎么用：QX 里添加远程重写，粘贴下面对应文件的链接。
 
