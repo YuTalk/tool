@@ -24,7 +24,6 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 | --- | --- |
 | 规则集 | 13 个（Egern、QX、Loon 各一份，内容一致） |
 | 模块 | 3 个（Spotify、YouTube Enhance、哔哩哔哩，都是从别人家搬过来的原版，没改过） |
-| QX 转换版 | 3 个（rewrite/ 文件夹，上面 3 个模块转成 Quantumult X 能用的格式） |
 | 图标 | 13 个（13 套图标库的预览图，都是从别人家搬过来的原图） |
 | 域名总数 | 964 条（去重后） |
 | GeoIP 库 | 6,575 条 CIDR，约 132KB，覆盖 357,427,495 个中国 IPv4 地址 |
@@ -34,7 +33,6 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 
 - [📦 文件说明](#-文件说明)
 - [🧩 模块](#-模块)
-- [🔄 模块的 QX 转换版](#-模块的-qx-转换版)
 - [⚡ 一键添加进软件](#-一键添加进软件)
 - [🚀 怎么用](#-怎么用)
 - [🔄 自动更新](#-自动更新)
@@ -212,30 +210,6 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 - Spotify：`https://raw.githubusercontent.com/YuTalk/tool/main/module/Spotify.sgmodule`
 - YouTube Enhance：`https://raw.githubusercontent.com/YuTalk/tool/main/module/YouTube.Enhance.sgmodule`
 - 哔哩哔哩：`https://raw.githubusercontent.com/YuTalk/tool/main/module/bilibili.yaml`
-
----
-
-## 🔄 模块的 QX 转换版
-
-上面 3 个模块转成 Quantumult X 能用的格式，放在 `rewrite/` 文件夹里，一共 3 个文件。QX 不能直接用 Surge 模块和 Loon 插件，所以转了一份。
-
-| 文件 | 对应哪个模块 | 内容 |
-| --- | --- | --- |
-| Spotify.conf | Spotify | 7 条脚本重写 + 3 条拦截 + MITM + 1 条分流 |
-| YouTube.Enhance.conf | YouTube Enhance | 3 条脚本重写 + MITM |
-| bilibili.conf | 哔哩哔哩 | 2 条空 JSON 返回 + 3 条整段替换响应 + 12 条 jq 改响应 + 5 条脚本重写 + MITM + 6 条分流 |
-
-怎么用：QX 里添加远程重写，粘贴下面对应文件的链接。
-
-- Spotify：`https://raw.githubusercontent.com/YuTalk/tool/main/rewrite/Spotify.conf`
-- YouTube Enhance：`https://raw.githubusercontent.com/YuTalk/tool/main/rewrite/YouTube.Enhance.conf`
-- 哔哩哔哩：`https://raw.githubusercontent.com/YuTalk/tool/main/rewrite/bilibili.conf`
-
-要注意的 3 点：
-
-- QX 的脚本不传参数，脚本用自带默认值，和模块原来的默认设置一样。
-- 哔哩哔哩那份用到 `jsonjq-response-body`，需要 Quantumult X build 845 或更新版本。
-- 有几条 QX 表达不了，转的时候跳过了，每份文件开头都写着跳过了哪几条、为什么跳过。
 
 ---
 
