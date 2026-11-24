@@ -4,6 +4,7 @@
 # (scripthub.vercel.app 站点前端损坏无法使用，故按其开源转换代码的规则转换)
 # 注意: QX 脚本不传参数，脚本用自带默认值
 # 注意: 本文件用到 jsonjq-response-body，需 Quantumult X build 845 或更新版本
+# 注意: 固定返回的 3 条 JSON 用 response-body 整段替换（QX 的 echo-response 只能引用本地文件，不能内联数据），只在上游返回非空正文时生效
 # 以下条目因 QX 不支持已跳过:
 # - [rules] 跳过 (逻辑组合规则 QX 无法直接表达): {'and': {'match': [{'domain_suffix': {'match': 'chat.bilibili.com'}}, {'or': {'m
 # - [rules] 跳过 (QX 无端口分流): dest_port 4480
@@ -14,11 +15,11 @@
 # - [rewrites] 跳过 (base64 二进制 protobuf 正文，QX echo-response 无法解码): https:\/\/grpc\.biliapi\.net\/bilibili\.app\.(view\.v1\.View
 
 [rewrite_local]
-https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? url echo-response application/json {}
-https:\/\/line3-h5-mobile-api\.biligame\.com\/game\/live\/large_card_material\? url echo-response application/json {}
-https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list\? url echo-response application/json {"code":0,"message":"OK","ttl":1,"data":{"max_time":0,"min_interval":31536000,"pull_interval":31536000,"keep_ids":[],"show":[],"list":[{}],"splash_request_id":""}}
-https:\/\/ap[ip]\.bilibili\.com\/x\/(resource\/(top\/activity|patch\/tab(\/v2)?)|v2\/search\/square|vip\/ads\/materials)\? url echo-response application/json {"code":-404,"message":"-404","ttl":1,"data":null}
-https:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive\? url echo-response application/json {"code":0,"data":{"closeType":"close_win","container":[],"showTime":""},"message":"success"}
+https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? url reject-dict
+https:\/\/line3-h5-mobile-api\.biligame\.com\/game\/live\/large_card_material\? url reject-dict
+https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list\? url response-body ^[\s\S]+$ response-body {"code":0,"message":"OK","ttl":1,"data":{"max_time":0,"min_interval":31536000,"pull_interval":31536000,"keep_ids":[],"show":[],"list":[{}],"splash_request_id":""}}
+https:\/\/ap[ip]\.bilibili\.com\/x\/(resource\/(top\/activity|patch\/tab(\/v2)?)|v2\/search\/square|vip\/ads\/materials)\? url response-body ^[\s\S]+$ response-body {"code":-404,"message":"-404","ttl":1,"data":null}
+https:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive\? url response-body ^[\s\S]+$ response-body {"code":0,"data":{"closeType":"close_win","container":[],"showTime":""},"message":"success"}
 http:\/\/[^?]+\/resolve\?host=(ap[ip]\.bilibili\.com|grpc\.biliapi\.net|api\.live\.bilibili\.com) url jsonjq-response-body '.dns[]? |= (.ips = [] | .ttl = 86400)'
 https:\/\/api\.live\.bilibili\.com\/xlive\/open-interface\/v2\/tracker\/conf\? url jsonjq-response-body '.data.domains = ["wss://tracker.chat.bilibili.com"]'
 https:\/\/api\.bilibili\.com\/x\/pd-proxy\/tracker\? url jsonjq-response-body '.data[][]? = "stun.chat.bilibili.com:3478"'
