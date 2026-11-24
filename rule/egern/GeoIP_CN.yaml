@@ -1,6 +1,0 @@
-# 最后修改：2026-11-24 14:44
-# GeoIP_CN
-# 总共 1 条
-# 用法：Egern 分流 -> DIRECT
-geoip_set:
-  - cn
