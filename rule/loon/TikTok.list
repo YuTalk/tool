@@ -1,7 +1,8 @@
 # 最后修改：2026-11-24 14:48
 # 抖音国际版 TikTok
-# 总共 36 条
+# 总共 38 条
 # 来源：blackmatrix7/ios_rule_script rule/Surge/TikTok/TikTok.list
+# 来源：fmz200/wool_scripts Loon/rule/TikTok.list
 # 用法：Loon 分流 -> PROXY
 DOMAIN-SUFFIX,bytedapm.com,PROXY
 DOMAIN-SUFFIX,bytegecko-i18n.com,PROXY
@@ -31,11 +32,13 @@ DOMAIN-SUFFIX,tiktokv.com,PROXY
 DOMAIN-SUFFIX,tiktokv.us,PROXY
 DOMAIN-SUFFIX,trae.ai,PROXY
 DOMAIN-SUFFIX,ttwebview.com,PROXY
+DOMAIN-SUFFIX,ttwstatic.com,PROXY
 DOMAIN,lf16-effectcdn.byteeffecttos-g.com,PROXY
 DOMAIN,lf16-pkgcdn.pitaya-clientai.com,PROXY
 DOMAIN,p16-tiktokcdn-com.akamaized.net,PROXY
 DOMAIN,trae-api-sg.mchost.guru,PROXY
 DOMAIN-KEYWORD,musical.ly,PROXY
 DOMAIN-KEYWORD,tiktok,PROXY
+DOMAIN-KEYWORD,tiktokcdn,PROXY
 USER-AGENT,TikTok*,PROXY
 PROCESS-NAME,com.zhiliaoapp.musically,PROXY

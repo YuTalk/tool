@@ -1,7 +1,8 @@
 # 最后修改：2026-11-24 14:48
 # 抖音国际版 TikTok
-# 总共 35 条
+# 总共 37 条
 # 来源：blackmatrix7/ios_rule_script rule/Surge/TikTok/TikTok.list
+# 来源：fmz200/wool_scripts Loon/rule/TikTok.list
 # 用法：QX 分流 -> TikTok
 host-suffix, bytedapm.com, TikTok
 host-suffix, bytegecko-i18n.com, TikTok
@@ -31,10 +32,12 @@ host-suffix, tiktokv.com, TikTok
 host-suffix, tiktokv.us, TikTok
 host-suffix, trae.ai, TikTok
 host-suffix, ttwebview.com, TikTok
+host-suffix, ttwstatic.com, TikTok
 host, lf16-effectcdn.byteeffecttos-g.com, TikTok
 host, lf16-pkgcdn.pitaya-clientai.com, TikTok
 host, p16-tiktokcdn-com.akamaized.net, TikTok
 host, trae-api-sg.mchost.guru, TikTok
 host-keyword, musical.ly, TikTok
 host-keyword, tiktok, TikTok
+host-keyword, tiktokcdn, TikTok
 user-agent, TikTok*, TikTok

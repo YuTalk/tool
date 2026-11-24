@@ -1,7 +1,8 @@
-# 最后修改：2026-11-24 14:48
+# 最后修改：2026-11-24 14:54
 # 抖音国际版 TikTok
-# 总共 35 条
+# 总共 37 条
 # 来源：blackmatrix7/ios_rule_script rule/Surge/TikTok/TikTok.list
+# 来源：fmz200/wool_scripts Loon/rule/TikTok.list
 # 用法：Egern 分流 -> TikTok
 domain_suffix_set:
   - bytedapm.com
@@ -32,6 +33,7 @@ domain_suffix_set:
   - tiktokv.us
   - trae.ai
   - ttwebview.com
+  - ttwstatic.com
 domain_set:
   - lf16-effectcdn.byteeffecttos-g.com
   - lf16-pkgcdn.pitaya-clientai.com
@@ -40,5 +42,6 @@ domain_set:
 domain_keyword_set:
   - musical.ly
   - tiktok
+  - tiktokcdn
 user_agent_set:
   - TikTok*
