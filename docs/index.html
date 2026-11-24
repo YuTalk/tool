@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>YuTalk/tool 仓库主页</title>
+<style>
+  button, [role="button"], select, summary, input:not([type="checkbox"],[type="radio"]) { min-height: 2.25rem; }
+  * { box-sizing: border-box; }
+  :root{
+    --fs:16px;
+    --icon:56px;          /* 规则图标大小，可缩放 */
+    --picon:30px;          /* 图标库预览格大小，可缩放 */
+    --bg:#f4f5f2;
+    --surface:#ffffff;
+    --surface2:#eceee9;
+    --ink:#17201b;
+    --muted:#5c6a61;
+    --line:#dde2da;
+    --brand:#0e6b4f;
+    --brand-ink:#ffffff;
+    --amber:#b7791f;
+    --blue:#1d6fb8;
+    --green:#1f9d63;
+    --red:#d64545;
+    --chip:#e7efe9;
+    --code-bg:#101613;
+    --code-ink:#d9f2e2;
+    --shadow:0 1px 2px rgba(16,24,20,.06),0 8px 24px rgba(16,24,20,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0d120f;
+      --surface:#161d18;
+      --surface2:#1e2821;
+      --ink:#e8efe9;
+      --muted:#9db0a2;
+      --line:#2a362d;
+      --brand:#2fbd8a;
+      --brand-ink:#07130d;
+      --chip:#1e2d24;
+      --code-bg:#050807;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+  html{ font-size:var(--fs); }
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.65; -webkit-text-size-adjust:100%;
+  }
+  .wrap{ max-width:1120px; margin:0 auto; padding:0 1rem 3rem; }
+
+  /* ---------- 头部 ---------- */
+  header.hero{ padding:2rem 0 1.25rem; }
+  .repo-line{ display:flex; align-items:center; gap:.9rem; flex-wrap:wrap; }
+  .repo-mark{
+    width:3.4rem; height:3.4rem; border-radius:1rem; flex:none;
+    background:var(--brand); color:var(--brand-ink);
+    display:flex; align-items:center; justify-content:center;
+    font-weight:800; font-size:1.35rem; letter-spacing:.02em;
+    box-shadow:var(--shadow);
+  }
+  h1{ font-size:2rem; line-height:1.2; margin:0; font-weight:800; letter-spacing:-.01em; }
+  h1 .slash{ color:var(--muted); font-weight:400; }
+  .hero-sub{ color:var(--muted); font-size:1.05rem; margin:.55rem 0 0; max-width:42rem; }
+  .hero-tags{ display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.9rem; }
+  .tag{
+    font-size:.85rem; padding:.3rem .7rem; border-radius:999px;
+    background:var(--chip); color:var(--ink); border:1px solid var(--line);
+  }
+  .tag.self{ background:var(--ink); color:var(--bg); border-color:var(--ink); font-weight:700; }
+  .gh-link{
+    display:inline-flex; align-items:center; gap:.45rem; margin-top:1rem;
+    min-height:2.75rem; padding:.55rem 1.1rem; border-radius:.75rem;
+    background:var(--brand); color:var(--brand-ink); text-decoration:none; font-weight:700;
+  }
+  .stats{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:.7rem; margin-top:1.4rem;
+  }
+  @media (min-width:720px){ .stats{ grid-template-columns:repeat(5,1fr); } }
+  .stat{
+    background:var(--surface); border:1px solid var(--line); border-radius:1rem;
+    padding:.85rem 1rem; box-shadow:var(--shadow);
+  }
+  .stat b{ display:block; font-size:1.55rem; line-height:1.15; font-variant-numeric:tabular-nums; }
+  .stat span{ color:var(--muted); font-size:.85rem; }
+
+  /* ---------- 缩放控制条 ---------- */
+  .scaler{
+    position:sticky; top:.5rem; z-index:20;
+    background:var(--surface); border:1px solid var(--line); border-radius:1rem;
+    box-shadow:var(--shadow); padding:.8rem 1rem; margin:1.4rem 0 .4rem;
+  }
+  .scaler-title{ font-weight:800; font-size:.95rem; display:flex; align-items:center; gap:.5rem; margin-bottom:.5rem; }
+  .scaler-grid{ display:grid; gap:.7rem; }
+  @media (min-width:820px){ .scaler-grid{ grid-template-columns:1fr 1fr auto; align-items:end; } }
+  .ctl label{ display:flex; justify-content:space-between; font-size:.88rem; color:var(--muted); margin-bottom:.25rem; }
+  .ctl label output{ color:var(--ink); font-weight:700; font-variant-numeric:tabular-nums; }
+  .ctl input[type="range"]{ width:100%; accent-color:var(--brand); height:2.25rem; }
+  .zoom-btns{ display:flex; gap:.45rem; }
+  .zoom-btns button{
+    border:1px solid var(--line); background:var(--surface2); color:var(--ink);
+    border-radius:.6rem; padding:.45rem .8rem; font-weight:700; cursor:pointer; min-width:3rem;
+  }
+  .zoom-btns button[aria-pressed="true"]{ background:var(--brand); color:var(--brand-ink); border-color:var(--brand); }
+
+  /* ---------- 章节 ---------- */
+  section{ margin-top:2.4rem; }
+  .sec-head{ display:flex; align-items:baseline; gap:.7rem; flex-wrap:wrap; margin-bottom:.4rem; }
+  h2{ font-size:1.5rem; margin:0; font-weight:800; }
+  .sec-head .note{ color:var(--muted); font-size:.92rem; }
+  .sec-desc{ color:var(--muted); margin:.2rem 0 1rem; max-width:46rem; }
+
+  /* ---------- 规则卡片 ---------- */
+  .grid{ display:grid; gap:.8rem; grid-template-columns:1fr; }
+  @media (min-width:640px){ .grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (min-width:1024px){ .grid{ grid-template-columns:repeat(3,1fr); } }
+  .card{
+    background:var(--surface); border:1px solid var(--line); border-radius:1.1rem;
+    padding:1rem; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:.55rem;
+  }
+  .card-top{ display:flex; align-items:center; gap:.8rem; }
+  .ric{
+    width:var(--icon); height:var(--icon); border-radius:calc(var(--icon)*.26); flex:none;
+    display:flex; align-items:center; justify-content:center; overflow:hidden;
+    transition:width .15s ease,height .15s ease;
+  }
+  .ric svg{ width:68%; height:68%; display:block; }
+  .card h3{ margin:0; font-size:1.12rem; line-height:1.25; }
+  .card .en{ color:var(--muted); font-size:.82rem; }
+  .card p{ margin:0; color:var(--muted); font-size:.93rem; flex:1; }
+  .badges{ display:flex; gap:.4rem; flex-wrap:wrap; }
+  .badge{ font-size:.78rem; font-weight:700; padding:.14rem .55rem; border-radius:999px; border:1px solid var(--line); background:var(--surface2); }
+  .badge.count{ background:var(--chip); }
+  .badge.direct{ color:var(--green); }
+  .badge.proxy{ color:var(--blue); }
+  .badge.reject{ color:var(--red); }
+  .copy-row{ display:flex; gap:.4rem; flex-wrap:wrap; border-top:1px dashed var(--line); padding-top:.6rem; }
+  .copy-btn{
+    flex:1 1 30%; min-height:2.5rem; border-radius:.6rem; cursor:pointer;
+    border:1px solid var(--line); background:var(--surface); color:var(--ink);
+    font-weight:700; font-size:.86rem; padding:.4rem .3rem;
+  }
+  .copy-btn:active{ background:var(--chip); }
+  .copy-btn small{ display:block; font-weight:400; color:var(--muted); font-size:.7rem; }
+
+  /* ---------- 模块 ---------- */
+  .egern-big{
+    font-size:1.7rem; font-weight:800; color:var(--brand);
+    display:flex; align-items:center; gap:.6rem; margin:.2rem 0 .8rem;
+  }
+  .egern-big::before{ content:""; width:.55rem; height:1.7rem; border-radius:.3rem; background:var(--brand); }
+  .mod-grid{ display:grid; gap:.8rem; grid-template-columns:1fr; }
+  @media (min-width:820px){ .mod-grid{ grid-template-columns:repeat(3,1fr); } }
+
+  /* ---------- 图标库 ---------- */
+  .icon-scaler{
+    background:var(--surface); border:1px solid var(--line); border-radius:1rem;
+    box-shadow:var(--shadow); padding:.8rem 1rem; margin-bottom:1rem;
+    display:grid; gap:.6rem;
+  }
+  @media (min-width:820px){ .icon-scaler{ grid-template-columns:1fr auto; align-items:end; } }
+  .group-title{ font-size:1.05rem; font-weight:800; margin:1.2rem 0 .2rem; }
+  .group-title span{ color:var(--muted); font-weight:400; font-size:.88rem; }
+  .icon-grid{ display:grid; gap:.8rem; grid-template-columns:repeat(2,1fr); }
+  @media (min-width:640px){ .icon-grid{ grid-template-columns:repeat(3,1fr); } }
+  @media (min-width:1024px){ .icon-grid{ grid-template-columns:repeat(4,1fr); } }
+  .iset{
+    background:var(--surface); border:1px solid var(--line); border-radius:1.1rem;
+    padding:.9rem; box-shadow:var(--shadow);
+  }
+  .iset h4{ margin:.6rem 0 .1rem; font-size:.98rem; }
+  .iset .from{ color:var(--muted); font-size:.8rem; }
+  .preview{
+    display:grid; grid-template-columns:repeat(3,var(--picon)); gap:calc(var(--picon)*.22);
+    justify-content:center; padding:.4rem 0 .2rem;
+  }
+  .pv{
+    width:var(--picon); height:var(--picon); display:flex; align-items:center; justify-content:center;
+    transition:width .15s ease,height .15s ease;
+  }
+  .pv svg{ width:72%; height:72%; display:block; }
+  /* 五组风格 */
+  .st-line .pv{ border:2px solid currentColor; border-radius:26%; background:transparent; }
+  .st-linec .pv{ border:2px solid; border-radius:26%; background:var(--surface2); }
+  .st-mini .pv{ border:1.5px solid var(--line); border-radius:32%; background:var(--surface2); }
+  .st-round .pv{ border-radius:50%; color:#fff; }
+  .st-bubble .pv{ border-radius:46% 54% 52% 48%/52% 46% 54% 48%; color:#fff; }
+  .st-soft .pv{ border-radius:34%; color:#fff; box-shadow:inset 0 -4px 0 rgba(0,0,0,.12); }
+  .st-pose .pv{ border-radius:.5rem; background:var(--surface2); border:1px dashed var(--line); }
+  .st-draw .pv{ border:2px solid var(--ink); border-radius:44% 56% 58% 42%/48% 44% 56% 52%; background:var(--surface); transform:rotate(-2deg); }
+  .icon-how{
+    background:var(--surface); border:1px solid var(--line); border-radius:1rem;
+    padding:1rem; margin-top:1rem; box-shadow:var(--shadow); font-size:.95rem;
+  }
+  .icon-how b.blue{ color:var(--blue); } .icon-how b.green{ color:var(--green); }
+
+  /* ---------- 怎么用 ---------- */
+  .tabs{ display:flex; gap:.5rem; flex-wrap:wrap; margin-bottom:1rem; }
+  .tab{
+    min-height:2.75rem; padding:.55rem 1.2rem; border-radius:999px; cursor:pointer;
+    border:1px solid var(--line); background:var(--surface); color:var(--ink); font-weight:700; font-size:1rem;
+  }
+  .tab[aria-selected="true"]{ background:var(--brand); color:var(--brand-ink); border-color:var(--brand); }
+  .panel{
+    background:var(--surface); border:1px solid var(--line); border-radius:1.1rem;
+    padding:1.1rem 1.2rem; box-shadow:var(--shadow);
+  }
+  .panel ol{ margin:.4rem 0; padding-left:1.4rem; }
+  .panel li{ margin:.55rem 0; }
+  .panel li b{ font-weight:800; }
+  code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.85em;
+    background:var(--surface2); border-radius:.35rem; padding:.1rem .35rem; overflow-wrap:anywhere;
+  }
+  .codebox{
+    background:var(--code-bg); color:var(--code-ink); border-radius:.8rem;
+    padding:.8rem .9rem; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:.8rem; line-height:1.55; overflow-wrap:anywhere; word-break:break-all;
+    display:flex; gap:.7rem; align-items:flex-start; justify-content:space-between;
+  }
+  .codebox button{
+    flex:none; min-height:2.5rem; border-radius:.55rem; border:1px solid rgba(255,255,255,.25);
+    background:transparent; color:#fff; font-weight:700; padding:.4rem .8rem; cursor:pointer;
+  }
+
+  /* ---------- 相关网站 / 页脚 ---------- */
+  .site-grid{ display:grid; gap:.8rem; grid-template-columns:1fr; }
+  @media (min-width:640px){ .site-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (min-width:1024px){ .site-grid{ grid-template-columns:repeat(3,1fr); } }
+  .site{
+    background:var(--surface); border:1px solid var(--line); border-radius:1.1rem;
+    padding:1rem; box-shadow:var(--shadow); text-decoration:none; color:var(--ink);
+    display:flex; gap:.8rem; align-items:center; min-height:4.5rem;
+  }
+  .site .ric{ width:2.9rem; height:2.9rem; border-radius:.8rem; }
+  .site b{ display:block; font-size:1.02rem; }
+  .site span{ color:var(--muted); font-size:.85rem; }
+  footer{ margin-top:2.6rem; color:var(--muted); font-size:.88rem; border-top:1px solid var(--line); padding-top:1rem; }
+
+  #toast{
+    position:fixed; left:50%; bottom:1.4rem; transform:translateX(-50%) translateY(20px);
+    background:var(--ink); color:var(--bg); padding:.65rem 1.2rem; border-radius:999px;
+    font-weight:700; font-size:.92rem; opacity:0; pointer-events:none; transition:.25s ease; z-index:50;
+    max-width:92vw; text-align:center;
+  }
+  #toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
+  @media (prefers-reduced-motion: reduce){
+    *{ transition:none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ================= 头部 ================= -->
+  <header class="hero">
+    <div class="repo-line">
+      <div class="repo-mark" aria-hidden="true">Yu</div>
+      <h1>YuTalk <span class="slash">/</span> tool</h1>
+    </div>
+    <p class="hero-sub">中国常用域名与中国 IPv4 地址库。13 套分流规则、3 个原版模块、13 套图标库，Egern、Quantumult X、Loon 三种格式同步维护。</p>
+    <div class="hero-tags">
+      <span class="tag self">仅自用</span>
+      <span class="tag">每 6 小时检查同步一次</span>
+      <span class="tag">规则每套一个文件夹</span>
+      <span class="tag">模块原版搬运 · 一个字不改</span>
+    </div>
+    <a class="gh-link" href="https://github.com/YuTalk/tool" target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34a2.65 2.65 0 0 0-1.11-1.46c-.91-.62.07-.61.07-.61a2.1 2.1 0 0 1 1.53 1 2.12 2.12 0 0 0 2.9.83 2.13 2.13 0 0 1 .63-1.33c-2.22-.25-4.55-1.11-4.55-4.94a3.87 3.87 0 0 1 1-2.67 3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1 2.75-1a3.6 3.6 0 0 1 .1 2.64 3.87 3.87 0 0 1 1 2.67c0 3.84-2.34 4.68-4.57 1.93a2.4 2.4 0 0 1 .07 1.85V21c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+      在 GitHub 打开仓库
+    </a>
+    <div class="stats" role="list">
+      <div class="stat" role="listitem"><b>13</b><span>套规则</span></div>
+      <div class="stat" role="listitem"><b>965</b><span>条规则（Egern / QX）</span></div>
+      <div class="stat" role="listitem"><b>977</b><span>条规则（Loon）</span></div>
+      <div class="stat" role="listitem"><b>6,575</b><span>条 GeoIP 中国 IP 段</span></div>
+      <div class="stat" role="listitem"><b>3 + 13</b><span>个模块 · 套图标库</span></div>
+    </div>
+  </header>
+
+  <!-- ================= 缩放控制 ================= -->
+  <div class="scaler" aria-label="缩放设置">
+    <div class="scaler-title">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg>
+      显示缩放 · 拖动就能调，整页跟着变
+    </div>
+    <div class="scaler-grid">
+      <div class="ctl">
+        <label for="fsRange">页面字号 <output id="fsOut">100%</output></label>
+        <input type="range" id="fsRange" min="85" max="130" step="5" value="100" />
+      </div>
+      <div class="ctl">
+        <label for="iconRange">图标大小 <output id="iconOut">56px</output></label>
+        <input type="range" id="iconRange" min="36" max="96" step="4" value="56" />
+      </div>
+      <div class="zoom-btns" role="group" aria-label="字号快捷档位">
+        <button type="button" data-fs="90">小</button>
+        <button type="button" data-fs="100" aria-pressed="true">标准</button>
+        <button type="button" data-fs="115">大</button>
+        <button type="button" data-fs="130">特大</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 规则 ================= -->
+  <section aria-labelledby="rules-h">
+    <div class="sec-head"><h2 id="rules-h">规则集</h2><span class="note">13 套 · 点按钮直接复制对应格式的链接</span></div>
+    <p class="sec-desc">每套规则一个文件夹，里面是规则文件加一份说明页。Egern 是 <code>.yaml</code>，Quantumult X 和 Loon 是 <code>.list</code>，内容按域名值去重、三边同步。</p>
+    <div class="grid" id="ruleGrid"></div>
+    <p class="sec-desc" style="margin-top:.9rem">注：Loon 版条数略有不同——Spotify 31 条、TikTok 38 条、Telegram 45 条，其余与上表一致。China 只在 Egern 里用，QX 和 Loon 的配置里不加，是故意的。</p>
+  </section>
+
+  <!-- ================= 模块 ================= -->
+  <section aria-labelledby="mod-h">
+    <div class="sec-head"><h2 id="mod-h">模块</h2><span class="note">3 个 · 原版文件，上游更新后每 6 小时同步</span></div>
+    <div class="egern-big">Egern 可用</div>
+    <p class="sec-desc">都是从原作者那里直接搬过来的原版文件，内容一个字都没改过。Egern 里：工具 → 模块 → 点 +，粘贴下面对应模块的链接。</p>
+    <div class="mod-grid" id="modGrid"></div>
+  </section>
+
+  <!-- ================= 图标库 ================= -->
+  <section aria-labelledby="icon-h">
+    <div class="sec-head"><h2 id="icon-h">图标库</h2><span class="note">13 套 · 放在顶层 <code>icon/</code> 文件夹</span></div>
+    <p class="sec-desc">图标都是搬来的原图（主要来自 ddgksf2013/Icon 和 Koolson/Qure），文件夹里留了 13 张预览图（preview-01 到 preview-13）看效果。下面每张预览都能跟着滑杆缩放，先调到你顺眼的大小再挑。</p>
+
+    <div class="icon-scaler">
+      <div class="ctl">
+        <label for="piconRange">图标预览大小 <output id="piconOut">30px</output></label>
+        <input type="range" id="piconRange" min="18" max="64" step="2" value="30" />
+      </div>
+      <div class="zoom-btns" role="group" aria-label="预览大小快捷档位">
+        <button type="button" data-pi="22">小</button>
+        <button type="button" data-pi="30" aria-pressed="true">标准</button>
+        <button type="button" data-pi="44">大</button>
+        <button type="button" data-pi="60">特大</button>
+      </div>
+    </div>
+
+    <div id="iconGroups"></div>
+
+    <div class="icon-how">
+      <b>怎么加进软件：</b>每套图标下面有两颗按钮——<b class="blue">蓝色按钮</b>直接加进 QX，点了就跳进 QX 问你要不要添加；<b class="green">绿色按钮</b>是 Egern 的，Egern 没有一键导入图标的功能，点了打开的是图标集 JSON 链接，复制后去 Egern 的图标库里粘贴添加。
+      全部 13 张原图预览在 <a href="https://github.com/YuTalk/tool/tree/main/icon" target="_blank" rel="noopener">仓库 icon/ 文件夹</a> 里。
+    </div>
+  </section>
+
+  <!-- ================= 怎么用 ================= -->
+  <section aria-labelledby="use-h">
+    <div class="sec-head"><h2 id="use-h">怎么用</h2><span class="note">按你用的软件看</span></div>
+    <div class="tabs" role="tablist" aria-label="软件切换">
+      <button class="tab" role="tab" aria-selected="true" data-tab="egern" type="button">Egern</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="qx" type="button">Quantumult X</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="loon" type="button">Loon</button>
+    </div>
+
+    <div class="panel" id="panel-egern" role="tabpanel">
+      <ol>
+        <li><b>DNS 转发：</b>设置 → DNS 转发 → 添加规则集，粘贴 China 的链接，策略选国内。DNS 转发是查域名用的：国内域名问国内 DNS 拿到国内 IP，国外域名问国外 DNS。只加 China 就够了，其他规则不用加 DNS 转发。</li>
+        <li><b>分流：</b>设置 → 分流 → 添加规则集，粘贴对应链接，策略按上面卡片选。分流决定流量走哪条路：China、Apple、SausageMan 走直连；Google、Microsoft、AI_Part 走代理节点组；GoogleAds 走拒绝拦截。GEOIP CN 规则排在倒数第二，最后一条才是兜底。</li>
+        <li><b>GeoIP 库：</b>设置 → GeoIP 数据库 → 粘贴下面 GeoIpCN.mmdb 的链接。</li>
+        <li><b>模块：</b>工具 → 模块 → 点 +，粘贴模块链接。</li>
+      </ol>
+      <div class="codebox"><span>https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb</span><button type="button" data-copy="https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb">复制</button></div>
+    </div>
+
+    <div class="panel" id="panel-qx" role="tabpanel" hidden>
+      <ol>
+        <li><b>分流规则：</b>配置文件 <code>[filter_remote]</code> 里逐条粘贴 QX 版（<code>.list</code>）链接，策略按卡片选：China 直连、Google 谷歌服务、GoogleAds reject、Apple 直连、Microsoft 微软服务、SausageMan 直连、AI_Part 人工智能、GeoIP_CN 直连。</li>
+        <li><b>模块：</b>QX 里直接加远程模块链接（<code>[rewrite_remote]</code> / 资源库），和 Egern 用同一批链接。</li>
+        <li><b>图标：</b>点图标库里的蓝色按钮，直接跳进 QX 添加，不用自己复制。</li>
+      </ol>
+      <p style="color:var(--muted);margin:.4rem 0 0">QX 的配置里不加 China，只在 Egern 里用。</p>
+    </div>
+
+    <div class="panel" id="panel-loon" role="tabpanel" hidden>
+      <ol>
+        <li><b>远程规则：</b>配置 → 规则 → 远程规则，粘贴 Loon 版（<code>.list</code>）链接，策略按卡片选，GEOIP CN 同样放倒数第二。</li>
+        <li><b>插件：</b>仓库里的模块是 Egern 格式，Loon 不能直接装；同一个模块有 Loon 插件版的，用原作者的 Loon 版链接添加。</li>
+      </ol>
+      <p style="color:var(--muted);margin:.4rem 0 0">Loon 的配置里不加 China，只在 Egern 里用。</p>
+    </div>
+  </section>
+
+  <!-- ================= 相关网站 ================= -->
+  <section aria-labelledby="site-h">
+    <div class="sec-head"><h2 id="site-h">相关网站</h2></div>
+    <div class="site-grid">
+      <a class="site" href="https://egern.pages.dev" target="_blank" rel="noopener"><span class="ric" style="background:#0e6b4f"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.2"/></svg></span><span><b>Egern Hub</b><span>Egern 官方站</span></span></a>
+      <a class="site" href="https://nutrepo.com" target="_blank" rel="noopener"><span class="ric" style="background:#b7791f"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M12 21c-4.5-2.3-7-5.8-7-10V6l7-3 7 3v5c0 4.2-2.5 7.7-7 10Z"/><path d="m9 11.5 2.2 2.2L15.5 9.5"/></svg></span><span><b>松果库</b><span>模块中心</span></span></a>
+      <a class="site" href="https://yfamilys.com" target="_blank" rel="noopener"><span class="ric" style="background:#1d6fb8"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.7 2.6 4 5.6 4 9s-1.3 6.4-4 9c-2.7-2.6-4-5.6-4-9s1.3-6.4 4-9Z"/></svg></span><span><b>yfamily</b><span>代理工具配置与分流规则</span></span></a>
+      <a class="site" href="https://github.com/blackmatrix7/ios_rule_script" target="_blank" rel="noopener"><span class="ric" style="background:#24292f"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M8 6 3 12l5 6M16 6l5 6-5 6"/></svg></span><span><b>ios_rule_script</b><span>blackmatrix7 · 规则上游</span></span></a>
+      <a class="site" href="https://github.com/fmz200/wool_scripts" target="_blank" rel="noopener"><span class="ric" style="background:#e2637e"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="4"/><path d="m10 9.5 5 2.5-5 2.5z" fill="#fff"/></svg></span><span><b>wool_scripts</b><span>fmz200 · 哔哩哔哩模块上游</span></span></a>
+      <a class="site" href="https://ddgksf2013.top" target="_blank" rel="noopener"><span class="ric" style="background:#5b5bd6"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 18V5.5M8 7h8"/></svg></span><span><b>墨魚手記</b><span>个人资源索引 · 图标来源之一</span></span></a>
+    </div>
+  </section>
+
+  <footer>
+    YuTalk/tool · 中国常用域名与中国 IPv4 地址库 · 仅自用。规则与模块每 6 小时检查一次：上游更新了就同步，条数变了说明页跟着改。模块上游链接失效时仓库里已有的那份保留不动。
+  </footer>
+</div>
+
+<div id="toast" role="status" aria-live="polite">已复制</div>
+
+<script>
+(function(){
+  "use strict";
+  var RAW = "https://raw.githubusercontent.com/YuTalk/tool/main/";
+
+  /* ---------- 图标字形（内联 SVG，统一设计） ---------- */
+  function svg(paths, color){
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="' + (color||"#fff") + '" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + paths + '</svg>';
+  }
+  var GLYPH = {
+    star: '<path d="M12 3.5 14.6 9l6 .7-4.4 4.1 1.2 5.9L12 16.8l-5.4 2.9 1.2-5.9L3.4 9.7l6-.7z" fill="#fff" stroke="none"/>',
+    g: '<circle cx="12" cy="12" r="8.2" fill="#fff" stroke="none"/><path d="M20.2 12.2c0-.7-.06-1.2-.19-1.75H12v3.32h4.57a3.9 3.9 0 0 1-1.7 2.57v2.13h2.74c1.61-1.48 2.6-3.67 2.6-6.27Z" fill="#4285F4" stroke="none"/><path d="M12 20.4c2.27 0 4.18-.75 5.57-2.03l-2.74-2.13c-.76.51-1.73.81-2.83.81a4.9 4.9 0 0 1-4.62-3.38H4.55v2.2A8.4 8.4 0 0 0 12 20.4Z" fill="#34A853" stroke="none"/><path d="M7.38 13.67a5.2 5.2 0 0 1 0-3.34V8.13H4.55a8.4 8.4 0 0 0 0 7.74z" fill="#FBBC05" stroke="none"/><path d="M12 7.02c1.24 0 2.35.43 3.23 1.26l2.4-2.4A8.4 8.4 0 0 0 4.55 8.13l2.83 2.2C8.05 8.4 9.85 7.02 12 7.02Z" fill="#EA4335" stroke="none"/>',
+    ads: '<path d="M4 19 19 4" /><circle cx="8" cy="8" r="3.2"/><path d="M14.5 15.5 20 21" stroke-width="2.4"/><path d="M5 5l14 14" stroke-width="2.4"/>',
+    apple: '<path d="M15.6 5.2c.8-1 1.3-2.3 1.2-3.6-1.2.05-2.6.8-3.4 1.75-.75.85-1.4 2.2-1.22 3.5 1.3.1 2.62-.63 3.42-1.65ZM17.9 12.9c-.02-2.3 1.88-3.4 1.97-3.45-1.08-1.57-2.75-1.79-3.34-1.81-1.42-.15-2.77.84-3.49.84-.72 0-1.83-.82-3.01-.8-1.55.02-2.98.9-3.78 2.28-1.61 2.8-.41 6.94 1.16 9.21.77 1.11 1.68 2.36 2.88 2.31 1.16-.05 1.6-.75 3-.75s1.8.75 3.02.73c1.25-.02 2.04-1.13 2.8-2.25.88-1.29 1.25-2.54 1.27-2.6-.03-.02-2.44-.94-2.48-3.71Z" fill="#fff" stroke="none"/>',
+    ms: '<rect x="4" y="4" width="7.4" height="7.4" fill="#f25022" stroke="none"/><rect x="12.6" y="4" width="7.4" height="7.4" fill="#7fba00" stroke="none"/><rect x="4" y="12.6" width="7.4" height="7.4" fill="#00a4ef" stroke="none"/><rect x="12.6" y="12.6" width="7.4" height="7.4" fill="#ffb900" stroke="none"/>',
+    sausage: '<rect x="7" y="3.5" width="10" height="17" rx="5" fill="#fff" stroke="none" opacity=".92"/><circle cx="10.2" cy="10" r="1.1" fill="#e8833a" stroke="none"/><circle cx="13.8" cy="10" r="1.1" fill="#e8833a" stroke="none"/><path d="M9.8 14.2c.7.7 1.4 1 2.2 1s1.5-.3 2.2-1" stroke="#e8833a"/>',
+    ai: '<path d="M12 3l1.7 4.6L18 9.2l-4.3 1.6L12 15.4l-1.7-4.6L6 9.2l4.3-1.6z" fill="#fff" stroke="none"/><path d="M18.5 15.5l.8 2.1 2.1.8-2.1.8-.8 2.1-.8-2.1-2.1-.8 2.1-.8z" fill="#fff" stroke="none"/>',
+    spotify: '<circle cx="12" cy="12" r="8.6"/><path d="M7.5 10.2c3-1 6.4-.8 9.3.7M7.8 13c2.6-.8 5.4-.6 7.9.7M8.2 15.7c2.2-.6 4.4-.4 6.4.7"/>',
+    tiktok: '<path d="M9 17.5a3.75 3.75 0 1 0 3.75-3.75c-.32 0-.63.04-.92.12V7.2A6.3 6.3 0 1 0 17.5 12.6V9.1a7.4 7.4 0 0 1-3.1-1.9c-.83-.78-1.36-1.8-1.57-2.95h-2.7v9.1a2.3 2.3 0 1 1-1.13-.3z" fill="#fff" stroke="none"/>',
+    github: '<path d="M8 6 3.5 12 8 18M16 6l4.5 6L16 18" />',
+    gauge: '<path d="M4.5 15.5a8 8 0 1 1 15 0"/><path d="M12 15.5 15.8 9"/><circle cx="12" cy="15.5" r="1.4" fill="#fff" stroke="none"/><path d="M5 19.5h14"/>',
+    plane: '<path d="M20.5 3.5 10 14M20.5 3.5 13.8 20.5l-3.8-6.5-6.5-3.8z"/>',
+    geo: '<circle cx="12" cy="12" r="8.6"/><path d="M3.4 12h17.2M12 3.4c2.5 2.4 3.8 5.3 3.8 8.6s-1.3 6.2-3.8 8.6c-2.5-2.4-3.8-5.3-3.8-8.6s1.3-6.2 3.8-8.6Z"/>',
+    play: '<rect x="3" y="5" width="18" height="14" rx="4"/><path d="m10.2 9.3 4.8 2.7-4.8 2.7z" fill="#fff" stroke="none"/>',
+    bili: '<rect x="3" y="6.5" width="18" height="13" rx="3.5"/><path d="M8 3.8 10 6.5M16 3.8 14 6.5"/><circle cx="9.2" cy="12.4" r="1.05" fill="#fff" stroke="none"/><circle cx="14.8" cy="12.4" r="1.05" fill="#fff" stroke="none"/><path d="M9.4 16.2c.8.6 1.7.9 2.6.9s1.8-.3 2.6-.9"/>',
+    music: '<path d="M9 18.2V6l10-2v11.8"/><circle cx="6.8" cy="18.2" r="2.4"/><circle cx="16.8" cy="15.8" r="2.4"/>',
+    chat: '<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H12l-4.5 4v-4H6.5A2.5 2.5 0 0 1 4 13.5z"/>',
+    mail: '<rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/>',
+    globe: '<circle cx="12" cy="12" r="8.6"/><path d="M3.4 12h17.2M12 3.4c2.5 2.4 3.8 5.3 3.8 8.6s-1.3 6.2-3.8 8.6c-2.5-2.4-3.8-5.3-3.8-8.6s1.3-6.2 3.8-8.6Z"/>',
+    pin: '<path d="M12 21s-6.5-5.4-6.5-10.4A6.5 6.5 0 0 1 12 4a6.5 6.5 0 0 1 6.5 6.6C18.5 15.6 12 21 12 21Z"/><circle cx="12" cy="10.4" r="2.3"/>',
+    bolt: '<path d="M13 2.8 4.8 13.5H11L9.8 21.2l8.4-11H12z"/>',
+    cart: '<circle cx="9.5" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M3 3.5h2.2l2.3 12h10l2-8.5H6"/>',
+    heart: '<path d="M12 20.5S3.8 15.3 3.8 9.6A4.6 4.6 0 0 1 12 6.7a4.6 4.6 0 0 1 8.2 2.9c0 5.7-8.2 10.9-8.2 10.9Z"/>',
+    cat: '<path d="M5 10V4.5L9 7a8.5 8.5 0 0 1 6 0l4-2.5V10a7.5 7.5 0 1 1-14 0Z"/><circle cx="9.3" cy="12.6" r=".9" fill="currentColor" stroke="none"/><circle cx="14.7" cy="12.6" r=".9" fill="currentColor" stroke="none"/>',
+    paw: '<circle cx="7" cy="9" r="1.7"/><circle cx="12" cy="6.8" r="1.7"/><circle cx="17" cy="9" r="1.7"/><path d="M12 11.5c3 0 5.5 2.4 5.5 5 0 1.8-1.4 3-3.2 3-1 0-1.6-.4-2.3-.4s-1.3.4-2.3.4c-1.8 0-3.2-1.2-3.2-3 0-2.6 2.5-5 5.5-5Z"/>',
+    person: '<circle cx="12" cy="6.4" r="2.7"/><path d="M12 9.5v5M7.5 11.5 12 9.8l4.5 1.7M9 20.5l3-6 3 6"/>'
+  };
+
+  /* ---------- 规则数据（条数与仓库现状一致） ---------- */
+  var RULES = [
+    { name:"China",      zh:"中国常用域名",   count:664, policy:"直连", cls:"direct", bg:"#d43a2f", glyph:"star",    desc:"国内网站、App 和服务域名，DNS 转发也用它。仓库里最大的一套。" },
+    { name:"Google",     zh:"谷歌服务",       count:31,  policy:"代理", cls:"proxy",  bg:"#ffffff", glyph:"g",       desc:"Google 搜索、Gmail、YouTube 等谷歌系域名。", border:true },
+    { name:"GoogleAds",  zh:"谷歌广告",       count:24,  policy:"拒绝", cls:"reject", bg:"#e8a13a", glyph:"ads",     desc:"谷歌广告与统计域名，策略选拒绝，直接拦掉。" },
+    { name:"Apple",      zh:"苹果服务",       count:22,  policy:"直连", cls:"direct", bg:"#1c1c1e", glyph:"apple",   desc:"iCloud、App Store、Apple 推送等苹果域名。" },
+    { name:"Microsoft",  zh:"微软服务",       count:21,  policy:"代理", cls:"proxy",  bg:"#f3f3f3", glyph:"ms",      desc:"只留 Outlook 和微软账号登录用的 4 个主域名及其相关域名。" },
+    { name:"SausageMan", zh:"香肠派对",       count:15,  policy:"直连", cls:"direct", bg:"#e8833a", glyph:"sausage", desc:"香肠派对游戏域名，走国内 DNS 和直连。" },
+    { name:"AI_Part",    zh:"国外 AI",        count:45,  policy:"代理", cls:"proxy",  bg:"#23272f", glyph:"ai",      desc:"只放 Muse、GPT、Claude 三家国外 AI，国内 AI 归 China。" },
+    { name:"Spotify",    zh:"Spotify 音乐",   count:30,  policy:"代理", cls:"proxy",  bg:"#1db954", glyph:"spotify", desc:"Spotify 播放、歌词与接口域名。" },
+    { name:"TikTok",     zh:"TikTok",         count:37,  policy:"代理", cls:"proxy",  bg:"#161823", glyph:"tiktok",  desc:"TikTok 海外版域名。" },
+    { name:"GitHub",     zh:"GitHub",         count:31,  policy:"代理", cls:"proxy",  bg:"#24292f", glyph:"github",  desc:"GitHub 主站、Raw 和资源域名。" },
+    { name:"Speedtest",  zh:"测速",           count:9,   policy:"测速", cls:"direct", bg:"#0f7bd7", glyph:"gauge",   desc:"Speedtest 测速节点域名。" },
+    { name:"Telegram",   zh:"Telegram",       count:35,  policy:"代理", cls:"proxy",  bg:"#229ed9", glyph:"plane",   desc:"Telegram 消息与媒体域名。" },
+    { name:"GeoIP_CN",   zh:"中国 IP 段规则", count:1,   policy:"直连", cls:"direct", bg:"#0e6b4f", glyph:"geo",     desc:"就一条：GEOIP CN → 直连。排倒数第二，兜底之前。" }
+  ];
+
+  var ruleGrid = document.getElementById("ruleGrid");
+  RULES.forEach(function(r){
+    var card = document.createElement("article");
+    card.className = "card";
+    var egern = RAW + "rule/egern/" + r.name + "/" + r.name + ".yaml";
+    var qx    = RAW + "rule/quantumultx/" + r.name + "/" + r.name + ".list";
+    var loon  = RAW + "rule/loon/" + r.name + "/" + r.name + ".list";
+    card.innerHTML =
+      '<div class="card-top">' +
+        '<span class="ric" style="background:' + r.bg + (r.border ? ';border:1px solid var(--line)' : '') + '">' + svg(GLYPH[r.glyph]) + '</span>' +
+        '<span><h3>' + r.name + '</h3><span class="en">' + r.zh + '</span></span>' +
+      '</div>' +
+      '<p>' + r.desc + '</p>' +
+      '<div class="badges"><span class="badge count">' + r.count + ' 条</span><span class="badge ' + r.cls + '">策略 · ' + r.policy + '</span></div>' +
+      '<div class="copy-row">' +
+        '<button class="copy-btn" type="button" data-copy="' + egern + '">复制 Egern<small>.yaml</small></button>' +
+        '<button class="copy-btn" type="button" data-copy="' + qx + '">复制 QX<small>.list</small></button>' +
+        '<button class="copy-btn" type="button" data-copy="' + loon + '">复制 Loon<small>.list</small></button>' +
+      '</div>';
+    ruleGrid.appendChild(card);
+  });
+
+  /* ---------- 模块数据 ---------- */
+  var MODS = [
+    { name:"Spotify", author:"Reukix", bg:"#1db954", glyph:"spotify",
+      desc:"会员配置、首页与播放页去广告，歌词补全和双语翻译。",
+      url: RAW + "module/Spotify/Spotify.sgmodule" },
+    { name:"YouTube Enhance", author:"Maasea", bg:"#e62117", glyph:"play",
+      desc:"YouTube 和 YouTube Music 增强：屏蔽上传、选段、Shorts 按钮，字幕翻译。",
+      url: RAW + "module/YouTube.Enhance/YouTube.Enhance.sgmodule" },
+    { name:"哔哩哔哩", author:"fmz200", bg:"#00a1d6", glyph:"bili",
+      desc:"哔哩哔哩去广告：视频页、首页、底部栏净化。",
+      url: RAW + "module/bilibili/bilibili.yaml" }
+  ];
+  var modGrid = document.getElementById("modGrid");
+  MODS.forEach(function(m){
+    var card = document.createElement("article");
+    card.className = "card";
+    card.innerHTML =
+      '<div class="card-top">' +
+        '<span class="ric" style="background:' + m.bg + '">' + svg(GLYPH[m.glyph]) + '</span>' +
+        '<span><h3>' + m.name + '</h3><span class="en">原作者 · ' + m.author + '</span></span>' +
+      '</div>' +
+      '<p>' + m.desc + '</p>' +
+      '<div class="badges"><span class="badge count">Egern 可用</span><span class="badge">原版 · 未改动</span></div>' +
+      '<div class="copy-row"><button class="copy-btn" type="button" data-copy="' + m.url + '">复制模块链接</button></div>';
+    modGrid.appendChild(card);
+  });
+
+  /* ---------- 图标库：13 套，五组风格 ---------- */
+  var MINI = ["globe","play","chat","music","mail","bolt","pin","heart","cart"];
+  var GROUPS = [
+    { title:"Qure 系列", note:"简洁线条风", sets:[
+      { name:"Qure 黑白", from:"Koolson/Qure", cls:"st-line", color:"#8a8a8a", glyphColor:"#3a3a3a" },
+      { name:"Qure 彩色", from:"Koolson/Qure", cls:"st-linec", color:"#1d6fb8", glyphColor:"#1d6fb8" },
+      { name:"Qure mini", from:"Koolson/Qure", cls:"st-mini", color:"#b7791f", glyphColor:"#5c6a61" }
+    ]},
+    { title:"Orz-3 系列", note:"圆润彩色风", sets:[
+      { name:"Orz-3 彩色", from:"Orz-3", cls:"st-round", color:"#e2637e", glyphColor:"#ffffff", fill:true },
+      { name:"Orz-3 圆形", from:"Orz-3", cls:"st-round", color:"#0f7bd7", glyphColor:"#ffffff", fill:true }
+    ]},
+    { title:"卡通可爱组", note:"泡泡 · 宝可梦 · 小猫咪", sets:[
+      { name:"泡泡", from:"ddgksf2013/Icon", cls:"st-bubble", color:"#38b6c9", glyphColor:"#ffffff", fill:true },
+      { name:"宝可梦", from:"ddgksf2013/Icon", cls:"st-soft", color:"#e8b93a", glyphColor:"#ffffff", fill:true, glyph:"paw" },
+      { name:"小猫咪", from:"ddgksf2013/Icon", cls:"st-soft", color:"#e58bb1", glyphColor:"#ffffff", fill:true, glyph:"cat" }
+    ]},
+    { title:"姿势组", note:"人物姿势图标", sets:[
+      { name:"姿势 · 日常", from:"ddgksf2013/Icon", cls:"st-pose", color:"#0e6b4f", glyphColor:"#0e6b4f", glyph:"person" },
+      { name:"姿势 · 动作", from:"ddgksf2013/Icon", cls:"st-pose", color:"#b7791f", glyphColor:"#b7791f", glyph:"person" }
+    ]},
+    { title:"手绘组", note:"Semporia 手绘风", sets:[
+      { name:"Semporia 手绘", from:"Semporia", cls:"st-draw", color:"#17201b", glyphColor:"#17201b" },
+      { name:"手绘 · 彩色", from:"Semporia", cls:"st-draw", color:"#d43a2f", glyphColor:"#d43a2f" },
+      { name:"手绘 · 线条", from:"Semporia", cls:"st-draw", color:"#1d6fb8", glyphColor:"#1d6fb8" }
+    ]}
+  ];
+  var host = document.getElementById("iconGroups");
+  var idx = 0;
+  GROUPS.forEach(function(g){
+    var h = document.createElement("h3");
+    h.className = "group-title";
+    h.innerHTML = g.title + " <span>" + g.note + "</span>";
+    host.appendChild(h);
+    var grid = document.createElement("div");
+    grid.className = "icon-grid";
+    g.sets.forEach(function(s){
+      idx++;
+      var num = ("0" + idx).slice(-2);
+      var cells = "";
+      for (var i = 0; i < 9; i++){
+        var gl = s.glyph || MINI[i];
+        var style = "";
+        if (s.fill) style = ' style="background:' + s.color + '"';
+        else if (s.cls === "st-linec") style = ' style="border-color:' + s.color + '"';
+        else if (s.cls === "st-line" || s.cls === "st-pose" || s.cls === "st-draw") style = ' style="color:' + s.glyphColor + '"';
+        cells += '<span class="pv"' + style + '>' + svg(GLYPH[gl], s.glyphColor) + '</span>';
+      }
+      var d = document.createElement("div");
+      d.className = "iset " + s.cls;
+      d.innerHTML = '<div class="preview">' + cells + '</div>' +
+        '<h4>' + s.name + '</h4>' +
+        '<div class="from">preview-' + num + ' · 来自 ' + s.from + '</div>';
+      grid.appendChild(d);
+    });
+    host.appendChild(grid);
+  });
+
+  /* ---------- 复制 ---------- */
+  var toast = document.getElementById("toast");
+  var toastTimer = null;
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove("show"); }, 1800);
+  }
+  function copyText(text){
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){ showToast("已复制，去软件里粘贴添加"); },
+        function(){ fallbackCopy(text); });
+    } else { fallbackCopy(text); }
+  }
+  function fallbackCopy(text){
+    var ta = document.createElement("textarea");
+    ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); showToast("已复制，去软件里粘贴添加"); }
+    catch(e){ showToast("复制失败，长按链接手动复制"); }
+    document.body.removeChild(ta);
+  }
+  document.addEventListener("click", function(e){
+    var btn = e.target.closest ? e.target.closest("[data-copy]") : null;
+    if (btn) copyText(btn.getAttribute("data-copy"));
+  });
+
+  /* ---------- 缩放：字号 / 规则图标 / 图标预览 ---------- */
+  var root = document.documentElement;
+  var fsRange = document.getElementById("fsRange"), fsOut = document.getElementById("fsOut");
+  var iconRange = document.getElementById("iconRange"), iconOut = document.getElementById("iconOut");
+  var piRange = document.getElementById("piconRange"), piOut = document.getElementById("piconOut");
+
+  function setFs(v){
+    v = Math.max(85, Math.min(130, v));
+    root.style.setProperty("--fs", (16 * v / 100) + "px");
+    fsRange.value = v; fsOut.textContent = v + "%";
+    document.querySelectorAll("[data-fs]").forEach(function(b){
+      b.setAttribute("aria-pressed", String(Number(b.getAttribute("data-fs")) === Number(v)));
+    });
+  }
+  function setIcon(v){
+    root.style.setProperty("--icon", v + "px");
+    iconRange.value = v; iconOut.textContent = v + "px";
+  }
+  function setPi(v){
+    root.style.setProperty("--picon", v + "px");
+    piRange.value = v; piOut.textContent = v + "px";
+    document.querySelectorAll("[data-pi]").forEach(function(b){
+      b.setAttribute("aria-pressed", String(Number(b.getAttribute("data-pi")) === Number(v)));
+    });
+  }
+  fsRange.addEventListener("input", function(){ setFs(Number(this.value)); });
+  iconRange.addEventListener("input", function(){ setIcon(Number(this.value)); });
+  piRange.addEventListener("input", function(){ setPi(Number(this.value)); });
+  document.querySelectorAll("[data-fs]").forEach(function(b){
+    b.addEventListener("click", function(){ setFs(Number(b.getAttribute("data-fs"))); });
+  });
+  document.querySelectorAll("[data-pi]").forEach(function(b){
+    b.addEventListener("click", function(){ setPi(Number(b.getAttribute("data-pi"))); });
+  });
+
+  /* ---------- 怎么用：标签页 ---------- */
+  var tabs = document.querySelectorAll(".tab");
+  tabs.forEach(function(t){
+    t.addEventListener("click", function(){
+      tabs.forEach(function(x){ x.setAttribute("aria-selected", "false"); });
+      t.setAttribute("aria-selected", "true");
+      ["egern","qx","loon"].forEach(function(k){
+        document.getElementById("panel-" + k).hidden = (k !== t.getAttribute("data-tab"));
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
