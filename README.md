@@ -210,9 +210,9 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 怎么用：Egern 里工具 → 模块 → 点 +，粘贴下面对应模块的链接；QX 里直接加远程模块链接。
 
-- Spotify：`https://raw.githubusercontent.com/YuTalk/tool/main/module/Spotify.sgmodule`
-- YouTube Enhance：`https://raw.githubusercontent.com/YuTalk/tool/main/module/YouTube.Enhance.sgmodule`
-- 哔哩哔哩：`https://raw.githubusercontent.com/YuTalk/tool/main/module/bilibili.yaml`
+- Spotify：`https://raw.githubusercontent.com/YuTalk/tool/main/module/Spotify/Spotify.sgmodule`
+- YouTube Enhance：`https://raw.githubusercontent.com/YuTalk/tool/main/module/YouTube.Enhance/YouTube.Enhance.sgmodule`
+- 哔哩哔哩：`https://raw.githubusercontent.com/YuTalk/tool/main/module/bilibili/bilibili.yaml`
 
 ---
 
