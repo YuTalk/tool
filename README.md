@@ -37,6 +37,7 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 - [🚀 怎么用](#-怎么用)
 - [🔄 自动更新](#-自动更新)
 - [❓ 常见问题](#-常见问题)
+- [🔗 相关网站](#-相关网站)
 
 ---
 
@@ -322,3 +323,19 @@ A：打开 Egern 的连接记录，看域名的连接走的是哪条策略。比
 ## 📄 开源协议
 
 MIT License —— 随便用，改了也行。
+
+---
+
+## 🔗 相关网站
+
+平时找模块、规则用得上的几个站：
+
+| 网站 | 是干什么的 |
+| --- | --- |
+| [Egern Hub](https://egern.pages.dev) | Egern 官方站，模块、规则与文档 |
+| [松果库](https://nutrepo.com) | Egern、Surge、Loon、QX、Stash 的模块中心 |
+| [yfamily](https://yfamilys.com) | 代理工具的配置、模块、插件与分流规则 |
+| [ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master) | blackmatrix7 的 iOS 规则库，本仓库 5 套规则的上游 |
+| [wool_scripts](https://github.com/fmz200/wool_scripts) | fmz200 的规则与模块库，本仓库哔哩哔哩模块的上游 |
+| [墨魚手記](https://ddgksf2013.top) | 个人资源索引：影视、动漫、下载、工具、QX 脚本 |
+
