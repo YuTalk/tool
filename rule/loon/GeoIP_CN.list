@@ -1,5 +1,0 @@
-# 最后修改：2026-11-24 14:40
-# GeoIP_CN
-# 总共 1 条
-# 用法：Loon 分流 -> DIRECT
-GEOIP,CN,DIRECT
