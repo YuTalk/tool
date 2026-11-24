@@ -29,10 +29,6 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 | GeoIP 库 | 6,574 条 CIDR，约 132KB，覆盖 357,426,983 个中国 IPv4 地址 |
 | 自动检查 | 每 6 小时，0:00、6:00、12:00、18:00 |
 
-<details>
-<summary><b>📦 文件说明</b></summary>
-
-
 ### 🌐 规则集
 
 
@@ -51,6 +47,11 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 | Speedtest | 9 | 测速（Speedtest、fast.com 等） | SpeedTest |
 | Telegram | 34 | Telegram 及第三方客户端 | Telegram |
 | GeoIP_CN | 1 | 中国 IP 段 | direct |
+
+
+<details>
+<summary><b>📦 文件说明</b></summary>
+
 
 每套规则现在都放在自己的文件夹里（比如 `rule/egern/China/`），点进文件夹能看到这套规则的说明页，里面有这套规则是干什么的、多少条、怎么用和链接。
 
@@ -97,7 +98,32 @@ China.yaml 分两段，第一段是应用 / 网站域名 **443 条**，第二段
 
 </details>
 
-### 🖼️ 图标
+### GeoIpCN.mmdb（6,574 条 CIDR，约 132KB）
+
+
+只含中国 IPv4，共覆盖 **357,426,983 个地址**，约 132KB，纯 IPv4，不含 IPv6。
+
+这是干什么的？代理软件拿到一个 IP 地址后，要判断这个 IP 是中国的还是外国的，才能决定走直连还是走代理，这个判断就靠 GeoIP 库。库里只装了中国段，外国 IP 查不到中国，返回空，就走代理；中国 IP 查得到，就走直连。所以库里没有外国段是正常的，不是缺数据。
+
+数据来源（5 个来源合并去重，每个来源单独拿出来都不全，合起来才全）：
+
+- 17mon/china_ip_list：国内常用的中国 IP 列表
+- APNIC 中国分配数据（cn|ipv4）：亚太互联网络信息中心分配给中国的 IP 段，最权威
+- chnroutes2：开源的中国路由表
+- Loyalsoldier/geoip CN 文本（仅 IPv4）：Loyalsoldier 维护的中国 IP 文本
+- metowolf/iplist 纯真 CN：纯真 IP 库的中国段
+
+怎么验证？223.5.5.5（阿里 DNS）、119.29.29.29（腾讯 DNS）、114.114.114.114 查出来必须是 CN；8.8.8.8（谷歌 DNS）、1.1.1.1 查出来必须不是 CN。
+
+> 只含中国段，外国 IP 查不到中国，这是对的 —— GEOIP CN 才能把外国流量送去代理。
+
+---
+
+</details>
+
+
+<details>
+<summary><b>🖼️ 图标</b></summary>
 
 
 图标都放在顶层 `icon/` 文件夹里，都是从别人家搬过来的原图（主要来自 [ddgksf2013/Icon](https://github.com/ddgksf2013/Icon) 和 [Koolson/Qure](https://github.com/Koolson/Qure)）。文件夹里现在只有 13 张预览图（preview-01 到 preview-13），单个应用图标已经删了，只留预览图给你看效果。
@@ -169,25 +195,6 @@ China.yaml 分两段，第一段是应用 / 网站域名 **443 条**，第二段
 **Semporia** [![加进 QX](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square)](https://quantumult.app/x/open-app/ui?module=gallery&type=icon&action=add&content=%5B%0A%20%20%20%20%22https%3A%2F%2Fraw.githubusercontent.com%2FSemporia%2FHand-Painted-icon%2Fmaster%2FSemporia.json%22%0A%5D) [![加进 Egern](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square)](https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Semporia.json)
 
 <a href="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-13-semporia.PNG"><img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-13-semporia.PNG" width="180"></a>
-
-### GeoIpCN.mmdb（6,574 条 CIDR，约 132KB）
-
-
-只含中国 IPv4，共覆盖 **357,426,983 个地址**，约 132KB，纯 IPv4，不含 IPv6。
-
-这是干什么的？代理软件拿到一个 IP 地址后，要判断这个 IP 是中国的还是外国的，才能决定走直连还是走代理，这个判断就靠 GeoIP 库。库里只装了中国段，外国 IP 查不到中国，返回空，就走代理；中国 IP 查得到，就走直连。所以库里没有外国段是正常的，不是缺数据。
-
-数据来源（5 个来源合并去重，每个来源单独拿出来都不全，合起来才全）：
-
-- 17mon/china_ip_list：国内常用的中国 IP 列表
-- APNIC 中国分配数据（cn|ipv4）：亚太互联网络信息中心分配给中国的 IP 段，最权威
-- chnroutes2：开源的中国路由表
-- Loyalsoldier/geoip CN 文本（仅 IPv4）：Loyalsoldier 维护的中国 IP 文本
-- metowolf/iplist 纯真 CN：纯真 IP 库的中国段
-
-怎么验证？223.5.5.5（阿里 DNS）、119.29.29.29（腾讯 DNS）、114.114.114.114 查出来必须是 CN；8.8.8.8（谷歌 DNS）、1.1.1.1 查出来必须不是 CN。
-
-> 只含中国段，外国 IP 查不到中国，这是对的 —— GEOIP CN 才能把外国流量送去代理。
 
 ---
 
@@ -318,41 +325,6 @@ China.yaml 分两段，第一段是应用 / 网站域名 **443 条**，第二段
 
 </details>
 
-
-<details>
-<summary><b>❓ 常见问题</b></summary>
-
-
-**Q：外国网站会不会被误判成中国？**
-A：不会。库里只装了中国段，外国 IP 查不到，返回空，就走代理。只有中国 IP 才会走直连。
-
-**Q：为什么只有 IPv4？**
-A：IPv6 关着，用纯 IPv4 更小更快。以后开 IPv6 再换回带 IPv6 的库。
-
-**Q：China.yaml 里的 CDN 域名有什么用？**
-A：主域名和 CDN 要一起走国内 DNS，不然图片视频会回外国 IP，慢甚至打不开。比如打开淘宝，主域名 taobao.com 走国内 DNS 拿到国内 IP，但商品图片在 CDN 上，如果 CDN 域名没加，图片就可能问国外 DNS 拿到外国 IP，图片加载慢甚至打不开。
-
-**Q：Egern 和 QX 的文件有什么区别？**
-A：内容一样，只是格式不同：Egern 用 `.yaml`，QX 用 `.list`，QX 每条后面都带策略。Egern 版和 QX 版是同步更新的，改一边另一边也会改。
-
-**Q：为什么 GEOIP CN 要放倒数第二，不能放第一？**
-A：放第一的话，每个域名都要先查 DNS 拿到 IP 再判断，费电又变慢。放倒数第二，域名规则先按域名匹配，不用查 IP，只有前面都没匹配上的流量才查 IP 判断，又快又省电。
-
-**Q：DNS 转发和分流有什么区别？**
-A：DNS 转发是查域名的时候决定问哪个 DNS（国内域名问国内 DNS，国外问国外 DNS），分流是拿到 IP 后决定流量走直连还是走代理。两个都要配，缺一个效果就打折：只配分流不配 DNS 转发，国内域名可能问国外 DNS 拿到外国 IP，GEOIP 判断就错了；只配 DNS 转发不配分流，流量不知道走哪条路。
-
-**Q：规则集显示 0 条怎么办？**
-A：先看链接对不对，再点规则集手动刷新一次。Egern 是按内容解析的，后缀不重要；如果刷新后还是 0，可能是链接里的文件被删了或者网络问题，等一会儿再试。
-
-**Q：怎么知道规则有没有生效？**
-A：打开 Egern 的连接记录，看域名的连接走的是哪条策略。比如打开微信，看 weixin.qq.com 是不是走 DIRECT；打开 YouTube，看 youtube.com 是不是走代理。
-
-**Q：图标预览图怎么放大看？**
-A：点图片就能打开原图，再捏合放大。图标那节的 13 张预览图都是原图，点开看得更清楚。
-
----
-
-</details>
 
 ## 📄 开源协议
 
