@@ -1,0 +1,17 @@
+# 最后修改：2026-11-24 14:48
+# 测速 Speedtest
+# 总共 9 条
+# 来源：blackmatrix7/ios_rule_script rule/Surge/Speedtest/Speedtest.list
+# 用法：Egern 分流 -> SpeedTest
+domain_suffix_set:
+  - fast.com
+  - ooklaserver.net
+  - speed.cloudflare.com
+  - speed.dler.io
+  - speedtest.co
+  - speedtest.net
+  - speedtestcustom.com
+domain_keyword_set:
+  - speedtest
+user_agent_set:
+  - SpeedTest*

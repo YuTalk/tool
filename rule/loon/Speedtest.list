@@ -1,0 +1,14 @@
+# 最后修改：2026-11-24 14:48
+# 测速 Speedtest
+# 总共 9 条
+# 来源：blackmatrix7/ios_rule_script rule/Surge/Speedtest/Speedtest.list
+# 用法：Loon 分流 -> PROXY
+DOMAIN-SUFFIX,fast.com,PROXY
+DOMAIN-SUFFIX,ooklaserver.net,PROXY
+DOMAIN-SUFFIX,speed.cloudflare.com,PROXY
+DOMAIN-SUFFIX,speed.dler.io,PROXY
+DOMAIN-SUFFIX,speedtest.co,PROXY
+DOMAIN-SUFFIX,speedtest.net,PROXY
+DOMAIN-SUFFIX,speedtestcustom.com,PROXY
+DOMAIN-KEYWORD,speedtest,PROXY
+USER-AGENT,SpeedTest*,PROXY

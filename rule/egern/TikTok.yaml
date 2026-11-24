@@ -1,0 +1,44 @@
+# 最后修改：2026-11-24 14:48
+# 抖音国际版 TikTok
+# 总共 35 条
+# 来源：blackmatrix7/ios_rule_script rule/Surge/TikTok/TikTok.list
+# 用法：Egern 分流 -> TikTok
+domain_suffix_set:
+  - bytedapm.com
+  - bytegecko-i18n.com
+  - byteintlapi.com
+  - byteoversea.com
+  - capcut.com
+  - capcutapi.com
+  - capcutapi.us
+  - capcutstatic.com
+  - ibytedtos.com
+  - ibyteimg.com
+  - ipstatp.com
+  - isnssdk.com
+  - marscode.com
+  - muscdn.com
+  - musical.ly
+  - sgpstatp.com
+  - snssdk.com
+  - tik-tokapi.com
+  - tiktok.com
+  - tiktokcdn-us.com
+  - tiktokcdn.com
+  - tiktokd.net
+  - tiktokd.org
+  - tiktokmusic.app
+  - tiktokv.com
+  - tiktokv.us
+  - trae.ai
+  - ttwebview.com
+domain_set:
+  - lf16-effectcdn.byteeffecttos-g.com
+  - lf16-pkgcdn.pitaya-clientai.com
+  - p16-tiktokcdn-com.akamaized.net
+  - trae-api-sg.mchost.guru
+domain_keyword_set:
+  - musical.ly
+  - tiktok
+user_agent_set:
+  - TikTok*
