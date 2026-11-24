@@ -45,8 +45,7 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 <summary><h2>📦 文件说明</h2></summary>
 
 
-<details>
-<summary><h3>🌐 规则集</h3></summary>
+### 🌐 规则集
 
 
 | 规则 | 条数 | 说明 | 策略 |
@@ -110,10 +109,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 </details>
 
-</details>
-
-<details>
-<summary><h3>🖼️ 图标</h3></summary>
+### 🖼️ 图标
 
 
 图标都放在顶层 `icon/` 文件夹里，都是从别人家搬过来的原图（主要来自 [ddgksf2013/Icon](https://github.com/ddgksf2013/Icon) 和 [Koolson/Qure](https://github.com/Koolson/Qure)）。文件夹里现在只有 13 张预览图（preview-01 到 preview-13），单个应用图标已经删了，只留预览图给你看效果。
@@ -186,10 +182,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 <a href="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-13-semporia.PNG"><img src="https://raw.githubusercontent.com/YuTalk/tool/main/icon/preview-13-semporia.PNG" width="180"></a>
 
-</details>
-
-<details>
-<summary><h3>GeoIpCN.mmdb（6,575 条 CIDR，约 132KB）</h3></summary>
+### GeoIpCN.mmdb（6,575 条 CIDR，约 132KB）
 
 
 只含中国 IPv4，共覆盖 **357,427,495 个地址**，约 132KB，纯 IPv4，不含 IPv6。
@@ -209,8 +202,6 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 > 只含中国段，外国 IP 查不到中国，这是对的 —— GEOIP CN 才能把外国流量送去代理。
 
 ---
-
-</details>
 
 </details>
 
@@ -271,8 +262,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 <summary><h2>🚀 怎么用</h2></summary>
 
 
-<details>
-<summary><h3><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/42/12/5d/42125db1-6a4f-de58-cf03-72bf8e2e4354/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" width="32" height="32" alt="Egern"> Egern</h3></summary>
+### <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/42/12/5d/42125db1-6a4f-de58-cf03-72bf8e2e4354/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" width="32" height="32" alt="Egern"> Egern
 
 
 1. **DNS 转发**：设置 → DNS 转发 → 添加规则集，粘贴 China 的链接，策略选国内。
@@ -294,10 +284,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 > ⚠️ GEOIP CN 一定放倒数第二，别放第一，不然每个域名都要先解析 IP，费电又变慢。域名规则不用查 IP，直接按域名匹配，又快又省电，只有没匹配上的流量才需要查 IP。
 
-</details>
-
-<details>
-<summary><h3><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/84/ae/50/84ae5055-dc8c-2f6e-cea6-8b543f72ae98/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg" width="32" height="32" alt="Quantumult X"> Quantumult X</h3></summary>
+### <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/84/ae/50/84ae5055-dc8c-2f6e-cea6-8b543f72ae98/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg" width="32" height="32" alt="Quantumult X"> Quantumult X
 
 
 1. 分流里加远程规则，粘贴上面表格里的 QX 版链接，策略按表格选。也可以直接点表格里的蓝色按钮，会跳进 QX 问你要不要添加。
@@ -305,10 +292,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 3. QX 不能用自建 .mmdb 库，用它自带的就行。QX 也没有 DNS 转发功能，DNS 就靠分流本身，国内域名走直连、国外走代理，效果是一样的。
 4. 注意：QX 每条规则后面必须带策略，没有策略会报 Invalid Line，这个仓库的 QX 版每条都带了策略，直接用就行。
 
-</details>
-
-<details>
-<summary><h3><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/92/4e/35/924e359d-e682-7b80-372b-920fdb8c6d6c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg" width="32" height="32" alt="Loon"> Loon</h3></summary>
+### <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/92/4e/35/924e359d-e682-7b80-372b-920fdb8c6d6c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg" width="32" height="32" alt="Loon"> Loon
 
 
 1. 分流里加远程规则，粘贴 `rule/loon/` 文件夹里对应那套的 `.list` 链接，每条规则自带策略，不用自己选：China、Apple、SausageMan、GeoIP_CN 是 DIRECT，Google、Microsoft、AI_Part、Spotify、TikTok、GitHub、Speedtest、Telegram 是 PROXY，GoogleAds 是 REJECT。
@@ -317,8 +301,6 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 4. 哔哩哔哩模块 Loon 不能直接用仓库里那个 Egern 版（`.yaml`），要用作者的 Loon 版插件（`.lpx`），链接在上面「模块」那节的说明里。
 
 ---
-
-</details>
 
 </details>
 
