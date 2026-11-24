@@ -18,8 +18,6 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 ![IPv4](https://img.shields.io/badge/GeoIP-IPv4-orange?style=flat-square)
 ![License](https://img.shields.io/badge/开源-MIT-lightgrey?style=flat-square)
 
-> 更好看的主页：https://yutalk.github.io/tool/（手机上能捏合缩放，图标能点开放大，链接一键复制）
-
 ## 👀 一眼看懂
 
 | 项目 | 数量 |
