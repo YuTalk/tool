@@ -350,9 +350,6 @@ A：打开 Egern 的连接记录，看域名的连接走的是哪条策略。比
 **Q：图标预览图怎么放大看？**
 A：点图片就能打开原图，再捏合放大。图标那节的 13 张预览图都是原图，点开看得更清楚。
 
-**Q：Egern 消息储存是什么？**
-A：平时用 Egern 攒下来的笔记（比如域名匹配的 5 种写法），存在一个单独的网页上，仓库最下面「Egern 消息储存」那节有链接，点链接就能看。网页上能新增、改、删、置顶、收藏，还能自己加分类；默认只能看，站长用口令解锁后才能改。
-
 ---
 
 </details>
@@ -375,12 +372,4 @@ MIT License —— 随便用，改了也行。
 | [ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master) | blackmatrix7 的 iOS 规则库，本仓库 5 套规则的上游 |
 | [wool_scripts](https://github.com/fmz200/wool_scripts) | fmz200 的规则与模块库，本仓库哔哩哔哩模块的上游 |
 | [墨魚手記](https://ddgksf2013.top) | 个人资源索引：影视、动漫、下载、工具、QX 脚本 |
-
----
-
-## 📝 Egern 消息储存
-
-平时用 Egern 攒下来的笔记和提醒（比如域名匹配的 5 种写法），存在一个单独的网页上，能新增、改、删、置顶、收藏，还能自己加分类；默认只能看，站长用口令解锁后才能改。
-
-[Egern 消息储存](https://yutalk.github.io/egern-notes/)
 
