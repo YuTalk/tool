@@ -41,8 +41,10 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 
 ---
 
+<a id="-文件说明"></a>
+
 <details>
-<summary><h2>📦 文件说明</h2></summary>
+<summary><b>📦 文件说明</b></summary>
 
 
 ### 🌐 规则集
@@ -205,8 +207,10 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 </details>
 
+<a id="-模块"></a>
+
 <details>
-<summary><h2>🧩 模块</h2></summary>
+<summary><b>🧩 模块</b></summary>
 
 
 3 个模块，都是从别人家直接搬过来的原版文件，内容一个字都没改过。上游更新了，这里每 6 小时自动同步一次。
@@ -227,8 +231,10 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 </details>
 
+<a id="-一键添加进软件"></a>
+
 <details>
-<summary><h2>⚡ 一键添加进软件</h2></summary>
+<summary><b>⚡ 一键添加进软件</b></summary>
 
 
 点下面表格里的链接，就会直接跳进 Egern / QX，问你要不要添加，点确认就加进去了，不用自己复制链接再粘贴。
@@ -258,8 +264,10 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 </details>
 
+<a id="-怎么用"></a>
+
 <details>
-<summary><h2>🚀 怎么用</h2></summary>
+<summary><b>🚀 怎么用</b></summary>
 
 
 ### <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/42/12/5d/42125db1-6a4f-de58-cf03-72bf8e2e4354/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" width="32" height="32" alt="Egern"> Egern
@@ -304,8 +312,10 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 </details>
 
+<a id="-自动更新"></a>
+
 <details>
-<summary><h2>🔄 自动更新</h2></summary>
+<summary><b>🔄 自动更新</b></summary>
 
 
 | 任务 | 频率 |
@@ -326,8 +336,10 @@ China.yaml 分两段，第一段是应用 / 网站域名 **530 条**，第二段
 
 </details>
 
+<a id="-常见问题"></a>
+
 <details>
-<summary><h2>❓ 常见问题</h2></summary>
+<summary><b>❓ 常见问题</b></summary>
 
 
 **Q：外国网站会不会被误判成中国？**
