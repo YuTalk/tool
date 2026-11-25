@@ -23,7 +23,6 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 | 项目 | 数量 |
 | --- | --- |
 | 规则集 | 13 个（Egern、QX、Loon 各一份，内容一致） |
-| 模块 | 3 个（Spotify、YouTube Enhance、哔哩哔哩，都是从别人家搬过来的原版，没改过） |
 | 图标 | 13 个（13 套图标库的预览图，都是从别人家搬过来的原图） |
 | 域名总数 | 850 条（去重后） |
 | GeoIP 库 | 6,574 条 CIDR，约 132KB，覆盖 357,426,983 个中国 IPv4 地址 |
@@ -202,29 +201,6 @@ China.yaml 分两段，第一段是应用 / 网站域名 **443 条**，第二段
 
 
 <details>
-<summary><b>🧩 模块</b></summary>
-
-
-3 个模块，都是从别人家直接搬过来的原版文件，内容一个字都没改过。上游更新了，这里每 6 小时自动同步一次。
-
-| 模块 | 是干什么的 | 原作者 |
-| --- | --- | --- |
-| Spotify | 会员配置、首页与播放页去广告，歌词补全和双语翻译 | Reukix |
-| YouTube Enhance | YouTube 和 YouTube Music 增强，屏蔽上传、选段、Shorts 按钮，字幕翻译 | Maasea |
-| 哔哩哔哩 | 哔哩哔哩去广告 | fmz200 |
-
-怎么用：Egern 里工具 → 模块 → 点 +，粘贴下面对应模块的链接；QX 里直接加远程模块链接。
-
-- Spotify：`https://raw.githubusercontent.com/YuTalk/tool/main/module/Spotify/Spotify.sgmodule`
-- YouTube Enhance：`https://raw.githubusercontent.com/YuTalk/tool/main/module/YouTube.Enhance/YouTube.Enhance.sgmodule`
-- 哔哩哔哩：`https://raw.githubusercontent.com/YuTalk/tool/main/module/bilibili/bilibili.yaml`
-
----
-
-</details>
-
-
-<details>
 <summary><b>⚡ 一键添加进软件</b></summary>
 
 
@@ -296,7 +272,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **443 条**，第二段
 1. 分流里加远程规则，粘贴 `rule/loon/` 文件夹里对应那套的 `.list` 链接，每条规则自带策略，不用自己选：China、Apple、SausageMan、GeoIP_CN 是 DIRECT，Google、Microsoft、AI_Part、Spotify、TikTok、GitHub、Speedtest、Telegram 是 PROXY，GoogleAds 是 REJECT。
 2. 分流留一条：`GEOIP,CN,DIRECT` 放倒数第二，`FINAL,兜底后备策略` 放最后。Loon 没有自建 .mmdb 库，靠 GeoIP_CN.list 这条远程规则判断中国 IP。
 3. Loon 的 DoH 流量模式选 Rule，就相当于 Egern 的 DNS 转发，国内域名走国内 DNS，国外走国外 DNS。
-4. 哔哩哔哩模块 Loon 不能直接用仓库里那个 Egern 版（`.yaml`），要用作者的 Loon 版插件（`.lpx`），链接在上面「模块」那节的说明里。
+4. 哔哩哔哩模块要用作者的 Loon 版插件（`.lpx`），不能用 Egern 版（`.yaml`）：`https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/split/partB/bilibili.lpx`
 
 ---
 
@@ -309,15 +285,14 @@ China.yaml 分两段，第一段是应用 / 网站域名 **443 条**，第二段
 
 | 任务 | 频率 |
 | --- | --- |
-| 仓库检查（全部规则 + GeoIP 库 + 模块 + README） | 每 6 小时，0:00、6:00、12:00、18:00 |
+| 仓库检查（全部规则 + GeoIP 库 + README） | 每 6 小时，0:00、6:00、12:00、18:00 |
 
-每次检查做五件事：
+每次检查做四件事：
 
 1. **规则**：China 从 ChinaDomain.list 和 geolocation-cn.yaml 拉最新源，合并去重；其他 6 套检查有没有失效域名（已停用、无法解析、服务已下线）。Egern 版和 QX 版同步改。
 2. **GeoIP 库**：从 5 个来源拉最新 IP 段，合并去重后重建 GeoIpCN.mmdb，验证通过才推。
-3. **模块**：Spotify、YouTube Enhance、哔哩哔哩从上游原地址拉最新版，原样同步，不改内容。
-4. **README**：检查里面的链接和条数是不是还对得上仓库现状，对不上就改对。
-5. **图标**：13 张预览图都在不在，链接能不能打开。
+3. **README**：检查里面的链接和条数是不是还对得上仓库现状，对不上就改对。
+4. **图标**：13 张预览图都在不在，链接能不能打开。
 
 文件名和链接固定不变，只更新内容。新增域名要经过主人同意才加，失效的直接删。每次有变化都会发邮件通知，没变化就不发。
 
@@ -342,6 +317,7 @@ MIT License —— 随便用，改了也行。
 | [松果库](https://nutrepo.com) | Egern、Surge、Loon、QX、Stash 的模块中心 |
 | [yfamily](https://yfamilys.com) | 代理工具的配置、模块、插件与分流规则 |
 | [ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master) | blackmatrix7 的 iOS 规则库，本仓库 5 套规则的上游 |
-| [wool_scripts](https://github.com/fmz200/wool_scripts) | fmz200 的规则与模块库，本仓库哔哩哔哩模块的上游 |
+| [wool_scripts](https://github.com/fmz200/wool_scripts) | fmz200 的规则与模块库，哔哩哔哩模块的原地址 |
 | [墨魚手記](https://ddgksf2013.top) | 个人资源索引：影视、动漫、下载、工具、QX 脚本 |
+| [ukix](https://github.com/Reukix/ukix) | Reukix 的模块库，Spotify 模块的原地址 |
 
