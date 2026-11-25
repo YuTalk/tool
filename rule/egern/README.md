@@ -12,7 +12,7 @@ Egern 用的规则，12 套，每套一个文件夹（点进文件夹能看到�
 
 ## 规则统计
 
-最后更新时间：2026-11-25 08:37:57
+最后更新时间：2026-11-25 11:26:36
 
 各规则集统计：
 
@@ -23,16 +23,16 @@ Egern 用的规则，12 套，每套一个文件夹（点进文件夹能看到�
 | <img src="https://cdn.simpleicons.org/apple" width="20" height="20" alt="Apple"> Apple | 22 |
 | <img src="https://www.microsoft.com/favicon.ico" width="20" height="20" alt="Microsoft"> Microsoft | 21 |
 | SausageMan | 15 |
-| AI_Part | 45 |
+| AI_Part | 72 |
 | GeoIP_CN | 1 |
 | <img src="https://cdn.simpleicons.org/spotify/1DB954" width="20" height="20" alt="Spotify"> Spotify | 28 |
 | <img src="https://cdn.simpleicons.org/tiktok/FE2C55" width="20" height="20" alt="TikTok"> TikTok | 37 |
 | <img src="https://cdn.simpleicons.org/github" width="20" height="20" alt="GitHub"> GitHub | 31 |
 | <img src="https://cdn.simpleicons.org/speedtest/141526" width="20" height="20" alt="Speedtest"> Speedtest | 9 |
 | <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="20" height="20" alt="Telegram"> Telegram | 34 |
-| TOTAL | 827 |
+| TOTAL | 853 |
 
-其中域名 826 条，GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
+其中域名 852 条，GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
 
 ## Egern
 
@@ -96,7 +96,7 @@ CDN 链接：
 
 https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/SausageMan/SausageMan.yaml
 
-**AI_Part.yaml（45 条）**
+**AI_Part.yaml（72 条）**
 
 原始链接：
 
@@ -169,7 +169,7 @@ https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/Telegram/Telegram.yaml
 
 ## 数据来源
 
-China 的数据来自 ACL4SSR 的 ChinaDomain.list 与 geolocation-cn；Spotify、TikTok、GitHub、Speedtest、Telegram 的数据来自 blackmatrix7 的 ios_rule_script（Surge 版）；TikTok、AI_Part、GeoIP_CN 另外对照了 fmz200 的 wool_scripts；Google、Apple、Microsoft、SausageMan 是手选的，没有固定上游。
+China 的数据来自 ACL4SSR 的 ChinaDomain.list 与 geolocation-cn；Spotify、TikTok、GitHub、Speedtest、Telegram 的数据来自 blackmatrix7 的 ios_rule_script（Surge 版）；TikTok、GeoIP_CN 另外对照了 fmz200 的 wool_scripts；AI_Part 对照了 fmz200 的 AI.list 和 blackmatrix7 的 Claude、Gemini 列表；Google、Apple、Microsoft、SausageMan 是手选的，没有固定上游。
 
 感谢以上规则作者的辛勤付出。
 

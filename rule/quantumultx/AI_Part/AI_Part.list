@@ -1,7 +1,7 @@
-# 最后修改：2026-11-24 12:15
+# 最后修改：2026-11-25 11:26
 # AI_Part
-# Muse + GPT + Claude
-# 总共 45 条
+# Muse + GPT + Claude + Grok + Gemini
+# 总共 72 条
 host-suffix, openai.com, 人工智能
 host-suffix, openai.org, 人工智能
 host-suffix, chatgpt.com, 人工智能
@@ -47,3 +47,34 @@ host-suffix, ai.meta.com, 人工智能
 host-suffix, atmeta.com, 人工智能
 host-suffix, metaaiusercontent.com, 人工智能
 host-suffix, metaaivm.com, 人工智能
+
+# Claude
+host-suffix, modelcontextprotocol.io, 人工智能
+# Grok
+host-suffix, grok.com, 人工智能
+host-suffix, grokipedia.com, 人工智能
+host-suffix, x.ai, 人工智能
+# Gemini
+host-suffix, ai.google.dev, 人工智能
+host-suffix, ai.studio, 人工智能
+host-suffix, aida.googleapis.com, 人工智能
+host-suffix, aistudio.google.com, 人工智能
+host-suffix, alkalicore-pa.clients6.google.com, 人工智能
+host-suffix, alkalimakersuite-pa.clients6.google.com, 人工智能
+host-suffix, bard.google.com, 人工智能
+host-suffix, business.gemini.google, 人工智能
+host-suffix, cloudaicompanion.googleapis.com, 人工智能
+host-suffix, deepmind.com, 人工智能
+host-suffix, deepmind.google, 人工智能
+host-suffix, developerprofiles-pa.googleapis.com, 人工智能
+host-suffix, geller-pa.googleapis.com, 人工智能
+host-suffix, gemini.google, 人工智能
+host-suffix, gemini.google.com, 人工智能
+host-suffix, generativeai.google, 人工智能
+host-suffix, generativelanguage.googleapis.com, 人工智能
+host-suffix, makersuite.google.com, 人工智能
+host-suffix, proactivebackend-pa.googleapis.com, 人工智能
+host-suffix, robinfrontend-pa.googleapis.com, 人工智能
+host-suffix, subscriptionsfirstparty-pa.googleapis.com, 人工智能
+host-suffix, vertexaisearch.cloud.google.com, 人工智能
+host-suffix, webchannel-alkalimakersuite-pa.clients6.google.com, 人工智能

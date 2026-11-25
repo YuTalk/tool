@@ -24,7 +24,7 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 | --- | --- |
 | 规则集 | 12 个（Egern、QX、Loon 各一份，内容一致） |
 | 图标 | 13 个（13 套图标库的预览图，都是从别人家搬过来的原图） |
-| 域名总数 | 826 条（去重后） |
+| 域名总数 | 852 条（去重后） |
 | GeoIP 库 | 6,574 条 CIDR，约 132KB，覆盖 357,426,983 个中国 IPv4 地址 |
 | 自动检查 | 每 6 小时，0:00、6:00、12:00、18:00 |
 
@@ -38,7 +38,7 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 | Apple | 22 | 苹果系统、商店、iCloud | direct |
 | Microsoft | 21 | Outlook、微软账号 | 微软服务 |
 | SausageMan | 15 | 香肠派对及 TapTap 相关 | direct |
-| AI_Part | 45 | Muse、GPT、Claude | 人工智能 |
+| AI_Part | 72 | Muse、GPT、Claude、Grok、Gemini | 人工智能 |
 | Spotify | 28 | Spotify 音乐及 CDN | Spotify |
 | TikTok | 37 | 抖音国际版 TikTok 及剪映 | TikTok |
 | GitHub | 31 | GitHub 及 npm 等 | GitHub |
@@ -85,7 +85,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **443 条**，第二段
 - **Apple（22 条）**：苹果系统服务，App Store、iCloud、Apple ID、系统更新、推送通知、Siri、Apple Music 等。苹果的服务器在国内有节点，走直连最快最稳，分流 → DIRECT，DNS 也走国内。
 - **Microsoft（21 条）**：微软服务，Outlook 邮箱、微软账号登录、OneDrive、Office 等。微软的服务器在国外，走直连慢甚至打不开，要走代理，策略选微软服务。
 - **SausageMan（15 条）**：香肠派对（吃鸡手游）加 TapTap 相关域名，游戏服务器、TapTap 下载、TapTap 账号、游戏内嵌网页等。游戏服务器在国内，走直连延迟最低，分流 → DIRECT，DNS 转发 → 国内。
-- **AI_Part（45 条）**：只包括你常用的三个 AI，Muse（Meta AI，7 条）、GPT / ChatGPT（OpenAI，19 条）、Claude（Anthropic，19 条）。三个 AI 都在国外，必须走代理，策略选人工智能。注意：meta.com 没加进去，因为它太宽，会把 Facebook、Instagram、WhatsApp 也拉进 AI 组。
+- **AI_Part（72 条）**：只包括你常用的五个 AI，Muse（Meta AI，7 条）、GPT / ChatGPT（OpenAI，19 条）、Claude（Anthropic，20 条）、Grok（xAI，3 条）、Gemini（Google，23 条）。五个 AI 都在国外，必须走代理，策略选人工智能。注意：meta.com 没加进去，因为它太宽，会把 Facebook、Instagram、WhatsApp 也拉进 AI 组。
 - **Spotify（28 条）**：Spotify 音乐，官网、App、歌单、歌词、图片和音频 CDN（spotifycdn、scdn、pscdn、akamaized、fastly）。Spotify 在国内打不开，必须走代理，策略选 Spotify。
 - **TikTok（37 条）**：抖音国际版 TikTok，App、视频 CDN、直播、剪映 CapCut、Trae AI 编程等。都在国外，必须走代理，策略选 TikTok。其中 ttwstatic.com 和 tiktokcdn 关键词是从 fmz200 的上游同步来的。
 - **GitHub（31 条）**：GitHub 全家，github.com、raw.githubusercontent.com、github.io、ghcr.io、githubassets、npmjs、git.io 等。GitHub 在国内直连慢，走代理最稳，策略选 GitHub。

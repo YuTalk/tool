@@ -1,7 +1,7 @@
-# 最后修改：2026-11-24 14:40
+# 最后修改：2026-11-25 11:26
 # AI_Part
-# Muse + GPT + Claude
-# 总共 45 条
+# Muse + GPT + Claude + Grok + Gemini
+# 总共 72 条
 # 用法：Loon 分流 -> PROXY
 DOMAIN-SUFFIX,openai.com,PROXY
 DOMAIN-SUFFIX,openai.org,PROXY
@@ -48,3 +48,34 @@ DOMAIN-SUFFIX,ai.meta.com,PROXY
 DOMAIN-SUFFIX,atmeta.com,PROXY
 DOMAIN-SUFFIX,metaaiusercontent.com,PROXY
 DOMAIN-SUFFIX,metaaivm.com,PROXY
+
+# Claude
+DOMAIN-SUFFIX,modelcontextprotocol.io,PROXY
+# Grok
+DOMAIN-SUFFIX,grok.com,PROXY
+DOMAIN-SUFFIX,grokipedia.com,PROXY
+DOMAIN-SUFFIX,x.ai,PROXY
+# Gemini
+DOMAIN-SUFFIX,ai.google.dev,PROXY
+DOMAIN-SUFFIX,ai.studio,PROXY
+DOMAIN-SUFFIX,aida.googleapis.com,PROXY
+DOMAIN-SUFFIX,aistudio.google.com,PROXY
+DOMAIN-SUFFIX,alkalicore-pa.clients6.google.com,PROXY
+DOMAIN-SUFFIX,alkalimakersuite-pa.clients6.google.com,PROXY
+DOMAIN-SUFFIX,bard.google.com,PROXY
+DOMAIN-SUFFIX,business.gemini.google,PROXY
+DOMAIN-SUFFIX,cloudaicompanion.googleapis.com,PROXY
+DOMAIN-SUFFIX,deepmind.com,PROXY
+DOMAIN-SUFFIX,deepmind.google,PROXY
+DOMAIN-SUFFIX,developerprofiles-pa.googleapis.com,PROXY
+DOMAIN-SUFFIX,geller-pa.googleapis.com,PROXY
+DOMAIN-SUFFIX,gemini.google,PROXY
+DOMAIN-SUFFIX,gemini.google.com,PROXY
+DOMAIN-SUFFIX,generativeai.google,PROXY
+DOMAIN-SUFFIX,generativelanguage.googleapis.com,PROXY
+DOMAIN-SUFFIX,makersuite.google.com,PROXY
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com,PROXY
+DOMAIN-SUFFIX,robinfrontend-pa.googleapis.com,PROXY
+DOMAIN-SUFFIX,subscriptionsfirstparty-pa.googleapis.com,PROXY
+DOMAIN-SUFFIX,vertexaisearch.cloud.google.com,PROXY
+DOMAIN-SUFFIX,webchannel-alkalimakersuite-pa.clients6.google.com,PROXY

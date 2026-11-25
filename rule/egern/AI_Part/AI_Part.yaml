@@ -1,7 +1,7 @@
-# 最后修改：2026-11-24 12:15
+# 最后修改：2026-11-25 11:26
 # AI_Part
-# Muse + GPT + Claude
-# 总共 45 条
+# Muse + GPT + Claude + Grok + Gemini
+# 总共 72 条
 # 用法：Egern 分流 -> 人工智能
 domain_suffix_set:
   - openai.com
@@ -49,3 +49,34 @@ domain_suffix_set:
   - atmeta.com
   - metaaiusercontent.com
   - metaaivm.com
+
+# Claude
+  - modelcontextprotocol.io
+# Grok
+  - grok.com
+  - grokipedia.com
+  - x.ai
+# Gemini
+  - ai.google.dev
+  - ai.studio
+  - aida.googleapis.com
+  - aistudio.google.com
+  - alkalicore-pa.clients6.google.com
+  - alkalimakersuite-pa.clients6.google.com
+  - bard.google.com
+  - business.gemini.google
+  - cloudaicompanion.googleapis.com
+  - deepmind.com
+  - deepmind.google
+  - developerprofiles-pa.googleapis.com
+  - geller-pa.googleapis.com
+  - gemini.google
+  - gemini.google.com
+  - generativeai.google
+  - generativelanguage.googleapis.com
+  - makersuite.google.com
+  - proactivebackend-pa.googleapis.com
+  - robinfrontend-pa.googleapis.com
+  - subscriptionsfirstparty-pa.googleapis.com
+  - vertexaisearch.cloud.google.com
+  - webchannel-alkalimakersuite-pa.clients6.google.com
