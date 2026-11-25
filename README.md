@@ -269,7 +269,6 @@ China.yaml 分两段，第一段是应用 / 网站域名 **443 条**，第二段
 1. 分流里加远程规则，粘贴 `rule/loon/` 文件夹里对应那套的 `.list` 链接，每条规则自带策略，不用自己选：China、Apple、SausageMan、GeoIP_CN 是 DIRECT，Google、Microsoft、AI_Part、Spotify、TikTok、GitHub、Speedtest、Telegram 是 PROXY。
 2. 分流留一条：`GEOIP,CN,DIRECT` 放倒数第二，`FINAL,兜底后备策略` 放最后。Loon 没有自建 .mmdb 库，靠 GeoIP_CN.list 这条远程规则判断中国 IP。
 3. Loon 的 DoH 流量模式选 Rule，就相当于 Egern 的 DNS 转发，国内域名走国内 DNS，国外走国外 DNS。
-4. 哔哩哔哩模块要用作者的 Loon 版插件（`.lpx`），不能用 Egern 版（`.yaml`）：`https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/split/partB/bilibili.lpx`
 
 ---
 
@@ -314,7 +313,5 @@ MIT License —— 随便用，改了也行。
 | [松果库](https://nutrepo.com) | Egern、Surge、Loon、QX、Stash 的模块中心 |
 | [yfamily](https://yfamilys.com) | 代理工具的配置、模块、插件与分流规则 |
 | [ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master) | blackmatrix7 的 iOS 规则库，本仓库 5 套规则的上游 |
-| [wool_scripts](https://github.com/fmz200/wool_scripts) | fmz200 的规则与模块库，哔哩哔哩模块的原地址 |
 | [墨魚手記](https://ddgksf2013.top) | 个人资源索引：影视、动漫、下载、工具、QX 脚本 |
-| [ukix](https://github.com/Reukix/ukix) | Reukix 的模块库，Spotify 模块的原地址 |
 
