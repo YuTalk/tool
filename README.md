@@ -70,10 +70,12 @@ China.yaml 分两段，第一段是应用 / 网站域名 **443 条**，第二段
 <summary>AI_Part 都包括谁？点开看</summary>
 
 - GPT / OpenAI（19 条）：ChatGPT 聊天、Sora 视频、OpenAI 官网、API 接口等
-- Claude / Anthropic（19 条）：Claude 聊天、Claude 官网、App 等
+- Claude / Anthropic（20 条）：Claude 聊天、Claude 官网、App 等
 - Muse / Meta AI（7 条）：meta.ai、muse.ai、llama.com 等，Meta 的 AI 聊天
+- Grok / xAI（3 条）：Grok 聊天、x.ai、Grokipedia 百科等
+- Gemini / Google（23 条）：Gemini 聊天、AI Studio、Vertex AI、DeepMind 等
 
-三个 AI 都在国外，都要走代理。meta.com 故意没加，因为它会把 Facebook、Instagram、WhatsApp 也拉进来。
+五个 AI 都在国外，都要走代理。meta.com 故意没加，因为它会把 Facebook、Instagram、WhatsApp 也拉进来。
 
 </details>
 
