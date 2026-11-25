@@ -53,9 +53,9 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 
 每套规则现在都放在自己的文件夹里（比如 `rule/egern/China/`），点进文件夹能看到这套规则的说明页，里面有这套规则是干什么的、多少条、怎么用和链接。
 
-另外还有一份 Loon 版，在 `rule/loon/` 文件夹里，12 套内容和上面一模一样，只是格式换成 Loon 的 `DOMAIN-SUFFIX,域名,策略`，策略只有两种：DIRECT（China、Apple、SausageMan、GeoIP_CN）、PROXY（Google、Microsoft、AI_Part、Spotify、TikTok、GitHub、Speedtest、Telegram）。
+另外还有一份 Loon 版，在 `rule/loon/` 文件夹里，内容和上面基本一致，只是格式换成 Loon 的 `DOMAIN-SUFFIX,域名,策略`，策略只有两种：DIRECT（China、Apple、SausageMan、GeoIP_CN）、PROXY（Google、Microsoft、AI_Part、Spotify、TikTok、GitHub、Speedtest、Telegram）。另外 Loon 版还多了进程名、IP 段等规则，所以有 3 套条数比上面多：Spotify 29 条、TikTok 37 条、Telegram 44 条。
 
-China.yaml 分两段，第一段是应用 / 网站域名 **443 条**，第二段是 CDN / 后台 / 接口域名 **110 条**，覆盖微信、QQ、淘宝、京东、拼多多、美团、饿了么、抖音、哔哩哔哩、爱奇艺、优酷、知乎、微博、百度、阿里、12306、银行、运营商、政府、快递……还有红果短剧、豆包、DeepSeek、Kimi、腾讯元宝、即梦 AI、剪映、夸克等热门应用。
+China.yaml 分两段，第一段是应用 / 网站域名 **437 条**，第二段是 CDN / 后台 / 接口域名 **108 条**，覆盖微信、QQ、淘宝、京东、拼多多、美团、饿了么、抖音、哔哩哔哩、爱奇艺、优酷、知乎、微博、百度、阿里、12306、银行、运营商、政府、快递……还有红果短剧、豆包、DeepSeek、Kimi、腾讯元宝、即梦 AI、剪映、夸克等热门应用。
 
 为什么分两段？第一段是你平时打开的 App 和网站本身，第二段是这些 App 背后用的图片、视频、接口服务器。只加第一段的话，App 能打开，但里面的图片视频可能还是走外国 IP，又慢又卡；两段一起加才完整。
 
