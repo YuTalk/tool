@@ -4,7 +4,7 @@
 
 ![](https://shields.io/badge/-移除重复规则-ff69b4) ![](https://shields.io/badge/-三格式同步-green) ![](https://shields.io/badge/-每6小时自动更新-blue) ![](https://shields.io/badge/-仅自用-critical)
 
-Loon 用的规则，13 套，每套一个文件夹（点进文件夹能看到这套规则的说明页），和 Egern、Quantumult X 那两份内容一致，只是格式不同（策略只用 DIRECT / PROXY / REJECT），由本仓库每 6 小时自动检查更新。
+Loon 用的规则，12 套，每套一个文件夹（点进文件夹能看到这套规则的说明页），和 Egern、Quantumult X 那两份内容一致，只是格式不同（策略只用 DIRECT / PROXY），由本仓库每 6 小时自动检查更新。
 
 分流规则是互联网公共服务的域名和 IP 地址汇总，所有数据均收集自互联网公开信息，不代表我们支持或使用这些服务。
 
@@ -12,7 +12,7 @@ Loon 用的规则，13 套，每套一个文件夹（点进文件夹能看到这
 
 ## 规则统计
 
-最后更新时间：2026-11-25 01:53:20
+最后更新时间：2026-11-25 08:37:57
 
 各规则集统计：
 
@@ -20,7 +20,6 @@ Loon 用的规则，13 套，每套一个文件夹（点进文件夹能看到这
 | ---- | ---- |
 | China | 553 |
 | <img src="https://cdn.simpleicons.org/google/4285F4" width="20" height="20" alt="Google"> Google | 31 |
-| <img src="https://cdn.simpleicons.org/googleads/4285F4" width="20" height="20" alt="GoogleAds"> GoogleAds | 24 |
 | <img src="https://cdn.simpleicons.org/apple" width="20" height="20" alt="Apple"> Apple | 22 |
 | <img src="https://www.microsoft.com/favicon.ico" width="20" height="20" alt="Microsoft"> Microsoft | 21 |
 | SausageMan | 15 |
@@ -31,9 +30,9 @@ Loon 用的规则，13 套，每套一个文件夹（点进文件夹能看到这
 | <img src="https://cdn.simpleicons.org/github" width="20" height="20" alt="GitHub"> GitHub | 31 |
 | <img src="https://cdn.simpleicons.org/speedtest/141526" width="20" height="20" alt="Speedtest"> Speedtest | 9 |
 | <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="20" height="20" alt="Telegram"> Telegram | 44 |
-| TOTAL | 863 |
+| TOTAL | 839 |
 
-其中域名 862 条，GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
+其中域名 838 条，GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
 
 ## Loon
 
@@ -41,7 +40,7 @@ Loon 用的规则，13 套，每套一个文件夹（点进文件夹能看到这
 - 在 Loon 里点规则 → 右上角 + → 粘贴下面对应规则的链接，就能加上。
 
 #### 配置建议
-- Loon 策略只用 DIRECT / PROXY / REJECT 三个标准名。
+- Loon 策略只用 DIRECT / PROXY 两个标准名。
 - GEOIP CN 是 GEOIP,CN,DIRECT，放倒数第二。
 - Loon 靠 DoH 流量模式选 Rule，实现和 Egern 的 DNS 转发一样的效果。
 
@@ -65,16 +64,6 @@ https://raw.githubusercontent.com/YuTalk/tool/main/rule/loon/Google/Google.list
 CDN 链接：
 
 https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/loon/Google/Google.list
-
-**GoogleAds.list（24 条）**
-
-原始链接：
-
-https://raw.githubusercontent.com/YuTalk/tool/main/rule/loon/GoogleAds/GoogleAds.list
-
-CDN 链接：
-
-https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/loon/GoogleAds/GoogleAds.list
 
 **Apple.list（22 条）**
 
@@ -179,7 +168,7 @@ https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/loon/Telegram/Telegram.list
 
 ## 数据来源
 
-China 的数据来自 ACL4SSR 的 ChinaDomain.list 与 geolocation-cn；Spotify、TikTok、GitHub、Speedtest、Telegram 的数据来自 blackmatrix7 的 ios_rule_script（Surge 版）；TikTok、AI_Part、GeoIP_CN 另外对照了 fmz200 的 wool_scripts；Google、GoogleAds、Apple、Microsoft、SausageMan 是手选的，没有固定上游。
+China 的数据来自 ACL4SSR 的 ChinaDomain.list 与 geolocation-cn；Spotify、TikTok、GitHub、Speedtest、Telegram 的数据来自 blackmatrix7 的 ios_rule_script（Surge 版）；TikTok、AI_Part、GeoIP_CN 另外对照了 fmz200 的 wool_scripts；Google、Apple、Microsoft、SausageMan 是手选的，没有固定上游。
 
 感谢以上规则作者的辛勤付出。
 
