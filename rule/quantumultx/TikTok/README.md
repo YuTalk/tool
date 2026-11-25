@@ -12,17 +12,17 @@ TikTok 规则（TikTok）由本仓库每 6 小时自动检查更新。
 
 ## 规则统计
 
-最后更新时间：2026-11-24 16:44:57
+最后更新时间：2026-11-25 11:34:28
 
 各类型规则统计：
 
 | 类型 | 数量(条) |
 | ---- | ---- |
-| DOMAIN-SUFFIX | 29 |
+| DOMAIN-SUFFIX | 28 |
 | host | 4 |
 | host-keyword | 3 |
 | user-agent | 1 |
-| TOTAL | 37 |
+| TOTAL | 36 |
 
 ## Quantumult X
 
