@@ -1,6 +1,6 @@
-# 最后修改：2026-11-25 01:53
+# 最后修改：2026-11-25 11:42
 # 中国常用域名 - 经常用到的
-# 总共 553 条
+# 总共 545 条
 # 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
 domain_suffix_set:
 # 第一段：应用/网站域名
@@ -308,9 +308,6 @@ domain_suffix_set:
   - paipai.com
   - paragon.com
   - pdfwifi.com
-  - playstation.com
-  - playstation.net
-  - playstationnetwork.com
   - polyv.net
   - pplive.com
   - pptv.com
@@ -361,9 +358,7 @@ domain_suffix_set:
   - steamcontent.com
   - steamusercontent.com
   - suning.com
-  - synology.com
   - taihe.com
-  - teamviewer.com
   - tebex.io
   - tencentmind.com
   - tenpay.com
@@ -384,7 +379,6 @@ domain_suffix_set:
   - tuniu.com
   - ucweb.com
   - udache.com
-  - unrealengine.com
   - upaiyun.com
   - upyun.com
   - uxengine.net
@@ -500,8 +494,6 @@ domain_suffix_set:
   - douyuscdn.com
   - dxycdn.com
   - edgesrv.com
-  - epicgames.com
-  - epicgames.dev
   - fengkongcloud.com
   - ganjistatic1.com
   - geilicdn.com

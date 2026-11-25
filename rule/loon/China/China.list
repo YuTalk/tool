@@ -1,6 +1,6 @@
-# 最后修改：2026-11-25 01:53
+# 最后修改：2026-11-25 11:42
 # 中国常用域名 - 经常用到的
-# 总共 553 条
+# 总共 545 条
 # 用法：Loon 分流 -> DIRECT
 # 第一段：应用/网站域名
 DOMAIN-SUFFIX,baidu.com,DIRECT
@@ -307,9 +307,6 @@ DOMAIN-SUFFIX,ourdvs.com,DIRECT
 DOMAIN-SUFFIX,paipai.com,DIRECT
 DOMAIN-SUFFIX,paragon.com,DIRECT
 DOMAIN-SUFFIX,pdfwifi.com,DIRECT
-DOMAIN-SUFFIX,playstation.com,DIRECT
-DOMAIN-SUFFIX,playstation.net,DIRECT
-DOMAIN-SUFFIX,playstationnetwork.com,DIRECT
 DOMAIN-SUFFIX,polyv.net,DIRECT
 DOMAIN-SUFFIX,pplive.com,DIRECT
 DOMAIN-SUFFIX,pptv.com,DIRECT
@@ -360,9 +357,7 @@ DOMAIN-SUFFIX,steamchina.com,DIRECT
 DOMAIN-SUFFIX,steamcontent.com,DIRECT
 DOMAIN-SUFFIX,steamusercontent.com,DIRECT
 DOMAIN-SUFFIX,suning.com,DIRECT
-DOMAIN-SUFFIX,synology.com,DIRECT
 DOMAIN-SUFFIX,taihe.com,DIRECT
-DOMAIN-SUFFIX,teamviewer.com,DIRECT
 DOMAIN-SUFFIX,tebex.io,DIRECT
 DOMAIN-SUFFIX,tencentmind.com,DIRECT
 DOMAIN-SUFFIX,tenpay.com,DIRECT
@@ -383,7 +378,6 @@ DOMAIN-SUFFIX,tudou.com,DIRECT
 DOMAIN-SUFFIX,tuniu.com,DIRECT
 DOMAIN-SUFFIX,ucweb.com,DIRECT
 DOMAIN-SUFFIX,udache.com,DIRECT
-DOMAIN-SUFFIX,unrealengine.com,DIRECT
 DOMAIN-SUFFIX,upaiyun.com,DIRECT
 DOMAIN-SUFFIX,upyun.com,DIRECT
 DOMAIN-SUFFIX,uxengine.net,DIRECT
@@ -499,8 +493,6 @@ DOMAIN-SUFFIX,douyucdn.cn,DIRECT
 DOMAIN-SUFFIX,douyuscdn.com,DIRECT
 DOMAIN-SUFFIX,dxycdn.com,DIRECT
 DOMAIN-SUFFIX,edgesrv.com,DIRECT
-DOMAIN-SUFFIX,epicgames.com,DIRECT
-DOMAIN-SUFFIX,epicgames.dev,DIRECT
 DOMAIN-SUFFIX,fengkongcloud.com,DIRECT
 DOMAIN-SUFFIX,ganjistatic1.com,DIRECT
 DOMAIN-SUFFIX,geilicdn.com,DIRECT

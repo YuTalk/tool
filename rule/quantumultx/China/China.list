@@ -1,6 +1,6 @@
-# 最后修改：2026-11-25 01:53
+# 最后修改：2026-11-25 11:42
 # 中国常用域名 - 经常用到的
-# 总共 553 条
+# 总共 545 条
 # 用法：QX 分流 -> direct
 # 第一段：应用/网站域名
 host-suffix, baidu.com, direct
@@ -307,9 +307,6 @@ host-suffix, ourdvs.com, direct
 host-suffix, paipai.com, direct
 host-suffix, paragon.com, direct
 host-suffix, pdfwifi.com, direct
-host-suffix, playstation.com, direct
-host-suffix, playstation.net, direct
-host-suffix, playstationnetwork.com, direct
 host-suffix, polyv.net, direct
 host-suffix, pplive.com, direct
 host-suffix, pptv.com, direct
@@ -360,9 +357,7 @@ host-suffix, steamchina.com, direct
 host-suffix, steamcontent.com, direct
 host-suffix, steamusercontent.com, direct
 host-suffix, suning.com, direct
-host-suffix, synology.com, direct
 host-suffix, taihe.com, direct
-host-suffix, teamviewer.com, direct
 host-suffix, tebex.io, direct
 host-suffix, tencentmind.com, direct
 host-suffix, tenpay.com, direct
@@ -383,7 +378,6 @@ host-suffix, tudou.com, direct
 host-suffix, tuniu.com, direct
 host-suffix, ucweb.com, direct
 host-suffix, udache.com, direct
-host-suffix, unrealengine.com, direct
 host-suffix, upaiyun.com, direct
 host-suffix, upyun.com, direct
 host-suffix, uxengine.net, direct
@@ -499,8 +493,6 @@ host-suffix, douyucdn.cn, direct
 host-suffix, douyuscdn.com, direct
 host-suffix, dxycdn.com, direct
 host-suffix, edgesrv.com, direct
-host-suffix, epicgames.com, direct
-host-suffix, epicgames.dev, direct
 host-suffix, fengkongcloud.com, direct
 host-suffix, ganjistatic1.com, direct
 host-suffix, geilicdn.com, direct

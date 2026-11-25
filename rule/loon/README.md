@@ -12,13 +12,13 @@ Loon 用的规则，12 套，每套一个文件夹（点进文件夹能看到这
 
 ## 规则统计
 
-最后更新时间：2026-11-25 11:34:40
+最后更新时间：2026-11-25 11:42:50
 
 各规则集统计：
 
 | 规则集 | 数量(条) |
 | ---- | ---- |
-| China | 553 |
+| China | 545 |
 | <img src="https://cdn.simpleicons.org/google/4285F4" width="20" height="20" alt="Google"> Google | 31 |
 | <img src="https://cdn.simpleicons.org/apple" width="20" height="20" alt="Apple"> Apple | 22 |
 | <img src="https://www.microsoft.com/favicon.ico" width="20" height="20" alt="Microsoft"> Microsoft | 21 |
@@ -30,9 +30,9 @@ Loon 用的规则，12 套，每套一个文件夹（点进文件夹能看到这
 | <img src="https://cdn.simpleicons.org/github" width="20" height="20" alt="GitHub"> GitHub | 31 |
 | <img src="https://cdn.simpleicons.org/speedtest/141526" width="20" height="20" alt="Speedtest"> Speedtest | 9 |
 | <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="20" height="20" alt="Telegram"> Telegram | 44 |
-| TOTAL | 865 |
+| TOTAL | 857 |
 
-其中域名 864 条，GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
+其中域名 856 条，GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
 
 ## Loon
 
