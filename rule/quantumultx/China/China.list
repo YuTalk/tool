@@ -1,6 +1,6 @@
-# 最后修改：2026-11-25 11:42
+# 最后修改：2026-11-25 12:23
 # 中国常用域名 - 经常用到的
-# 总共 545 条
+# 总共 546 条
 # 用法：QX 分流 -> direct
 # 第一段：应用/网站域名
 host-suffix, baidu.com, direct
@@ -310,6 +310,7 @@ host-suffix, pdfwifi.com, direct
 host-suffix, polyv.net, direct
 host-suffix, pplive.com, direct
 host-suffix, pptv.com, direct
+host-suffix, psbc.com, direct
 host-suffix, qbox.me, direct
 host-suffix, qdaily.com, direct
 host-suffix, qdmm.com, direct
