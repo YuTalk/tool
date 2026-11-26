@@ -31,20 +31,20 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 ### 🌐 规则集
 
 
-| 规则 | 条数 | 说明 | 策略 |
-| --- | --- | --- | --- |
-| China | 546 | 国内应用 / 网站 + CDN / 后台，Egern DNS 转发 → 国内 | DIRECT |
-| Google | 31 | 谷歌搜索、Gmail、YouTube 等 | 谷歌服务 |
-| Apple | 22 | 苹果系统、商店、iCloud | direct |
-| Microsoft | 21 | Outlook、微软账号 | 微软服务 |
-| SausageMan | 15 | 香肠派对及 TapTap 相关 | direct |
-| AI_Part | 72 | Muse、GPT、Claude、Grok、Gemini | 人工智能 |
-| Spotify | 28 | Spotify 音乐及 CDN | Spotify |
-| TikTok | 36 | 抖音国际版 TikTok 及剪映 | TikTok |
-| GitHub | 31 | GitHub 及 npm 等 | GitHub |
-| Speedtest | 9 | 测速（Speedtest、fast.com 等） | SpeedTest |
-| Telegram | 34 | Telegram 及第三方客户端 | Telegram |
-| GeoIP_CN | 1 | 中国 IP 段 | direct |
+| 规则 | 条数 | 说明 |
+| --- | --- | --- |
+| China | 546 | 国内应用 / 网站 + CDN / 后台，Egern DNS 转发 → 国内 |
+| Google | 31 | 谷歌搜索、Gmail、YouTube 等 |
+| Apple | 22 | 苹果系统、商店、iCloud |
+| Microsoft | 21 | Outlook、微软账号 |
+| SausageMan | 15 | 香肠派对及 TapTap 相关 |
+| AI_Part | 72 | Muse、GPT、Claude、Grok、Gemini |
+| Spotify | 28 | Spotify 音乐及 CDN |
+| TikTok | 36 | 抖音国际版 TikTok 及剪映 |
+| GitHub | 31 | GitHub 及 npm 等 |
+| Speedtest | 9 | 测速（Speedtest、fast.com 等） |
+| Telegram | 34 | Telegram 及第三方客户端 |
+| GeoIP_CN | 1 | 中国 IP 段 |
 
 
 <details>
