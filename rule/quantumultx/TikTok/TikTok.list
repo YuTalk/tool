@@ -1,6 +1,6 @@
-# 最后修改：2026-11-25 11:34
+# 最后修改：2026-11-26 13:16
 # 抖音国际版 TikTok
-# 总共 36 条
+# 总共 32 条
 # 来源：blackmatrix7/ios_rule_script rule/Surge/TikTok/TikTok.list
 # 来源：fmz200/wool_scripts Loon/rule/TikTok.list
 # 用法：QX 分流 -> TikTok
@@ -8,10 +8,6 @@ host-suffix, bytedapm.com, TikTok
 host-suffix, bytegecko-i18n.com, TikTok
 host-suffix, byteintlapi.com, TikTok
 host-suffix, byteoversea.com, TikTok
-host-suffix, capcut.com, TikTok
-host-suffix, capcutapi.com, TikTok
-host-suffix, capcutapi.us, TikTok
-host-suffix, capcutstatic.com, TikTok
 host-suffix, ibytedtos.com, TikTok
 host-suffix, ibyteimg.com, TikTok
 host-suffix, ipstatp.com, TikTok

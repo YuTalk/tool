@@ -12,7 +12,7 @@ TikTok 规则（TikTok）由本仓库每 6 小时自动检查更新。
 
 ## 规则统计
 
-最后更新时间：2026-11-25 11:34:28
+最后更新时间：2026-11-26 13:16:00
 
 各类型规则统计：
 
@@ -20,10 +20,10 @@ TikTok 规则（TikTok）由本仓库每 6 小时自动检查更新。
 | ---- | ---- |
 | DOMAIN | 4 |
 | DOMAIN-KEYWORD | 3 |
-| DOMAIN-SUFFIX | 28 |
+| DOMAIN-SUFFIX | 24 |
 | PROCESS-NAME | 1 |
 | USER-AGENT | 1 |
-| TOTAL | 37 |
+| TOTAL | 33 |
 
 ## Loon
 
