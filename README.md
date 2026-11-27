@@ -240,9 +240,29 @@ Telegram、Telegraph、Telegram Desktop、Telegram下载、Swiftgram、Telega、
 | --- | --- |
 | 仓库检查 | 每 6 小时 |
 
-每天 0:00、6:00、12:00、18:00 各检查一次。不是仓库自带的 GitHub Actions，是外部定时任务在跑，有变化才推到仓库。
+每天 0:00、6:00、12:00、18:00 各检查一次。这个检查不是仓库自带的 GitHub Actions，仓库里没有 .github/workflows，是外部定时任务在跑，有变化才推到仓库。
 
-每次检查：规则（China 拉最新源合并去重，其他 6 套查失效域名）、GeoIP 库（8 个来源重建 GeoIpCN.mmdb）、README（链接和条数对不上就改）、图标（13 张预览图和链接能不能打开）。文件名和链接固定不变，只更新内容。新增域名要经过主人同意才加，失效的直接删。有变化发邮件通知，没变化不发。
+每次检查做四件事：
+
+1. **规则**：每套规则去上游拉最新版，对比有没有新增或失效的域名。
+   - China：ACL4SSR 的 ChinaDomain.list + geolocation-cn
+   - Google：手选（谷歌官方域名/CDN，不照搬上游大表）
+   - Apple：手选（苹果官方域名/CDN；fmz200 的 AppleAll 1623 行太大，不合进来）
+   - Microsoft：手选（微软官方域名/CDN）
+   - SausageMan：手选（香肠派对官方域名/CDN）
+   - AI_Part：本地精选 5 个外国 AI，交叉核对 fmz200 的 AI.list 和 blackmatrix7 的 Claude、Gemini 列表
+   - Spotify：blackmatrix7/ios_rule_script Surge 版
+   - TikTok：blackmatrix7 Surge 版，fmz200 交叉核对
+   - GitHub：blackmatrix7 Surge 版
+   - Speedtest：blackmatrix7 Surge 版
+   - Telegram：blackmatrix7 Surge 版
+   - GeoIP_CN：fmz200/wool_scripts 的 GeoIP_CN.list
+   上游新增直接同步；失效的域名直接删。Egern 版和 QX 版同步改。
+2. **GeoIP 库**：从 8 个来源（17mon、APNIC、chnroutes2、Loyalsoldier、metowolf、gaoyifan、clang、missuo）拉最新 IP 段，合并去重后重建 GeoIpCN.mmdb（IPv4 版），验证通过才推。
+3. **README**：检查里面的链接和条数是不是还对得上仓库现状，对不上就改对。
+4. **图标**：13 张预览图都在不在，链接能不能打开。
+
+文件名和链接固定不变，只更新内容。新增域名要经过主人同意才加，失效的直接删。每次有变化都会发邮件通知，没变化就不发。
 
 ---
 
