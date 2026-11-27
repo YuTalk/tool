@@ -120,23 +120,116 @@ qx、egern 两栏里各有一个「添加」：qx 点一下跳进 QX，问你要
 ---
 
 </details>
-
 <details>
 <summary><b>文件说明</b></summary>
 
-
-每套规则现在都放在自己的文件夹里（比如 `rule/egern/China/`），点进文件夹能看到这套规则的说明页，里面有这套规则是干什么的、多少条、怎么用和链接。
-
-另外还有一份 Loon 版，在 `rule/loon/` 文件夹里，内容和上面基本一致，只是格式换成 Loon 的 `DOMAIN-SUFFIX,域名,策略`，策略只有两种：DIRECT（China、Apple、SausageMan、GeoIP_CN）、PROXY（Google、Microsoft、AI_Part、Spotify、TikTok、GitHub、Speedtest、Telegram）。另外 Loon 版还多了进程名、IP 段等规则，所以有 3 套条数比上面多：Spotify 29 条、TikTok 33 条、Telegram 44 条。
-
-China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段是 CDN / 后台 / 接口域名 **108 条**，覆盖微信、QQ、淘宝、京东、拼多多、美团、饿了么、抖音、哔哩哔哩、爱奇艺、优酷、知乎、微博、百度、阿里、12306、银行、运营商、政府、快递……还有红果短剧、豆包、DeepSeek、Kimi、腾讯元宝、即梦 AI、剪映、夸克等热门应用。
-
-为什么分两段？第一段是你平时打开的 App 和网站本身，第二段是这些 App 背后用的图片、视频、接口服务器。只加第一段的话，App 能打开，但里面的图片视频可能还是走外国 IP，又慢又卡；两段一起加才完整。
+每套规则都放在自己的文件夹里（比如 `rule/egern/China/`），点进文件夹能看到这套规则的说明页。Loon 版在 `rule/loon/` 里，Spotify 29 条、TikTok 33 条、Telegram 44 条，其余一样。点开每条规则，看里面包含哪些应用。
 
 <details>
-<summary>China 都包括谁？点开看</summary>
+<summary>China（546 条）</summary>
 
-微信、QQ、淘宝、天猫、京东、拼多多、美团、饿了么、抖音、快手、哔哩哔哩、爱奇艺、优酷、腾讯视频、芒果 TV、知乎、微博、百度、阿里云、12306、滴滴、高德地图、银行、运营商、政府网站、快递，等等。
+应用 / 网站（438 条）：微信、QQ、QQ邮箱、QQ音乐、腾讯视频、腾讯微云、腾讯文档、腾讯会议、微信支付、财付通、腾讯应用宝、Foxmail、搜搜、起点中文网、红袖添香、起点读书、阅文集团、腾讯元宝、腾讯、淘宝、天猫、1688、闲鱼、支付宝、阿里巴巴、阿里云、阿里云 DNS、速卖通、钉钉、饿了么、高德地图、优酷、土豆网、虾米音乐、万网、夸克、百度、百度地图、百度贴吧、百度智能云、百度短链接、百度糯米、hao123、爱奇艺、千千音乐、抖音、今日头条、今日头条号、火山小视频、火山直播、飞聊、飞书、豆包、剪映、即梦AI、红果短剧、悟空问答、字节跳动、网易、网易邮箱、网易云音乐、网易云、有道、LOFTER、网易易盾、网易考拉、京东、京东支付、拍拍网、美团、美团外卖、大众点评、小米、金山、WPS、金山词霸、金山云、多看阅读、快手、哔哩哔哩、哔哩哔哩游戏、12306、1号店、Abercrombie & Fitch、BootCSS、DeepSeek、EMS、Element Plus、FIR 应用分发、Gitee、HelpShift、Hollister、IPIP、IT168、IT之家、Kimi、KnewOne、Mob、OneDNS、Outlook、PPTV、Snapdrop、StartSSL、Steam、Steam（完美世界）、Tebex、UC浏览器、Weico、YY直播、Zealer、realme、vivo、xip.io、一下科技、一加、下厨房、东方网、中信银行、中华网、中国农业银行、中国国际广播电台、中国天气、中国日报、中国气象局、中国电信、中国移动、中国网、中国联通、中国邮政、中国邮政储蓄银行、中国银联、中央人民广播电台、中搜、中文域名（.中国）、中文域名（.公司）、中文域名（.网络）、中通快递、乐居、书迷楼、人人影视、人人影视字幕组、什么值得买、保利威、全民直播、凤凰网、加网、华军软件园、南方周末、博客园、印象笔记、去哪儿、又拍云、和风天气、喜茶、喜马拉雅、嘀哩嘀哩、圆通速递、坚果云、墨迹天气、多玩游戏、天天美剧、天气、天气网、天涯社区、天眼查、太合音乐、央视网、好奇心日报、威锋网、字幕组、宜搜、小红书、少数派、幕布、开源中国、开课吧、微博、微店、微软、快递100、思否、我买网、战旗直播、房天下、所有 .cn 域名、招商银行、拼多多、搜库、搜狐、搜狗、摩拜单车、斗鱼、新华网、新浪、新浪云、易宝支付、星巴克、智联招聘、极验、永硕E盘、海底捞、滴滴出行、澎湃新闻、火车票网、猫眼电影、环球网、瑞幸咖啡、瓜子二手车、申通快递、电影天堂、界面新闻、看看、知乎、秀米、科大讯飞、秒拍、简书、糗事百科、索尼、美丽说、美图、美拍、联想、聚美优品、肯德基、腾讯 DNSPod、色影无忌、芒果TV、花椒直播、苏宁易购、荔枝FM、荣耀、菜鸟教程、落网、蓝奏云、蓝点网、蘑菇街、虎扑、虎牙直播、观察者网、豆瓣、豌豆荚、赶集网、车168、迅雷、途牛、酷我音乐、酷狗音乐、铁血网、雪球、音悦台、韵达快递、顺丰速运、魅族、麦当劳。
+
+CDN / 后台 / 接口（108 条）：1号店图片、CloudXNS、QQ/微信头像 CDN、QQ头像/图片、YY静态、中国联通沃商店云、亚马逊图片、京东云、京东图片 CDN、今日头条 API、今日头条 CDN、今日头条云、今日头条图片、优酷图片、凤凰网图片、友盟云、咪咕云、咪咕视频、哔哩哔哩、哔哩哔哩 API、哔哩哔哩视频、天气网静态、央视网图片、字幕组 API、字节跳动、字节跳动 API、字节跳动 CDN、字节跳动 DNS、字节跳动图片、字节跳动静态、小米图片、微博 CDN、抖音 CDN、抖音图片、抖音视频点播、抖音静态、搜房网图片、搜狗 CDN、斗鱼 CDN、新浪图片、淘宝 CDN、淘宝/天猫 CDN、淘宝缓存、爱奇艺图片、百度图片、百度智能云对象存储、百度静态、百度静态 CDN、知乎图片、简书 API、腾讯云、腾讯云 CDN、腾讯图片 CDN、蘑菇街 CDN、虎嗅网 CDN、赶集网静态、迅雷 CDN、途牛 CDN、阿里云、阿里云 CDN、阿里图片 CDN、饿了么 CDN。
+
+未识别的域名：13th.tech、71.am、8686c.com、algocasts.io、allawnfs.com、allawno.com、allawntech.com、asklink.com、baomitu.com、chaipip.com、chinaplay.store、cn163.net、cnmstl.net、dhrest.com、fantasy.tv、feelgood.cn、frdic.com、fresh-ideas.cc、ghpym.com、go2map.com、godic.net、gwdang.com、gzlzfm.com、haibian.com、hitv.com、hrtsea.com、id6.me、igamecj.com、im9.com、ixdzs.com、jomodns.com、ksosoft.com、kspkg.com、laomo.me、lemicp.com、letitfly.me、lxdns.com、moke.com、mpyit.com、nruan.com、ourdvs.com、paragon.com、pdfwifi.com、qbox.me、qin.io、qy.net、repaik.com、ruguoapp.com、sandai.net、simplecd.me、snwx.com、tencentmind.com、th-sjy.com、tianyaui.com、tietuku.com、tmiaoo.com、udache.com、uxengine.net、xdrig.com、xiaojukeji.com、xslb.net、yach.me、zhangzishi.cc、zhenguanyu.biz、zhenguanyu.com、zhuihd.com、hc-cdn.com、mmstat.com、smtcdns.com、smtcdns.net、00cdn.com、71edge.com、88cdn.com、appsimg.com、cdnmama.com、chuimg.com、dxycdn.com、edgesrv.com、fengkongcloud.com、geilicdn.com、jmstatic.com、kanimg.com、msstatic.com、p2cdn.com、st.dl.bscstorage.net、st.dl.eccdnx.com、st.dl.pinyuncloud.com、wscdns.com、xhscdn.com、xmcdn.com、ydstatic.com、yunjiasu-cdn.net、yximgs.com、zjcdn.com。
+
+</details>
+
+<details>
+<summary>Google（31 条）</summary>
+
+谷歌搜索、Gmail、YouTube、YouTube Music、Google云端硬盘、Google文档、Google地图、Google Play、Google翻译、Google学术、Google新闻、Google相册、Google日历、Google Meet、Gemini、谷歌账号、谷歌API、谷歌图片、谷歌用户内容、谷歌静态、YouTube视频、YouTube图片。
+
+</details>
+
+<details>
+<summary>Apple（22 条）</summary>
+
+苹果、iCloud、App Store、iTunes、Apple Music、Apple TV、苹果支持、苹果开发者、CloudKit、iCloud内容、苹果静态、苹果CDN、苹果图片、苹果DNS。
+
+</details>
+
+<details>
+<summary>Microsoft（21 条）</summary>
+
+微软、Outlook、Hotmail、Office、Office 365、Microsoft 365、OneDrive、Windows、Windows更新、微软在线服务、SharePoint、MSN、必应搜索、Azure、微软账号、微软支持、微软学习、微软Live。
+
+</details>
+
+<details>
+<summary>SausageMan（15 条）</summary>
+
+香肠派对、TapTap、TapTap直播SDK、心动网络、腾讯云。
+
+未识别的域名：my-imcloud.com、imcloud.com。
+
+</details>
+
+<details>
+<summary>AI_Part（72 条）</summary>
+
+ChatGPT、Sora、OpenAI、Claude、Anthropic、MCP（模型上下文协议）、Meta AI、Muse、Llama、Meta、Grok、Grokipedia、xAI、Gemini、Bard、Google AI、Google AI Studio、Google Cloud AI、Google MakerSuite、Google生成式AI、DeepMind、Vertex AI、Google。
+
+未识别的域名：crixet.com。
+
+</details>
+
+<details>
+<summary>Spotify（28 条）</summary>
+
+Spotify（主站、音频 CDN、图片 CDN、短链接 spoti.fi、招聘、新闻、设计、图表、Spotify Codes、Spotify for Brands）。
+
+另外还有进程名 spotify、2 个服务器 IP（104.154.127.126、35.186.224.47）、通配符 Spotify*。Loon 版 29 条。
+
+</details>
+
+<details>
+<summary>TikTok（32 条）</summary>
+
+TikTok、TikTok Music、Musical.ly、MarsCode、Trae、字节跳动。
+
+另外还有进程名 tiktok、tiktokcdn、通配符 TikTok*。Loon 版 33 条。
+
+</details>
+
+<details>
+<summary>GitHub（31 条）</summary>
+
+GitHub、GitHub Copilot、GitHub Pages、GitHub.dev、Atom、Dependabot、npm、GitHub Container Registry、GitHub Status、GitHub Universe、GitHub社区、GitHub Blog、GitHub商店、开源指南、RawGit、RawGitHub、GitHub App、GitHub Hackathon、GitHub Next、GitHub Preview、My Octocat。
+
+另外还有进程名 github。
+
+</details>
+
+<details>
+<summary>Speedtest（9 条）</summary>
+
+Speedtest、Speedtest Custom、Fast.com、Cloudflare测速、Ookla。
+
+另外还有进程名 speedtest、通配符 SpeedTest*。
+
+未识别的域名：speed.dler.io。
+
+</details>
+
+<details>
+<summary>Telegram（34 条）</summary>
+
+Telegram、Telegraph、Telegram Desktop、Telegram下载、Swiftgram、Telega、Telegram Comments、Telegram Contest、Telegram Quiz、Telesco.pe。
+
+另外还有进程名 nicegram、6 个 IPv4 段、4 个 IPv6 段。Loon 版 44 条。
+
+未识别的域名：mbrx.app、stel.com、usercontent.dev、api.imem.app。
+
+</details>
+
+<details>
+<summary>GeoIP_CN（1 条）</summary>
+
+没有应用，只有一条 GEOIP CN 规则（中国 IP 段）。
+
+</details>
 
 </details>
 
@@ -196,7 +289,6 @@ China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段
 
 ---
 
-</details>
 
 <details>
 <summary><b>自动更新</b></summary>
