@@ -27,8 +27,8 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 | GeoIP 库 | 6,566 条 CIDR，约 132KB，覆盖 357,421,607 个中国 IPv4 地址 |
 | 自动检查 | 每 6 小时，0:00、6:00、12:00、18:00 |
 
-### 🌐 规则集
-
+<details>
+<summary><b>规则集</b></summary>
 
 | 规则 | 条数 | 说明 |
 | --- | --- | --- |
@@ -45,9 +45,10 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 | Telegram | 34 | Telegram 及第三方客户端 |
 | GeoIP_CN | 1 | 中国 IP 段 |
 
+</details>
 
 <details>
-<summary><b>📦 文件说明</b></summary>
+<summary><b>文件说明</b></summary>
 
 
 每套规则现在都放在自己的文件夹里（比如 `rule/egern/China/`），点进文件夹能看到这套规则的说明页，里面有这套规则是干什么的、多少条、怎么用和链接。
@@ -121,7 +122,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段
 
 
 <details>
-<summary><b>🖼️ 图标</b></summary>
+<summary><b>图标</b></summary>
 
 
 图标都放在顶层 `icon/` 文件夹里，都是从别人家搬过来的原图（主要来自 [ddgksf2013/Icon](https://github.com/ddgksf2013/Icon) 和 [Koolson/Qure](https://github.com/Koolson/Qure)）。文件夹里现在只有 13 张预览图（preview-01 到 preview-13），单个应用图标已经删了，只留预览图给你看效果。
@@ -200,7 +201,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段
 
 
 <details>
-<summary><b>⚡ 一键添加进软件</b></summary>
+<summary><b>一键添加进软件</b></summary>
 
 
 点下面表格里的链接，就会直接跳进 Egern / QX，问你要不要添加，点确认就加进去了，不用自己复制链接再粘贴。
@@ -231,7 +232,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段
 
 
 <details>
-<summary><b>🚀 怎么用</b></summary>
+<summary><b>怎么用</b></summary>
 
 
 ### <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/42/12/5d/42125db1-6a4f-de58-cf03-72bf8e2e4354/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" width="32" height="32" alt="Egern"> Egern
@@ -277,7 +278,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段
 
 
 <details>
-<summary><b>🔄 自动更新</b></summary>
+<summary><b>自动更新</b></summary>
 
 
 | 任务 | 频率 |
