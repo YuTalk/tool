@@ -143,51 +143,6 @@ https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/GeoIP_CN/GeoIP_CN.
 </details>
 
 <details>
-<summary><b>怎么用</b></summary>
-
-
-### <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/42/12/5d/42125db1-6a4f-de58-cf03-72bf8e2e4354/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" width="32" height="32" alt="Egern"> Egern
-
-
-1. **DNS 转发**：设置 → DNS 转发 → 添加规则集，粘贴 China 的链接，策略选国内。
-
-   ```
-   https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/China/China.yaml
-   ```
-
-   DNS 转发是查域名用的：国内域名问国内 DNS，拿到国内 IP；国外域名问国外 DNS。
-2. **分流**：设置 → 分流 → 添加规则集，粘贴对应链接，策略按上面表格选。分流是决定流量走哪条路的：China、Apple、SausageMan 走 DIRECT 直连；Google、Microsoft、AI_Part 走代理节点组。也可以直接点上面「一键添加」表格里的绿色按钮，不用自己复制链接。
-3. **GeoIP 库**：设置 → GeoIP 数据库 → 粘贴 GeoIpCN.mmdb 的链接，把默认的库换成这个自建库。
-
-   ```
-   https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
-   ```
-
-   自建库只含中国段，判断更准。
-4. **分流留一条**：`GEOIP CN → DIRECT` 放倒数第二，`默认 → 兜底策略` 放最后。倒数第二的意思是：前面所有域名规则都没匹配上，才轮到 GEOIP 判断 IP 是不是中国的；是中国的走直连，不是的走默认代理。
-
-> ⚠️ GEOIP CN 一定放倒数第二，别放第一，不然每个域名都要先解析 IP，费电又变慢。域名规则不用查 IP，直接按域名匹配，又快又省电，只有没匹配上的流量才需要查 IP。
-
-### <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/84/ae/50/84ae5055-dc8c-2f6e-cea6-8b543f72ae98/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg" width="32" height="32" alt="Quantumult X"> Quantumult X
-
-
-1. 分流里加远程规则，粘贴上面表格里的 QX 版链接，策略按表格选。也可以直接点表格里的蓝色按钮，会跳进 QX 问你要不要添加。
-2. 分流留一条：`geoip, cn, direct` 放倒数第二，`final` 放最后。QX 没有自建 .mmdb 库，靠 GeoIP_CN.list 这条远程规则判断中国 IP。
-3. QX 不能用自建 .mmdb 库，用它自带的就行。QX 也没有 DNS 转发功能，DNS 就靠分流本身，国内域名走直连、国外走代理，效果是一样的。
-4. 注意：QX 每条规则后面必须带策略，没有策略会报 Invalid Line，这个仓库的 QX 版每条都带了策略，直接用就行。
-
-### <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/92/4e/35/924e359d-e682-7b80-372b-920fdb8c6d6c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg" width="32" height="32" alt="Loon"> Loon
-
-
-1. 分流里加远程规则，粘贴 `rule/loon/` 文件夹里对应那套的 `.list` 链接，每条规则自带策略，不用自己选：China、Apple、SausageMan、GeoIP_CN 是 DIRECT，Google、Microsoft、AI_Part、Spotify、TikTok、GitHub、Speedtest、Telegram 是 PROXY。
-2. 分流留一条：`GEOIP,CN,DIRECT` 放倒数第二，`FINAL,兜底后备策略` 放最后。Loon 没有自建 .mmdb 库，靠 GeoIP_CN.list 这条远程规则判断中国 IP。
-3. Loon 的 DoH 流量模式选 Rule，就相当于 Egern 的 DNS 转发，国内域名走国内 DNS，国外走国外 DNS。
-
----
-
-</details>
-
-<details>
 <summary><b>文件说明</b></summary>
 
 
