@@ -1,6 +1,6 @@
-# 最后修改：2026-11-25 12:23
+# 最后修改：2026-11-27 18:36
 # 中国常用域名 - 经常用到的
-# 总共 546 条
+# 总共 545 条
 # 用法：QX 分流 -> direct
 # 第一段：应用/网站域名
 host-suffix, baidu.com, direct
@@ -397,7 +397,6 @@ host-suffix, xiami.net, direct
 host-suffix, xiaohongshu.com, direct
 host-suffix, xiaojukeji.com, direct
 host-suffix, ximalaya.com, direct
-host-suffix, xip.io, direct
 host-suffix, xitek.com, direct
 host-suffix, xiumi.us, direct
 host-suffix, xn--55qx5d, direct

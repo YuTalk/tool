@@ -18,8 +18,8 @@ China 规则（中国常用域名）由本仓库每 6 小时自动检查更新�
 
 | 类型 | 数量(条) |
 | ---- | ---- |
-| DOMAIN-SUFFIX | 546 |
-| TOTAL | 546 |
+| DOMAIN-SUFFIX | 545 |
+| TOTAL | 545 |
 
 ## Loon
 

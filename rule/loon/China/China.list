@@ -1,6 +1,6 @@
-# 最后修改：2026-11-25 12:23
+# 最后修改：2026-11-27 18:36
 # 中国常用域名 - 经常用到的
-# 总共 546 条
+# 总共 545 条
 # 用法：Loon 分流 -> DIRECT
 # 第一段：应用/网站域名
 DOMAIN-SUFFIX,baidu.com,DIRECT
@@ -397,7 +397,6 @@ DOMAIN-SUFFIX,xiami.net,DIRECT
 DOMAIN-SUFFIX,xiaohongshu.com,DIRECT
 DOMAIN-SUFFIX,xiaojukeji.com,DIRECT
 DOMAIN-SUFFIX,ximalaya.com,DIRECT
-DOMAIN-SUFFIX,xip.io,DIRECT
 DOMAIN-SUFFIX,xitek.com,DIRECT
 DOMAIN-SUFFIX,xiumi.us,DIRECT
 DOMAIN-SUFFIX,xn--55qx5d,DIRECT

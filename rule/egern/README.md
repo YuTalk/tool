@@ -18,7 +18,7 @@ Egern 用的规则，12 套，每套一个文件夹（点进文件夹能看到�
 
 | 规则集 | 数量(条) |
 | ---- | ---- |
-| China | 546 |
+| China | 545 |
 | <img src="https://cdn.simpleicons.org/google/4285F4" width="20" height="20" alt="Google"> Google | 31 |
 | <img src="https://cdn.simpleicons.org/apple" width="20" height="20" alt="Apple"> Apple | 22 |
 | <img src="https://www.microsoft.com/favicon.ico" width="20" height="20" alt="Microsoft"> Microsoft | 21 |
@@ -30,9 +30,9 @@ Egern 用的规则，12 套，每套一个文件夹（点进文件夹能看到�
 | <img src="https://cdn.simpleicons.org/github" width="20" height="20" alt="GitHub"> GitHub | 31 |
 | <img src="https://cdn.simpleicons.org/speedtest/141526" width="20" height="20" alt="Speedtest"> Speedtest | 9 |
 | <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="20" height="20" alt="Telegram"> Telegram | 34 |
-| TOTAL | 842 |
+| TOTAL | 841 |
 
-其中域名条目 841 条（snssdk.com 和 gemini.google.com 在两个规则集里各出现一次，去重后 839 条，和主 README 的域名总数一致），GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
+其中域名条目 840 条（snssdk.com 和 gemini.google.com 在两个规则集里各出现一次，去重后 838 条，和主 README 的域名总数一致），GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
 
 ## Egern
 
@@ -46,7 +46,7 @@ Egern 用的规则，12 套，每套一个文件夹（点进文件夹能看到�
 - DNS 转发里 China.yaml 配国内 DNS（223.5.5.5、119.29.29.29），没配 DNS 转发的域名会走国外 DNS。
 
 #### 规则链接
-**China.yaml（546 条）**
+**China.yaml（545 条）**
 
 原始链接：
 
