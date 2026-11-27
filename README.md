@@ -240,29 +240,36 @@ Telegram、Telegraph、Telegram Desktop、Telegram下载、Swiftgram、Telega、
 | --- | --- |
 | 仓库检查 | 每 6 小时 |
 
-每天 0:00、6:00、12:00、18:00 各检查一次。这个检查不是仓库自带的 GitHub Actions，仓库里没有 .github/workflows，是外部定时任务在跑，有变化才推到仓库。
+每天 0:00、6:00、12:00、18:00 各检查一次。这个检查不是仓库自带的 GitHub Actions，仓库里没有 .github/workflows，是外部定时任务在跑。
+
+每次检查分三遍，三遍都通过才推到仓库：
+- 第一遍：发现变化、动手改、记下要问主人的事。
+- 第二遍：全核对一遍。
+- 第三遍：独立审计，不看前两遍的记录，直接从仓库 API 重拉文件复核条数、域名、三格式一致、README 数字和链接、raw 链接能打开。
+三遍都通过才推、发邮件、发新版；没变化就不推、不发邮件、不发新版。
 
 每次检查做四件事：
 
-1. **规则**：每套规则去上游拉最新版，对比有没有新增或失效的域名。
-   - China：ACL4SSR 的 ChinaDomain.list + geolocation-cn
-   - Google：手选（谷歌官方域名/CDN，不照搬上游大表）
-   - Apple：手选（苹果官方域名/CDN），交叉核对 fmz200 的 AppleAll.list 和 blackmatrix7 的 Apple（只核对、不合进来；AppleAll 1623 行太大）
-   - Microsoft：手选（微软官方域名/CDN）
-   - SausageMan：手选（香肠派对官方域名/CDN）
-   - AI_Part：本地精选 5 个外国 AI，交叉核对 fmz200 的 AI.list 和 blackmatrix7 的 Claude、Gemini 列表
-   - Spotify：blackmatrix7/ios_rule_script Surge 版
-   - TikTok：blackmatrix7 Surge 版，fmz200 交叉核对
-   - GitHub：blackmatrix7 Surge 版
-   - Speedtest：blackmatrix7 Surge 版
-   - Telegram：blackmatrix7 Surge 版
-   - GeoIP_CN：fmz200/wool_scripts 的 GeoIP_CN.list，交叉核对 blackmatrix7
-   有 fmz200 和 blackmatrix7 两家列表的，都两家交叉核对（AI_Part、Apple、TikTok、GeoIP_CN）；只有 blackmatrix7 有的（Spotify、GitHub、Speedtest、Telegram），就跟 blackmatrix7。fmz200 没有 Spotify、GitHub、Speedtest、Telegram 的列表，没法交叉核对。上游新增直接同步；失效的域名直接删。Egern 版和 QX 版同步改。
+1. **规则**：每套规则去上游拉最新版，对比有没有新增或失效的域名。上游链接：
+   - China：[ACL4SSR ChinaDomain.list](https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list) + [geolocation-cn](https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/geolocation-cn)
+   - Google：手选，没有上游链接（谷歌官方域名/CDN，不照搬上游大表）
+   - Apple：手选，没有上游链接；交叉核对 [fmz200 AppleAll.list](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/AppleAll.list) 和 [blackmatrix7 Apple](https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple.list)（只核对、不合进来）
+   - Microsoft：手选，没有上游链接（微软官方域名/CDN）
+   - SausageMan：手选，没有上游链接（香肠派对官方域名/CDN）
+   - AI_Part：本地精选 5 个外国 AI，交叉核对 [fmz200 AI.list](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/AI.list)、[blackmatrix7 Claude](https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Claude/Claude.list)、[blackmatrix7 Gemini](https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Gemini/Gemini.list)
+   - Spotify：[blackmatrix7 Spotify](https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Spotify/Spotify.list)
+   - TikTok：[blackmatrix7 TikTok](https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TikTok/TikTok.list)，交叉核对 [fmz200 TikTok.list](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/TikTok.list)
+   - GitHub：[blackmatrix7 GitHub](https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list)
+   - Speedtest：[blackmatrix7 Speedtest](https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Speedtest/Speedtest.list)
+   - Telegram：[blackmatrix7 Telegram](https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list)
+   - GeoIP_CN：[fmz200 GeoIP_CN.list](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/GeoIP_CN.list)，交叉核对 blackmatrix7
+   有 fmz200 和 blackmatrix7 两家列表的，都两家交叉核对（AI_Part、Apple、TikTok、GeoIP_CN）；只有 blackmatrix7 有的（Spotify、GitHub、Speedtest、Telegram），就跟 blackmatrix7。fmz200 没有 Spotify、GitHub、Speedtest、Telegram 的列表，没法交叉核对。
+   失效域名怎么定：用四家 DoH（谷歌、Cloudflare、阿里、腾讯 DNSPod doh.pub）查 A 记录和 AAAA 记录，共 7 项；7 项全 SERVFAIL，或任一项 NXDOMAIN，才算失效、直接删；四家结果不一致的放观察名单，不删。Egern 版和 QX 版同步改。
 2. **GeoIP 库**：从 8 个来源（17mon、APNIC、chnroutes2、Loyalsoldier、metowolf、gaoyifan、clang、missuo）拉最新 IP 段，合并去重后重建 GeoIpCN.mmdb（IPv4 版），验证通过才推。
 3. **README**：检查里面的链接和条数是不是还对得上仓库现状，对不上就改对。
 4. **图标**：13 张预览图都在不在，链接能不能打开。
 
-文件名和链接固定不变，只更新内容。新增域名要经过主人同意才加，失效的直接删。每次有变化都会发邮件通知，没变化就不发。
+文件名和链接固定不变，只更新内容。新增域名要经过主人同意才加，失效的直接删。有变化就推到仓库、发邮件通知、发新版（版本号加一）；没变化就不推、不发邮件、不发新版。
 
 ---
 
