@@ -247,7 +247,7 @@ Telegram、Telegraph、Telegram Desktop、Telegram下载、Swiftgram、Telega、
 1. **规则**：每套规则去上游拉最新版，对比有没有新增或失效的域名。
    - China：ACL4SSR 的 ChinaDomain.list + geolocation-cn
    - Google：手选（谷歌官方域名/CDN，不照搬上游大表）
-   - Apple：手选（苹果官方域名/CDN；fmz200 的 AppleAll 1623 行太大，不合进来）
+   - Apple：手选（苹果官方域名/CDN），交叉核对 fmz200 的 AppleAll.list 和 blackmatrix7 的 Apple（只核对、不合进来；AppleAll 1623 行太大）
    - Microsoft：手选（微软官方域名/CDN）
    - SausageMan：手选（香肠派对官方域名/CDN）
    - AI_Part：本地精选 5 个外国 AI，交叉核对 fmz200 的 AI.list 和 blackmatrix7 的 Claude、Gemini 列表
@@ -256,8 +256,8 @@ Telegram、Telegraph、Telegram Desktop、Telegram下载、Swiftgram、Telega、
    - GitHub：blackmatrix7 Surge 版
    - Speedtest：blackmatrix7 Surge 版
    - Telegram：blackmatrix7 Surge 版
-   - GeoIP_CN：fmz200/wool_scripts 的 GeoIP_CN.list
-   上游新增直接同步；失效的域名直接删。Egern 版和 QX 版同步改。
+   - GeoIP_CN：fmz200/wool_scripts 的 GeoIP_CN.list，交叉核对 blackmatrix7
+   有 fmz200 和 blackmatrix7 两家列表的，都两家交叉核对（AI_Part、Apple、TikTok、GeoIP_CN）；只有 blackmatrix7 有的（Spotify、GitHub、Speedtest、Telegram），就跟 blackmatrix7。fmz200 没有 Spotify、GitHub、Speedtest、Telegram 的列表，没法交叉核对。上游新增直接同步；失效的域名直接删。Egern 版和 QX 版同步改。
 2. **GeoIP 库**：从 8 个来源（17mon、APNIC、chnroutes2、Loyalsoldier、metowolf、gaoyifan、clang、missuo）拉最新 IP 段，合并去重后重建 GeoIpCN.mmdb（IPv4 版），验证通过才推。
 3. **README**：检查里面的链接和条数是不是还对得上仓库现状，对不上就改对。
 4. **图标**：13 张预览图都在不在，链接能不能打开。
