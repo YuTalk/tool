@@ -17,8 +17,7 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 ![更新](https://img.shields.io/badge/自动更新-每%206%20小时-blue?style=flat-square)
 ![IPv4](https://img.shields.io/badge/GeoIP-IPv4-orange?style=flat-square)
 
-<details>
-<summary><b>一眼看懂</b></summary>
+## 内容预览
 
 | 项目 | 数量 |
 | --- | --- |
@@ -27,8 +26,6 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 | 域名总数 | 839 条（去重后，12 套合计 842 条，2 个域名跨套重复） |
 | GeoIP 库 | 6,566 条 CIDR，约 132KB，覆盖 357,421,607 个中国 IPv4 地址 |
 | 自动检查 | 每 6 小时，0:00、6:00、12:00、18:00 |
-
-</details>
 
 <details>
 <summary><b>规则集</b></summary>
