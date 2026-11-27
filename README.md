@@ -45,81 +45,24 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 | Telegram | 34 | Telegram 及第三方客户端 |
 | GeoIP_CN | 1 | 中国 IP 段 |
 
-</details>
+下面是 Egern 的 12 套规则链接，点代码框右上角复制，一次全拷走：
 
-<details>
-<summary><b>文件说明</b></summary>
-
-
-每套规则现在都放在自己的文件夹里（比如 `rule/egern/China/`），点进文件夹能看到这套规则的说明页，里面有这套规则是干什么的、多少条、怎么用和链接。
-
-另外还有一份 Loon 版，在 `rule/loon/` 文件夹里，内容和上面基本一致，只是格式换成 Loon 的 `DOMAIN-SUFFIX,域名,策略`，策略只有两种：DIRECT（China、Apple、SausageMan、GeoIP_CN）、PROXY（Google、Microsoft、AI_Part、Spotify、TikTok、GitHub、Speedtest、Telegram）。另外 Loon 版还多了进程名、IP 段等规则，所以有 3 套条数比上面多：Spotify 29 条、TikTok 33 条、Telegram 44 条。
-
-China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段是 CDN / 后台 / 接口域名 **108 条**，覆盖微信、QQ、淘宝、京东、拼多多、美团、饿了么、抖音、哔哩哔哩、爱奇艺、优酷、知乎、微博、百度、阿里、12306、银行、运营商、政府、快递……还有红果短剧、豆包、DeepSeek、Kimi、腾讯元宝、即梦 AI、剪映、夸克等热门应用。
-
-为什么分两段？第一段是你平时打开的 App 和网站本身，第二段是这些 App 背后用的图片、视频、接口服务器。只加第一段的话，App 能打开，但里面的图片视频可能还是走外国 IP，又慢又卡；两段一起加才完整。
-
-<details>
-<summary>China 都包括谁？点开看</summary>
-
-微信、QQ、淘宝、天猫、京东、拼多多、美团、饿了么、抖音、快手、哔哩哔哩、爱奇艺、优酷、腾讯视频、芒果 TV、知乎、微博、百度、阿里云、12306、滴滴、高德地图、银行、运营商、政府网站、快递，等等。
+```
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/China/China.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Google/Google.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Apple/Apple.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Microsoft/Microsoft.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/SausageMan/SausageMan.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/AI_Part/AI_Part.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Spotify/Spotify.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/TikTok/TikTok.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/GitHub/GitHub.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Speedtest/Speedtest.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Telegram/Telegram.yaml
+https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/GeoIP_CN/GeoIP_CN.yaml
+```
 
 </details>
-
-<details>
-<summary>AI_Part 都包括谁？点开看</summary>
-
-- GPT / OpenAI（19 条）：ChatGPT 聊天、Sora 视频、OpenAI 官网、API 接口等
-- Claude / Anthropic（20 条）：Claude 聊天、Claude 官网、App 等
-- Muse / Meta AI（7 条）：meta.ai、muse.ai、llama.com 等，Meta 的 AI 聊天
-- Grok / xAI（3 条）：Grok 聊天、x.ai、Grokipedia 百科等
-- Gemini / Google（23 条）：Gemini 聊天、AI Studio、Vertex AI、DeepMind 等
-
-五个 AI 都在国外，都要走代理。meta.com 故意没加，因为它会把 Facebook、Instagram、WhatsApp 也拉进来。
-
-</details>
-
-<details>
-<summary>每条规则是干什么的？点开看</summary>
-
-- **China（546 条）**：国内常用的应用和网站域名，加上它们的 CDN、后台、接口域名。分两段：第一段是应用和网站本身（438 条），第二段是这些应用背后的 CDN、图片、视频、接口域名（108 条），两段要一起用才完整。Egern 里分流 → DIRECT，流量直接走，不绕代理。这样国内 App 打开快、不卡，视频图片也快。另外里面有一条单独的 cn，匹配所有 .cn 结尾的域名：不管是国内的还是国外服务用的 .cn 域名，都走直连、问国内 DNS。这是特意留的，用来覆盖没单独列出来的 .cn 域名。
-- **Google（31 条）**：谷歌全家桶，谷歌搜索、Gmail、YouTube、Google Drive、Google 地图、Google Play、谷歌账号登录等。谷歌在国内打不开，必须走代理，策略选谷歌服务（也就是你的代理节点组）。
-- **Apple（22 条）**：苹果系统服务，App Store、iCloud、Apple ID、系统更新、推送通知、Siri、Apple Music 等。苹果的服务器在国内有节点，走直连最快最稳，分流 → DIRECT。
-- **Microsoft（21 条）**：微软服务，Outlook 邮箱、微软账号登录、OneDrive、Office 等。微软的服务器在国外，走直连慢甚至打不开，要走代理，策略选微软服务。
-- **SausageMan（15 条）**：香肠派对（吃鸡手游）加 TapTap 相关域名，游戏服务器、TapTap 下载、TapTap 账号、游戏内嵌网页等。游戏服务器在国内，走直连延迟最低，分流 → DIRECT。
-- **AI_Part（72 条）**：只包括你常用的五个 AI，Muse（Meta AI，7 条）、GPT / ChatGPT（OpenAI，19 条）、Claude（Anthropic，20 条）、Grok（xAI，3 条）、Gemini（Google，23 条）。五个 AI 都在国外，必须走代理，策略选人工智能。注意：meta.com 没加进去，因为它太宽，会把 Facebook、Instagram、WhatsApp 也拉进 AI 组。
-- **Spotify（28 条）**：Spotify 音乐，官网、App、歌单、歌词、图片和音频 CDN（spotifycdn、scdn、pscdn、akamaized、fastly）。Spotify 在国内打不开，必须走代理，策略选 Spotify。
-- **TikTok（32 条）**：抖音国际版 TikTok，App、视频 CDN、直播、Trae AI 编程等。都在国外，必须走代理，策略选 TikTok。其中 ttwstatic.com 和 tiktokcdn 关键词是从 fmz200 的上游同步来的。
-- **GitHub（31 条）**：GitHub 全家，github.com、raw.githubusercontent.com、github.io、ghcr.io、githubassets、npmjs、git.io 等。GitHub 在国内直连慢，走代理最稳，策略选 GitHub。
-- **Speedtest（9 条）**：测速网站，speedtest.net、fast.com、ooklaserver、speed.cloudflare.com 等。测速要走代理才能测出真实的节点速度，策略选 SpeedTest。
-- **Telegram（34 条）**：Telegram，官网、t.me、telegra.ph、telegram.org、下载和 CDN，还有 Telegram 的服务器 IP 段（149.154.160.0/20、91.108.0.0/16 等）。Telegram 在国内打不开，必须走代理，策略选 Telegram。
-- **GeoIP_CN（1 条）**：中国 IP 段列表，只有 1 条规则，内容就是 geoip, cn, direct，Egern、QX、Loon 三个版本都有。QX 没有自建 .mmdb 库，靠这条远程规则判断中国 IP。放在分流倒数第二，外国 IP 走默认代理。
-
-</details>
-
-### GeoIpCN.mmdb（6,566 条 CIDR，约 132KB）
-
-
-只含中国 IPv4，共覆盖 **357,421,607 个地址**，约 132KB，纯 IPv4，不含 IPv6。
-
-这是干什么的？代理软件拿到一个 IP 地址后，要判断这个 IP 是中国的还是外国的，才能决定走直连还是走代理，这个判断就靠 GeoIP 库。库里只装了中国段，外国 IP 查不到中国，返回空，就走代理；中国 IP 查得到，就走直连。所以库里没有外国段是正常的，不是缺数据。
-
-数据来源（5 个来源合并去重，每个来源单独拿出来都不全，合起来才全）：
-
-- 17mon/china_ip_list：国内常用的中国 IP 列表
-- APNIC 中国分配数据（cn|ipv4）：亚太互联网络信息中心分配给中国的 IP 段，最权威
-- chnroutes2：开源的中国路由表
-- Loyalsoldier/geoip CN 文本（仅 IPv4）：Loyalsoldier 维护的中国 IP 文本
-- metowolf/iplist 纯真 CN：纯真 IP 库的中国段
-
-怎么验证？223.5.5.5（阿里 DNS）、119.29.29.29（腾讯 DNS）、114.114.114.114 查出来必须是 CN；8.8.8.8（谷歌 DNS）、1.1.1.1 查出来必须不是 CN。
-
-> 只含中国段，外国 IP 查不到中国，这是对的 —— GEOIP CN 才能把外国流量送去代理。
-
----
-
-</details>
-
 
 <details>
 <summary><b>图标</b></summary>
@@ -199,38 +142,6 @@ China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段
 
 </details>
 
-
-<details>
-<summary><b>一键添加进软件</b></summary>
-
-
-点下面表格里的链接，就会直接跳进 Egern / QX，问你要不要添加，点确认就加进去了，不用自己复制链接再粘贴。
-
-| 软件 | Egern | Quantumult X |
-| --- | --- | --- |
-| China | [![加进 Egern](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square)](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fegern%2FChina%2FChina.yaml&policy=DIRECT) | [![加进 QX](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square)](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FChina%2FChina.list%2C%20tag%3DChina%2C%20force-policy%3Ddirect%22%5D%7D) |
-| Google | [![加进 Egern](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square)](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fegern%2FGoogle%2FGoogle.yaml&policy=%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1) | [![加进 QX](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square)](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FGoogle%2FGoogle.list%2C%20tag%3DGoogle%2C%20force-policy%3D%E8%B0%B7%E6%AD%8C%E6%9C%8D%E5%8A%A1%22%5D%7D) |
-| Apple | [![加进 Egern](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square)](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fegern%2FApple%2FApple.yaml&policy=DIRECT) | [![加进 QX](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square)](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FApple%2FApple.list%2C%20tag%3DApple%2C%20force-policy%3Ddirect%22%5D%7D) |
-| Microsoft | [![加进 Egern](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square)](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fegern%2FMicrosoft%2FMicrosoft.yaml&policy=%E5%BE%AE%E8%BD%AF%E6%9C%8D%E5%8A%A1) | [![加进 QX](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square)](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FMicrosoft%2FMicrosoft.list%2C%20tag%3DMicrosoft%2C%20force-policy%3D%E5%BE%AE%E8%BD%AF%E6%9C%8D%E5%8A%A1%22%5D%7D) |
-| SausageMan | [![加进 Egern](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square)](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fegern%2FSausageMan%2FSausageMan.yaml&policy=DIRECT) | [![加进 QX](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square)](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FSausageMan%2FSausageMan.list%2C%20tag%3DSausageMan%2C%20force-policy%3Ddirect%22%5D%7D) |
-| AI_Part | [![加进 Egern](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square)](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fegern%2FAI_Part%2FAI_Part.yaml&policy=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD) | [![加进 QX](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square)](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FAI_Part%2FAI_Part.list%2C%20tag%3DAI_Part%2C%20force-policy%3D%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%22%5D%7D) |
-| Spotify | [![加进 Egern](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square)](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fegern%2FSpotify%2FSpotify.yaml&policy=Spotify) | [![加进 QX](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square)](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FSpotify%2FSpotify.list%2C%20tag%3DSpotify%2C%20force-policy%3DSpotify%22%5D%7D) |
-| TikTok | [![加进 Egern](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square)](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fegern%2FTikTok%2FTikTok.yaml&policy=TikTok) | [![加进 QX](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square)](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FTikTok%2FTikTok.list%2C%20tag%3DTikTok%2C%20force-policy%3DTikTok%22%5D%7D) |
-| GitHub | [![加进 Egern](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square)](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fegern%2FGitHub%2FGitHub.yaml&policy=GitHub) | [![加进 QX](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square)](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FGitHub%2FGitHub.list%2C%20tag%3DGitHub%2C%20force-policy%3DGitHub%22%5D%7D) |
-| Speedtest | [![加进 Egern](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square)](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fegern%2FSpeedtest%2FSpeedtest.yaml&policy=SpeedTest) | [![加进 QX](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square)](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FSpeedtest%2FSpeedtest.list%2C%20tag%3DSpeedtest%2C%20force-policy%3DSpeedTest%22%5D%7D) |
-| Telegram | [![加进 Egern](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square)](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fegern%2FTelegram%2FTelegram.yaml&policy=Telegram) | [![加进 QX](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square)](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FTelegram%2FTelegram.list%2C%20tag%3DTelegram%2C%20force-policy%3DTelegram%22%5D%7D) |
-| GeoIP_CN | [![加进 Egern](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square)](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fegern%2FGeoIP_CN%2FGeoIP_CN.yaml&policy=DIRECT) | [![加进 QX](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square)](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FGeoIP_CN%2FGeoIP_CN.list%2C%20tag%3DGeoIP_CN%2C%20force-policy%3Ddirect%22%5D%7D) |
-
-> 注意：
-> - 点链接后软件会先弹出来让你确认，策略已经按上面表格填好了，确认就行。
-> - 一键添加的链接里写了策略组名（谷歌服务、微软服务、人工智能、Spotify、TikTok、GitHub、SpeedTest、Telegram、DIRECT），你的配置里要有同名策略组才能直接用；如果没有，先在软件里建好同名策略组，或者点链接后手动改策略。
-> - 如果点链接没反应，先确认 Egern / QX 已经装好了。
-
----
-
-</details>
-
-
 <details>
 <summary><b>怎么用</b></summary>
 
@@ -276,6 +187,78 @@ China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段
 
 </details>
 
+<details>
+<summary><b>文件说明</b></summary>
+
+
+每套规则现在都放在自己的文件夹里（比如 `rule/egern/China/`），点进文件夹能看到这套规则的说明页，里面有这套规则是干什么的、多少条、怎么用和链接。
+
+另外还有一份 Loon 版，在 `rule/loon/` 文件夹里，内容和上面基本一致，只是格式换成 Loon 的 `DOMAIN-SUFFIX,域名,策略`，策略只有两种：DIRECT（China、Apple、SausageMan、GeoIP_CN）、PROXY（Google、Microsoft、AI_Part、Spotify、TikTok、GitHub、Speedtest、Telegram）。另外 Loon 版还多了进程名、IP 段等规则，所以有 3 套条数比上面多：Spotify 29 条、TikTok 33 条、Telegram 44 条。
+
+China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段是 CDN / 后台 / 接口域名 **108 条**，覆盖微信、QQ、淘宝、京东、拼多多、美团、饿了么、抖音、哔哩哔哩、爱奇艺、优酷、知乎、微博、百度、阿里、12306、银行、运营商、政府、快递……还有红果短剧、豆包、DeepSeek、Kimi、腾讯元宝、即梦 AI、剪映、夸克等热门应用。
+
+为什么分两段？第一段是你平时打开的 App 和网站本身，第二段是这些 App 背后用的图片、视频、接口服务器。只加第一段的话，App 能打开，但里面的图片视频可能还是走外国 IP，又慢又卡；两段一起加才完整。
+
+<details>
+<summary>China 都包括谁？点开看</summary>
+
+微信、QQ、淘宝、天猫、京东、拼多多、美团、饿了么、抖音、快手、哔哩哔哩、爱奇艺、优酷、腾讯视频、芒果 TV、知乎、微博、百度、阿里云、12306、滴滴、高德地图、银行、运营商、政府网站、快递，等等。
+
+</details>
+
+<details>
+<summary>AI_Part 都包括谁？点开看</summary>
+
+- GPT / OpenAI（19 条）：ChatGPT 聊天、Sora 视频、OpenAI 官网、API 接口等
+- Claude / Anthropic（20 条）：Claude 聊天、Claude 官网、App 等
+- Muse / Meta AI（7 条）：meta.ai、muse.ai、llama.com 等，Meta 的 AI 聊天
+- Grok / xAI（3 条）：Grok 聊天、x.ai、Grokipedia 百科等
+- Gemini / Google（23 条）：Gemini 聊天、AI Studio、Vertex AI、DeepMind 等
+
+五个 AI 都在国外，都要走代理。meta.com 故意没加，因为它会把 Facebook、Instagram、WhatsApp 也拉进来。
+
+</details>
+
+<details>
+<summary>每条规则是干什么的？点开看</summary>
+
+- **China（546 条）**：国内常用的应用和网站域名，加上它们的 CDN、后台、接口域名。分两段：第一段是应用和网站本身（438 条），第二段是这些应用背后的 CDN、图片、视频、接口域名（108 条），两段要一起用才完整。Egern 里分流 → DIRECT，流量直接走，不绕代理。这样国内 App 打开快、不卡，视频图片也快。另外里面有一条单独的 cn，匹配所有 .cn 结尾的域名：不管是国内的还是国外服务用的 .cn 域名，都走直连、问国内 DNS。这是特意留的，用来覆盖没单独列出来的 .cn 域名。
+- **Google（31 条）**：谷歌全家桶，谷歌搜索、Gmail、YouTube、Google Drive、Google 地图、Google Play、谷歌账号登录等。谷歌在国内打不开，必须走代理，策略选谷歌服务（也就是你的代理节点组）。
+- **Apple（22 条）**：苹果系统服务，App Store、iCloud、Apple ID、系统更新、推送通知、Siri、Apple Music 等。苹果的服务器在国内有节点，走直连最快最稳，分流 → DIRECT。
+- **Microsoft（21 条）**：微软服务，Outlook 邮箱、微软账号登录、OneDrive、Office 等。微软的服务器在国外，走直连慢甚至打不开，要走代理，策略选微软服务。
+- **SausageMan（15 条）**：香肠派对（吃鸡手游）加 TapTap 相关域名，游戏服务器、TapTap 下载、TapTap 账号、游戏内嵌网页等。游戏服务器在国内，走直连延迟最低，分流 → DIRECT。
+- **AI_Part（72 条）**：只包括你常用的五个 AI，Muse（Meta AI，7 条）、GPT / ChatGPT（OpenAI，19 条）、Claude（Anthropic，20 条）、Grok（xAI，3 条）、Gemini（Google，23 条）。五个 AI 都在国外，必须走代理，策略选人工智能。注意：meta.com 没加进去，因为它太宽，会把 Facebook、Instagram、WhatsApp 也拉进 AI 组。
+- **Spotify（28 条）**：Spotify 音乐，官网、App、歌单、歌词、图片和音频 CDN（spotifycdn、scdn、pscdn、akamaized、fastly）。Spotify 在国内打不开，必须走代理，策略选 Spotify。
+- **TikTok（32 条）**：抖音国际版 TikTok，App、视频 CDN、直播、Trae AI 编程等。都在国外，必须走代理，策略选 TikTok。其中 ttwstatic.com 和 tiktokcdn 关键词是从 fmz200 的上游同步来的。
+- **GitHub（31 条）**：GitHub 全家，github.com、raw.githubusercontent.com、github.io、ghcr.io、githubassets、npmjs、git.io 等。GitHub 在国内直连慢，走代理最稳，策略选 GitHub。
+- **Speedtest（9 条）**：测速网站，speedtest.net、fast.com、ooklaserver、speed.cloudflare.com 等。测速要走代理才能测出真实的节点速度，策略选 SpeedTest。
+- **Telegram（34 条）**：Telegram，官网、t.me、telegra.ph、telegram.org、下载和 CDN，还有 Telegram 的服务器 IP 段（149.154.160.0/20、91.108.0.0/16 等）。Telegram 在国内打不开，必须走代理，策略选 Telegram。
+- **GeoIP_CN（1 条）**：中国 IP 段列表，只有 1 条规则，内容就是 geoip, cn, direct，Egern、QX、Loon 三个版本都有。QX 没有自建 .mmdb 库，靠这条远程规则判断中国 IP。放在分流倒数第二，外国 IP 走默认代理。
+
+</details>
+
+### GeoIpCN.mmdb（6,566 条 CIDR，约 132KB）
+
+
+只含中国 IPv4，共覆盖 **357,421,607 个地址**，约 132KB，纯 IPv4，不含 IPv6。
+
+这是干什么的？代理软件拿到一个 IP 地址后，要判断这个 IP 是中国的还是外国的，才能决定走直连还是走代理，这个判断就靠 GeoIP 库。库里只装了中国段，外国 IP 查不到中国，返回空，就走代理；中国 IP 查得到，就走直连。所以库里没有外国段是正常的，不是缺数据。
+
+数据来源（5 个来源合并去重，每个来源单独拿出来都不全，合起来才全）：
+
+- 17mon/china_ip_list：国内常用的中国 IP 列表
+- APNIC 中国分配数据（cn|ipv4）：亚太互联网络信息中心分配给中国的 IP 段，最权威
+- chnroutes2：开源的中国路由表
+- Loyalsoldier/geoip CN 文本（仅 IPv4）：Loyalsoldier 维护的中国 IP 文本
+- metowolf/iplist 纯真 CN：纯真 IP 库的中国段
+
+怎么验证？223.5.5.5（阿里 DNS）、119.29.29.29（腾讯 DNS）、114.114.114.114 查出来必须是 CN；8.8.8.8（谷歌 DNS）、1.1.1.1 查出来必须不是 CN。
+
+> 只含中国段，外国 IP 查不到中国，这是对的 —— GEOIP CN 才能把外国流量送去代理。
+
+---
+
+</details>
 
 <details>
 <summary><b>自动更新</b></summary>
@@ -299,7 +282,6 @@ China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段
 ---
 
 </details>
-
 
 ## 📄 使用说明
 
