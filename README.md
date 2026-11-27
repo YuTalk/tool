@@ -4,7 +4,7 @@
 
 点代码框右上角的复制按钮，粘贴到 Egern 的 GeoIP 数据库设置里。
 
-**IPv4 版**（只含中国 IPv4，6,566 条，约 132KB）：
+**IPv4 版**（只含中国 IPv4，6,566 条，约 135KB）：
 
 ```
 https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
@@ -26,7 +26,7 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 | 规则集 | 12 个（Egern、QX、Loon 各一份，内容基本一致，Loon 版 3 套多几条） |
 | 图标 | 13 个（13 套图标库的预览图，都是从别人家搬过来的原图） |
 | 域名总数 | 839 条（去重后，12 套合计 842 条，2 个域名跨套重复） |
-| GeoIP 库 | 1 个版本：IPv4 版 6,566 条约 132KB |
+| GeoIP 库 | 1 个版本：IPv4 版 6,566 条约 135KB |
 | 自动检查 | 每 6 小时，0:00、6:00、12:00、18:00 |
 
 <details>
@@ -181,9 +181,9 @@ China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段
 
 ### GeoIP 库
 
-**IPv4 版：GeoIpCN.mmdb（6,566 条 CIDR，约 132KB）**
+**IPv4 版：GeoIpCN.mmdb（6,566 条 CIDR，约 135KB）**
 
-只含中国 IPv4，共覆盖 **357,421,607 个地址**，约 132KB。
+只含中国 IPv4，共覆盖 **357,421,607 个地址**，约 135KB。
 
 这是干什么的？代理软件拿到一个 IP 地址后，要判断这个 IP 是中国的还是外国的，才能决定走直连还是走代理，这个判断就靠 GeoIP 库。库里只装了中国段，外国 IP 查不到中国，返回空，就走代理；中国 IP 查得到，就走直连。所以库里没有外国段是正常的，不是缺数据。
 
