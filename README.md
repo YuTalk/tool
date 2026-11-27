@@ -24,7 +24,7 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 | 规则集 | 12 个（Egern、QX、Loon 各一份，内容基本一致，Loon 版 3 套多几条） |
 | 图标 | 13 个（13 套图标库的预览图，都是从别人家搬过来的原图） |
 | 域名总数 | 839 条（去重后，12 套合计 842 条，2 个域名跨套重复） |
-| GeoIP 库 | 6,566 条 CIDR，约 132KB，覆盖 357,421,607 个中国 IPv4 地址 |
+| GeoIP 库 | 5,767 条 CIDR，约 110KB，覆盖 352,239,298 个中国 IPv4 地址 |
 | 自动检查 | 每 6 小时，0:00、6:00、12:00、18:00 |
 
 ### 🌐 规则集
@@ -32,7 +32,7 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 
 | 规则 | 条数 | 说明 |
 | --- | --- | --- |
-| China | 546 | 国内应用 / 网站 + CDN / 后台，Egern DNS 转发 → 国内 |
+| China | 546 | 国内应用 / 网站 + CDN / 后台 |
 | Google | 31 | 谷歌搜索、Gmail、YouTube 等 |
 | Apple | 22 | 苹果系统、商店、iCloud |
 | Microsoft | 21 | Outlook、微软账号 |
@@ -81,11 +81,11 @@ China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段
 <details>
 <summary>每条规则是干什么的？点开看</summary>
 
-- **China（546 条）**：国内常用的应用和网站域名，加上它们的 CDN、后台、接口域名。分两段：第一段是应用和网站本身（438 条），第二段是这些应用背后的 CDN、图片、视频、接口域名（108 条），两段要一起用才完整。Egern 里要加两处：DNS 转发 → 国内，查域名时问国内 DNS，拿到国内 IP；分流 → DIRECT，流量直接走，不绕代理。这样国内 App 打开快、不卡，视频图片也快。另外里面有一条单独的 cn，匹配所有 .cn 结尾的域名：不管是国内的还是国外服务用的 .cn 域名，都走直连、问国内 DNS。这是特意留的，用来覆盖没单独列出来的 .cn 域名。
+- **China（546 条）**：国内常用的应用和网站域名，加上它们的 CDN、后台、接口域名。分两段：第一段是应用和网站本身（438 条），第二段是这些应用背后的 CDN、图片、视频、接口域名（108 条），两段要一起用才完整。Egern 里分流 → DIRECT，流量直接走，不绕代理。这样国内 App 打开快、不卡，视频图片也快。另外里面有一条单独的 cn，匹配所有 .cn 结尾的域名：不管是国内的还是国外服务用的 .cn 域名，都走直连、问国内 DNS。这是特意留的，用来覆盖没单独列出来的 .cn 域名。
 - **Google（31 条）**：谷歌全家桶，谷歌搜索、Gmail、YouTube、Google Drive、Google 地图、Google Play、谷歌账号登录等。谷歌在国内打不开，必须走代理，策略选谷歌服务（也就是你的代理节点组）。
-- **Apple（22 条）**：苹果系统服务，App Store、iCloud、Apple ID、系统更新、推送通知、Siri、Apple Music 等。苹果的服务器在国内有节点，走直连最快最稳，分流 → DIRECT，DNS 也走国内。
+- **Apple（22 条）**：苹果系统服务，App Store、iCloud、Apple ID、系统更新、推送通知、Siri、Apple Music 等。苹果的服务器在国内有节点，走直连最快最稳，分流 → DIRECT。
 - **Microsoft（21 条）**：微软服务，Outlook 邮箱、微软账号登录、OneDrive、Office 等。微软的服务器在国外，走直连慢甚至打不开，要走代理，策略选微软服务。
-- **SausageMan（15 条）**：香肠派对（吃鸡手游）加 TapTap 相关域名，游戏服务器、TapTap 下载、TapTap 账号、游戏内嵌网页等。游戏服务器在国内，走直连延迟最低，分流 → DIRECT，DNS 转发 → 国内。
+- **SausageMan（15 条）**：香肠派对（吃鸡手游）加 TapTap 相关域名，游戏服务器、TapTap 下载、TapTap 账号、游戏内嵌网页等。游戏服务器在国内，走直连延迟最低，分流 → DIRECT。
 - **AI_Part（72 条）**：只包括你常用的五个 AI，Muse（Meta AI，7 条）、GPT / ChatGPT（OpenAI，19 条）、Claude（Anthropic，20 条）、Grok（xAI，3 条）、Gemini（Google，23 条）。五个 AI 都在国外，必须走代理，策略选人工智能。注意：meta.com 没加进去，因为它太宽，会把 Facebook、Instagram、WhatsApp 也拉进 AI 组。
 - **Spotify（28 条）**：Spotify 音乐，官网、App、歌单、歌词、图片和音频 CDN（spotifycdn、scdn、pscdn、akamaized、fastly）。Spotify 在国内打不开，必须走代理，策略选 Spotify。
 - **TikTok（32 条）**：抖音国际版 TikTok，App、视频 CDN、直播、Trae AI 编程等。都在国外，必须走代理，策略选 TikTok。其中 ttwstatic.com 和 tiktokcdn 关键词是从 fmz200 的上游同步来的。
@@ -96,10 +96,10 @@ China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段
 
 </details>
 
-### GeoIpCN.mmdb（6,566 条 CIDR，约 132KB）
+### GeoIpCN.mmdb（5,767 条 CIDR，约 110KB）
 
 
-只含中国 IPv4，共覆盖 **357,421,607 个地址**，约 132KB，纯 IPv4，不含 IPv6。
+只含中国 IPv4，共覆盖 **352,239,298 个地址**，约 110KB，纯 IPv4，不含 IPv6。
 
 这是干什么的？代理软件拿到一个 IP 地址后，要判断这个 IP 是中国的还是外国的，才能决定走直连还是走代理，这个判断就靠 GeoIP 库。库里只装了中国段，外国 IP 查不到中国，返回空，就走代理；中国 IP 查得到，就走直连。所以库里没有外国段是正常的，不是缺数据。
 
@@ -221,7 +221,6 @@ China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段
 | GeoIP_CN | [![加进 Egern](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square)](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fegern%2FGeoIP_CN%2FGeoIP_CN.yaml&policy=DIRECT) | [![加进 QX](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square)](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FGeoIP_CN%2FGeoIP_CN.list%2C%20tag%3DGeoIP_CN%2C%20force-policy%3Ddirect%22%5D%7D) |
 
 > 注意：
-> - Egern 的一键添加是加到**分流**里，China、Apple、SausageMan 还要再单独加一次 **DNS 转发 → 国内**，那个不能一键加，得在设置里手动加。
 > - 点链接后软件会先弹出来让你确认，策略已经按上面表格填好了，确认就行。
 > - 一键添加的链接里写了策略组名（谷歌服务、微软服务、人工智能、Spotify、TikTok、GitHub、SpeedTest、Telegram、DIRECT），你的配置里要有同名策略组才能直接用；如果没有，先在软件里建好同名策略组，或者点链接后手动改策略。
 > - 如果点链接没反应，先确认 Egern / QX 已经装好了。
@@ -244,7 +243,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段
    https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/China/China.yaml
    ```
 
-   DNS 转发是查域名用的：国内域名问国内 DNS，拿到国内 IP；国外域名问国外 DNS。China、Apple、SausageMan 三套都要加 DNS 转发 → 国内，其他规则不用加 DNS 转发。
+   DNS 转发是查域名用的：国内域名问国内 DNS，拿到国内 IP；国外域名问国外 DNS。
 2. **分流**：设置 → 分流 → 添加规则集，粘贴对应链接，策略按上面表格选。分流是决定流量走哪条路的：China、Apple、SausageMan 走 DIRECT 直连；Google、Microsoft、AI_Part 走代理节点组。也可以直接点上面「一键添加」表格里的绿色按钮，不用自己复制链接。
 3. **GeoIP 库**：设置 → GeoIP 数据库 → 粘贴 GeoIpCN.mmdb 的链接，把默认的库换成这个自建库。
 
