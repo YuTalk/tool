@@ -1,6 +1,6 @@
-# 最后修改：2026-11-23 23:18
+# 最后修改：2026-11-27 18:47
 # 微软 / Outlook
-# 总共 21 条
+# 总共 17 条
 # 用法：Egern 分流 -> 微软服务
 domain_suffix_set:
   - microsoft.com
@@ -20,7 +20,3 @@ domain_suffix_set:
   - bing.com
   - windows.net
   - azure.com
-  - outlook.live.com
-  - account.microsoft.com
-  - support.microsoft.com
-  - learn.microsoft.com

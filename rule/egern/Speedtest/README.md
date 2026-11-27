@@ -18,7 +18,9 @@ Speedtest 规则（Speedtest 测速）由本仓库每 6 小时自动检查更新
 
 | 类型 | 数量(条) |
 | ---- | ---- |
-| DOMAIN-SUFFIX | 9 |
+| DOMAIN-SUFFIX | 7 |
+| DOMAIN-KEYWORD | 1 |
+| USER-AGENT | 1 |
 | TOTAL | 9 |
 
 ## Egern

@@ -1,4 +1,4 @@
-# 最后修改：2026-11-24 18:08
+# 最后修改：2026-11-27 18:47
 # Spotify 音乐
 # 总共 28 条
 # 来源：blackmatrix7/ios_rule_script rule/Surge/Spotify/Spotify.list
@@ -28,6 +28,6 @@ host, heads-ak-spotify-com.akamaized.net, Spotify
 host, spotify.com.edgesuite.net, Spotify
 host, spotify.map.fastly.net, Spotify
 host-keyword, spotify, Spotify
-ip-cidr, 104.154.127.126/32, Spotify
-ip-cidr, 35.186.224.47/32, Spotify
+ip-cidr, 104.154.127.126/32, Spotify, no-resolve
+ip-cidr, 35.186.224.47/32, Spotify, no-resolve
 user-agent, Spotify*, Spotify

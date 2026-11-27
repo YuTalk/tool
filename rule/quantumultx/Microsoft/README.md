@@ -18,8 +18,8 @@ Microsoft 规则（微软服务）由本仓库每 6 小时自动检查更新。
 
 | 类型 | 数量(条) |
 | ---- | ---- |
-| DOMAIN-SUFFIX | 21 |
-| TOTAL | 21 |
+| DOMAIN-SUFFIX | 17 |
+| TOTAL | 17 |
 
 ## Quantumult X
 

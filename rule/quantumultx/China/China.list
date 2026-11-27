@@ -1,6 +1,6 @@
-# 最后修改：2026-11-27 18:36
+# 最后修改：2026-11-27 18:47
 # 中国常用域名 - 经常用到的
-# 总共 545 条
+# 总共 483 条
 # 用法：QX 分流 -> direct
 # 第一段：应用/网站域名
 host-suffix, baidu.com, direct
@@ -8,7 +8,6 @@ host-suffix, qq.com, direct
 host-suffix, weixin.com, direct
 host-suffix, wechat.com, direct
 host-suffix, weibo.com, direct
-host-suffix, weibo.cn, direct
 host-suffix, taobao.com, direct
 host-suffix, tmall.com, direct
 host-suffix, jd.com, direct
@@ -24,14 +23,9 @@ host-suffix, zhihu.com, direct
 host-suffix, bilibili.com, direct
 host-suffix, youku.com, direct
 host-suffix, iqiyi.com, direct
-host-suffix, v.qq.com, direct
 host-suffix, mgtv.com, direct
 host-suffix, douyin.com, direct
-host-suffix, 12306.cn, direct
 host-suffix, cctv.com, direct
-host-suffix, cntv.cn, direct
-host-suffix, sina.com.cn, direct
-host-suffix, sina.cn, direct
 host-suffix, sohu.com, direct
 host-suffix, ifeng.com, direct
 host-suffix, 163.com, direct
@@ -42,38 +36,25 @@ host-suffix, amap.com, direct
 host-suffix, gaode.com, direct
 host-suffix, didi.com, direct
 host-suffix, xinhuanet.com, direct
-host-suffix, 10086.cn, direct
 host-suffix, 10010.com, direct
-host-suffix, 189.cn, direct
 host-suffix, netease.com, direct
-host-suffix, music.163.com, direct
 host-suffix, kugou.com, direct
-host-suffix, qqmusic.qq.com, direct
 host-suffix, douban.com, direct
 host-suffix, cnblogs.com, direct
 host-suffix, gitee.com, direct
 host-suffix, oschina.net, direct
 host-suffix, qqmail.com, direct
-host-suffix, outlook.cn, direct
-host-suffix, weather.com.cn, direct
-host-suffix, cma.cn, direct
 host-suffix, mi.com, direct
 host-suffix, xiaomi.com, direct
 host-suffix, honor.com, direct
 host-suffix, vivo.com, direct
 host-suffix, oneplus.com, direct
 host-suffix, lenovo.com, direct
-host-suffix, mcdonalds.com.cn, direct
-host-suffix, kfc.com.cn, direct
-host-suffix, starbucks.com.cn, direct
 host-suffix, luckincoffee.com, direct
 host-suffix, heytea.com, direct
 host-suffix, haidilao.com, direct
 host-suffix, tencent.com, direct
 host-suffix, weiyun.com, direct
-host-suffix, alipay.cn, direct
-host-suffix, feishu.cn, direct
-host-suffix, wps.cn, direct
 host-suffix, wps.com, direct
 host-suffix, kingsoft.com, direct
 host-suffix, jinshan.com, direct
@@ -85,23 +66,11 @@ host-suffix, heweather.com, direct
 host-suffix, kuaidi100.com, direct
 host-suffix, sf-express.com, direct
 host-suffix, zto.com, direct
-host-suffix, yto.net.cn, direct
 host-suffix, yundaex.com, direct
-host-suffix, sto.cn, direct
-host-suffix, ems.com.cn, direct
-host-suffix, chinapost.com.cn, direct
-host-suffix, chinaunicom.cn, direct
 host-suffix, unicom.com, direct
-host-suffix, telecom.cn, direct
 host-suffix, cmcc.com, direct
-host-suffix, cctv.cn, direct
-host-suffix, cnr.cn, direct
-host-suffix, cri.cn, direct
 host-suffix, china.com, direct
-host-suffix, chinadaily.com.cn, direct
 host-suffix, huanqiu.com, direct
-host-suffix, thepaper.cn, direct
-host-suffix, guancha.cn, direct
 host-suffix, jiemian.com, direct
 host-suffix, baidubce.com, direct
 host-suffix, meituan.net, direct
@@ -112,24 +81,13 @@ host-suffix, 10086.com, direct
 host-suffix, 12306.com, direct
 host-suffix, 126.net, direct
 host-suffix, acg.tv, direct
-host-suffix, baidu.com.cn, direct
 host-suffix, bdurl.net, direct
 host-suffix, bilibili.co, direct
 host-suffix, biligame.net, direct
-host-suffix, china.com.cn, direct
-host-suffix, didi.cn, direct
-host-suffix, docs.qq.com, direct
-host-suffix, enrichgw.10010.com, direct
 host-suffix, iesdouyin.com, direct
-host-suffix, map.baidu.com, direct
-host-suffix, meeting.tencent.com, direct
-host-suffix, nishub1.10010.com, direct
-host-suffix, open.e.189.cn, direct
 host-suffix, sina.com, direct
 host-suffix, tianya.net, direct
-host-suffix, tieba.baidu.com, direct
 host-suffix, tmall.hk, direct
-host-suffix, waimai.meituan.com, direct
 host-suffix, weather.com, direct
 host-suffix, xiaomi.net, direct
 host-suffix, xiaomicp.com, direct
@@ -156,7 +114,6 @@ host-suffix, allawno.com, direct
 host-suffix, allawntech.com, direct
 host-suffix, amemv.com, direct
 host-suffix, asklink.com, direct
-host-suffix, auth.wosms.cn, direct
 host-suffix, autonavi.com, direct
 host-suffix, b23.tv, direct
 host-suffix, baomitu.com, direct
@@ -178,7 +135,6 @@ host-suffix, cmpassport.com, direct
 host-suffix, cn, direct
 host-suffix, cn163.net, direct
 host-suffix, cnmstl.net, direct
-host-suffix, config.cmpassport.com, direct
 host-suffix, dhrest.com, direct
 host-suffix, dianping.com, direct
 host-suffix, didialift.com, direct
@@ -200,7 +156,6 @@ host-suffix, ecitic.com, direct
 host-suffix, element-plus.org, direct
 host-suffix, fang.com, direct
 host-suffix, fantasy.tv, direct
-host-suffix, feelgood.cn, direct
 host-suffix, feiliao.com, direct
 host-suffix, feng.com, direct
 host-suffix, fir.im, direct
@@ -221,7 +176,6 @@ host-suffix, helpshift.com, direct
 host-suffix, hichina.com, direct
 host-suffix, hihonor.com, direct
 host-suffix, hitv.com, direct
-host-suffix, hmrz.wo.cn, direct
 host-suffix, hollisterco.com, direct
 host-suffix, hongxiu.com, direct
 host-suffix, hrtsea.com, direct
@@ -233,7 +187,6 @@ host-suffix, hupu.com, direct
 host-suffix, huya.com, direct
 host-suffix, ibytedapm.com, direct
 host-suffix, iciba.com, direct
-host-suffix, id.mail.wo.cn, direct
 host-suffix, id6.me, direct
 host-suffix, iflyink.com, direct
 host-suffix, iflyrec.com, direct
@@ -275,8 +228,6 @@ host-suffix, lizhi.fm, direct
 host-suffix, lizhi.io, direct
 host-suffix, lizhifm.com, direct
 host-suffix, lofter.com, direct
-host-suffix, log.cmpassport.com, direct
-host-suffix, log1.cmpassport.com, direct
 host-suffix, luoo.net, direct
 host-suffix, lxdns.com, direct
 host-suffix, maoyan.com, direct
@@ -336,7 +287,6 @@ host-suffix, sankuai.com, direct
 host-suffix, segmentfault.com, direct
 host-suffix, shumilou.net, direct
 host-suffix, simplecd.me, direct
-host-suffix, sinaapp.cn, direct
 host-suffix, sinaapp.com, direct
 host-suffix, smzdm.com, direct
 host-suffix, snapdrop.net, direct
@@ -407,7 +357,6 @@ host-suffix, xueqiu.com, direct
 host-suffix, xz.pphimalayanrt.com, direct
 host-suffix, yach.me, direct
 host-suffix, yangkeduo.com, direct
-host-suffix, ye.dun.163yun.com, direct
 host-suffix, yeepay.com, direct
 host-suffix, yhd.com, direct
 host-suffix, yinxiang.com, direct
@@ -435,14 +384,9 @@ host-suffix, hongguoduanju.com, direct
 host-suffix, doubao.com, direct
 host-suffix, deepseek.com, direct
 host-suffix, kimi.com, direct
-host-suffix, moonshot.cn, direct
-host-suffix, yuanbao.tencent.com, direct
-host-suffix, jimeng.jianying.com, direct
 host-suffix, jianying.com, direct
-host-suffix, quark.cn, direct
 # 第二段：CDN/后台/接口域名
 host-suffix, alicdn.com, direct
-host-suffix, qlogo.cn, direct
 host-suffix, tencentcloud.com, direct
 host-suffix, 360buyimg.com, direct
 host-suffix, alicloudccp.com, direct
@@ -456,7 +400,6 @@ host-suffix, bilivideo.com, direct
 host-suffix, byted-static.com, direct
 host-suffix, bytedns.net, direct
 host-suffix, byteimg.com, direct
-host-suffix, cloud.tencent.com, direct
 host-suffix, douyincdn.com, direct
 host-suffix, douyinpic.com, direct
 host-suffix, douyinstatic.com, direct
@@ -469,10 +412,8 @@ host-suffix, idqqimg.com, direct
 host-suffix, mi-img.com, direct
 host-suffix, mmstat.com, direct
 host-suffix, pstatp.com, direct
-host-suffix, sinaimg.cn, direct
 host-suffix, smtcdns.com, direct
 host-suffix, smtcdns.net, direct
-host-suffix, tbcdn.cn, direct
 host-suffix, toutiaocdn.com, direct
 host-suffix, zhimg.com, direct
 host-suffix, 00cdn.com, direct
@@ -483,13 +424,11 @@ host-suffix, alibabacloud.com, direct
 host-suffix, appsimg.com, direct
 host-suffix, bdimg.com, direct
 host-suffix, bdstatic.com, direct
-host-suffix, bilivideo.cn, direct
 host-suffix, bytefcdnrd.com, direct
 host-suffix, cctvpic.com, direct
 host-suffix, cdnmama.com, direct
 host-suffix, chuimg.com, direct
 host-suffix, cloudxns.net, direct
-host-suffix, douyucdn.cn, direct
 host-suffix, douyuscdn.com, direct
 host-suffix, dxycdn.com, direct
 host-suffix, edgesrv.com, direct
@@ -510,7 +449,6 @@ host-suffix, miguvideo.com, direct
 host-suffix, mogucdn.com, direct
 host-suffix, msstatic.com, direct
 host-suffix, myqcloud.com, direct
-host-suffix, opencloud.wostore.cn, direct
 host-suffix, p2cdn.com, direct
 host-suffix, ppsimg.com, direct
 host-suffix, qcloud.com, direct

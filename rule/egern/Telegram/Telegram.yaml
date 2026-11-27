@@ -1,8 +1,9 @@
-# 最后修改：2026-11-24 18:08
+# 最后修改：2026-11-27 18:47
 # Telegram
 # 总共 34 条
 # 来源：blackmatrix7/ios_rule_script rule/Surge/Telegram/Telegram.list
 # 用法：Egern 分流 -> Telegram
+no_resolve: true
 domain_suffix_set:
   - cdn-telegram.org
   - comments.app

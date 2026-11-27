@@ -18,8 +18,8 @@ Apple 规则（Apple 服务）由本仓库每 6 小时自动检查更新。
 
 | 类型 | 数量(条) |
 | ---- | ---- |
-| DOMAIN-SUFFIX | 22 |
-| TOTAL | 22 |
+| DOMAIN-SUFFIX | 17 |
+| TOTAL | 17 |
 
 ## Quantumult X
 

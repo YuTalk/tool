@@ -1,4 +1,4 @@
-# 最后修改：2026-11-26 13:16
+# 最后修改：2026-11-27 18:47
 # 抖音国际版 TikTok
 # 总共 32 条
 # 来源：blackmatrix7/ios_rule_script rule/Surge/TikTok/TikTok.list
@@ -32,7 +32,7 @@ host, lf16-effectcdn.byteeffecttos-g.com, TikTok
 host, lf16-pkgcdn.pitaya-clientai.com, TikTok
 host, p16-tiktokcdn-com.akamaized.net, TikTok
 host, trae-api-sg.mchost.guru, TikTok
-host-keyword, musical.ly, TikTok
+host-suffix, musical.ly, TikTok
 host-keyword, tiktok, TikTok
 host-keyword, tiktokcdn, TikTok
 user-agent, TikTok*, TikTok

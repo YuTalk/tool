@@ -1,8 +1,9 @@
-# 最后修改：2026-11-24 18:08
+# 最后修改：2026-11-27 18:47
 # Spotify 音乐
 # 总共 28 条
 # 来源：blackmatrix7/ios_rule_script rule/Surge/Spotify/Spotify.list
 # 用法：Egern 分流 -> Spotify
+no_resolve: true
 domain_suffix_set:
   - audio-ak-spotify-com.akamaized.net
   - byspotify.com

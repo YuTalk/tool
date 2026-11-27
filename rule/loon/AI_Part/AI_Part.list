@@ -1,7 +1,7 @@
-# 最后修改：2026-11-25 11:26
+# 最后修改：2026-11-27 18:47
 # AI_Part
 # Muse + GPT + Claude + Grok + Gemini
-# 总共 72 条
+# 总共 71 条
 # 用法：Loon 分流 -> PROXY
 DOMAIN-SUFFIX,openai.com,PROXY
 DOMAIN-SUFFIX,openai.org,PROXY
@@ -63,7 +63,6 @@ DOMAIN-SUFFIX,aistudio.google.com,PROXY
 DOMAIN-SUFFIX,alkalicore-pa.clients6.google.com,PROXY
 DOMAIN-SUFFIX,alkalimakersuite-pa.clients6.google.com,PROXY
 DOMAIN-SUFFIX,bard.google.com,PROXY
-DOMAIN-SUFFIX,business.gemini.google,PROXY
 DOMAIN-SUFFIX,cloudaicompanion.googleapis.com,PROXY
 DOMAIN-SUFFIX,deepmind.com,PROXY
 DOMAIN-SUFFIX,deepmind.google,PROXY

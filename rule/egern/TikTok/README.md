@@ -18,7 +18,10 @@ TikTok 规则（TikTok）由本仓库每 6 小时自动检查更新。
 
 | 类型 | 数量(条) |
 | ---- | ---- |
-| DOMAIN-SUFFIX | 32 |
+| DOMAIN-SUFFIX | 25 |
+| DOMAIN | 4 |
+| DOMAIN-KEYWORD | 2 |
+| USER-AGENT | 1 |
 | TOTAL | 32 |
 
 ## Egern

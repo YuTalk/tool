@@ -18,7 +18,11 @@ Telegram 规则（Telegram）由本仓库每 6 小时自动检查更新。
 
 | 类型 | 数量(条) |
 | ---- | ---- |
-| DOMAIN-SUFFIX | 34 |
+| DOMAIN-SUFFIX | 21 |
+| DOMAIN | 2 |
+| DOMAIN-KEYWORD | 1 |
+| IP-CIDR | 6 |
+| IP-CIDR6 | 4 |
 | TOTAL | 34 |
 
 ## Egern

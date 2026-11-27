@@ -18,8 +18,8 @@ AI_Part 规则（Muse + GPT + Claude + Grok + Gemini）由本仓库每 6 小时�
 
 | 类型 | 数量(条) |
 | ---- | ---- |
-| DOMAIN-SUFFIX | 72 |
-| TOTAL | 72 |
+| DOMAIN-SUFFIX | 71 |
+| TOTAL | 71 |
 
 ## Loon
 

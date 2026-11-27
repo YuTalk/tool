@@ -4,7 +4,7 @@
 
 ![](https://shields.io/badge/-移除重复规则-ff69b4) ![](https://shields.io/badge/-三格式同步-green) ![](https://shields.io/badge/-每6小时自动更新-blue) ![](https://shields.io/badge/-仅自用-critical)
 
-GeoIP_CN 规则（中国 IP（GEOIP））由本仓库每 6 小时自动检查更新。
+GeoIP_CN 规则（中国 IP（GEOIP））就一条 GEOIP CN 规则，不用更新，没有上游，一直保持不变。
 
 分流规则是互联网公共服务的域名和 IP 地址汇总，所有数据均收集自互联网公开信息，不代表我们支持或使用这些服务。
 
@@ -12,7 +12,7 @@ GeoIP_CN 规则（中国 IP（GEOIP））由本仓库每 6 小时自动检查更
 
 ## 规则统计
 
-最后更新时间：2026-11-24 16:44:57
+最后更新时间：2026-11-27 18:47:00
 
 各类型规则统计：
 
@@ -43,7 +43,7 @@ https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/egern/GeoIP_CN/GeoIP_CN.yaml
 
 ## 数据来源
 
-GeoIP_CN 的数据来自 fmz200 的 wool_scripts。
+GeoIP_CN 没有上游，不用更新，一直保持不变。
 
 感谢以上规则作者的辛勤付出。
 

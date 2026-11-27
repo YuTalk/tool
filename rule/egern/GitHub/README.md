@@ -18,7 +18,8 @@ GitHub 规则（GitHub）由本仓库每 6 小时自动检查更新。
 
 | 类型 | 数量(条) |
 | ---- | ---- |
-| DOMAIN-SUFFIX | 31 |
+| DOMAIN-SUFFIX | 30 |
+| DOMAIN-KEYWORD | 1 |
 | TOTAL | 31 |
 
 ## Egern

@@ -1,4 +1,4 @@
-# 最后修改：2026-11-24 18:08
+# 最后修改：2026-11-27 18:47
 # Spotify 音乐
 # 总共 29 条
 # 来源：blackmatrix7/ios_rule_script rule/Surge/Spotify/Spotify.list
@@ -28,7 +28,7 @@ DOMAIN,heads-ak-spotify-com.akamaized.net,PROXY
 DOMAIN,spotify.com.edgesuite.net,PROXY
 DOMAIN,spotify.map.fastly.net,PROXY
 DOMAIN-KEYWORD,spotify,PROXY
-IP-CIDR,104.154.127.126/32,PROXY
-IP-CIDR,35.186.224.47/32,PROXY
+IP-CIDR,104.154.127.126/32,PROXY,no-resolve
+IP-CIDR,35.186.224.47/32,PROXY,no-resolve
 USER-AGENT,Spotify*,PROXY
 PROCESS-NAME,com.spotify.music,PROXY

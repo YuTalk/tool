@@ -1,6 +1,6 @@
-# 最后修改：2026-11-27 18:36
+# 最后修改：2026-11-27 18:47
 # 中国常用域名 - 经常用到的
-# 总共 545 条
+# 总共 483 条
 # 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
 domain_suffix_set:
 # 第一段：应用/网站域名
@@ -9,7 +9,6 @@ domain_suffix_set:
   - weixin.com
   - wechat.com
   - weibo.com
-  - weibo.cn
   - taobao.com
   - tmall.com
   - jd.com
@@ -25,14 +24,9 @@ domain_suffix_set:
   - bilibili.com
   - youku.com
   - iqiyi.com
-  - v.qq.com
   - mgtv.com
   - douyin.com
-  - 12306.cn
   - cctv.com
-  - cntv.cn
-  - sina.com.cn
-  - sina.cn
   - sohu.com
   - ifeng.com
   - 163.com
@@ -43,38 +37,25 @@ domain_suffix_set:
   - gaode.com
   - didi.com
   - xinhuanet.com
-  - 10086.cn
   - 10010.com
-  - 189.cn
   - netease.com
-  - music.163.com
   - kugou.com
-  - qqmusic.qq.com
   - douban.com
   - cnblogs.com
   - gitee.com
   - oschina.net
   - qqmail.com
-  - outlook.cn
-  - weather.com.cn
-  - cma.cn
   - mi.com
   - xiaomi.com
   - honor.com
   - vivo.com
   - oneplus.com
   - lenovo.com
-  - mcdonalds.com.cn
-  - kfc.com.cn
-  - starbucks.com.cn
   - luckincoffee.com
   - heytea.com
   - haidilao.com
   - tencent.com
   - weiyun.com
-  - alipay.cn
-  - feishu.cn
-  - wps.cn
   - wps.com
   - kingsoft.com
   - jinshan.com
@@ -86,23 +67,11 @@ domain_suffix_set:
   - kuaidi100.com
   - sf-express.com
   - zto.com
-  - yto.net.cn
   - yundaex.com
-  - sto.cn
-  - ems.com.cn
-  - chinapost.com.cn
-  - chinaunicom.cn
   - unicom.com
-  - telecom.cn
   - cmcc.com
-  - cctv.cn
-  - cnr.cn
-  - cri.cn
   - china.com
-  - chinadaily.com.cn
   - huanqiu.com
-  - thepaper.cn
-  - guancha.cn
   - jiemian.com
   - baidubce.com
   - meituan.net
@@ -113,24 +82,13 @@ domain_suffix_set:
   - 12306.com
   - 126.net
   - acg.tv
-  - baidu.com.cn
   - bdurl.net
   - bilibili.co
   - biligame.net
-  - china.com.cn
-  - didi.cn
-  - docs.qq.com
-  - enrichgw.10010.com
   - iesdouyin.com
-  - map.baidu.com
-  - meeting.tencent.com
-  - nishub1.10010.com
-  - open.e.189.cn
   - sina.com
   - tianya.net
-  - tieba.baidu.com
   - tmall.hk
-  - waimai.meituan.com
   - weather.com
   - xiaomi.net
   - xiaomicp.com
@@ -157,7 +115,6 @@ domain_suffix_set:
   - allawntech.com
   - amemv.com
   - asklink.com
-  - auth.wosms.cn
   - autonavi.com
   - b23.tv
   - baomitu.com
@@ -179,7 +136,6 @@ domain_suffix_set:
   - cn
   - cn163.net
   - cnmstl.net
-  - config.cmpassport.com
   - dhrest.com
   - dianping.com
   - didialift.com
@@ -201,7 +157,6 @@ domain_suffix_set:
   - element-plus.org
   - fang.com
   - fantasy.tv
-  - feelgood.cn
   - feiliao.com
   - feng.com
   - fir.im
@@ -222,7 +177,6 @@ domain_suffix_set:
   - hichina.com
   - hihonor.com
   - hitv.com
-  - hmrz.wo.cn
   - hollisterco.com
   - hongxiu.com
   - hrtsea.com
@@ -234,7 +188,6 @@ domain_suffix_set:
   - huya.com
   - ibytedapm.com
   - iciba.com
-  - id.mail.wo.cn
   - id6.me
   - iflyink.com
   - iflyrec.com
@@ -276,8 +229,6 @@ domain_suffix_set:
   - lizhi.io
   - lizhifm.com
   - lofter.com
-  - log.cmpassport.com
-  - log1.cmpassport.com
   - luoo.net
   - lxdns.com
   - maoyan.com
@@ -337,7 +288,6 @@ domain_suffix_set:
   - segmentfault.com
   - shumilou.net
   - simplecd.me
-  - sinaapp.cn
   - sinaapp.com
   - smzdm.com
   - snapdrop.net
@@ -408,7 +358,6 @@ domain_suffix_set:
   - xz.pphimalayanrt.com
   - yach.me
   - yangkeduo.com
-  - ye.dun.163yun.com
   - yeepay.com
   - yhd.com
   - yinxiang.com
@@ -436,14 +385,9 @@ domain_suffix_set:
   - doubao.com
   - deepseek.com
   - kimi.com
-  - moonshot.cn
-  - yuanbao.tencent.com
-  - jimeng.jianying.com
   - jianying.com
-  - quark.cn
 # 第二段：CDN/后台/接口域名
   - alicdn.com
-  - qlogo.cn
   - tencentcloud.com
   - 360buyimg.com
   - alicloudccp.com
@@ -457,7 +401,6 @@ domain_suffix_set:
   - byted-static.com
   - bytedns.net
   - byteimg.com
-  - cloud.tencent.com
   - douyincdn.com
   - douyinpic.com
   - douyinstatic.com
@@ -470,10 +413,8 @@ domain_suffix_set:
   - mi-img.com
   - mmstat.com
   - pstatp.com
-  - sinaimg.cn
   - smtcdns.com
   - smtcdns.net
-  - tbcdn.cn
   - toutiaocdn.com
   - zhimg.com
   - 00cdn.com
@@ -484,13 +425,11 @@ domain_suffix_set:
   - appsimg.com
   - bdimg.com
   - bdstatic.com
-  - bilivideo.cn
   - bytefcdnrd.com
   - cctvpic.com
   - cdnmama.com
   - chuimg.com
   - cloudxns.net
-  - douyucdn.cn
   - douyuscdn.com
   - dxycdn.com
   - edgesrv.com
@@ -511,7 +450,6 @@ domain_suffix_set:
   - mogucdn.com
   - msstatic.com
   - myqcloud.com
-  - opencloud.wostore.cn
   - p2cdn.com
   - ppsimg.com
   - qcloud.com

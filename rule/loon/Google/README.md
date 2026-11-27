@@ -18,8 +18,8 @@ Google 规则（Google 服务）由本仓库每 6 小时自动检查更新。
 
 | 类型 | 数量(条) |
 | ---- | ---- |
-| DOMAIN-SUFFIX | 30 |
-| TOTAL | 30 |
+| DOMAIN-SUFFIX | 18 |
+| TOTAL | 18 |
 
 ## Loon
 

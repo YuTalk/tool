@@ -1,4 +1,4 @@
-# 最后修改：2026-11-24 18:08
+# 最后修改：2026-11-27 18:47
 # Telegram
 # 总共 34 条
 # 来源：blackmatrix7/ios_rule_script rule/Surge/Telegram/Telegram.list
@@ -27,13 +27,13 @@ host-suffix, usercontent.dev, Telegram
 host, api.imem.app, Telegram
 host, api.swiftgram.app, Telegram
 host-keyword, nicegram, Telegram
-ip-cidr, 109.239.140.0/24, Telegram
-ip-cidr, 139.59.210.98/32, Telegram
-ip-cidr, 149.154.160.0/20, Telegram
-ip-cidr, 196.55.216.167/32, Telegram
-ip-cidr, 5.28.192.0/18, Telegram
-ip-cidr, 91.108.0.0/16, Telegram
-ip6-cidr, 2001:67c:4e8::/48, Telegram
-ip6-cidr, 2001:b28:f23c::/47, Telegram
-ip6-cidr, 2001:b28:f23f::/48, Telegram
-ip6-cidr, 2a0a:f280::/29, Telegram
+ip-cidr, 109.239.140.0/24, Telegram, no-resolve
+ip-cidr, 139.59.210.98/32, Telegram, no-resolve
+ip-cidr, 149.154.160.0/20, Telegram, no-resolve
+ip-cidr, 196.55.216.167/32, Telegram, no-resolve
+ip-cidr, 5.28.192.0/18, Telegram, no-resolve
+ip-cidr, 91.108.0.0/16, Telegram, no-resolve
+ip6-cidr, 2001:67c:4e8::/48, Telegram, no-resolve
+ip6-cidr, 2001:b28:f23c::/47, Telegram, no-resolve
+ip6-cidr, 2001:b28:f23f::/48, Telegram, no-resolve
+ip6-cidr, 2a0a:f280::/29, Telegram, no-resolve

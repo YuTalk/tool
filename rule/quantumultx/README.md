@@ -18,21 +18,21 @@ Quantumult X 用的规则，12 套，每套一个文件夹（点进文件夹能�
 
 | 规则集 | 数量(条) |
 | ---- | ---- |
-| China | 545 |
-| <img src="https://cdn.simpleicons.org/google/4285F4" width="20" height="20" alt="Google"> Google | 30 |
-| <img src="https://cdn.simpleicons.org/apple" width="20" height="20" alt="Apple"> Apple | 22 |
-| <img src="https://www.microsoft.com/favicon.ico" width="20" height="20" alt="Microsoft"> Microsoft | 21 |
+| China | 483 |
+| <img src="https://cdn.simpleicons.org/google/4285F4" width="20" height="20" alt="Google"> Google | 18 |
+| <img src="https://cdn.simpleicons.org/apple" width="20" height="20" alt="Apple"> Apple | 17 |
+| <img src="https://www.microsoft.com/favicon.ico" width="20" height="20" alt="Microsoft"> Microsoft | 17 |
 | SausageMan | 15 |
-| AI_Part | 72 |
+| AI_Part | 71 |
 | GeoIP_CN | 1 |
 | <img src="https://cdn.simpleicons.org/spotify/1DB954" width="20" height="20" alt="Spotify"> Spotify | 28 |
 | <img src="https://cdn.simpleicons.org/tiktok/FE2C55" width="20" height="20" alt="TikTok"> TikTok | 32 |
 | <img src="https://cdn.simpleicons.org/github" width="20" height="20" alt="GitHub"> GitHub | 31 |
 | <img src="https://cdn.simpleicons.org/speedtest/141526" width="20" height="20" alt="Speedtest"> Speedtest | 9 |
 | <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="20" height="20" alt="Telegram"> Telegram | 34 |
-| TOTAL | 840 |
+| TOTAL | 756 |
 
-其中域名条目 839 条（snssdk.com 在两个规则集里各出现一次，去重后 838 条，和主 README 的域名总数一致），GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
+其中域名条目 755 条（snssdk.com 在两个规则集里各出现一次，去重后 754 条，和主 README 的域名总数一致），GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
 
 ## Quantumult X
 
@@ -46,7 +46,7 @@ Quantumult X 用的规则，12 套，每套一个文件夹（点进文件夹能�
 - QX 没有 DNS 转发，DNS 用 doh-server 直连，逐域名用 server=/*.example.com/ 这种形式。
 
 #### 规则链接
-**China.list（545 条）**
+**China.list（483 条）**
 
 原始链接：
 
@@ -66,7 +66,7 @@ CDN 链接：
 
 https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/Google/Google.list
 
-**Apple.list（22 条）**
+**Apple.list（17 条）**
 
 原始链接：
 
@@ -76,7 +76,7 @@ CDN 链接：
 
 https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/Apple/Apple.list
 
-**Microsoft.list（21 条）**
+**Microsoft.list（17 条）**
 
 原始链接：
 
@@ -96,7 +96,7 @@ CDN 链接：
 
 https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/SausageMan/SausageMan.list
 
-**AI_Part.list（72 条）**
+**AI_Part.list（71 条）**
 
 原始链接：
 

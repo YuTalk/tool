@@ -18,7 +18,11 @@ Spotify 规则（Spotify）由本仓库每 6 小时自动检查更新。
 
 | 类型 | 数量(条) |
 | ---- | ---- |
-| DOMAIN-SUFFIX | 28 |
+| DOMAIN-SUFFIX | 19 |
+| DOMAIN | 5 |
+| DOMAIN-KEYWORD | 1 |
+| IP-CIDR | 2 |
+| USER-AGENT | 1 |
 | TOTAL | 28 |
 
 ## Egern
