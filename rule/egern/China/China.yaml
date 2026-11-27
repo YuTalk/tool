@@ -1,6 +1,6 @@
-# 最后修改：2026-11-27 18:47
+# 最后修改：2026-11-27 18:56
 # 中国常用域名 - 经常用到的
-# 总共 483 条
+# 总共 482 条
 # 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
 domain_suffix_set:
 # 第一段：应用/网站域名
@@ -291,7 +291,6 @@ domain_suffix_set:
   - sinaapp.com
   - smzdm.com
   - snapdrop.net
-  - snssdk.com
   - snwx.com
   - sogo.com
   - sogou.com

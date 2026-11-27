@@ -1,6 +1,6 @@
-# 最后修改：2026-11-27 18:47
+# 最后修改：2026-11-27 18:56
 # 中国常用域名 - 经常用到的
-# 总共 483 条
+# 总共 482 条
 # 用法：Loon 分流 -> DIRECT
 # 第一段：应用/网站域名
 DOMAIN-SUFFIX,baidu.com,DIRECT
@@ -290,7 +290,6 @@ DOMAIN-SUFFIX,simplecd.me,DIRECT
 DOMAIN-SUFFIX,sinaapp.com,DIRECT
 DOMAIN-SUFFIX,smzdm.com,DIRECT
 DOMAIN-SUFFIX,snapdrop.net,DIRECT
-DOMAIN-SUFFIX,snssdk.com,DIRECT
 DOMAIN-SUFFIX,snwx.com,DIRECT
 DOMAIN-SUFFIX,sogo.com,DIRECT
 DOMAIN-SUFFIX,sogou.com,DIRECT

@@ -18,8 +18,8 @@ China 规则（中国常用域名）由本仓库每 6 小时自动检查更新�
 
 | 类型 | 数量(条) |
 | ---- | ---- |
-| DOMAIN-SUFFIX | 483 |
-| TOTAL | 483 |
+| DOMAIN-SUFFIX | 482 |
+| TOTAL | 482 |
 
 ## Quantumult X
 

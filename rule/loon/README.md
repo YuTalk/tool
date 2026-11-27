@@ -18,7 +18,7 @@ Loon 用的规则，12 套，每套一个文件夹（点进文件夹能看到这
 
 | 规则集 | 数量(条) |
 | ---- | ---- |
-| China | 483 |
+| China | 482 |
 | <img src="https://cdn.simpleicons.org/google/4285F4" width="20" height="20" alt="Google"> Google | 18 |
 | <img src="https://cdn.simpleicons.org/apple" width="20" height="20" alt="Apple"> Apple | 17 |
 | <img src="https://www.microsoft.com/favicon.ico" width="20" height="20" alt="Microsoft"> Microsoft | 17 |
@@ -30,9 +30,9 @@ Loon 用的规则，12 套，每套一个文件夹（点进文件夹能看到这
 | <img src="https://cdn.simpleicons.org/github" width="20" height="20" alt="GitHub"> GitHub | 31 |
 | <img src="https://cdn.simpleicons.org/speedtest/141526" width="20" height="20" alt="Speedtest"> Speedtest | 9 |
 | <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="20" height="20" alt="Telegram"> Telegram | 44 |
-| TOTAL | 768 |
+| TOTAL | 767 |
 
-其中规则条目 767 条（去重后 754 条，和主 README 的域名总数一致；多出来的 13 条里 12 条是 IP-ASN 和进程名规则、1 条是跨规则集重复的域名），GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
+其中规则条目 766 条（去重后 754 条，和主 README 的域名总数一致；多出来的 12 条是 IP-ASN 和进程名规则），GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
 
 ## Loon
 
@@ -45,7 +45,7 @@ Loon 用的规则，12 套，每套一个文件夹（点进文件夹能看到这
 - Loon 靠 DoH 流量模式选 Rule，实现和 Egern 的 DNS 转发一样的效果。
 
 #### 规则链接
-**China.list（483 条）**
+**China.list（482 条）**
 
 原始链接：
 

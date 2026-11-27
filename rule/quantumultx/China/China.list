@@ -1,6 +1,6 @@
-# 最后修改：2026-11-27 18:47
+# 最后修改：2026-11-27 18:56
 # 中国常用域名 - 经常用到的
-# 总共 483 条
+# 总共 482 条
 # 用法：QX 分流 -> direct
 # 第一段：应用/网站域名
 host-suffix, baidu.com, direct
@@ -290,7 +290,6 @@ host-suffix, simplecd.me, direct
 host-suffix, sinaapp.com, direct
 host-suffix, smzdm.com, direct
 host-suffix, snapdrop.net, direct
-host-suffix, snssdk.com, direct
 host-suffix, snwx.com, direct
 host-suffix, sogo.com, direct
 host-suffix, sogou.com, direct
