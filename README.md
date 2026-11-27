@@ -16,13 +16,12 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 
 ![更新](https://img.shields.io/badge/自动更新-每%206%20小时-blue?style=flat-square)
 ![IPv4](https://img.shields.io/badge/GeoIP-IPv4-orange?style=flat-square)
-![License](https://img.shields.io/badge/开源-MIT-lightgrey?style=flat-square)
 
 ## 👀 一眼看懂
 
 | 项目 | 数量 |
 | --- | --- |
-| 规则集 | 12 个（Egern、QX、Loon 各一份，内容一致） |
+| 规则集 | 12 个（Egern、QX、Loon 各一份，内容基本一致，Loon 版 3 套多几条） |
 | 图标 | 13 个（13 套图标库的预览图，都是从别人家搬过来的原图） |
 | 域名总数 | 839 条（去重后） |
 | GeoIP 库 | 6,566 条 CIDR，约 132KB，覆盖 357,421,607 个中国 IPv4 地址 |
@@ -224,6 +223,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段
 > 注意：
 > - Egern 的一键添加是加到**分流**里，China 还要再单独加一次 **DNS 转发 → 国内**，那个不能一键加，得在设置里手动加。
 > - 点链接后软件会先弹出来让你确认，策略已经按上面表格填好了，确认就行。
+> - 一键添加的链接里写了策略组名（谷歌服务、微软服务、人工智能、Spotify、TikTok、GitHub、SpeedTest、Telegram、DIRECT），你的配置里要有同名策略组才能直接用；如果没有，先在软件里建好同名策略组，或者点链接后手动改策略。
 > - 如果点链接没反应，先确认 Egern / QX 已经装好了。
 
 ---
@@ -301,9 +301,9 @@ China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段
 </details>
 
 
-## 📄 开源协议
+## 📄 使用说明
 
-MIT License —— 随便用，改了也行。
+本仓库仅供个人自用，不开源。里面的规则和 GeoIP 库数据来自互联网公开信息（17mon、APNIC、Loyalsoldier 等 5 个上游），图标是从别人家搬来的原图，各有各的许可，请勿直接商用或转载。
 
 ---
 
