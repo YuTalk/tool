@@ -234,33 +234,25 @@ Telegram、Telegraph、Telegram Desktop、Telegram下载、Swiftgram、Telega、
 </details>
 
 <details>
-<summary>AI_Part 都包括谁？点开看</summary>
+<summary><b>自动更新</b></summary>
 
-- GPT / OpenAI（19 条）：ChatGPT 聊天、Sora 视频、OpenAI 官网、API 接口等
-- Claude / Anthropic（20 条）：Claude 聊天、Claude 官网、App 等
-- Muse / Meta AI（7 条）：meta.ai、muse.ai、llama.com 等，Meta 的 AI 聊天
-- Grok / xAI（3 条）：Grok 聊天、x.ai、Grokipedia 百科等
-- Gemini / Google（23 条）：Gemini 聊天、AI Studio、Vertex AI、DeepMind 等
 
-五个 AI 都在国外，都要走代理。meta.com 故意没加，因为它会把 Facebook、Instagram、WhatsApp 也拉进来。
+| 任务 | 频率 |
+| --- | --- |
+| 仓库检查（全部规则 + GeoIP 库 + README） | 每 6 小时，0:00、6:00、12:00、18:00 |
 
-</details>
+这个检查不是仓库自带的 GitHub Actions，仓库里没有 .github/workflows，是外部定时任务在跑，有变化才推到仓库。
 
-<details>
-<summary>每条规则是干什么的？点开看</summary>
+每次检查做四件事：
 
-- **China（546 条）**：国内常用的应用和网站域名，加上它们的 CDN、后台、接口域名。分两段：第一段是应用和网站本身（438 条），第二段是这些应用背后的 CDN、图片、视频、接口域名（108 条），两段要一起用才完整。Egern 里分流 → DIRECT，流量直接走，不绕代理。这样国内 App 打开快、不卡，视频图片也快。另外里面有一条单独的 cn，匹配所有 .cn 结尾的域名：不管是国内的还是国外服务用的 .cn 域名，都走直连、问国内 DNS。这是特意留的，用来覆盖没单独列出来的 .cn 域名。
-- **Google（31 条）**：谷歌全家桶，谷歌搜索、Gmail、YouTube、Google Drive、Google 地图、Google Play、谷歌账号登录等。谷歌在国内打不开，必须走代理，策略选谷歌服务（也就是你的代理节点组）。
-- **Apple（22 条）**：苹果系统服务，App Store、iCloud、Apple ID、系统更新、推送通知、Siri、Apple Music 等。苹果的服务器在国内有节点，走直连最快最稳，分流 → DIRECT。
-- **Microsoft（21 条）**：微软服务，Outlook 邮箱、微软账号登录、OneDrive、Office 等。微软的服务器在国外，走直连慢甚至打不开，要走代理，策略选微软服务。
-- **SausageMan（15 条）**：香肠派对（吃鸡手游）加 TapTap 相关域名，游戏服务器、TapTap 下载、TapTap 账号、游戏内嵌网页等。游戏服务器在国内，走直连延迟最低，分流 → DIRECT。
-- **AI_Part（72 条）**：只包括你常用的五个 AI，Muse（Meta AI，7 条）、GPT / ChatGPT（OpenAI，19 条）、Claude（Anthropic，20 条）、Grok（xAI，3 条）、Gemini（Google，23 条）。五个 AI 都在国外，必须走代理，策略选人工智能。注意：meta.com 没加进去，因为它太宽，会把 Facebook、Instagram、WhatsApp 也拉进 AI 组。
-- **Spotify（28 条）**：Spotify 音乐，官网、App、歌单、歌词、图片和音频 CDN（spotifycdn、scdn、pscdn、akamaized、fastly）。Spotify 在国内打不开，必须走代理，策略选 Spotify。
-- **TikTok（32 条）**：抖音国际版 TikTok，App、视频 CDN、直播、Trae AI 编程等。都在国外，必须走代理，策略选 TikTok。其中 ttwstatic.com 和 tiktokcdn 关键词是从 fmz200 的上游同步来的。
-- **GitHub（31 条）**：GitHub 全家，github.com、raw.githubusercontent.com、github.io、ghcr.io、githubassets、npmjs、git.io 等。GitHub 在国内直连慢，走代理最稳，策略选 GitHub。
-- **Speedtest（9 条）**：测速网站，speedtest.net、fast.com、ooklaserver、speed.cloudflare.com 等。测速要走代理才能测出真实的节点速度，策略选 SpeedTest。
-- **Telegram（34 条）**：Telegram，官网、t.me、telegra.ph、telegram.org、下载和 CDN，还有 Telegram 的服务器 IP 段（149.154.160.0/20、91.108.0.0/16 等）。Telegram 在国内打不开，必须走代理，策略选 Telegram。
-- **GeoIP_CN（1 条）**：中国 IP 段列表，只有 1 条规则，内容就是 geoip, cn, direct，Egern、QX、Loon 三个版本都有。QX 没有自建 .mmdb 库，靠这条远程规则判断中国 IP。放在分流倒数第二，外国 IP 走默认代理。
+1. **规则**：China 从 ChinaDomain.list 和 geolocation-cn.yaml 拉最新源，合并去重；其他 6 套检查有没有失效域名（已停用、无法解析、服务已下线）。Egern 版和 QX 版同步改。
+2. **GeoIP 库**：从 8 个来源拉最新 IP 段，合并去重后重建 GeoIpCN.mmdb（IPv4 版），验证通过才推。
+3. **README**：检查里面的链接和条数是不是还对得上仓库现状，对不上就改对。
+4. **图标**：13 张预览图都在不在，链接能不能打开。
+
+文件名和链接固定不变，只更新内容。新增域名要经过主人同意才加，失效的直接删。每次有变化都会发邮件通知，没变化就不发。
+
+---
 
 </details>
 
@@ -290,28 +282,6 @@ Telegram、Telegraph、Telegram Desktop、Telegram下载、Swiftgram、Telega、
 ---
 
 
-<details>
-<summary><b>自动更新</b></summary>
-
-
-| 任务 | 频率 |
-| --- | --- |
-| 仓库检查（全部规则 + GeoIP 库 + README） | 每 6 小时，0:00、6:00、12:00、18:00 |
-
-这个检查不是仓库自带的 GitHub Actions，仓库里没有 .github/workflows，是外部定时任务在跑，有变化才推到仓库。
-
-每次检查做四件事：
-
-1. **规则**：China 从 ChinaDomain.list 和 geolocation-cn.yaml 拉最新源，合并去重；其他 6 套检查有没有失效域名（已停用、无法解析、服务已下线）。Egern 版和 QX 版同步改。
-2. **GeoIP 库**：从 8 个来源拉最新 IP 段，合并去重后重建 GeoIpCN.mmdb（IPv4 版），验证通过才推。
-3. **README**：检查里面的链接和条数是不是还对得上仓库现状，对不上就改对。
-4. **图标**：13 张预览图都在不在，链接能不能打开。
-
-文件名和链接固定不变，只更新内容。新增域名要经过主人同意才加，失效的直接删。每次有变化都会发邮件通知，没变化就不发。
-
----
-
-</details>
 
 ## 📄 使用说明
 
