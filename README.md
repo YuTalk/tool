@@ -10,7 +10,7 @@
 https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 ```
 
-**IPv4+IPv6 版**（IPv4 6,566 条 + IPv6 2,079 条，约 235KB）：
+**IPv4+IPv6 版**（IPv4 6,604 条 + IPv6 2,072 条，约 241KB）：
 
 ```
 https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN-v6.mmdb
@@ -32,7 +32,7 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN-v6.mmdb
 | 规则集 | 12 个（Egern、QX、Loon 各一份，内容基本一致，Loon 版 3 套多几条） |
 | 图标 | 13 个（13 套图标库的预览图，都是从别人家搬过来的原图） |
 | 域名总数 | 839 条（去重后，12 套合计 842 条，2 个域名跨套重复） |
-| GeoIP 库 | 2 个版本：IPv4 版 6,566 条约 132KB；IPv4+IPv6 版 8,645 条约 235KB |
+| GeoIP 库 | 2 个版本：IPv4 版 6,566 条约 132KB；IPv4+IPv6 版 8,676 条约 241KB |
 | 自动检查 | 每 6 小时，0:00、6:00、12:00、18:00 |
 
 <details>
@@ -191,13 +191,13 @@ China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段
 
 只含中国 IPv4，共覆盖 **357,421,607 个地址**，约 132KB，纯 IPv4，不含 IPv6。
 
-**IPv4+IPv6 版：GeoIpCN-v6.mmdb（8,645 条 CIDR，约 235KB）**
+**IPv4+IPv6 版：GeoIpCN-v6.mmdb（8,676 条 CIDR，约 241KB）**
 
-IPv4 6,566 条 + IPv6 2,079 条，IPv4 覆盖 357,421,607 个地址，IPv6 约 68,556 个 /32 等效，约 235KB。Egern 里用这个，IPv6 的中国 IP 也能判断走直连。
+IPv4 6,604 条 + IPv6 2,072 条，IPv4 覆盖 357,438,806 个地址，IPv6 约 68,572 个 /32 等效，约 241KB。Egern 里用这个，IPv6 的中国 IP 也能判断走直连。
 
 这是干什么的？代理软件拿到一个 IP 地址后，要判断这个 IP 是中国的还是外国的，才能决定走直连还是走代理，这个判断就靠 GeoIP 库。库里只装了中国段，外国 IP 查不到中国，返回空，就走代理；中国 IP 查得到，就走直连。所以库里没有外国段是正常的，不是缺数据。
 
-数据来源（6 个来源合并去重，每个来源单独拿出来都不全，合起来才全）：
+数据来源（8 个来源合并去重，每个来源单独拿出来都不全，合起来才全）：
 
 - 17mon/china_ip_list：国内常用的中国 IP 列表
 - APNIC 中国分配数据（cn|ipv4、cn|ipv6）：亚太互联网络信息中心分配给中国的 IP 段，最权威
@@ -205,6 +205,8 @@ IPv4 6,566 条 + IPv6 2,079 条，IPv4 覆盖 357,421,607 个地址，IPv6 约 6
 - Loyalsoldier/geoip CN 文本：Loyalsoldier 维护的中国 IP 文本（含 IPv4 和 IPv6）
 - metowolf/iplist 纯真 CN：纯真 IP 库的中国段
 - gaoyifan/china-operator-ip：三大运营商 IP 段（IPv4 和 IPv6）
+- clang/Clang.cn：中国 IP 列表（IPv4 和 IPv6）
+- missuo/ASN-China：中国 IP 列表（IPv4 和 IPv6）
 
 怎么验证？223.5.5.5（阿里 DNS）、119.29.29.29（腾讯 DNS）、114.114.114.114 查出来必须是 CN；8.8.8.8（谷歌 DNS）、1.1.1.1 查出来必须不是 CN。IPv6 版再加 2400:3200::1（阿里）、2408:8000::1（移动）、2409:8000::1（联通）、240e:960::1（电信）必须是 CN，2606:4700:4700::1111、2001:4860:4860::8888 必须不是 CN。
 
@@ -227,7 +229,7 @@ IPv4 6,566 条 + IPv6 2,079 条，IPv4 覆盖 357,421,607 个地址，IPv6 约 6
 每次检查做四件事：
 
 1. **规则**：China 从 ChinaDomain.list 和 geolocation-cn.yaml 拉最新源，合并去重；其他 6 套检查有没有失效域名（已停用、无法解析、服务已下线）。Egern 版和 QX 版同步改。
-2. **GeoIP 库**：从 6 个来源拉最新 IP 段，合并去重后重建 GeoIpCN.mmdb（IPv4 版）和 GeoIpCN-v6.mmdb（IPv4+IPv6 版），验证通过才推。
+2. **GeoIP 库**：从 8 个来源拉最新 IP 段，合并去重后重建 GeoIpCN.mmdb（IPv4 版）和 GeoIpCN-v6.mmdb（IPv4+IPv6 版），验证通过才推。
 3. **README**：检查里面的链接和条数是不是还对得上仓库现状，对不上就改对。
 4. **图标**：13 张预览图都在不在，链接能不能打开。
 
@@ -239,7 +241,7 @@ IPv4 6,566 条 + IPv6 2,079 条，IPv4 覆盖 357,421,607 个地址，IPv6 约 6
 
 ## 📄 使用说明
 
-本仓库仅供作者个人自用，未采用任何开源协议，不授权他人使用、转载或商用；仓库公开可见仅为便于作者设备拉取规则。里面的规则和 GeoIP 库数据来自互联网公开信息（17mon、APNIC、Loyalsoldier 等 6 个上游），图标是从别人家搬来的原图，各有各的许可，请勿直接商用或转载。
+本仓库仅供作者个人自用，未采用任何开源协议，不授权他人使用、转载或商用；仓库公开可见仅为便于作者设备拉取规则。里面的规则和 GeoIP 库数据来自互联网公开信息（17mon、APNIC、Loyalsoldier 等 8 个上游），图标是从别人家搬来的原图，各有各的许可，请勿直接商用或转载。
 
 ---
 
