@@ -1,6 +1,6 @@
-# 最后修改：2026-11-27 19:04
+# 最后修改：2026-11-27 19:22
 # 中国常用域名 - 经常用到的
-# 总共 481 条
+# 总共 471 条
 # 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
 domain_suffix_set:
 # 第一段：应用/网站域名
@@ -89,7 +89,6 @@ domain_suffix_set:
   - sina.com
   - tianya.net
   - tmall.hk
-  - weather.com
   - xiaomi.net
   - xiaomicp.com
   - 127.net
@@ -100,7 +99,6 @@ domain_suffix_set:
   - 8686c.com
   - 95516.com
   - abchina.com
-  - abercrombie.com
   - algocasts.io
   - aliapp.org
   - alibabachengdun.com
@@ -173,11 +171,9 @@ domain_suffix_set:
   - gwdang.com
   - gzlzfm.com
   - haibian.com
-  - helpshift.com
   - hichina.com
   - hihonor.com
   - hitv.com
-  - hollisterco.com
   - hongxiu.com
   - hrtsea.com
   - huajiao.com
@@ -257,7 +253,6 @@ domain_suffix_set:
   - onlinedown.net
   - ourdvs.com
   - paipai.com
-  - paragon.com
   - pdfwifi.com
   - polyv.net
   - pplive.com
@@ -290,7 +285,6 @@ domain_suffix_set:
   - simplecd.me
   - sinaapp.com
   - smzdm.com
-  - snapdrop.net
   - snwx.com
   - sogo.com
   - sogou.com
@@ -299,8 +293,6 @@ domain_suffix_set:
   - sohuno.com
   - sohurdc.com
   - soku.com
-  - sony.com
-  - sonyentertainmentnetwork.com
   - soso.com
   - sspai.com
   - steamchina.com
@@ -308,7 +300,6 @@ domain_suffix_set:
   - steamusercontent.com
   - suning.com
   - taihe.com
-  - tebex.io
   - tencentmind.com
   - tenpay.com
   - th-sjy.com
@@ -436,7 +427,6 @@ domain_suffix_set:
   - geilicdn.com
   - huxiucdn.com
   - ifengimg.com
-  - images-amazon.com
   - iqiyipic.com
   - jcloudcs.com
   - jdcloud.com

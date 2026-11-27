@@ -1,6 +1,6 @@
-# 最后修改：2026-11-27 19:04
+# 最后修改：2026-11-27 19:22
 # 中国常用域名 - 经常用到的
-# 总共 481 条
+# 总共 471 条
 # 用法：QX 分流 -> direct
 # 第一段：应用/网站域名
 host-suffix, baidu.com, direct
@@ -88,7 +88,6 @@ host-suffix, iesdouyin.com, direct
 host-suffix, sina.com, direct
 host-suffix, tianya.net, direct
 host-suffix, tmall.hk, direct
-host-suffix, weather.com, direct
 host-suffix, xiaomi.net, direct
 host-suffix, xiaomicp.com, direct
 host-suffix, 127.net, direct
@@ -99,7 +98,6 @@ host-suffix, 71.am, direct
 host-suffix, 8686c.com, direct
 host-suffix, 95516.com, direct
 host-suffix, abchina.com, direct
-host-suffix, abercrombie.com, direct
 host-suffix, algocasts.io, direct
 host-suffix, aliapp.org, direct
 host-suffix, alibabachengdun.com, direct
@@ -172,11 +170,9 @@ host-suffix, guazi.com, direct
 host-suffix, gwdang.com, direct
 host-suffix, gzlzfm.com, direct
 host-suffix, haibian.com, direct
-host-suffix, helpshift.com, direct
 host-suffix, hichina.com, direct
 host-suffix, hihonor.com, direct
 host-suffix, hitv.com, direct
-host-suffix, hollisterco.com, direct
 host-suffix, hongxiu.com, direct
 host-suffix, hrtsea.com, direct
 host-suffix, huajiao.com, direct
@@ -256,7 +252,6 @@ host-suffix, onedns.net, direct
 host-suffix, onlinedown.net, direct
 host-suffix, ourdvs.com, direct
 host-suffix, paipai.com, direct
-host-suffix, paragon.com, direct
 host-suffix, pdfwifi.com, direct
 host-suffix, polyv.net, direct
 host-suffix, pplive.com, direct
@@ -289,7 +284,6 @@ host-suffix, shumilou.net, direct
 host-suffix, simplecd.me, direct
 host-suffix, sinaapp.com, direct
 host-suffix, smzdm.com, direct
-host-suffix, snapdrop.net, direct
 host-suffix, snwx.com, direct
 host-suffix, sogo.com, direct
 host-suffix, sogou.com, direct
@@ -298,8 +292,6 @@ host-suffix, sohucs.com, direct
 host-suffix, sohuno.com, direct
 host-suffix, sohurdc.com, direct
 host-suffix, soku.com, direct
-host-suffix, sony.com, direct
-host-suffix, sonyentertainmentnetwork.com, direct
 host-suffix, soso.com, direct
 host-suffix, sspai.com, direct
 host-suffix, steamchina.com, direct
@@ -307,7 +299,6 @@ host-suffix, steamcontent.com, direct
 host-suffix, steamusercontent.com, direct
 host-suffix, suning.com, direct
 host-suffix, taihe.com, direct
-host-suffix, tebex.io, direct
 host-suffix, tencentmind.com, direct
 host-suffix, tenpay.com, direct
 host-suffix, th-sjy.com, direct
@@ -435,7 +426,6 @@ host-suffix, ganjistatic1.com, direct
 host-suffix, geilicdn.com, direct
 host-suffix, huxiucdn.com, direct
 host-suffix, ifengimg.com, direct
-host-suffix, images-amazon.com, direct
 host-suffix, iqiyipic.com, direct
 host-suffix, jcloudcs.com, direct
 host-suffix, jdcloud.com, direct

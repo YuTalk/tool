@@ -25,7 +25,7 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 | --- | --- |
 | 规则集 | 12 个（Egern、QX、Loon 各一份，内容基本一致，Loon 版 3 套多几条） |
 | 图标 | 13 个（13 套图标库的预览图，都是从别人家搬过来的原图） |
-| 域名总数 | 753 条（去重后，12 套合计 754 条） |
+| 域名总数 | 743 条（去重后，12 套合计 744 条） |
 | GeoIP 库 | 1 个版本：IPv4 版 6,566 条约 135KB |
 | 自动检查 | 每 6 小时，0:00、6:00、12:00、18:00 |
 
@@ -35,7 +35,7 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 qx、egern、loon 三栏里各有一个按钮：qx 的「加进 QX」点一下跳进 QX，问你要不要添加这套规则；egern 的「加进 Egern」点一下打开这套规则的文件，复制链接去 Egern 里粘贴添加（GitHub 不支持直接跳进 Egern）；loon 的「加进 Loon」点一下打开这套规则的文件，复制链接去 Loon 里粘贴添加。
 | 规则 | 条数 | qx | egern | loon |
 | --- | --- | --- | --- | --- |
-| China | 481 | <a href="https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FChina%2FChina.list%2C%20tag%3DChina%22%5D%7D"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square"></a> | <a href="https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/China/China.yaml"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square"></a> | <a href="https://raw.githubusercontent.com/YuTalk/tool/main/rule/loon/China/China.list"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Loon-5856D6?style=flat-square"></a> |
+| China | 471 | <a href="https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FChina%2FChina.list%2C%20tag%3DChina%22%5D%7D"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square"></a> | <a href="https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/China/China.yaml"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square"></a> | <a href="https://raw.githubusercontent.com/YuTalk/tool/main/rule/loon/China/China.list"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Loon-5856D6?style=flat-square"></a> |
 | Google | 18 | <a href="https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FGoogle%2FGoogle.list%2C%20tag%3DGoogle%22%5D%7D"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square"></a> | <a href="https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Google/Google.yaml"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square"></a> | <a href="https://raw.githubusercontent.com/YuTalk/tool/main/rule/loon/Google/Google.list"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Loon-5856D6?style=flat-square"></a> |
 | Apple | 17 | <a href="https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FApple%2FApple.list%2C%20tag%3DApple%22%5D%7D"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square"></a> | <a href="https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Apple/Apple.yaml"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square"></a> | <a href="https://raw.githubusercontent.com/YuTalk/tool/main/rule/loon/Apple/Apple.list"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Loon-5856D6?style=flat-square"></a> |
 | Microsoft | 17 | <a href="https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FMicrosoft%2FMicrosoft.list%2C%20tag%3DMicrosoft%22%5D%7D"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square"></a> | <a href="https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Microsoft/Microsoft.yaml"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square"></a> | <a href="https://raw.githubusercontent.com/YuTalk/tool/main/rule/loon/Microsoft/Microsoft.list"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Loon-5856D6?style=flat-square"></a> |
@@ -47,6 +47,8 @@ qx、egern、loon 三栏里各有一个按钮：qx 的「加进 QX」点一下�
 | Speedtest | 9 | <a href="https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FSpeedtest%2FSpeedtest.list%2C%20tag%3DSpeedtest%22%5D%7D"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square"></a> | <a href="https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Speedtest/Speedtest.yaml"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square"></a> | <a href="https://raw.githubusercontent.com/YuTalk/tool/main/rule/loon/Speedtest/Speedtest.list"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Loon-5856D6?style=flat-square"></a> |
 | Telegram | 34 | <a href="https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FTelegram%2FTelegram.list%2C%20tag%3DTelegram%22%5D%7D"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square"></a> | <a href="https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/Telegram/Telegram.yaml"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square"></a> | <a href="https://raw.githubusercontent.com/YuTalk/tool/main/rule/loon/Telegram/Telegram.list"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Loon-5856D6?style=flat-square"></a> |
 | GeoIP_CN | 1 | <a href="https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FGeoIP_CN%2FGeoIP_CN.list%2C%20tag%3DGeoIP_CN%22%5D%7D"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square"></a> | <a href="https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/GeoIP_CN/GeoIP_CN.yaml"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square"></a> | <a href="https://raw.githubusercontent.com/YuTalk/tool/main/rule/loon/GeoIP_CN/GeoIP_CN.list"><img src="https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Loon-5856D6?style=flat-square"></a> |
+
+顺序注意：规则按顺序匹配，先匹配到的先生效。AI_Part 必须排在 Google、Microsoft 前面（AI_Part 里的 gemini.google.com、aistudio.google.com、一批 *.googleapis.com 是 google.com、googleapis.com 的子域，openaiassets.blob.core.windows.net 等是 windows.net 的子域）；GitHub 必须排在 China 前面（github-avatars.oss-cn-hongkong.aliyuncs.com 是 aliyuncs.com 的子域）；GEOIP CN 排在倒数第二、默认规则之前。
 </details>
 
 <details>
@@ -126,32 +128,32 @@ qx、egern、loon 三栏里各有一个按钮：qx 的「加进 QX」点一下�
 每套规则都放在自己的文件夹里（比如 `rule/egern/China/`），点进文件夹能看到这套规则的说明页。Loon 版在 `rule/loon/` 里，Spotify 29 条、TikTok 33 条、Telegram 44 条，其余一样。点开每条规则，看里面包含哪些应用。
 
 <details>
-<summary>China（481 条）</summary>
+<summary>China（471 条）</summary>
 
-应用 / 网站（380 条）：微信、QQ、QQ邮箱、QQ音乐、腾讯视频、腾讯微云、腾讯文档、腾讯会议、微信支付、财付通、腾讯应用宝、Foxmail、搜搜、起点中文网、红袖添香、起点读书、阅文集团、腾讯元宝、腾讯、淘宝、天猫、1688、闲鱼、支付宝、阿里巴巴、阿里云、阿里云 DNS、速卖通、钉钉、饿了么、高德地图、优酷、土豆网、虾米音乐、万网、百度、百度地图、百度贴吧、百度智能云、百度短链接、百度糯米、hao123、爱奇艺、千千音乐、抖音、今日头条、今日头条号、火山小视频、火山直播、飞聊、豆包、剪映、即梦AI、红果短剧、悟空问答、字节跳动、网易、网易邮箱、网易云音乐、网易云、有道、LOFTER、网易易盾、网易考拉、京东、京东支付、拍拍网、美团、美团外卖、大众点评、小米、金山、WPS、金山词霸、金山云、多看阅读、快手、哔哩哔哩、哔哩哔哩游戏、12306、1号店、Abercrombie & Fitch、BootCSS、DeepSeek、Element Plus、FIR 应用分发、Gitee、HelpShift、Hollister、IPIP、IT168、IT之家、KnewOne、Mob、OneDNS、PPTV、Snapdrop、StartSSL、Steam、Steam（完美世界）、Tebex、UC浏览器、Weico、YY直播、Zealer、realme、vivo、一下科技、一加、下厨房、东方网、中信银行、中华网、中国农业银行、中国天气、中国日报、中国移动、中国网、中国联通、中国邮政储蓄银行、中国银联、中搜、中文域名（.中国）、中文域名（.公司）、中文域名（.网络）、中通快递、乐居、书迷楼、人人影视、人人影视字幕组、什么值得买、保利威、全民直播、凤凰网、加网、华军软件园、南方周末、博客园、印象笔记、去哪儿、又拍云、和风天气、喜茶、喜马拉雅、嘀哩嘀哩、坚果云、墨迹天气、多玩游戏、天天美剧、天气、天气网、天涯社区、天眼查、太合音乐、央视网、好奇心日报、威锋网、字幕组、宜搜、小红书、少数派、幕布、开源中国、开课吧、微博、微店、微软、快递100、思否、我买网、战旗直播、房天下、所有 .cn 域名、招商银行、拼多多、搜库、搜狐、搜狗、摩拜单车、斗鱼、新华网、新浪、新浪云、易宝支付、星巴克、智联招聘、极验、永硕E盘、海底捞、滴滴出行、火车票网、猫眼电影、环球网、瑞幸咖啡、瓜子二手车、电影天堂、界面新闻、看看、知乎、秀米、科大讯飞、秒拍、简书、糗事百科、索尼、美丽说、美图、美拍、联想、聚美优品、肯德基、腾讯 DNSPod、色影无忌、芒果TV、花椒直播、苏宁易购、荔枝FM、荣耀、菜鸟教程、落网、蓝奏云、蓝点网、蘑菇街、虎扑、虎牙直播、豆瓣、豌豆荚、赶集网、车168、迅雷、途牛、酷我音乐、酷狗音乐、铁血网、雪球、音悦台、韵达快递、顺丰速运、魅族、麦当劳。
+应用 / 网站（371 条）：微信、QQ、QQ邮箱、QQ音乐、腾讯视频、腾讯微云、腾讯文档、腾讯会议、微信支付、财付通、腾讯应用宝、Foxmail、搜搜、起点中文网、红袖添香、起点读书、阅文集团、腾讯元宝、腾讯、淘宝、天猫、1688、闲鱼、支付宝、阿里巴巴、阿里云、阿里云 DNS、速卖通、钉钉、饿了么、高德地图、优酷、土豆网、虾米音乐、万网、百度、百度地图、百度贴吧、百度智能云、百度短链接、百度糯米、hao123、爱奇艺、千千音乐、抖音、今日头条、今日头条号、火山小视频、火山直播、飞聊、豆包、剪映、即梦AI、红果短剧、悟空问答、字节跳动、网易、网易邮箱、网易云音乐、网易云、有道、LOFTER、网易易盾、网易考拉、京东、京东支付、拍拍网、美团、美团外卖、大众点评、小米、金山、WPS、金山词霸、金山云、多看阅读、快手、哔哩哔哩、哔哩哔哩游戏、12306、1号店、BootCSS、DeepSeek、Element Plus、FIR 应用分发、Gitee、IPIP、IT168、IT之家、KnewOne、Mob、OneDNS、PPTV、Steam、Steam（完美世界）、UC浏览器、Weico、YY直播、Zealer、realme、vivo、一下科技、一加、下厨房、东方网、中信银行、中华网、中国农业银行、中国天气、中国日报、中国移动、中国网、中国联通、中国邮政储蓄银行、中国银联、中搜、中文域名（.中国）、中文域名（.公司）、中文域名（.网络）、中通快递、乐居、书迷楼、人人影视、人人影视字幕组、什么值得买、保利威、全民直播、凤凰网、加网、华军软件园、南方周末、博客园、印象笔记、去哪儿、又拍云、和风天气、喜茶、喜马拉雅、嘀哩嘀哩、坚果云、墨迹天气、多玩游戏、天天美剧、天气网、天涯社区、天眼查、太合音乐、央视网、好奇心日报、威锋网、字幕组、宜搜、小红书、少数派、幕布、开源中国、开课吧、微博、微店、微软、快递100、思否、我买网、战旗直播、房天下、所有 .cn 域名、招商银行、拼多多、搜库、搜狐、搜狗、摩拜单车、斗鱼、新华网、新浪、新浪云、易宝支付、星巴克、智联招聘、极验、永硕E盘、海底捞、滴滴出行、火车票网、猫眼电影、环球网、瑞幸咖啡、瓜子二手车、电影天堂、界面新闻、看看、知乎、秀米、科大讯飞、秒拍、简书、糗事百科、美丽说、美图、美拍、联想、聚美优品、肯德基、腾讯 DNSPod、色影无忌、芒果TV、花椒直播、苏宁易购、荔枝FM、荣耀、菜鸟教程、落网、蓝奏云、蓝点网、蘑菇街、虎扑、虎牙直播、豆瓣、豌豆荚、赶集网、车168、迅雷、途牛、酷我音乐、酷狗音乐、铁血网、雪球、音悦台、韵达快递、顺丰速运、魅族、麦当劳。
 
-CDN / 后台 / 接口（101 条）：1号店图片、CloudXNS、QQ头像/图片、YY静态、亚马逊图片、京东云、京东图片 CDN、今日头条 API、今日头条 CDN、今日头条云、今日头条图片、优酷图片、凤凰网图片、友盟云、咪咕云、咪咕视频、哔哩哔哩、哔哩哔哩 API、天气网静态、央视网图片、字幕组 API、字节跳动、字节跳动 API、字节跳动 CDN、字节跳动 DNS、字节跳动图片、字节跳动静态、小米图片、微博 CDN、抖音 CDN、抖音图片、抖音视频点播、抖音静态、搜房网图片、搜狗 CDN、淘宝/天猫 CDN、淘宝缓存、爱奇艺图片、百度图片、百度智能云对象存储、百度静态、百度静态 CDN、知乎图片、简书 API、腾讯云 CDN、腾讯图片 CDN、蘑菇街 CDN、虎嗅网 CDN、赶集网静态、迅雷 CDN、途牛 CDN、阿里云、阿里云 CDN、阿里图片 CDN、饿了么 CDN。
+CDN / 后台 / 接口（100 条）：1号店图片、CloudXNS、QQ头像/图片、YY静态、京东云、京东图片 CDN、今日头条 API、今日头条 CDN、今日头条云、今日头条图片、优酷图片、凤凰网图片、友盟云、咪咕云、咪咕视频、哔哩哔哩、哔哩哔哩 API、天气网静态、央视网图片、字幕组 API、字节跳动、字节跳动 API、字节跳动 CDN、字节跳动 DNS、字节跳动图片、字节跳动静态、小米图片、微博 CDN、抖音 CDN、抖音图片、抖音视频点播、抖音静态、搜房网图片、搜狗 CDN、淘宝/天猫 CDN、淘宝缓存、爱奇艺图片、百度图片、百度智能云对象存储、百度静态、百度静态 CDN、知乎图片、简书 API、腾讯云 CDN、腾讯图片 CDN、蘑菇街 CDN、虎嗅网 CDN、赶集网静态、迅雷 CDN、途牛 CDN、阿里云、阿里云 CDN、阿里图片 CDN、饿了么 CDN。
 
-未识别的域名：13th.tech、71.am、8686c.com、algocasts.io、allawnfs.com、allawno.com、allawntech.com、asklink.com、baomitu.com、chaipip.com、chinaplay.store、cn163.net、cnmstl.net、dhrest.com、fantasy.tv、frdic.com、fresh-ideas.cc、ghpym.com、go2map.com、godic.net、gwdang.com、gzlzfm.com、haibian.com、hitv.com、hrtsea.com、id6.me、igamecj.com、im9.com、ixdzs.com、jomodns.com、ksosoft.com、kspkg.com、laomo.me、lemicp.com、letitfly.me、lxdns.com、moke.com、mpyit.com、nruan.com、ourdvs.com、paragon.com、pdfwifi.com、qbox.me、qin.io、qy.net、repaik.com、ruguoapp.com、sandai.net、simplecd.me、snwx.com、tencentmind.com、th-sjy.com、tianyaui.com、tietuku.com、tmiaoo.com、udache.com、uxengine.net、xdrig.com、xiaojukeji.com、xslb.net、yach.me、zhangzishi.cc、zhenguanyu.biz、zhenguanyu.com、zhuihd.com、hc-cdn.com、mmstat.com、smtcdns.com、smtcdns.net、00cdn.com、71edge.com、88cdn.com、appsimg.com、cdnmama.com、chuimg.com、dxycdn.com、edgesrv.com、fengkongcloud.com、geilicdn.com、jmstatic.com、kanimg.com、msstatic.com、p2cdn.com、st.dl.bscstorage.net、st.dl.eccdnx.com、st.dl.pinyuncloud.com、wscdns.com、xhscdn.com、xmcdn.com、ydstatic.com、yunjiasu-cdn.net、yximgs.com、zjcdn.com。
+未识别的域名：13th.tech、71.am、8686c.com、algocasts.io、allawnfs.com、allawno.com、allawntech.com、asklink.com、baomitu.com、chaipip.com、chinaplay.store、cn163.net、cnmstl.net、dhrest.com、fantasy.tv、frdic.com、fresh-ideas.cc、ghpym.com、go2map.com、godic.net、gwdang.com、gzlzfm.com、haibian.com、hitv.com、hrtsea.com、id6.me、igamecj.com、im9.com、ixdzs.com、jomodns.com、ksosoft.com、kspkg.com、laomo.me、lemicp.com、letitfly.me、lxdns.com、moke.com、mpyit.com、nruan.com、ourdvs.com、pdfwifi.com、qbox.me、qin.io、qy.net、repaik.com、ruguoapp.com、sandai.net、simplecd.me、snwx.com、tencentmind.com、th-sjy.com、tianyaui.com、tietuku.com、tmiaoo.com、udache.com、uxengine.net、xdrig.com、xiaojukeji.com、xslb.net、yach.me、zhangzishi.cc、zhenguanyu.biz、zhenguanyu.com、zhuihd.com、hc-cdn.com、mmstat.com、smtcdns.com、smtcdns.net、00cdn.com、71edge.com、88cdn.com、appsimg.com、cdnmama.com、chuimg.com、dxycdn.com、edgesrv.com、fengkongcloud.com、geilicdn.com、jmstatic.com、kanimg.com、msstatic.com、p2cdn.com、st.dl.bscstorage.net、st.dl.eccdnx.com、st.dl.pinyuncloud.com、wscdns.com、xhscdn.com、xmcdn.com、ydstatic.com、yunjiasu-cdn.net、yximgs.com、zjcdn.com。
 
 </details>
 
 <details>
-<summary>Google（31 条）</summary>
+<summary>Google（18 条）</summary>
 
 谷歌搜索、Gmail、YouTube、YouTube Music、Google云端硬盘、Google文档、Google地图、Google Play、Google翻译、Google学术、Google新闻、Google相册、Google日历、Google Meet、Gemini、谷歌账号、谷歌API、谷歌图片、谷歌用户内容、谷歌静态、YouTube视频、YouTube图片。
 
 </details>
 
 <details>
-<summary>Apple（22 条）</summary>
+<summary>Apple（17 条）</summary>
 
 苹果、iCloud、App Store、iTunes、Apple Music、Apple TV、苹果支持、苹果开发者、CloudKit、iCloud内容、苹果静态、苹果CDN、苹果图片、苹果DNS。
 
 </details>
 
 <details>
-<summary>Microsoft（21 条）</summary>
+<summary>Microsoft（17 条）</summary>
 
 微软、Outlook、Hotmail、Office、Office 365、Microsoft 365、OneDrive、Windows、Windows更新、微软在线服务、SharePoint、MSN、必应搜索、Azure、微软账号、微软支持、微软学习、微软Live。
 
@@ -167,7 +169,7 @@ CDN / 后台 / 接口（101 条）：1号店图片、CloudXNS、QQ头像/图片�
 </details>
 
 <details>
-<summary>AI_Part（72 条）</summary>
+<summary>AI_Part（71 条）</summary>
 
 ChatGPT、Sora、OpenAI、Claude、Anthropic、MCP（模型上下文协议）、Meta AI、Muse、Llama、Meta、Grok、Grokipedia、xAI、Gemini、Bard、Google AI、Google AI Studio、Google Cloud AI、Google MakerSuite、Google生成式AI、DeepMind、Vertex AI、Google。
 

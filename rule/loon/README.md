@@ -12,13 +12,13 @@ Loon 用的规则，12 套，每套一个文件夹（点进文件夹能看到这
 
 ## 规则统计
 
-最后更新时间：2026-11-26 13:16:00
+最后更新时间：2026-11-27 19:22:00
 
 各规则集统计：
 
 | 规则集 | 数量(条) |
 | ---- | ---- |
-| China | 481 |
+| China | 471 |
 | <img src="https://cdn.simpleicons.org/google/4285F4" width="20" height="20" alt="Google"> Google | 18 |
 | <img src="https://cdn.simpleicons.org/apple" width="20" height="20" alt="Apple"> Apple | 17 |
 | <img src="https://www.microsoft.com/favicon.ico" width="20" height="20" alt="Microsoft"> Microsoft | 17 |
@@ -30,9 +30,9 @@ Loon 用的规则，12 套，每套一个文件夹（点进文件夹能看到这
 | <img src="https://cdn.simpleicons.org/github" width="20" height="20" alt="GitHub"> GitHub | 31 |
 | <img src="https://cdn.simpleicons.org/speedtest/141526" width="20" height="20" alt="Speedtest"> Speedtest | 9 |
 | <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="20" height="20" alt="Telegram"> Telegram | 44 |
-| TOTAL | 766 |
+| TOTAL | 756 |
 
-其中规则条目 765 条（去重后 753 条，和主 README 的域名总数一致；多出来的 12 条是 IP-ASN 和进程名规则），GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
+其中规则条目 755 条（去重后 743 条，和主 README 的域名总数一致；多出来的 12 条是 IP-ASN 和进程名规则），GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
 
 ## Loon
 
@@ -45,7 +45,7 @@ Loon 用的规则，12 套，每套一个文件夹（点进文件夹能看到这
 - Loon 靠 DoH 流量模式选 Rule，实现和 Egern 的 DNS 转发一样的效果。
 
 #### 规则链接
-**China.list（481 条）**
+**China.list（471 条）**
 
 原始链接：
 
@@ -55,7 +55,7 @@ CDN 链接：
 
 https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/loon/China/China.list
 
-**Google.list（31 条）**
+**Google.list（18 条）**
 
 原始链接：
 
