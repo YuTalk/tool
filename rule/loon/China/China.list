@@ -1,6 +1,6 @@
-# 最后修改：2026-11-27 19:22
+# 最后修改：2026-11-27 19:55
 # 中国常用域名 - 经常用到的
-# 总共 471 条
+# 总共 464 条
 # 用法：Loon 分流 -> DIRECT
 # 第一段：应用/网站域名
 DOMAIN-SUFFIX,baidu.com,DIRECT
@@ -102,7 +102,6 @@ DOMAIN-SUFFIX,algocasts.io,DIRECT
 DOMAIN-SUFFIX,aliapp.org,DIRECT
 DOMAIN-SUFFIX,alibabachengdun.com,DIRECT
 DOMAIN-SUFFIX,alibabausercontent.com,DIRECT
-DOMAIN-SUFFIX,aliexpress.com,DIRECT
 DOMAIN-SUFFIX,alikunlun.com,DIRECT
 DOMAIN-SUFFIX,alipayobjects.com,DIRECT
 DOMAIN-SUFFIX,alisoft.com,DIRECT
@@ -116,7 +115,6 @@ DOMAIN-SUFFIX,autonavi.com,DIRECT
 DOMAIN-SUFFIX,b23.tv,DIRECT
 DOMAIN-SUFFIX,baomitu.com,DIRECT
 DOMAIN-SUFFIX,biligame.com,DIRECT
-DOMAIN-SUFFIX,biliintl.co,DIRECT
 DOMAIN-SUFFIX,bootcss.com,DIRECT
 DOMAIN-SUFFIX,bytedance.com,DIRECT
 DOMAIN-SUFFIX,bytedance.net,DIRECT
@@ -241,8 +239,6 @@ DOMAIN-SUFFIX,mogu.com,DIRECT
 DOMAIN-SUFFIX,mogujie.com,DIRECT
 DOMAIN-SUFFIX,moke.com,DIRECT
 DOMAIN-SUFFIX,mpyit.com,DIRECT
-DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
-DOMAIN-SUFFIX,msftncsi.com,DIRECT
 DOMAIN-SUFFIX,mubu.com,DIRECT
 DOMAIN-SUFFIX,mxhichina.com,DIRECT
 DOMAIN-SUFFIX,myapp.com,DIRECT
@@ -295,8 +291,6 @@ DOMAIN-SUFFIX,soku.com,DIRECT
 DOMAIN-SUFFIX,soso.com,DIRECT
 DOMAIN-SUFFIX,sspai.com,DIRECT
 DOMAIN-SUFFIX,steamchina.com,DIRECT
-DOMAIN-SUFFIX,steamcontent.com,DIRECT
-DOMAIN-SUFFIX,steamusercontent.com,DIRECT
 DOMAIN-SUFFIX,suning.com,DIRECT
 DOMAIN-SUFFIX,taihe.com,DIRECT
 DOMAIN-SUFFIX,tencentmind.com,DIRECT
@@ -409,7 +403,6 @@ DOMAIN-SUFFIX,00cdn.com,DIRECT
 DOMAIN-SUFFIX,71edge.com,DIRECT
 DOMAIN-SUFFIX,88cdn.com,DIRECT
 DOMAIN-SUFFIX,acgvideo.com,DIRECT
-DOMAIN-SUFFIX,alibabacloud.com,DIRECT
 DOMAIN-SUFFIX,appsimg.com,DIRECT
 DOMAIN-SUFFIX,bdimg.com,DIRECT
 DOMAIN-SUFFIX,bdstatic.com,DIRECT

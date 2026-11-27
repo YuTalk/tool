@@ -1,6 +1,6 @@
-# 最后修改：2026-11-27 19:22
+# 最后修改：2026-11-27 19:55
 # 中国常用域名 - 经常用到的
-# 总共 471 条
+# 总共 464 条
 # 用法：QX 分流 -> direct
 # 第一段：应用/网站域名
 host-suffix, baidu.com, direct
@@ -102,7 +102,6 @@ host-suffix, algocasts.io, direct
 host-suffix, aliapp.org, direct
 host-suffix, alibabachengdun.com, direct
 host-suffix, alibabausercontent.com, direct
-host-suffix, aliexpress.com, direct
 host-suffix, alikunlun.com, direct
 host-suffix, alipayobjects.com, direct
 host-suffix, alisoft.com, direct
@@ -116,7 +115,6 @@ host-suffix, autonavi.com, direct
 host-suffix, b23.tv, direct
 host-suffix, baomitu.com, direct
 host-suffix, biligame.com, direct
-host-suffix, biliintl.co, direct
 host-suffix, bootcss.com, direct
 host-suffix, bytedance.com, direct
 host-suffix, bytedance.net, direct
@@ -241,8 +239,6 @@ host-suffix, mogu.com, direct
 host-suffix, mogujie.com, direct
 host-suffix, moke.com, direct
 host-suffix, mpyit.com, direct
-host-suffix, msftconnecttest.com, direct
-host-suffix, msftncsi.com, direct
 host-suffix, mubu.com, direct
 host-suffix, mxhichina.com, direct
 host-suffix, myapp.com, direct
@@ -295,8 +291,6 @@ host-suffix, soku.com, direct
 host-suffix, soso.com, direct
 host-suffix, sspai.com, direct
 host-suffix, steamchina.com, direct
-host-suffix, steamcontent.com, direct
-host-suffix, steamusercontent.com, direct
 host-suffix, suning.com, direct
 host-suffix, taihe.com, direct
 host-suffix, tencentmind.com, direct
@@ -409,7 +403,6 @@ host-suffix, 00cdn.com, direct
 host-suffix, 71edge.com, direct
 host-suffix, 88cdn.com, direct
 host-suffix, acgvideo.com, direct
-host-suffix, alibabacloud.com, direct
 host-suffix, appsimg.com, direct
 host-suffix, bdimg.com, direct
 host-suffix, bdstatic.com, direct

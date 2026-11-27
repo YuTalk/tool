@@ -1,6 +1,6 @@
-# 最后修改：2026-11-27 19:22
+# 最后修改：2026-11-27 19:55
 # 中国常用域名 - 经常用到的
-# 总共 471 条
+# 总共 464 条
 # 用法：Egern DNS 转发 -> 国内，或分流 -> DIRECT
 domain_suffix_set:
 # 第一段：应用/网站域名
@@ -103,7 +103,6 @@ domain_suffix_set:
   - aliapp.org
   - alibabachengdun.com
   - alibabausercontent.com
-  - aliexpress.com
   - alikunlun.com
   - alipayobjects.com
   - alisoft.com
@@ -117,7 +116,6 @@ domain_suffix_set:
   - b23.tv
   - baomitu.com
   - biligame.com
-  - biliintl.co
   - bootcss.com
   - bytedance.com
   - bytedance.net
@@ -242,8 +240,6 @@ domain_suffix_set:
   - mogujie.com
   - moke.com
   - mpyit.com
-  - msftconnecttest.com
-  - msftncsi.com
   - mubu.com
   - mxhichina.com
   - myapp.com
@@ -296,8 +292,6 @@ domain_suffix_set:
   - soso.com
   - sspai.com
   - steamchina.com
-  - steamcontent.com
-  - steamusercontent.com
   - suning.com
   - taihe.com
   - tencentmind.com
@@ -410,7 +404,6 @@ domain_suffix_set:
   - 71edge.com
   - 88cdn.com
   - acgvideo.com
-  - alibabacloud.com
   - appsimg.com
   - bdimg.com
   - bdstatic.com
