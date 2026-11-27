@@ -1,6 +1,6 @@
-# 最后修改：2026-11-27 18:56
+# 最后修改：2026-11-27 19:04
 # 中国常用域名 - 经常用到的
-# 总共 482 条
+# 总共 481 条
 # 用法：Loon 分流 -> DIRECT
 # 第一段：应用/网站域名
 DOMAIN-SUFFIX,baidu.com,DIRECT
@@ -302,7 +302,6 @@ DOMAIN-SUFFIX,sony.com,DIRECT
 DOMAIN-SUFFIX,sonyentertainmentnetwork.com,DIRECT
 DOMAIN-SUFFIX,soso.com,DIRECT
 DOMAIN-SUFFIX,sspai.com,DIRECT
-DOMAIN-SUFFIX,startssl.com,DIRECT
 DOMAIN-SUFFIX,steamchina.com,DIRECT
 DOMAIN-SUFFIX,steamcontent.com,DIRECT
 DOMAIN-SUFFIX,steamusercontent.com,DIRECT
