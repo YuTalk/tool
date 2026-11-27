@@ -1,6 +1,6 @@
-# 最后修改：2026-11-24 14:40
+# 最后修改：2026-11-27 18:39
 # 谷歌 / YouTube
-# 总共 31 条
+# 总共 30 条
 # 用法：Loon 分流 -> PROXY
 DOMAIN-SUFFIX,google.com,PROXY
 DOMAIN-SUFFIX,googleapis.com,PROXY
@@ -26,7 +26,6 @@ DOMAIN-SUFFIX,google.com.hk,PROXY
 DOMAIN-SUFFIX,google.co.jp,PROXY
 DOMAIN-SUFFIX,google.co.uk,PROXY
 DOMAIN-SUFFIX,google.de,PROXY
-DOMAIN-SUFFIX,gemini.google.com,PROXY
 DOMAIN-SUFFIX,translate.google.com,PROXY
 DOMAIN-SUFFIX,scholar.google.com,PROXY
 DOMAIN-SUFFIX,news.google.com,PROXY

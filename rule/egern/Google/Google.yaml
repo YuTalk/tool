@@ -1,6 +1,6 @@
-# 最后修改：2026-11-23 23:18
+# 最后修改：2026-11-27 18:39
 # 谷歌 / YouTube
-# 总共 31 条
+# 总共 30 条
 # 用法：Egern 分流 -> 谷歌服务
 domain_suffix_set:
   - google.com
@@ -27,7 +27,6 @@ domain_suffix_set:
   - google.co.jp
   - google.co.uk
   - google.de
-  - gemini.google.com
   - translate.google.com
   - scholar.google.com
   - news.google.com
