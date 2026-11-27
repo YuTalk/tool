@@ -23,7 +23,7 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 | --- | --- |
 | 规则集 | 12 个（Egern、QX、Loon 各一份，内容基本一致，Loon 版 3 套多几条） |
 | 图标 | 13 个（13 套图标库的预览图，都是从别人家搬过来的原图） |
-| 域名总数 | 839 条（去重后） |
+| 域名总数 | 839 条（去重后，12 套合计 842 条，2 个域名跨套重复） |
 | GeoIP 库 | 6,566 条 CIDR，约 132KB，覆盖 357,421,607 个中国 IPv4 地址 |
 | 自动检查 | 每 6 小时，0:00、6:00、12:00、18:00 |
 
@@ -221,7 +221,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段
 | GeoIP_CN | [![加进 Egern](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_Egern-34C759?style=flat-square)](https://egernapp.com/rules/new?type=rule_set&match=https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fegern%2FGeoIP_CN%2FGeoIP_CN.yaml&policy=DIRECT) | [![加进 QX](https://img.shields.io/badge/%E5%8A%A0%E8%BF%9B_QX-007AFF?style=flat-square)](https://quantumult.app/x/open-app/add-resource?remote-resource=%7B%22filter_remote%22%3A%5B%22https%3A%2F%2Fraw.githubusercontent.com%2FYuTalk%2Ftool%2Fmain%2Frule%2Fquantumultx%2FGeoIP_CN%2FGeoIP_CN.list%2C%20tag%3DGeoIP_CN%2C%20force-policy%3Ddirect%22%5D%7D) |
 
 > 注意：
-> - Egern 的一键添加是加到**分流**里，China 还要再单独加一次 **DNS 转发 → 国内**，那个不能一键加，得在设置里手动加。
+> - Egern 的一键添加是加到**分流**里，China、Apple、SausageMan 还要再单独加一次 **DNS 转发 → 国内**，那个不能一键加，得在设置里手动加。
 > - 点链接后软件会先弹出来让你确认，策略已经按上面表格填好了，确认就行。
 > - 一键添加的链接里写了策略组名（谷歌服务、微软服务、人工智能、Spotify、TikTok、GitHub、SpeedTest、Telegram、DIRECT），你的配置里要有同名策略组才能直接用；如果没有，先在软件里建好同名策略组，或者点链接后手动改策略。
 > - 如果点链接没反应，先确认 Egern / QX 已经装好了。
@@ -244,7 +244,7 @@ China.yaml 分两段，第一段是应用 / 网站域名 **438 条**，第二段
    https://raw.githubusercontent.com/YuTalk/tool/main/rule/egern/China/China.yaml
    ```
 
-   DNS 转发是查域名用的：国内域名问国内 DNS，拿到国内 IP；国外域名问国外 DNS。只加 China 就够了，其他规则不用加 DNS 转发。
+   DNS 转发是查域名用的：国内域名问国内 DNS，拿到国内 IP；国外域名问国外 DNS。China、Apple、SausageMan 三套都要加 DNS 转发 → 国内，其他规则不用加 DNS 转发。
 2. **分流**：设置 → 分流 → 添加规则集，粘贴对应链接，策略按上面表格选。分流是决定流量走哪条路的：China、Apple、SausageMan 走 DIRECT 直连；Google、Microsoft、AI_Part 走代理节点组。也可以直接点上面「一键添加」表格里的绿色按钮，不用自己复制链接。
 3. **GeoIP 库**：设置 → GeoIP 数据库 → 粘贴 GeoIpCN.mmdb 的链接，把默认的库换成这个自建库。
 
