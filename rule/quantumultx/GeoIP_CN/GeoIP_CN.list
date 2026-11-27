@@ -1,5 +1,4 @@
-# 最后修改：2026-11-23 23:18
+# 最后修改：2026-11-27 18:22
 # GeoIP_CN
-# 来源：https://raw.githubusercontent.com/YuTalk/tool/main/rules/quantumultx/GeoIP_CN.list
 # 总共 1 条
 geoip, cn, direct
