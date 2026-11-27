@@ -263,8 +263,8 @@ Telegram、Telegraph、Telegram Desktop、Telegram下载、Swiftgram、Telega、
    - Speedtest：[blackmatrix7 Speedtest](https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Speedtest/Speedtest.list)
    - Telegram：[blackmatrix7 Telegram](https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list)
    - GeoIP_CN：[fmz200 GeoIP_CN.list](https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/GeoIP_CN.list)
-   有 fmz200 和 blackmatrix7 两家列表的，都两家交叉核对（AI_Part、Apple、TikTok）；只有 blackmatrix7 有的（Spotify、GitHub、Speedtest、Telegram），就跟 blackmatrix7。fmz200 没有 Spotify、GitHub、Speedtest、Telegram 的列表，没法交叉核对。
-   失效域名怎么定：用四家 DoH（谷歌、Cloudflare、阿里、腾讯 DNSPod doh.pub）查 A 记录和 AAAA 记录，共 7 项；7 项全 SERVFAIL，或任一项 NXDOMAIN，才算失效、直接删；四家结果不一致的放观察名单，不删。Egern 版和 QX 版同步改。
+
+有 fmz200 和 blackmatrix7 两家列表的，都两家交叉核对（AI_Part、Apple、TikTok）；只有 blackmatrix7 有的（Spotify、GitHub、Speedtest、Telegram），就跟 blackmatrix7。fmz200 没有 Spotify、GitHub、Speedtest、Telegram 的列表，没法交叉核对。失效域名怎么定：用四家 DoH（谷歌、Cloudflare、阿里、腾讯 DNSPod doh.pub）查 A 记录和 AAAA 记录，共 7 项；7 项全 SERVFAIL，或任一项 NXDOMAIN，才算失效、直接删；四家结果不一致的放观察名单，不删。Egern 版和 QX 版同步改。
 2. **GeoIP 库**：从 8 个来源（17mon、APNIC、chnroutes2、Loyalsoldier、metowolf、gaoyifan、clang、missuo）拉最新 IP 段，合并去重后重建 GeoIpCN.mmdb（IPv4 版），验证通过才推。
 3. **README**：检查里面的链接和条数是不是还对得上仓库现状，对不上就改对。
 4. **图标**：13 张预览图都在不在，链接能不能打开。
