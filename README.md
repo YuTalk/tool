@@ -1,3 +1,5 @@
+> ⚠️ 本仓库仅供作者个人自用，不开源、不对外提供服务；内容来源于公开信息，仅供学习参考，请勿转载或商用。
+
 ## 📋 GeoIP 库直链
 
 点代码框右上角的复制按钮，粘贴到 Egern 的 GeoIP 数据库设置里：
@@ -7,8 +9,6 @@ https://raw.githubusercontent.com/YuTalk/tool/main/GeoIpCN.mmdb
 ```
 
 ---
-
-> ⚠️ 仅自用
 
 # 🧰 Tool
 
