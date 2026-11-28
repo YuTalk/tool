@@ -1,7 +1,7 @@
-# 最后修改：2026-11-28 12:05
+# 最后修改：2026-11-28 13:14
 # AI_Part
 # Muse + GPT + Claude + Grok + Gemini
-# 总共 80 条
+# 总共 78 条
 host-suffix, openai.com, 人工智能
 host-suffix, openai.org, 人工智能
 host-suffix, chatgpt.com, 人工智能
@@ -24,7 +24,6 @@ host-suffix, ai.com, 人工智能
 host-suffix, openai-api.arkoselabs.com, 人工智能
 host-suffix, anthropic.com, 人工智能
 host-suffix, anthropic.auth0.com, 人工智能
-host-suffix, anthropic-com.ghost.io, 人工智能
 host-suffix, anthropic.com.cdn.cloudflare.net, 人工智能
 host-suffix, anthropic.team, 人工智能
 host-suffix, claude.ai, 人工智能
@@ -59,7 +58,6 @@ host-suffix, grok.com, 人工智能
 host-suffix, grokipedia.com, 人工智能
 host-suffix, grok.x.com, 人工智能
 host-suffix, grokusercontent.com, 人工智能
-host-suffix, grokcli.io, 人工智能
 host-suffix, grokbot.com, 人工智能
 host-suffix, x.ai, 人工智能
 # Gemini

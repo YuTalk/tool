@@ -1,7 +1,7 @@
-# 最后修改：2026-11-28 12:05
+# 最后修改：2026-11-28 13:14
 # AI_Part
 # Muse + GPT + Claude + Grok + Gemini
-# 总共 80 条
+# 总共 78 条
 # 用法：Egern 分流 -> 人工智能
 domain_suffix_set:
   - openai.com
@@ -26,7 +26,6 @@ domain_suffix_set:
   - openai-api.arkoselabs.com
   - anthropic.com
   - anthropic.auth0.com
-  - anthropic-com.ghost.io
   - anthropic.com.cdn.cloudflare.net
   - anthropic.team
   - claude.ai
@@ -61,7 +60,6 @@ domain_suffix_set:
   - grokipedia.com
   - grok.x.com
   - grokusercontent.com
-  - grokcli.io
   - grokbot.com
   - x.ai
 # Gemini

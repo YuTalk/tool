@@ -12,14 +12,14 @@ AI_Part 规则（Muse + GPT + Claude + Grok + Gemini）由本仓库每 6 小时�
 
 ## 规则统计
 
-最后更新时间：2026-11-28 12:05:43
+最后更新时间：2026-11-28 13:14:15
 
 各类型规则统计：
 
 | 类型 | 数量(条) |
 | ---- | ---- |
-| DOMAIN-SUFFIX | 80 |
-| TOTAL | 80 |
+| DOMAIN-SUFFIX | 78 |
+| TOTAL | 78 |
 
 ## Loon
 

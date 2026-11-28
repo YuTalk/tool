@@ -12,7 +12,7 @@ Quantumult X 用的规则，12 套，每套一个文件夹（点进文件夹能�
 
 ## 规则统计
 
-最后更新时间：2026-11-28 12:05:43
+最后更新时间：2026-11-28 13:14:15
 
 各规则集统计：
 
@@ -23,16 +23,16 @@ Quantumult X 用的规则，12 套，每套一个文件夹（点进文件夹能�
 | <img src="https://cdn.simpleicons.org/apple" width="20" height="20" alt="Apple"> Apple | 17 |
 | <img src="https://www.microsoft.com/favicon.ico" width="20" height="20" alt="Microsoft"> Microsoft | 17 |
 | SausageMan | 15 |
-| AI_Part | 80 |
+| AI_Part | 78 |
 | GeoIP_CN | 1 |
 | <img src="https://cdn.simpleicons.org/spotify/1DB954" width="20" height="20" alt="Spotify"> Spotify | 28 |
 | <img src="https://cdn.simpleicons.org/tiktok/FE2C55" width="20" height="20" alt="TikTok"> TikTok | 32 |
 | <img src="https://cdn.simpleicons.org/github" width="20" height="20" alt="GitHub"> GitHub | 31 |
 | <img src="https://cdn.simpleicons.org/speedtest/141526" width="20" height="20" alt="Speedtest"> Speedtest | 9 |
 | <img src="https://cdn.simpleicons.org/telegram/26A5E4" width="20" height="20" alt="Telegram"> Telegram | 34 |
-| TOTAL | 746 |
+| TOTAL | 744 |
 
-其中域名条目 745 条，去重后 745 条，和主 README 的域名总数一致），GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
+其中域名条目 743 条，去重后 743 条，和主 README 的域名总数一致），GeoIP_CN 是 1 条 GEOIP 规则，不算域名。
 
 ## Quantumult X
 
@@ -96,7 +96,7 @@ CDN 链接：
 
 https://cdn.jsdelivr.net/gh/YuTalk/tool@main/rule/quantumultx/SausageMan/SausageMan.list
 
-**AI_Part.list（80 条）**
+**AI_Part.list（78 条）**
 
 原始链接：
 

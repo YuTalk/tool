@@ -1,7 +1,7 @@
-# 最后修改：2026-11-28 12:05
+# 最后修改：2026-11-28 13:14
 # AI_Part
 # Muse + GPT + Claude + Grok + Gemini
-# 总共 80 条
+# 总共 78 条
 # 用法：Loon 分流 -> PROXY
 DOMAIN-SUFFIX,openai.com,PROXY
 DOMAIN-SUFFIX,openai.org,PROXY
@@ -25,7 +25,6 @@ DOMAIN-SUFFIX,ai.com,PROXY
 DOMAIN-SUFFIX,openai-api.arkoselabs.com,PROXY
 DOMAIN-SUFFIX,anthropic.com,PROXY
 DOMAIN-SUFFIX,anthropic.auth0.com,PROXY
-DOMAIN-SUFFIX,anthropic-com.ghost.io,PROXY
 DOMAIN-SUFFIX,anthropic.com.cdn.cloudflare.net,PROXY
 DOMAIN-SUFFIX,anthropic.team,PROXY
 DOMAIN-SUFFIX,claude.ai,PROXY
@@ -60,7 +59,6 @@ DOMAIN-SUFFIX,grok.com,PROXY
 DOMAIN-SUFFIX,grokipedia.com,PROXY
 DOMAIN-SUFFIX,grok.x.com,PROXY
 DOMAIN-SUFFIX,grokusercontent.com,PROXY
-DOMAIN-SUFFIX,grokcli.io,PROXY
 DOMAIN-SUFFIX,grokbot.com,PROXY
 DOMAIN-SUFFIX,x.ai,PROXY
 # Gemini
