@@ -1,7 +1,7 @@
-# 最后修改：2026-11-27 18:47
+# 最后修改：2026-11-28 12:05
 # AI_Part
 # Muse + GPT + Claude + Grok + Gemini
-# 总共 71 条
+# 总共 80 条
 host-suffix, openai.com, 人工智能
 host-suffix, openai.org, 人工智能
 host-suffix, chatgpt.com, 人工智能
@@ -21,7 +21,11 @@ host-suffix, production-openaicom-storage.azureedge.net, 人工智能
 host-suffix, chat.com, 人工智能
 host-suffix, crixet.com, 人工智能
 host-suffix, ai.com, 人工智能
+host-suffix, openai-api.arkoselabs.com, 人工智能
 host-suffix, anthropic.com, 人工智能
+host-suffix, anthropic.auth0.com, 人工智能
+host-suffix, anthropic-com.ghost.io, 人工智能
+host-suffix, anthropic.com.cdn.cloudflare.net, 人工智能
 host-suffix, anthropic.team, 人工智能
 host-suffix, claude.ai, 人工智能
 host-suffix, claude.app, 人工智能
@@ -53,6 +57,10 @@ host-suffix, modelcontextprotocol.io, 人工智能
 # Grok
 host-suffix, grok.com, 人工智能
 host-suffix, grokipedia.com, 人工智能
+host-suffix, grok.x.com, 人工智能
+host-suffix, grokusercontent.com, 人工智能
+host-suffix, grokcli.io, 人工智能
+host-suffix, grokbot.com, 人工智能
 host-suffix, x.ai, 人工智能
 # Gemini
 host-suffix, ai.google.dev, 人工智能
@@ -69,6 +77,7 @@ host-suffix, developerprofiles-pa.googleapis.com, 人工智能
 host-suffix, geller-pa.googleapis.com, 人工智能
 host-suffix, gemini.google, 人工智能
 host-suffix, gemini.google.com, 人工智能
+host-suffix, geminiweb-pa.clients6.google.com, 人工智能
 host-suffix, generativeai.google, 人工智能
 host-suffix, generativelanguage.googleapis.com, 人工智能
 host-suffix, makersuite.google.com, 人工智能
